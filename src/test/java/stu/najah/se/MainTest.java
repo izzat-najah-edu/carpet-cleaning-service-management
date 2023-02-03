@@ -1,5 +1,7 @@
 package stu.najah.se;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -10,7 +12,17 @@ class MainTest {
     /**
      * To be tested
      */
-    Main main = new Main();
+    Main main;
+
+    @BeforeEach
+    void setUp() {
+        main = new Main();
+    }
+
+    @AfterEach
+    void tearDown() {
+        main = null;
+    }
 
     @Test
     void isPrime() {

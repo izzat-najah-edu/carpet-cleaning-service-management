@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="initial test for the project with no functionalities">
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/SampleApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stu.najah.se/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="initial test for the project with no functionalities" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,7 +132,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675437047214</updated>
       <workItem from="1675437048259" duration="4574000" />
-      <workItem from="1675441661390" duration="339000" />
+      <workItem from="1675441661390" duration="898000" />
     </task>
     <task id="LOCAL-00001" summary="initial test for the project with no functionalities">
       <created>1675438707335</created>
@@ -168,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675439699205</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="initial test for the project with no functionalities">
+      <created>1675442162706</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675442162706</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
