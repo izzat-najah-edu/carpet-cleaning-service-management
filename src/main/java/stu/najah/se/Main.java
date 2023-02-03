@@ -1,4 +1,4 @@
-package stu.najah;
+package stu.najah.se;
 
 public class Main {
 
@@ -21,10 +21,6 @@ public class Main {
             }
         }
         return true;
-    }
-
-    int add(int a, int b) {
-        return a + b;
     }
 
     public static void main(String[] args) {

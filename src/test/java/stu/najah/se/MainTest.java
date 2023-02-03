@@ -1,4 +1,4 @@
-package stu.najah;
+package stu.najah.se;
 
 import org.junit.jupiter.api.Test;
 
