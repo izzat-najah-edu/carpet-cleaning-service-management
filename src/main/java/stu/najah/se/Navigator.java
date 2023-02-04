@@ -1,8 +1,22 @@
 package stu.najah.se;
 
-public class Main {
+import java.sql.Connection;
+
+/**
+ * This is the main class where the application starts,
+ * it includes a static method to get the database connection
+ */
+public class Navigator {
 
     /**
+     * @return the database connection
+     */
+    public static Connection getConnection() {
+        return null;
+    }
+
+    /**
+     * TEST FUNCTION.
      * checks if x is a prime number or not.
      * the test is done by dividing x to all numbers from 2 up to sqrt(x),
      * if at least one number divides x then x is not a prime,
@@ -10,7 +24,7 @@ public class Main {
      * @param x to be tested
      * @return whether x is prime or not
      */
-    boolean isPrime(int x) {
+    static boolean isPrime(int x) {
         if(x < 2) {
             return false;
         }
