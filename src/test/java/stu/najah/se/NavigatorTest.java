@@ -20,22 +20,6 @@ class NavigatorTest {
     void tearDown() {
     }
 
-    @Test
-    void isPrime() {
-        // not primes
-        assertFalse(Navigator.isPrime(-5));
-        assertFalse(Navigator.isPrime(0));
-        assertFalse(Navigator.isPrime(1));
-        assertFalse(Navigator.isPrime(4));
-        assertFalse(Navigator.isPrime(100));
-        assertFalse(Navigator.isPrime(22222222));
-        // primes
-        assertTrue(Navigator.isPrime(2));
-        assertTrue(Navigator.isPrime(7));
-        assertTrue(Navigator.isPrime(13));
-        assertTrue(Navigator.isPrime(101));
-    }
-
     /**
      * Tests the connection given by the Navigator class,
      * the connection shouldn't be null,

@@ -7,8 +7,8 @@ import java.util.logging.Logger;
 
 public class Admin {
 
-    final Logger logger = Logger.getLogger(Admin.class.getName());
-    boolean logState;
+    private final Logger logger = Logger.getLogger(Admin.class.getName());
+    private boolean logState;
 
     public Admin() {
         logState = false;
