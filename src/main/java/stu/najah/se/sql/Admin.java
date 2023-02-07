@@ -1,4 +1,6 @@
-package stu.najah.se;
+package stu.najah.se.sql;
+
+import stu.najah.se.Navigator;
 
 import java.sql.SQLException;
 import java.util.logging.Logger;

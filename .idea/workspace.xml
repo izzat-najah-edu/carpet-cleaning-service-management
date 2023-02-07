@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="new tests">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="admin class edited">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +22,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <favorite-branches>
       <branch-storage>
         <map>
@@ -41,7 +50,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="aya" />
       </map>
     </option>
     <option name="UPDATE_TYPE" value="REBASE" />
@@ -110,7 +119,7 @@
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.*" />
+          <option name="PATTERN" value="stu.najah.se.sql.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,7 +131,7 @@
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.*" />
+          <option name="PATTERN" value="stu.najah.se.sql.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,7 +146,7 @@
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.*" />
+          <option name="PATTERN" value="stu.najah.se.sql.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -172,6 +181,7 @@
       <workItem from="1675503795917" duration="1063000" />
       <workItem from="1675536310120" duration="120000" />
       <workItem from="1675536439135" duration="1064000" />
+      <workItem from="1675754827678" duration="1739000" />
     </task>
     <task id="LOCAL-00001" summary="initial test for the project with no functionalities">
       <created>1675438707335</created>
@@ -222,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675536980806</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="admin class edited">
+      <created>1675717542154</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675717542154</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +256,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="izzat" />
                       </list>
                     </value>
                   </entry>
@@ -256,7 +273,8 @@
     <MESSAGE value="initial test for the project with no functionalities" />
     <MESSAGE value="initial test" />
     <MESSAGE value="new tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="new tests" />
+    <MESSAGE value="admin class edited" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin class edited" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CarpetCleaningServiceManagement$Navigator.ic" NAME="Navigator Coverage Results" MODIFIED="1675536773415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
