@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="admin class edited">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="admin class edited" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,6 +107,9 @@
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu.najah.se\sql" />
       <recent name="F:\Work\Projects\CarpetCleaningServiceManagement\src\main\resources\stu.najah.se.sql" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="stu.najah.se.sql" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="stu.najah" />
     </key>
@@ -181,7 +182,7 @@
       <workItem from="1675503795917" duration="1063000" />
       <workItem from="1675536310120" duration="120000" />
       <workItem from="1675536439135" duration="1064000" />
-      <workItem from="1675754827678" duration="1739000" />
+      <workItem from="1675754827678" duration="1895000" />
     </task>
     <task id="LOCAL-00001" summary="initial test for the project with no functionalities">
       <created>1675438707335</created>
@@ -239,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675717542154</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="admin class edited">
+      <created>1675757387882</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1675757387882</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

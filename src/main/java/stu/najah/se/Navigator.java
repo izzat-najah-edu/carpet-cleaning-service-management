@@ -15,6 +15,7 @@ public class Navigator {
      */
     @NotNull
     public static Connection getConnection() {
+        // to be implemented ...
         return null;
     }
 
