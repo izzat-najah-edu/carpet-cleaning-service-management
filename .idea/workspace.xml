@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="cucumber dependencies added">
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="small edits">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/stu.najah.se/sql/CREATE.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu.najah.se/sql/RelationalMapping.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu.najah.se/sql/diagrams/RelationalMapping.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu.najah.se/sql/UML.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu.najah.se/sql/diagrams/UML.drawio" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,11 +108,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu.najah.se\sql\diagrams" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\java\stu\najah\se" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu.najah.se\sql" />
-      <recent name="F:\Work\Projects\CarpetCleaningServiceManagement\src\main\resources\stu.najah.se.sql" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="stu.najah.se.sql" />
