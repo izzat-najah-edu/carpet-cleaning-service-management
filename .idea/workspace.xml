@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="small edits">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stu.najah.se/sql/CREATE.sql" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="file ordering">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stu.najah.se/sql/RelationalMapping.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu.najah.se/sql/diagrams/RelationalMapping.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stu.najah.se/sql/UML.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu.najah.se/sql/diagrams/UML.drawio" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675761363637</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="file ordering">
+      <created>1675773181226</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675773181226</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +309,8 @@
     <MESSAGE value="admin class edited" />
     <MESSAGE value="small edit" />
     <MESSAGE value="cucumber dependencies added" />
-    <option name="LAST_COMMIT_MESSAGE" value="cucumber dependencies added" />
+    <MESSAGE value="file ordering" />
+    <option name="LAST_COMMIT_MESSAGE" value="file ordering" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CarpetCleaningServiceManagement$Navigator.ic" NAME="Navigator Coverage Results" MODIFIED="1675536773415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
