@@ -1,5 +1,7 @@
 package stu.najah.se;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.sql.Connection;
 
 /**
@@ -11,6 +13,7 @@ public class Navigator {
     /**
      * @return the database connection
      */
+    @NotNull
     public static Connection getConnection() {
         return null;
     }
