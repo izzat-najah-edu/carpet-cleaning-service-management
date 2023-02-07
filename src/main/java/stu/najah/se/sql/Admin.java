@@ -1,16 +1,14 @@
-package stu.najah.se;
+package stu.najah.se.sql;
+
+import stu.najah.se.Navigator;
 
 import java.sql.SQLException;
 import java.util.logging.Logger;
 
 public class Admin {
 
-    final Logger logger = Logger.getLogger(Admin.class.getName());
-    boolean logState;
-
-    public Admin() {
-        logState = false;
-    }
+    private final Logger logger = Logger.getLogger(Admin.class.getName());
+    private boolean logState = false;
 
     public void setLogState(boolean b) {
         logState = b;
@@ -54,15 +52,15 @@ public class Admin {
      * @throws SQLException if the username is not found
      */
     public static String getPassword(String username) throws SQLException {
-        var con = Navigator.getConnection();
-        var statement = con.createStatement();
-        var set = statement.executeQuery(
+        var connection = Navigator.getConnection();
+        var statement = connection.createStatement();
+        var resultSet = statement.executeQuery(
                 "select password from admin where username = " + username
         );
-        if (!set.next()) {
+        if (!resultSet.next()) {
             throw new SQLException("no admin by this username");
         }
-        return set.getString("password");
+        return resultSet.getString("password");
     }
 
 }
