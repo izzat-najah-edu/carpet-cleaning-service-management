@@ -1,6 +1,8 @@
-- This directory includes the features of the project
+# Adding Features
+
+- The directory src/test/java/resources/features includes the features of the project
 - Each feature has a corresponding -Step Definitions- Class located at src/test/java/features
-- The -Step Definitions- Class links every step of every scenario into actual code to be excuted throughout the tests
+- The -Step Definitions- Class links every step of every scenario into actual code to be executed throughout the tests
 - But that class alone is not enough, it simply executes all features as code
 - When we start the test, only JUnit test classes execute, so we make another test class,
 and we configure it to run the cucumber tests [@RunWith & @CucumberOptions]
