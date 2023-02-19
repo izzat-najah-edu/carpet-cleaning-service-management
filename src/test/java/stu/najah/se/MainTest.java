@@ -10,6 +10,5 @@ import org.junit.runner.RunWith;
         features = {"src/test/resources/features"},
         glue = {"features"}
 )
-public class LoginTest {
-
+public class MainTest {
 }

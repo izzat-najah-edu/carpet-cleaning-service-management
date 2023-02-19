@@ -11,3 +11,8 @@ Feature: Login
     Given the login screen is displayed
     When I enter a wrong username or a wrong password
     Then an error message indicating a failed login is displayed
+
+  Scenario: Exit
+    Given the login screen is displayed
+    When I click the exit button
+    Then the login screen closes
