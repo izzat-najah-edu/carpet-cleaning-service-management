@@ -42,4 +42,8 @@ public class LoginSteps {
         // to be implemented
         System.out.println("*** login failed :(");
     }
+
+    @When("I click the exit button")
+    public void iPressTheExitButton() {
+    }
 }
