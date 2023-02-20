@@ -1,4 +1,4 @@
-package stu.najah.se;
+package main;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
+import stu.najah.se.Navigator;
 
 import java.sql.Connection;
 import java.sql.SQLException;
