@@ -10,5 +10,12 @@ module CarpetCleaningServiceManagementTest {
 
     requires java.sql;
 
+    requires javafx.controls;
+    requires javafx.fxml;
+
+    requires org.testfx;
+    requires org.testfx.junit5;
+
     exports features;
+    exports main;
 }

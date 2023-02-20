@@ -11,4 +11,8 @@ import org.junit.runner.RunWith;
         glue = {"features"}
 )
 public class FeaturesTest {
+    /*
+    This class servers as an entry point for Cucumber tests.
+    Don't add any step definitions or tests here.
+     */
 }

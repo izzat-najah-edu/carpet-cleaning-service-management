@@ -21,12 +21,12 @@ public class Launcher extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws IOException {
+    public void start(Stage stage) throws IOException {
         FXMLLoader controller = new FXMLLoader(Objects.requireNonNull(
                 getClass().getResource("fxml/login.fxml")));
         Parent root = controller.load();
         Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        stage.setScene(scene);
+        stage.show();
     }
 }

@@ -23,6 +23,6 @@ public class Navigator {
 
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        Launcher.main(args); // this starts the application
+        Launcher.launch(args); // this starts the application
     }
 }
