@@ -9,6 +9,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * This is the JavaFX application launcher.
+ * Call it's main function to start the application.
+ * It's main function will stop only when the application is closed.
+ */
 public class Launcher extends Application {
 
     public static void main(String[] args) {
@@ -17,7 +22,9 @@ public class Launcher extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Launcher.class.getResource("login.fxml")));
+        FXMLLoader controller = new FXMLLoader(Objects.requireNonNull(
+                getClass().getResource("fxml/login.fxml")));
+        Parent root = controller.load();
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();

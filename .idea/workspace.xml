@@ -4,13 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="features added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/Launcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stu.najah.se/gui/login.fxml" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="javafx added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stu/najah/se/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stu/najah/se/FeaturesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/diagrams/RelationalMapping.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/diagrams/RelationalMapping.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/diagrams/UML.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/diagrams/UML.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/sql/CREATE.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sql/CREATE.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu.najah.se/gui/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stu/najah/se/FeaturesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/main/FeaturesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stu/najah/se/NavigatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/main/NavigatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +31,7 @@
         <option value="Class" />
         <option value="FxmlFile" />
         <option value="JavaFXApplication" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -110,11 +118,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu\najah\edu\gui\fxml" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\java\stu\najah\se\sql" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\test\resources" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu.najah.se\gui\fxml" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="features" />
@@ -124,7 +132,7 @@
       <recent name="stu.najah" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Launcher">
+  <component name="RunManager" selected="Application.Navigator">
     <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.gui.Launcher" />
       <module name="CarpetCleaningServiceManagement" />
@@ -143,7 +151,7 @@
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.*" />
+          <option name="PATTERN" value="main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,12 +163,12 @@
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.*" />
+          <option name="PATTERN" value="main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.FeaturesTest" />
+      <option name="PACKAGE_NAME" value="main" />
+      <option name="MAIN_CLASS_NAME" value="main.FeaturesTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,7 +178,7 @@
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.*" />
+          <option name="PATTERN" value="main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -189,8 +197,8 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.NavigatorTest" />
+      <option name="PACKAGE_NAME" value="main" />
+      <option name="MAIN_CLASS_NAME" value="main.NavigatorTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -213,9 +221,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Launcher" />
         <item itemvalue="Application.Navigator" />
         <item itemvalue="JUnit.FeaturesTest" />
+        <item itemvalue="Application.Launcher" />
         <item itemvalue="JUnit.NavigatorTest" />
         <item itemvalue="JUnit.LoginTest" />
       </list>
@@ -242,6 +250,7 @@
       <workItem from="1675880686278" duration="902000" />
       <workItem from="1676656220386" duration="742000" />
       <workItem from="1676838580246" duration="2149000" />
+      <workItem from="1676890433209" duration="2844000" />
     </task>
     <task id="LOCAL-00001" summary="initial test for the project with no functionalities">
       <created>1675438707335</created>
@@ -355,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675858063507</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="javafx added">
+      <created>1676890834014</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1676890834014</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +411,8 @@
     <MESSAGE value="file ordering" />
     <MESSAGE value="login feature added" />
     <MESSAGE value="files organization" />
-    <option name="LAST_COMMIT_MESSAGE" value="files organization" />
+    <MESSAGE value="javafx added" />
+    <option name="LAST_COMMIT_MESSAGE" value="javafx added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CarpetCleaningServiceManagement$Navigator.ic" NAME="Navigator Coverage Results" MODIFIED="1675536773415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
