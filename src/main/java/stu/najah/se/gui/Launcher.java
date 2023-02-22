@@ -11,22 +11,22 @@ import java.util.Objects;
 
 /**
  * This is the JavaFX application launcher.
- * Call it's main function to start the application.
- * It's main function will stop only when the application is closed.
  */
 public class Launcher extends Application {
 
-    public static void main(String[] args) {
-        launch(args);
-    }
-
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) {
         FXMLLoader controller = new FXMLLoader(Objects.requireNonNull(
                 getClass().getResource("fxml/login.fxml")));
-        Parent root = controller.load();
+        Parent root;
+        try {
+            root = controller.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
+
 }

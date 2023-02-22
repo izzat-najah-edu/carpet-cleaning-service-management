@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 )
 public class FeaturesTest {
     /*
-    This class servers as an entry point for Cucumber tests.
-    Don't add any step definitions or tests here.
+    This class servers as an entry point for all Cucumber tests in the 'features' directory.
+    Don't place any step definitions or tests here.
      */
 }

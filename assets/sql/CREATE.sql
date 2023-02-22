@@ -1,5 +1,9 @@
 -- Use this SQL code to create the database from scratch
 
+create database carpet_cleaning_service_management;
+create user ccsm identified with 'ccsm1234';
+grant all privileges on carpet_cleaning_service_management.* to ccsm;
+
 create table admin
 (
     username varchar(256) primary key,
