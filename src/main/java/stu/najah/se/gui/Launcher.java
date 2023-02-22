@@ -15,15 +15,10 @@ import java.util.Objects;
 public class Launcher extends Application {
 
     @Override
-    public void start(Stage stage) {
+    public void start(Stage stage) throws IOException {
         FXMLLoader controller = new FXMLLoader(Objects.requireNonNull(
                 getClass().getResource("fxml/login.fxml")));
-        Parent root;
-        try {
-            root = controller.load();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        Parent root = controller.load();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

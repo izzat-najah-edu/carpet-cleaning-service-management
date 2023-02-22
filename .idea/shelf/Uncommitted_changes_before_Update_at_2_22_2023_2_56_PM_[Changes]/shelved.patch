@@ -1,0 +1,380 @@
+Index: src/test/resources/features/Login.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: Login\r\n  As a user, I want to log in to the program so that I can access my account.\r\n\r\n  Scenario: Successful Login\r\n    Given the login screen is displayed\r\n    When I enter the correct username and the correct password\r\n    Then the login screen closes\r\n    And the main screen opens\r\n\r\n  Scenario: Failed Login\r\n    Given the login screen is displayed\r\n    When I enter a wrong username or a wrong password\r\n    Then an error message indicating a failed login is displayed\r\n\r\n  Scenario: Exit\r\n    Given the login screen is displayed\r\n    When I click the exit button\r\n    Then the login screen closes\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/resources/features/Login.feature b/src/test/resources/features/Login.feature
+--- a/src/test/resources/features/Login.feature	(revision 9a637c3171592f380cc374dc23acc9c1bc283383)
++++ b/src/test/resources/features/Login.feature	(date 1676909077071)
+@@ -2,17 +2,17 @@
+   As a user, I want to log in to the program so that I can access my account.
+ 
+   Scenario: Successful Login
+-    Given the login screen is displayed
++    Given the login screen is opened
+     When I enter the correct username and the correct password
+     Then the login screen closes
+     And the main screen opens
+ 
+   Scenario: Failed Login
+-    Given the login screen is displayed
++    Given the login screen is opened
+     When I enter a wrong username or a wrong password
+     Then an error message indicating a failed login is displayed
+ 
+   Scenario: Exit
+-    Given the login screen is displayed
++    Given the login screen is opened
+     When I click the exit button
+     Then the login screen closes
+Index: src/test/resources/features/Main.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: Main\r\n  As a user, I want to perform different operations directly from the main screen.\r\n\r\n  Scenario: Open The Customers Panel\r\n    Given the main screen is displayed\r\n    When I click on the customers panel\r\n    Then the customers panel opens\r\n\r\n  Scenario: Open The Orders Panel\r\n    Given the main screen is displayed\r\n    When I click on the orders panel\r\n    Then the orders panel opens\r\n\r\n  Scenario: Exit\r\n    Given the main screen is displayed\r\n    When I click the exit button\r\n    Then the main screen closes\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/resources/features/Main.feature b/src/test/resources/features/Main.feature
+--- a/src/test/resources/features/Main.feature	(revision 9a637c3171592f380cc374dc23acc9c1bc283383)
++++ b/src/test/resources/features/Main.feature	(date 1676909077034)
+@@ -2,16 +2,16 @@
+   As a user, I want to perform different operations directly from the main screen.
+ 
+   Scenario: Open The Customers Panel
+-    Given the main screen is displayed
++    Given the main screen is opened
+     When I click on the customers panel
+     Then the customers panel opens
+ 
+   Scenario: Open The Orders Panel
+-    Given the main screen is displayed
++    Given the main screen is opened
+     When I click on the orders panel
+     Then the orders panel opens
+ 
+   Scenario: Exit
+-    Given the main screen is displayed
++    Given the main screen is opened
+     When I click the exit button
+     Then the main screen closes
+Index: src/test/java/features/LoginSteps.java
+===================================================================
+diff --git a/src/test/java/features/LoginSteps.java b/src/test/java/features/LoginSteps.java
+deleted file mode 100644
+--- a/src/test/java/features/LoginSteps.java	(revision 9a637c3171592f380cc374dc23acc9c1bc283383)
++++ /dev/null	(revision 9a637c3171592f380cc374dc23acc9c1bc283383)
+@@ -1,77 +0,0 @@
+-package features;
+-
+-import io.cucumber.java.AfterAll;
+-import io.cucumber.java.BeforeAll;
+-import io.cucumber.java.en.And;
+-import io.cucumber.java.en.Given;
+-import io.cucumber.java.en.Then;
+-import io.cucumber.java.en.When;
+-import javafx.application.Platform;
+-import javafx.stage.Stage;
+-import org.testfx.util.WaitForAsyncUtils;
+-import stu.najah.se.gui.Launcher;
+-
+-import java.io.IOException;
+-
+-public class LoginSteps {
+-
+-    @BeforeAll
+-    public static void setup() {
+-        // Launch the JavaFX application
+-        Platform.startup(() -> {
+-            try {
+-                new Launcher().start(new Stage());
+-            } catch (IOException e) {
+-                throw new RuntimeException(e);
+-            }
+-        });
+-    }
+-
+-    @AfterAll
+-    public static void cleanup() {
+-        Platform.exit();
+-    }
+-
+-    @Given("the login screen is displayed")
+-    public void theLoginScreenIsDisplayed() {
+-        // launch the application
+-        WaitForAsyncUtils.waitForFxEvents();
+-        for (int i = 0; i < 1000000; i++) {
+-            System.out.println(i);
+-        }
+-    }
+-
+-    @When("I enter the correct username and the correct password")
+-    public void iEnterTheCorrectUsernameAndTheCorrectPassword() {
+-        // to be implemented
+-        System.out.println("*** you entered the correct login information :)");
+-    }
+-
+-    @Then("the login screen closes")
+-    public void theLoginScreenCloses() {
+-        // to be implemented
+-        System.out.println("*** imagine login screen closed :)");
+-    }
+-
+-    @And("the main screen opens")
+-    public void theMainScreenOpens() {
+-        // to be implemented
+-        System.out.println("*** imagine main screen opened :)");
+-    }
+-
+-    @When("I enter a wrong username or a wrong password")
+-    public void iEnterAWrongUsernameOrAWrongPassword() {
+-        // to be implemented
+-        System.out.println("*** you entered wrong username or password :(");
+-    }
+-
+-    @Then("an error message indicating a failed login is displayed")
+-    public void anErrorMessageIndicatingAFailedLoginIsDisplayed() {
+-        // to be implemented
+-        System.out.println("*** login failed :(");
+-    }
+-
+-    @When("I click the exit button")
+-    public void iPressTheExitButton() {
+-    }
+-}
+Index: src/test/java/features/MainSteps.java
+===================================================================
+diff --git a/src/test/java/features/MainSteps.java b/src/test/java/features/MainSteps.java
+deleted file mode 100644
+--- a/src/test/java/features/MainSteps.java	(revision 9a637c3171592f380cc374dc23acc9c1bc283383)
++++ /dev/null	(revision 9a637c3171592f380cc374dc23acc9c1bc283383)
+@@ -1,31 +0,0 @@
+-package features;
+-
+-import io.cucumber.java.en.Given;
+-import io.cucumber.java.en.Then;
+-import io.cucumber.java.en.When;
+-
+-public class MainSteps {
+-    @Given("the main screen is displayed")
+-    public void theMainScreenIsDisplayed() {
+-    }
+-
+-    @When("I click on the customers panel")
+-    public void iClickOnTheCustomersPanel() {
+-    }
+-
+-    @Then("the customers panel opens")
+-    public void theCustomersPanelOpens() {
+-    }
+-
+-    @When("I click on the orders panel")
+-    public void iClickOnTheOrdersPanel() {
+-    }
+-
+-    @Then("the orders panel opens")
+-    public void theOrdersPanelOpens() {
+-    }
+-
+-    @Then("the main screen closes")
+-    public void theMainScreenCloses() {
+-    }
+-}
+Index: src/test/java/features/SwitchingSteps.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/features/SwitchingSteps.java b/src/test/java/features/SwitchingSteps.java
+new file mode 100644
+--- /dev/null	(date 1676910626016)
++++ b/src/test/java/features/SwitchingSteps.java	(date 1676910626016)
+@@ -0,0 +1,72 @@
++package features;
++
++import io.cucumber.java.AfterAll;
++import io.cucumber.java.BeforeAll;
++import io.cucumber.java.en.And;
++import io.cucumber.java.en.Given;
++import io.cucumber.java.en.Then;
++import javafx.application.Platform;
++import javafx.stage.Stage;
++import org.testfx.util.WaitForAsyncUtils;
++import stu.najah.se.gui.Launcher;
++
++import java.io.IOException;
++
++/**
++ * Step Definitions Class.
++ * For steps that are responsible for changing the switching screens.
++ * E.g. login, exit...
++ */
++public class SwitchingSteps {
++
++    @BeforeAll
++    public static void setup() {
++        // Launch the JavaFX application
++        Platform.startup(() -> {
++            try {
++                new Launcher().start(new Stage());
++            } catch (IOException e) {
++                throw new RuntimeException(e);
++            }
++        });
++    }
++
++    @AfterAll
++    public static void cleanup() {
++        Platform.exit();
++    }
++
++    @Given("the login screen is opened")
++    public void theLoginScreenIsOpened() {
++        WaitForAsyncUtils.waitForFxEvents();
++    }
++
++    @Then("the login screen closes")
++    public void theLoginScreenCloses() {
++        
++    }
++
++    @And("the main screen opens")
++    public void theMainScreenOpens() {
++        
++    }
++
++    @Given("the main screen is opened")
++    public void theMainScreenIsOpened() {
++        
++    }
++
++    @Then("the customers panel opens")
++    public void theCustomersPanelOpens() {
++        
++    }
++
++    @Then("the orders panel opens")
++    public void theOrdersPanelOpens() {
++        
++    }
++
++    @Then("the main screen closes")
++    public void theMainScreenCloses() {
++    }
++}
+Index: src/test/java/features/InputSteps.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/features/InputSteps.java b/src/test/java/features/InputSteps.java
+new file mode 100644
+--- /dev/null	(date 1676910625953)
++++ b/src/test/java/features/InputSteps.java	(date 1676910625953)
+@@ -0,0 +1,36 @@
++package features;
++
++import io.cucumber.java.en.When;
++
++/**
++ * Step Definitions Class.
++ * For steps that are responsible for inputting information to the application.
++ * E.g. enter text, click button...
++ */
++public class InputSteps {
++    
++    @When("I enter the correct username and the correct password")
++    public void iEnterTheCorrectUsernameAndTheCorrectPassword() {
++        
++    }
++
++    @When("I enter a wrong username or a wrong password")
++    public void iEnterAWrongUsernameOrAWrongPassword() {
++        
++    }
++
++    @When("I click the exit button")
++    public void iClickTheExitButton() {
++        
++    }
++
++    @When("I click on the customers panel")
++    public void iClickOnTheCustomersPanel() {
++        
++    }
++
++    @When("I click on the orders panel")
++    public void iClickOnTheOrdersPanel() {
++
++    }
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"30a2bec6-b51e-49fd-8372-661244324514\" name=\"Changes\" comment=\"jfoenix added\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pom.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/stu/najah/se/gui/Launcher.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/stu/najah/se/gui/Launcher.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/features/LoginSteps.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/features/LoginSteps.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/main/FeaturesTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/main/FeaturesTest.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/main/NavigatorTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/main/NavigatorTest.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/module-info.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/module-info.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JUnit5 Test Class\" />\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"JavaFXApplication\" />\r\n        <option value=\"module-info\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <excluded-from-favorite>\r\n      <branch-storage>\r\n        <map>\r\n          <entry type=\"REMOTE\">\r\n            <value>\r\n              <list>\r\n                <branch-info repo=\"$PROJECT_DIR$\" source=\"origin/master\" />\r\n              </list>\r\n            </value>\r\n          </entry>\r\n        </map>\r\n      </branch-storage>\r\n    </excluded-from-favorite>\r\n    <favorite-branches>\r\n      <branch-storage>\r\n        <map>\r\n          <entry type=\"REMOTE\">\r\n            <value>\r\n              <list>\r\n                <branch-info repo=\"$PROJECT_DIR$\" source=\"origin/main-izzat\" />\r\n              </list>\r\n            </value>\r\n          </entry>\r\n        </map>\r\n      </branch-storage>\r\n    </favorite-branches>\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"aya\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"UPDATE_TYPE\" value=\"REBASE\" />\r\n  </component>\r\n  <component name=\"JpbToolWindowState\">\r\n    <option name=\"isToolWindowVisible\" value=\"false\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"importingSettings\">\r\n      <MavenImportingSettings>\r\n        <option name=\"workspaceImportEnabled\" value=\"true\" />\r\n      </MavenImportingSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2LEX7IjaP3I0Ce1rPwNHL1LN2xy\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,\r\n    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,\r\n    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;F:/Work/Projects/Java/CarpetCleaningServiceManagement/src/main/java/stu/najah/se&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,\r\n    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateTestDialog.Recents.Supers\">\r\n      <recent name=\"\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"F:\\Work\\Projects\\Java\\CarpetCleaningServiceManagement\" />\r\n      <recent name=\"F:\\Work\\Projects\\Java\\CarpetCleaningServiceManagement\\src\\main\\resources\\stu\\najah\\edu\\gui\\fxml\" />\r\n      <recent name=\"F:\\Work\\Projects\\Java\\CarpetCleaningServiceManagement\\src\\main\\java\\stu\\najah\\se\\sql\" />\r\n      <recent name=\"F:\\Work\\Projects\\Java\\CarpetCleaningServiceManagement\\src\" />\r\n      <recent name=\"F:\\Work\\Projects\\Java\\CarpetCleaningServiceManagement\\src\\main\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"features\" />\r\n      <recent name=\"stu.najah.se.sql\" />\r\n    </key>\r\n    <key name=\"CreateTestDialog.RecentsKey\">\r\n      <recent name=\"stu.najah\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"JUnit.FeaturesTest\">\r\n    <configuration name=\"Launcher\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"stu.najah.se.gui.Launcher\" />\r\n      <module name=\"CarpetCleaningServiceManagement\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"stu.najah.se.gui.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Navigator\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"stu.najah.se.Navigator\" />\r\n      <module name=\"CarpetCleaningServiceManagement\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"FeaturesTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"CarpetCleaningServiceManagement\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"main\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.FeaturesTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"FeaturesTest.setup\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"CarpetCleaningServiceManagement\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"main\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.FeaturesTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"setup\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"NavigatorTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"CarpetCleaningServiceManagement\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"stu.najah.se.sql.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"main\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.NavigatorTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"NavigatorTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"CarpetCleaningServiceManagement\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"stu.najah.se.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"stu.najah.se\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"stu.najah.se.NavigatorTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.FeaturesTest\" />\r\n        <item itemvalue=\"JUnit.FeaturesTest.setup\" />\r\n        <item itemvalue=\"Application.Navigator\" />\r\n        <item itemvalue=\"Application.Launcher\" />\r\n        <item itemvalue=\"JUnit.NavigatorTest\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"30a2bec6-b51e-49fd-8372-661244324514\" name=\"Changes\" comment=\"\" />\r\n      <created>1675437047214</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1675437047214</updated>\r\n      <workItem from=\"1675437048259\" duration=\"4574000\" />\r\n      <workItem from=\"1675441661390\" duration=\"898000\" />\r\n      <workItem from=\"1675503004656\" duration=\"728000\" />\r\n      <workItem from=\"1675503795917\" duration=\"1063000\" />\r\n      <workItem from=\"1675536310120\" duration=\"120000\" />\r\n      <workItem from=\"1675536439135\" duration=\"1064000\" />\r\n      <workItem from=\"1675754827678\" duration=\"1895000\" />\r\n      <workItem from=\"1675760615769\" duration=\"83000\" />\r\n      <workItem from=\"1675760927397\" duration=\"1432000\" />\r\n      <workItem from=\"1675878953132\" duration=\"825000\" />\r\n      <workItem from=\"1675880686278\" duration=\"902000\" />\r\n      <workItem from=\"1676656220386\" duration=\"742000\" />\r\n      <workItem from=\"1676838580246\" duration=\"2149000\" />\r\n      <workItem from=\"1676890433209\" duration=\"3804000\" />\r\n      <workItem from=\"1676894933994\" duration=\"6827000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"initial test for the project with no functionalities\">\r\n      <created>1675438707335</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675438707335</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"initial test for the project with no functionalities\">\r\n      <created>1675438985420</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675438985420</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"initial test for the project with no functionalities\">\r\n      <created>1675439499437</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675439499437</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"initial test for the project with no functionalities\">\r\n      <created>1675439699205</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675439699205</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"initial test for the project with no functionalities\">\r\n      <created>1675442162706</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675442162706</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"initial test\">\r\n      <created>1675504458626</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675504458626</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"new tests\">\r\n      <created>1675536980806</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675536980806</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"admin class edited\">\r\n      <created>1675717542154</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675717542154</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"admin class edited\">\r\n      <created>1675757387882</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675757387882</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"small edit\">\r\n      <created>1675760694953</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675760694953</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"cucumber dependencies added\">\r\n      <created>1675761363637</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675761363637</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"file ordering\">\r\n      <created>1675773181226</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675773181226</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"file ordering\">\r\n      <created>1675774681454</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675774681454</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"login feature added\">\r\n      <created>1675780411504</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675780411504</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"files organization\">\r\n      <created>1675857882051</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675857882051</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"files organization\">\r\n      <created>1675858063507</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1675858063507</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"javafx added\">\r\n      <created>1676890834014</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1676890834014</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"javafx added\">\r\n      <created>1676893670720</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1676893670721</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"jfoenix added\">\r\n      <created>1676898932340</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1676898932340</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"20\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"izzat\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"initial test for the project with no functionalities\" />\r\n    <MESSAGE value=\"initial test\" />\r\n    <MESSAGE value=\"new tests\" />\r\n    <MESSAGE value=\"admin class edited\" />\r\n    <MESSAGE value=\"small edit\" />\r\n    <MESSAGE value=\"cucumber dependencies added\" />\r\n    <MESSAGE value=\"file ordering\" />\r\n    <MESSAGE value=\"login feature added\" />\r\n    <MESSAGE value=\"files organization\" />\r\n    <MESSAGE value=\"javafx added\" />\r\n    <MESSAGE value=\"jfoenix added\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"jfoenix added\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/CarpetCleaningServiceManagement$Navigator.ic\" NAME=\"Navigator Coverage Results\" MODIFIED=\"1675536773415\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\r\n      <FILTER>stu.najah.se.*</FILTER>\r\n    </SUITE>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 9a637c3171592f380cc374dc23acc9c1bc283383)
++++ b/.idea/workspace.xml	(date 1676912089006)
+@@ -4,15 +4,14 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="jfoenix added">
++    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="javafx tests">
++      <change afterPath="$PROJECT_DIR$/src/test/java/features/InputSteps.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/features/SwitchingSteps.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/Launcher.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/main/FeaturesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/main/FeaturesTest.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/main/NavigatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/main/NavigatorTest.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/module-info.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/features/MainSteps.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Login.feature" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Main.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Main.feature" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -248,6 +247,9 @@
+       <workItem from="1676838580246" duration="2149000" />
+       <workItem from="1676890433209" duration="3804000" />
+       <workItem from="1676894933994" duration="6827000" />
++      <workItem from="1676905660834" duration="379000" />
++      <workItem from="1676907211359" duration="203000" />
++      <workItem from="1676908225031" duration="2883000" />
+     </task>
+     <task id="LOCAL-00001" summary="initial test for the project with no functionalities">
+       <created>1675438707335</created>
+@@ -382,7 +384,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1676898932340</updated>
+     </task>
+-    <option name="localTasksCounter" value="20" />
++    <task id="LOCAL-00020" summary="javafx tests">
++      <created>1676905881179</created>
++      <option name="number" value="00020" />
++      <option name="presentableId" value="LOCAL-00020" />
++      <option name="project" value="LOCAL" />
++      <updated>1676905881179</updated>
++    </task>
++    <option name="localTasksCounter" value="21" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -424,7 +433,8 @@
+     <MESSAGE value="files organization" />
+     <MESSAGE value="javafx added" />
+     <MESSAGE value="jfoenix added" />
+-    <option name="LAST_COMMIT_MESSAGE" value="jfoenix added" />
++    <MESSAGE value="javafx tests" />
++    <option name="LAST_COMMIT_MESSAGE" value="javafx tests" />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+     <SUITE FILE_PATH="coverage/CarpetCleaningServiceManagement$Navigator.ic" NAME="Navigator Coverage Results" MODIFIED="1675536773415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
