@@ -4,27 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="database added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/SceneManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/QueryManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/main.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/features/MainSteps.java" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="tests added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/Launcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/LoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/Admin1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/InputSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/PromptSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/SwitchingSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Main.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Main.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/main/NavigatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/main/NavigatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,48 +178,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FeaturesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CarpetCleaningServiceManagement" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="features.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="features" />
-      <option name="MAIN_CLASS_NAME" value="features.FeaturesTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FeaturesTest.setup" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CarpetCleaningServiceManagement" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="features.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="features" />
-      <option name="MAIN_CLASS_NAME" value="features.FeaturesTest" />
-      <option name="METHOD_NAME" value="setup" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="NavigatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.*" />
+          <option name="PATTERN" value="main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.NavigatorTest" />
+      <option name="PACKAGE_NAME" value="main" />
+      <option name="MAIN_CLASS_NAME" value="main.NavigatorTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NavigatorTest.getConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CarpetCleaningServiceManagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="main" />
+      <option name="MAIN_CLASS_NAME" value="main.NavigatorTest" />
+      <option name="METHOD_NAME" value="getConnection" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -243,10 +212,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.FeaturesTest (1)" />
+        <item itemvalue="JUnit.NavigatorTest" />
+        <item itemvalue="JUnit.NavigatorTest.getConnection" />
         <item itemvalue="Application.Navigator" />
         <item itemvalue="Application.SceneManager" />
-        <item itemvalue="JUnit.FeaturesTest" />
-        <item itemvalue="JUnit.FeaturesTest.setup" />
       </list>
     </recent_temporary>
   </component>
@@ -282,7 +251,7 @@
       <workItem from="1677164993729" duration="2846000" />
       <workItem from="1677184328508" duration="1886000" />
       <workItem from="1677243440841" duration="8249000" />
-      <workItem from="1677322280940" duration="4879000" />
+      <workItem from="1677322280940" duration="5533000" />
     </task>
     <task id="LOCAL-00001" summary="initial test for the project with no functionalities">
       <created>1675438707335</created>
@@ -431,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677099217821</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="tests added">
+      <created>1677327495171</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1677327495171</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +451,8 @@
     <MESSAGE value="jfoenix added" />
     <MESSAGE value="javafx tests" />
     <MESSAGE value="database added" />
-    <option name="LAST_COMMIT_MESSAGE" value="database added" />
+    <MESSAGE value="tests added" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CarpetCleaningServiceManagement$Navigator.ic" NAME="Navigator Coverage Results" MODIFIED="1675536773415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

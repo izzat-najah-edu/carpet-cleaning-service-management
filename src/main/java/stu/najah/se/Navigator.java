@@ -33,6 +33,7 @@ public class Navigator {
                     "jdbc:mysql://localhost:3306/carpet_cleaning_service_management",
                     "ccsm", "ccsm1234"
             );
+            connection.setAutoCommit(false);
             queryManager = new QueryManager(connection);
         } catch (SQLException e) {
             throw new RuntimeException(e);

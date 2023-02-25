@@ -17,5 +17,6 @@ module CarpetCleaningServiceManagementTest {
     requires org.testfx.junit5;
 
     exports features;
+    opens main to org.junit.platform.commons;
     exports main;
 }
