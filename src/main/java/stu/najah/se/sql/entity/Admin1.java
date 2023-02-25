@@ -1,13 +1,13 @@
-package stu.najah.se.sql;
+package stu.najah.se.sql.entity;
 
 import stu.najah.se.Navigator;
 
 import java.sql.SQLException;
 import java.util.logging.Logger;
 
-public class Admin {
+public class Admin1 {
 
-    private final Logger logger = Logger.getLogger(Admin.class.getName());
+    private final Logger logger = Logger.getLogger(Admin1.class.getName());
     private boolean logState = false;
 
     public void setLogState(boolean b) {

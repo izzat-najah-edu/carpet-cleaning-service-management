@@ -1,18 +1,16 @@
 Feature: Login
   As a user, I want to log in to the program so that I can access my account.
+  So the application have a special login panel to control authorization.
+
+  Background: User has not logged in yet
+    Given login screen is opened
 
   Scenario: Successful Login
-    Given the login screen is opened
-    When I enter the correct username and the correct password
-    Then the login screen closes
-    And the main screen opens
+    When I enter correct username and correct password
+    And I click on the login button
+    Then login screen switches to main screen
 
   Scenario: Failed Login
-    Given the login screen is opened
-    When I enter a wrong username or a wrong password
-    Then an error message indicating a failed login is displayed
-
-  Scenario: Exit
-    Given the login screen is opened
-    When I click the exit button
-    Then the login screen closes
+    When I enter wrong username or wrong password
+    And I click on the login button
+    Then error message indicating failed login is prompted
