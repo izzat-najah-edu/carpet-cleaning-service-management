@@ -14,12 +14,6 @@ import java.sql.SQLException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(
-        plugin = {"pretty", "html:target/cucumber-reports"},
-        features = {"src/test/resources/features"},
-        glue = {"features"}
-)
 class NavigatorTest {
 
     @BeforeEach

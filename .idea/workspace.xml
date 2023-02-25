@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="javafx added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/login.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="database added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/diagrams/RelationalMapping.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/diagrams/RelationalMapping.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/diagrams/UML.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/diagrams/UML.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/sql/CREATE.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/sql/CREATE.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stu.najah.se/gui/login.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stu/najah/se/FeaturesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/main/FeaturesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stu/najah/se/NavigatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/main/NavigatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +18,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="FxmlFile" />
         <option value="JavaFXApplication" />
         <option value="module-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -111,6 +101,12 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;,
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -118,11 +114,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\test\resources\features\aya" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu\najah\edu\gui\fxml" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\java\stu\najah\se\sql" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu.najah.se\gui\fxml" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="features" />
@@ -151,7 +147,7 @@
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.*" />
+          <option name="PATTERN" value="features.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -159,7 +155,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FeaturesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FeaturesTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
@@ -174,32 +170,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FeaturesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.*" />
+          <option name="PATTERN" value="features.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.LoginTest" />
+      <option name="PACKAGE_NAME" value="features" />
+      <option name="MAIN_CLASS_NAME" value="features.FeaturesTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NavigatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FeaturesTest.setup" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.sql.*" />
+          <option name="PATTERN" value="features.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="main" />
-      <option name="MAIN_CLASS_NAME" value="main.NavigatorTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="features" />
+      <option name="MAIN_CLASS_NAME" value="features.FeaturesTest" />
+      <option name="METHOD_NAME" value="setup" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -222,10 +219,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Navigator" />
-        <item itemvalue="JUnit.FeaturesTest" />
         <item itemvalue="Application.Launcher" />
-        <item itemvalue="JUnit.NavigatorTest" />
-        <item itemvalue="JUnit.LoginTest" />
+        <item itemvalue="JUnit.FeaturesTest (1)" />
+        <item itemvalue="JUnit.FeaturesTest" />
+        <item itemvalue="JUnit.FeaturesTest.setup" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +247,13 @@
       <workItem from="1675880686278" duration="902000" />
       <workItem from="1676656220386" duration="742000" />
       <workItem from="1676838580246" duration="2149000" />
-      <workItem from="1676890433209" duration="2844000" />
+      <workItem from="1676890433209" duration="3804000" />
+      <workItem from="1676894933994" duration="6827000" />
+      <workItem from="1676905660834" duration="379000" />
+      <workItem from="1676907211359" duration="203000" />
+      <workItem from="1676908225031" duration="2883000" />
+      <workItem from="1677070559252" duration="5066000" />
+      <workItem from="1677094100782" duration="966000" />
     </task>
     <task id="LOCAL-00001" summary="initial test for the project with no functionalities">
       <created>1675438707335</created>
@@ -371,7 +374,28 @@
       <option name="project" value="LOCAL" />
       <updated>1676890834014</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="javafx added">
+      <created>1676893670720</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1676893670721</updated>
+    </task>
+    <task id="LOCAL-00019" summary="jfoenix added">
+      <created>1676898932340</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1676898932340</updated>
+    </task>
+    <task id="LOCAL-00020" summary="javafx tests">
+      <created>1676905881179</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1676905881179</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +436,9 @@
     <MESSAGE value="login feature added" />
     <MESSAGE value="files organization" />
     <MESSAGE value="javafx added" />
-    <option name="LAST_COMMIT_MESSAGE" value="javafx added" />
+    <MESSAGE value="jfoenix added" />
+    <MESSAGE value="javafx tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="javafx tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CarpetCleaningServiceManagement$Navigator.ic" NAME="Navigator Coverage Results" MODIFIED="1675536773415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
