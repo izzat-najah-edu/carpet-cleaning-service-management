@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import stu.najah.se.Navigator;
-import stu.najah.se.sql.entity.Admin;
 
 public class LoginController {
 
@@ -22,12 +21,12 @@ public class LoginController {
     @FXML
     public void login() {
         // try to log-in
-        Navigator.login(new Admin(
+        Navigator.login(
                 textFieldUsername.getText(),
                 textFieldPassword.getText()
-        ));
+        );
         // if it fails
-        if(!Navigator.isLoggedIn()) {
+        if (!Navigator.isLoggedIn()) {
             // todo: prompt fail...
             System.out.println("login failed");
         }

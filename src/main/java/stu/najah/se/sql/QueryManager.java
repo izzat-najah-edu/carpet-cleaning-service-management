@@ -29,7 +29,7 @@ public class QueryManager {
      * @param admin to be checked
      * @return whether the admin exists or not
      */
-    public boolean checkAdminExists(Admin admin) {
+    public boolean checkExists(Admin admin) {
         try {
             // no error is expected... so the exception is caught
             selectExistsAdmin.setString(1, admin.getUsername());

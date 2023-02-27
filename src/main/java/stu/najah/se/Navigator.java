@@ -70,6 +70,7 @@ public class Navigator {
     /**
      * @return the scene manager of the application
      */
+    @NotNull
     public static SceneManager getSceneManager() {
         return sceneManager;
     }
@@ -77,6 +78,7 @@ public class Navigator {
     /**
      * @return the query manager of the application
      */
+    @NotNull
     public static QueryManager getQueryManager() {
         return queryManager;
     }
@@ -99,12 +101,14 @@ public class Navigator {
     }
 
     /**
-     * Tries to logs into the main screen from the login panel using the given admin information.
+     * Tries to logs into the main screen from the login panel using the given user information.
      * If it fails nothing happens, check .isLoggedIn() to test the result
-     * @param admin will be checked in the database.
+     * @param username will be checked in the database.
+     * @param password will be checked in the database.
      */
-    public static void login(Admin admin) {
-        if (queryManager.checkAdminExists(admin)) {
+    public static void login(String username, String password) {
+        var admin = new Admin(username, password);
+        if (queryManager.checkExists(admin)) {
             Navigator.currentAdmin = admin;
             sceneManager.setMainScene();
         }

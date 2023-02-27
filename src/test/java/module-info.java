@@ -14,6 +14,7 @@ module CarpetCleaningServiceManagementTest {
     requires javafx.fxml;
 
     requires org.testfx;
+    requires org.hamcrest;
     requires org.testfx.junit5;
 
     exports features;

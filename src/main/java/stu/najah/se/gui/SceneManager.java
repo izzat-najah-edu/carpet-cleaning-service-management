@@ -2,8 +2,11 @@ package stu.najah.se.gui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import org.jetbrains.annotations.NotNull;
 import stu.najah.se.gui.fxml.LoginController;
 import stu.najah.se.gui.fxml.MainController;
 
@@ -17,14 +20,19 @@ import java.io.IOException;
 public class SceneManager extends Application {
 
     private Stage stage;
-    private Scene loginScene;
-    private Scene mainScene;
+    private boolean loggedIn = false;
+
     private LoginController loginController;
     private MainController mainController;
-    private boolean loggedIn = false;
+
+    private Scene loginScene;
+    private Scene mainScene;
 
     @Override
     public void start(Stage stage) throws IOException {
+        // the stage reference
+        // MUST BE BEFORE INITIALIZING THE CONTROLLERS
+        this.stage = stage;
         // login scene
         var loader = new FXMLLoader(getClass().getResource("fxml/login.fxml"));
         this.loginScene = new Scene(loader.load());
@@ -34,9 +42,19 @@ public class SceneManager extends Application {
         this.mainScene = new Scene(loader.load());
         this.mainController = loader.getController();
         // the stage
-        this.stage = stage;
+        this.stage.initStyle(StageStyle.TRANSPARENT);
+        this.stage.setTitle("Carpet Cleaning Service Management");
         this.stage.setScene(loginScene);
+        this.stage.centerOnScreen();
         this.stage.show();
+    }
+
+    /**
+     * @return the primary stage of the application
+     */
+    @NotNull
+    public Stage getStage() {
+        return stage;
     }
 
     /**
@@ -48,6 +66,7 @@ public class SceneManager extends Application {
             return;
         }
         stage.setScene(loginScene);
+        stage.centerOnScreen();
         mainController.clear();
         loggedIn = false;
     }
@@ -61,6 +80,7 @@ public class SceneManager extends Application {
             return;
         }
         stage.setScene(mainScene);
+        stage.centerOnScreen();
         loginController.clear();
         loggedIn = true;
     }
@@ -71,4 +91,6 @@ public class SceneManager extends Application {
     public boolean isLoggedIn() {
         return loggedIn;
     }
+
+
 }
