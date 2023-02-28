@@ -4,24 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="navigator test fixed">
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/CustomersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/OrdersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/customers.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/orders.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/features/Utility.java" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="panels navigation added">
+      <change afterPath="$PROJECT_DIR$/src/test/java/features/AddCustomerSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/AddCustomer.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/72b255f7-4443-449b-a52b-599d4edebd59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/72b255f7-4443-449b-a52b-599d4edebd59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sql/CREATE.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sql/CREATE.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/QueryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/QueryManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/MainSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/NavigationSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Main.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Navigation.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/CustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/CustomersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/QueryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/SQLManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/customers.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +116,9 @@
       "mongo",
       "mysql"
     ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "MySQL"
+    ],
     "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
       "MySQL"
     ]
@@ -150,7 +146,7 @@
       <recent name="stu.najah" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FeaturesTest (1)">
+  <component name="RunManager" selected="Application.Navigator">
     <configuration name="Navigator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.Navigator" />
       <module name="CarpetCleaningServiceManagement" />
@@ -225,8 +221,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FeaturesTest (1)" />
         <item itemvalue="Application.Navigator" />
+        <item itemvalue="JUnit.FeaturesTest (1)" />
         <item itemvalue="JUnit.NavigatorTest" />
         <item itemvalue="JUnit.NavigatorTest.getConnection" />
         <item itemvalue="Application.SceneManager" />
@@ -267,7 +263,8 @@
       <workItem from="1677243440841" duration="8249000" />
       <workItem from="1677322280940" duration="9907000" />
       <workItem from="1677345810750" duration="1294000" />
-      <workItem from="1677501782401" duration="6908000" />
+      <workItem from="1677501782401" duration="7683000" />
+      <workItem from="1677578633431" duration="2047000" />
     </task>
     <task id="LOCAL-00001" summary="initial test for the project with no functionalities">
       <created>1675438707335</created>
@@ -430,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677327891010</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="panels navigation added">
+      <created>1677509145210</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1677509145210</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +480,8 @@
     <MESSAGE value="database added" />
     <MESSAGE value="tests added" />
     <MESSAGE value="navigator test fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="navigator test fixed" />
+    <MESSAGE value="panels navigation added" />
+    <option name="LAST_COMMIT_MESSAGE" value="panels navigation added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CarpetCleaningServiceManagement$Navigator.ic" NAME="Navigator Coverage Results" MODIFIED="1675536773415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

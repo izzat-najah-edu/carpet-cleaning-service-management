@@ -6,7 +6,7 @@ import javafx.scene.control.Tab;
 public class CustomersController {
 
     @FXML
-    private Tab tab1;
+    private Tab tabAddCustomer;
 
     @FXML
     private Tab tab2;

@@ -943,95 +943,51 @@ carpet_cleaning_service_management|schema||ccsm||UPDATE|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="294" parent="288" name="product">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </table>
-    <column id="295" parent="292" name="username">
+    <column id="294" parent="292" name="username">
       <DasType>varchar(256)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="296" parent="292" name="password">
+    <column id="295" parent="292" name="password">
       <DasType>varchar(256)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <index id="297" parent="292" name="PRIMARY">
+    <index id="296" parent="292" name="PRIMARY">
       <ColNames>username</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="298" parent="292" name="PRIMARY">
+    <key id="297" parent="292" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="299" parent="293" name="id">
+    <column id="298" parent="293" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="300" parent="293" name="name">
+    <column id="299" parent="293" name="name">
       <DasType>varchar(256)|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="301" parent="293" name="phone">
+    <column id="300" parent="293" name="phone">
       <DasType>char(10)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="302" parent="293" name="address">
+    <column id="301" parent="293" name="address">
       <DasType>varchar(256)|0s</DasType>
       <Position>4</Position>
     </column>
-    <index id="303" parent="293" name="PRIMARY">
+    <index id="302" parent="293" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="304" parent="293" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="305" parent="294" name="number">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="306" parent="294" name="customer_id">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="307" parent="294" name="description">
-      <DasType>varchar(256)|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <column id="308" parent="294" name="picture">
-      <DasType>varchar(256)|0s</DasType>
-      <Position>4</Position>
-    </column>
-    <column id="309" parent="294" name="special_treatment">
-      <DasType>varchar(256)|0s</DasType>
-      <Position>5</Position>
-    </column>
-    <foreign-key id="310" parent="294" name="product_ibfk_1">
-      <ColNames>customer_id</ColNames>
-      <RefColNames>id</RefColNames>
-      <RefTableName>customer</RefTableName>
-    </foreign-key>
-    <index id="311" parent="294" name="PRIMARY">
-      <ColNames>number
-customer_id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="312" parent="294" name="customer_id">
-      <ColNames>customer_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="313" parent="294" name="PRIMARY">
+    <key id="303" parent="293" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

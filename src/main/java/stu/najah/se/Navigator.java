@@ -4,7 +4,7 @@ import javafx.application.Platform;
 import javafx.stage.Stage;
 import org.jetbrains.annotations.NotNull;
 import stu.najah.se.gui.SceneManager;
-import stu.najah.se.sql.QueryManager;
+import stu.najah.se.sql.SQLManager;
 import stu.najah.se.sql.entity.Admin;
 
 import java.io.IOException;
@@ -23,7 +23,7 @@ public class Navigator {
 
     private static Connection connection;
     private static SceneManager sceneManager;
-    private static QueryManager queryManager;
+    private static SQLManager SQLManager;
     private static Admin currentAdmin;
 
     public static void main(String[] args) {
@@ -34,7 +34,7 @@ public class Navigator {
                     "ccsm", "ccsm1234"
             );
             connection.setAutoCommit(false);
-            queryManager = new QueryManager(connection);
+            SQLManager = new SQLManager(connection);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -79,8 +79,8 @@ public class Navigator {
      * @return the query manager of the application
      */
     @NotNull
-    public static QueryManager getQueryManager() {
-        return queryManager;
+    public static SQLManager getQueryManager() {
+        return SQLManager;
     }
 
     /**
@@ -108,7 +108,7 @@ public class Navigator {
      */
     public static void login(String username, String password) {
         var admin = new Admin(username, password);
-        if (queryManager.checkExists(admin)) {
+        if (SQLManager.checkExists(admin)) {
             Navigator.currentAdmin = admin;
             sceneManager.setMainScene();
         }

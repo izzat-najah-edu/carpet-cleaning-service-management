@@ -9,7 +9,7 @@
    <children>
       <TabPane prefHeight="750.0" prefWidth="1000.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab fx:id="tab1" text="Tab1">
+          <Tab fx:id="tabAddCustomer" text="Add">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="203.0" prefWidth="247.0">
                      <children>

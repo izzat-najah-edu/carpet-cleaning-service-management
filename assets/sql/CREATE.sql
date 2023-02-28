@@ -12,8 +12,8 @@ create table admin
 
 create table customer
 (
-    id      int primary key,
-    name    varchar(256),
+    id      int auto_increment primary key,
+    name    varchar(256) not null,
     phone   char(10),
     address varchar(256)
 );

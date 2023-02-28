@@ -8,24 +8,31 @@ import java.sql.SQLException;
 
 /**
  * A database-connection wrapper class.
- * with different methods to perform SQL query on the database.
+ * with different methods to perform SQL operations on the database.
  */
-public class QueryManager {
+public class SQLManager {
 
     private final PreparedStatement selectExistsAdmin;
 
+    private final PreparedStatement insertCustomer;
+
     /**
      * Creates an object and initializes all prepared statements with the connection
+     *
      * @param connection to be used in construction of prepared statements
      */
-    public QueryManager(Connection connection) throws SQLException {
+    public SQLManager(Connection connection) throws SQLException {
         selectExistsAdmin = connection.prepareStatement(
                 "select exists(select * from admin where username=? and password=?)"
+        );
+        insertCustomer = connection.prepareStatement(
+                "insert into customer (name, phone, address) values (?, ?, ?)"
         );
     }
 
     /**
      * Checks the given admin if it exists in the database or not.
+     *
      * @param admin to be checked
      * @return whether the admin exists or not
      */
