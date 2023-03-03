@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="database added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/AdminEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/CustomerEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/72b255f7-4443-449b-a52b-599d4edebd59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/72b255f7-4443-449b-a52b-599d4edebd59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_22_2023_2_56_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_22_2023_2_56_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/SQLManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/Admin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/Admin1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/main/NavigatorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/module-info.java" afterDir="false" />
-    </list>
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="hibernate implementation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -282,7 +265,7 @@
       <workItem from="1677706070617" duration="1376000" />
       <workItem from="1677770990404" duration="5212000" />
       <workItem from="1677781104441" duration="605000" />
-      <workItem from="1677840811582" duration="2367000" />
+      <workItem from="1677840811582" duration="2530000" />
     </task>
     <task id="LOCAL-00001" summary="initial test for the project with no functionalities">
       <created>1675438707335</created>
@@ -452,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677509145210</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="hibernate implementation">
+      <created>1677843313636</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1677843313636</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +489,8 @@
     <MESSAGE value="tests added" />
     <MESSAGE value="navigator test fixed" />
     <MESSAGE value="panels navigation added" />
-    <option name="LAST_COMMIT_MESSAGE" value="panels navigation added" />
+    <MESSAGE value="hibernate implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="hibernate implementation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
