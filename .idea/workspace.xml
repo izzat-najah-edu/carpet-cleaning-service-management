@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="hibernate implementation" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="panels navigation added">
+      <change afterPath="$PROJECT_DIR$/assets/sql/INSERT.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/dao/CustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/dao/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/CustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/CustomersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/customers.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +24,7 @@
         <option value="JavaFXApplication" />
         <option value="module-info" />
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -50,7 +58,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="aya" />
+        <entry key="$PROJECT_DIR$" value="izzat" />
       </map>
     </option>
     <option name="UPDATE_TYPE" value="REBASE" />
@@ -79,7 +87,6 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;72b255f7-4443-449b-a52b-599d4edebd59&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -94,9 +101,9 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.35287356&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -122,11 +129,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu\najah\se" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\test\resources\features\aya" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu\najah\edu\gui\fxml" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\java\stu\najah\se\sql" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="features" />
@@ -135,18 +142,14 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="stu.najah" />
     </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="stu.najah.se.sql.entity" />
-      <recent name="stu.najah.se" />
-    </key>
   </component>
-  <component name="RunManager" selected="Application.Navigator">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.Main" />
+  <component name="RunManager" selected="JUnit.FeaturesTest (1)">
+    <configuration name="Navigator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.Navigator" />
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.*" />
+          <option name="PATTERN" value="features.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -154,12 +157,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Navigator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.Navigator" />
+    <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.gui.SceneManager" />
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="features.*" />
+          <option name="PATTERN" value="stu.najah.se.gui.fxml.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -215,11 +218,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Navigator" />
         <item itemvalue="JUnit.FeaturesTest (1)" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Navigator" />
         <item itemvalue="JUnit.NavigatorTest" />
         <item itemvalue="JUnit.NavigatorTest.getConnection" />
+        <item itemvalue="Application.SceneManager" />
       </list>
     </recent_temporary>
   </component>
@@ -259,13 +262,7 @@
       <workItem from="1677345810750" duration="1294000" />
       <workItem from="1677501782401" duration="7683000" />
       <workItem from="1677578633431" duration="2047000" />
-      <workItem from="1677691809564" duration="2221000" />
-      <workItem from="1677694601292" duration="52000" />
-      <workItem from="1677697974270" duration="3153000" />
-      <workItem from="1677706070617" duration="1376000" />
-      <workItem from="1677770990404" duration="5212000" />
-      <workItem from="1677781104441" duration="605000" />
-      <workItem from="1677840811582" duration="2530000" />
+      <workItem from="1677860616101" duration="6666000" />
     </task>
     <task id="LOCAL-00001" summary="initial test for the project with no functionalities">
       <created>1675438707335</created>
@@ -435,14 +432,7 @@
       <option name="project" value="LOCAL" />
       <updated>1677509145210</updated>
     </task>
-    <task id="LOCAL-00025" summary="hibernate implementation">
-      <created>1677843313636</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1677843313636</updated>
-    </task>
-    <option name="localTasksCounter" value="26" />
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +449,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="izzat" />
+                        <option value="origin/izzat" />
                       </list>
                     </value>
                   </entry>
@@ -489,18 +479,7 @@
     <MESSAGE value="tests added" />
     <MESSAGE value="navigator test fixed" />
     <MESSAGE value="panels navigation added" />
-    <MESSAGE value="hibernate implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="hibernate implementation" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="jakarta.persistence.PersistenceException" package="jakarta.persistence" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="panels navigation added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CarpetCleaningServiceManagement$Navigator.ic" NAME="Navigator Coverage Results" MODIFIED="1675536773415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
