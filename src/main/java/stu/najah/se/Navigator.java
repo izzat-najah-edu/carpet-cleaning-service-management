@@ -2,53 +2,49 @@ package stu.najah.se;
 
 import javafx.application.Platform;
 import javafx.stage.Stage;
-import org.jetbrains.annotations.NotNull;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 import stu.najah.se.gui.SceneManager;
-import stu.najah.se.sql.SQLManager;
-import stu.najah.se.sql.entity.Admin;
+import stu.najah.se.sql.entity.AdminEntity;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 
 /**
  * This is the main class where the application starts,
- * it includes a static method to get the database connection.
+ * it includes a static method to generate database sessions.
  * it includes a static method to display prompt messages to the user.
  * it includes some static methods to control the application (e.g. logout, login, exit)
  * calling Navigator.main() will launch the application.
  */
 public class Navigator {
 
-    private static Connection connection;
+    /**
+     * The factory object that generates the sessions
+     */
+    private static SessionFactory sessionFactory;
+    /**
+     * The gui controller, to move between scenes
+     */
     private static SceneManager sceneManager;
-    private static SQLManager SQLManager;
-    private static Admin currentAdmin;
+    /**
+     * A detached object of the admin that is logged in the system
+     */
+    private static AdminEntity currentAdmin;
 
     public static void main(String[] args) {
-        // this establishes the connection with the database
+        // initialize the session factory
         try {
-            connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/carpet_cleaning_service_management",
-                    "ccsm", "ccsm1234"
-            );
-            connection.setAutoCommit(false);
-            SQLManager = new SQLManager(connection);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+            var configuration = new Configuration().configure(
+                    Navigator.class.getResource("hibernate.cfg.xml"));
+            sessionFactory = configuration.buildSessionFactory();
+        } catch (Throwable ex) {
+            throw new ExceptionInInitializerError(ex);
         }
-        // this closes the connection after the application is shutdown
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-        }));
-        // this launches the application without blocking the control flow
+        // close the session factory after the application is shutdown
+        Runtime.getRuntime().addShutdownHook(new Thread(sessionFactory::close));
+        // launch the application without blocking the control flow
         Platform.startup(() -> {
             try {
                 sceneManager = new SceneManager();
@@ -60,27 +56,27 @@ public class Navigator {
     }
 
     /**
-     * @return the database connection
+     * Always close the session after, and don't keep references to it.
+     * it's meant to be disregarded as soon as the transaction is finished
+     * @return a new session object
      */
-    @NotNull
-    public static Connection getConnection() {
-        return connection;
+    public static Session getSession() throws HibernateException {
+        return sessionFactory.openSession();
     }
 
     /**
      * @return the scene manager of the application
      */
-    @NotNull
     public static SceneManager getSceneManager() {
         return sceneManager;
     }
 
     /**
-     * @return the query manager of the application
+     * This entity is a detached object
+     * @return the current admin if logged in. otherwise null
      */
-    @NotNull
-    public static SQLManager getQueryManager() {
-        return SQLManager;
+    public static AdminEntity getCurrentAdmin() {
+        return currentAdmin;
     }
 
     /**
@@ -103,15 +99,19 @@ public class Navigator {
     /**
      * Tries to logs into the main screen from the login panel using the given user information.
      * If it fails nothing happens, check .isLoggedIn() to test the result
+     *
      * @param username will be checked in the database.
      * @param password will be checked in the database.
      */
     public static void login(String username, String password) {
-        var admin = new Admin(username, password);
-        if (SQLManager.checkExists(admin)) {
+        var session = getSession();
+        var admin = session.get(AdminEntity.class, username);
+        if(admin != null && admin.getPassword().equals(password)) {
+            // the username exists, and the given password is correct
             Navigator.currentAdmin = admin;
             sceneManager.setMainScene();
         }
+        session.close();
     }
 
     /**
