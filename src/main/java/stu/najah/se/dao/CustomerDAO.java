@@ -1,8 +1,6 @@
 package stu.najah.se.dao;
 
-import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
-import jakarta.persistence.criteria.Root;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import stu.najah.se.Navigator;
@@ -26,7 +24,7 @@ public class CustomerDAO
             if(transaction != null) {
                 transaction.rollback();
             }
-            // throw message...
+            Navigator.prompt(e.getMessage());
             return false;
         }
     }
@@ -44,7 +42,7 @@ public class CustomerDAO
             if(transaction != null) {
                 transaction.rollback();
             }
-            // throw message...
+            Navigator.prompt(e.getMessage());
             return false;
         }
     }
@@ -62,7 +60,7 @@ public class CustomerDAO
             if(transaction != null) {
                 transaction.rollback();
             }
-            // throw message...
+            Navigator.prompt(e.getMessage());
             return false;
         }
     }

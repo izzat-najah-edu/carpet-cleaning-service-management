@@ -2,7 +2,6 @@ package stu.najah.se.gui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -31,7 +30,7 @@ public class SceneManager extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         // the stage reference
-        // MUST BE BEFORE INITIALIZING THE CONTROLLERS
+        // MUST REFERENCE BEFORE INITIALIZING THE CONTROLLERS
         this.stage = stage;
         // login scene
         var loader = new FXMLLoader(getClass().getResource("fxml/login.fxml"));

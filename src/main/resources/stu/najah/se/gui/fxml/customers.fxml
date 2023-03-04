@@ -6,30 +6,46 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.gui.fxml.CustomersController">
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.gui.fxml.CustomersController">
    <children>
-      <TabPane prefHeight="750.0" prefWidth="1000.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+      <TabPane prefHeight="700.0" prefWidth="1000.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab fx:id="tabAddCustomer" text="Add">
+          <Tab fx:id="tabEditCustomer" text="Edit">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="203.0" prefWidth="247.0">
                      <children>
-                        <Label layoutX="516.0" layoutY="23.0" text="Customers">
+                        <Label layoutX="455.0" layoutY="17.0" text="Customers" underline="true">
                            <font>
-                              <Font size="20.0" />
+                              <Font size="30.0" />
                            </font></Label>
-                        <TableView fx:id="tableCustomers" layoutX="516.0" layoutY="67.0" prefHeight="653.0" prefWidth="426.0">
+                        <TableView fx:id="tableCustomers" layoutX="455.0" layoutY="67.0" prefHeight="605.0" prefWidth="487.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="Id" />
-                            <TableColumn prefWidth="75.0" text="Name" />
-                              <TableColumn prefWidth="75.0" text="Phone" />
-                              <TableColumn prefWidth="75.0" text="Address" />
+                            <TableColumn fx:id="tableCustomersColId" prefWidth="75.0" text="Id" />
+                            <TableColumn fx:id="tableCustomersColName" prefWidth="120.0" text="Name" />
+                              <TableColumn fx:id="tableCustomersColPhone" prefWidth="109.0" text="Phone" />
+                              <TableColumn fx:id="tableCustomersColAddress" prefWidth="182.0" text="Address" />
                           </columns>
                         </TableView>
-                        <Button layoutX="628.0" layoutY="26.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+                        <Button fx:id="buttonRefresh" layoutX="610.0" layoutY="27.0" mnemonicParsing="false" onAction="#refresh" prefHeight="22.0" prefWidth="56.0" text="Refresh" />
+                        <TextField fx:id="textFieldName" layoutX="123.0" layoutY="144.0" prefHeight="25.0" prefWidth="232.0" promptText="Select to Show" />
+                        <TextField fx:id="textFieldPhone" layoutX="123.0" layoutY="184.0" prefHeight="25.0" prefWidth="232.0" promptText="Select to Show" />
+                        <TextField fx:id="textFieldAddress" layoutX="123.0" layoutY="225.0" prefHeight="25.0" prefWidth="233.0" promptText="Select to Show" />
+                        <Label layoutX="61.0" layoutY="148.0" text="Name:" />
+                        <Label layoutX="61.0" layoutY="188.0" text="Phone:" />
+                        <Label layoutX="61.0" layoutY="229.0" text="Address:" />
+                        <Button fx:id="buttonCreateCustomer" layoutX="80.0" layoutY="281.0" mnemonicParsing="false" onAction="#createCustomer" prefHeight="36.0" prefWidth="259.0" text="Create New Customer" />
+                        <Button fx:id="buttonUpdateCustomer" layoutX="81.0" layoutY="325.0" mnemonicParsing="false" onAction="#updateCustomer" prefHeight="36.0" prefWidth="258.0" text="Update Selected Customer" />
+                        <Button fx:id="buttonDeleteCustomer" layoutX="80.0" layoutY="368.0" mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="35.0" prefWidth="259.0" text="Delete Selected Customer" />
+                        <Button fx:id="buttonClear" layoutX="123.0" layoutY="79.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="59.0" text="Clear" />
+                        <Label layoutX="53.0" layoutY="69.0" text="Edit" underline="true">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
                      </children></AnchorPane>
             </content>
           </Tab>

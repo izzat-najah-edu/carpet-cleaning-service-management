@@ -120,4 +120,9 @@ public class Navigator {
     public static boolean isLoggedIn() {
         return sceneManager.isLoggedIn();
     }
+
+    public static void prompt(String message) {
+        // todo graphically...
+        System.out.println(message);
+    }
 }

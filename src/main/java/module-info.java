@@ -17,4 +17,5 @@ module CarpetCleaningServiceManagement {
     exports stu.najah.se.gui;
     exports stu.najah.se.gui.fxml;
     exports stu.najah.se.sql.entity;
+    exports stu.najah.se.dao;
 }

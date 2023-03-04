@@ -5,18 +5,20 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.TextField;
+import stu.najah.se.Navigator;
 import stu.najah.se.dao.CustomerDAO;
+import stu.najah.se.gui.FXUtility;
 import stu.najah.se.sql.entity.CustomerEntity;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class CustomersController
-    implements Initializable {
+        implements Initializable {
 
     @FXML
-    private Tab tabAddCustomer;
+    private Tab tabEditCustomer;
 
     @FXML
     private Tab tab2;
@@ -24,23 +26,97 @@ public class CustomersController
     @FXML
     private TableView<CustomerEntity> tableCustomers;
 
+    @FXML
+    private TableColumn<CustomerEntity, Integer> tableCustomersColId;
+
+    @FXML
+    private TableColumn<CustomerEntity, String> tableCustomersColName;
+
+    @FXML
+    private TableColumn<CustomerEntity, String> tableCustomersColPhone;
+
+    @FXML
+    private TableColumn<CustomerEntity, String> tableCustomersColAddress;
+
+    @FXML
+    private TextField textFieldName;
+
+    @FXML
+    private TextField textFieldPhone;
+
+    @FXML
+    private TextField textFieldAddress;
+
     private final CustomerDAO customerDAO = new CustomerDAO();
+    private CustomerEntity selectedCustomer = null;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        TableColumn<?, ?> column = tableCustomers.getColumns().get(0);
-        column.setCellValueFactory(new PropertyValueFactory<>("id"));
-        column = tableCustomers.getColumns().get(1);
-        column.setCellValueFactory(new PropertyValueFactory<>("name"));
-        column = tableCustomers.getColumns().get(2);
-        column.setCellValueFactory(new PropertyValueFactory<>("phone"));
-        column = tableCustomers.getColumns().get(3);
-        column.setCellValueFactory(new PropertyValueFactory<>("address"));
+        FXUtility.setUpTable(tableCustomers);
+        tableCustomers.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> {
+                    selectedCustomer = newValue;
+                    fill();
+                });
         refresh();
     }
 
     @FXML
-    public void refresh() {
+    void refresh() {
         tableCustomers.setItems(customerDAO.getAll());
+        tableCustomers.getSelectionModel().clearSelection();
+        // implicitly calls clear()
+    }
+
+    @FXML
+    void clear() {
+        selectedCustomer = null;
+        textFieldName.clear();
+        textFieldPhone.clear();
+        textFieldAddress.clear();
+    }
+
+    private void fill() {
+        if (selectedCustomer != null) {
+            textFieldName.setText(selectedCustomer.getName());
+            textFieldPhone.setText(selectedCustomer.getPhone());
+            textFieldAddress.setText(selectedCustomer.getAddress());
+        } else {
+            clear();
+        }
+    }
+
+    @FXML
+    void createCustomer() {
+        var customer = new CustomerEntity();
+        customer.setName(textFieldName.getText());
+        customer.setPhone(textFieldPhone.getText());
+        customer.setAddress(textFieldAddress.getText());
+        customerDAO.insert(customer);
+        refresh();
+    }
+
+    @FXML
+    void deleteCustomer() {
+        if(selectedCustomer == null) {
+            Navigator.prompt("No customer selected!");
+            return;
+        }
+        customerDAO.delete(selectedCustomer);
+        refresh();
+    }
+
+    @FXML
+    void updateCustomer() {
+        if(selectedCustomer == null) {
+            Navigator.prompt("No customer selected!");
+            return;
+        }
+        // edit the selected customer then update it using the DAO
+        selectedCustomer.setName(textFieldName.getText());
+        selectedCustomer.setPhone(textFieldPhone.getText());
+        selectedCustomer.setAddress(textFieldAddress.getText());
+        customerDAO.update(selectedCustomer);
+        refresh();
     }
 }

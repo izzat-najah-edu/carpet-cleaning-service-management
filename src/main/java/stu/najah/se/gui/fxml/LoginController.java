@@ -27,17 +27,8 @@ public class LoginController {
         );
         // if it fails
         if (!Navigator.isLoggedIn()) {
-            // todo: prompt fail...
-            System.out.println("login failed");
+            Navigator.prompt("Username or password incorrect!");
         }
-    }
-
-    public TextField getTextFieldUsername() {
-        return textFieldUsername;
-    }
-
-    public PasswordField getTextFieldPassword() {
-        return textFieldPassword;
     }
 
     public void clear() {
