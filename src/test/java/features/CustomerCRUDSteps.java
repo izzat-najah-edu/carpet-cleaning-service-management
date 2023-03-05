@@ -10,7 +10,7 @@ import stu.najah.se.sql.entity.CustomerEntity;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class EditCustomerSteps extends FxRobot {
+public class CustomerCRUDSteps extends FxRobot {
 
     private final TableView<CustomerEntity> tableCustomers
              = lookup("#tableCustomers").queryTableView();

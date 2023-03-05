@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="customers table added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/FXUtility.java" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="customer crud operations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/dao/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/dao/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/CustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/CustomersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/customers.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/AddCustomerSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/EditCustomerSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/AddCustomer.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/EditCustomer.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,7 +261,8 @@
       <workItem from="1677872811047" duration="1814000" />
       <workItem from="1677924543002" duration="3877000" />
       <workItem from="1677929939328" duration="6957000" />
-      <workItem from="1677951995005" duration="4622000" />
+      <workItem from="1677951995005" duration="4844000" />
+      <workItem from="1678029566186" duration="568000" />
     </task>
     <task id="LOCAL-00001" summary="initial test for the project with no functionalities">
       <created>1675438707335</created>
@@ -448,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677870244976</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="customer crud operations">
+      <created>1677966783189</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1677966783189</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,7 +494,8 @@
     <MESSAGE value="navigator test fixed" />
     <MESSAGE value="panels navigation added" />
     <MESSAGE value="customers table added" />
-    <option name="LAST_COMMIT_MESSAGE" value="customers table added" />
+    <MESSAGE value="customer crud operations" />
+    <option name="LAST_COMMIT_MESSAGE" value="customer crud operations" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CarpetCleaningServiceManagement$Navigator.ic" NAME="Navigator Coverage Results" MODIFIED="1675536773415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

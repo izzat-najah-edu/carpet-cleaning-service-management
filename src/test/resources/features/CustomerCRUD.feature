@@ -1,4 +1,4 @@
-Feature: Edit Customer
+Feature: Customer CRUD Operations
   the list of customers of the system should is continuously changing, so there should be
   the option to perform CRUD operations on the customers list.
 
