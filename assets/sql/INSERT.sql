@@ -24,3 +24,33 @@ INSERT INTO customer (name, phone, address) VALUES ('Daniel Wilson', '8901234567
 INSERT INTO customer (name, phone, address) VALUES ('Charlotte Wright', '9012345678', '753 Spruce St, Anytown, USA');
 INSERT INTO customer (name, phone, address) VALUES ('Ethan Young', '0123456789', '864 Pine St, Anytown, USA');
 INSERT INTO customer (name, phone, address) VALUES ('Elizabeth Adams', '2345678901', '246 Maple St, Anytown, USA');
+
+-- products:
+INSERT INTO product (customer_id, description) VALUES (7, 'Living Room Carpet Cleaning');
+INSERT INTO product (customer_id, description) VALUES (8, 'Bedroom Carpet Cleaning');
+INSERT INTO product (customer_id, description) VALUES (9, 'Stairway Carpet Cleaning');
+INSERT INTO product (customer_id, description) VALUES (10, 'Area Rug Cleaning');
+INSERT INTO product (customer_id, description) VALUES (11, 'Upholstery Cleaning');
+INSERT INTO product (customer_id, description) VALUES (12, 'Tile & Grout Cleaning');
+INSERT INTO product (customer_id, description) VALUES (13, 'Mattress Cleaning');
+INSERT INTO product (customer_id, description) VALUES (14, 'Carpet Deodorizing');
+INSERT INTO product (customer_id, description) VALUES (15, 'Carpet Protection');
+INSERT INTO product (customer_id, description) VALUES (16, 'Carpet Stain Removal');
+INSERT INTO product (customer_id, description) VALUES (17, 'Carpet Steam Cleaning');
+INSERT INTO product (customer_id, description) VALUES (18, 'Pet Urine Removal Treatment');
+INSERT INTO product (customer_id, description) VALUES (19, 'Commercial Carpet Cleaning');
+INSERT INTO product (customer_id, description) VALUES (20, 'Odor Elimination');
+INSERT INTO product (customer_id, description) VALUES (21, 'Carpet Shampooing');
+INSERT INTO product (customer_id, description) VALUES (22, 'Carpet Stretching');
+INSERT INTO product (customer_id, description) VALUES (23, 'Water Extraction');
+INSERT INTO product (customer_id, description) VALUES (24, 'Carpet Repair');
+INSERT INTO product (customer_id, description) VALUES (7, 'Basement Carpet Cleaning');
+INSERT INTO product (customer_id, description) VALUES (8, 'Rug Cleaning');
+INSERT INTO product (customer_id, description, special_treatment) VALUES (10, 'Carpet cleaning (2 rooms)', 'Deep clean stains');
+INSERT INTO product (customer_id, description, special_treatment) VALUES (9, 'Upholstery cleaning (sofa)', 'Remove pet hair');
+INSERT INTO product (customer_id, description, special_treatment) VALUES (12, 'Carpet cleaning (3 rooms)', 'Deodorize');
+INSERT INTO product (customer_id, description, special_treatment) VALUES (11, 'Area rug cleaning', 'Treat tough stains');
+INSERT INTO product (customer_id, description, special_treatment) VALUES (8, 'Tile and grout cleaning', 'Seal grout');
+INSERT INTO product (customer_id, description, special_treatment) VALUES (16, 'Carpet cleaning (1 room)', 'Remove high traffic dirt');
+INSERT INTO product (customer_id, description, special_treatment) VALUES (14, 'Carpet and upholstery cleaning', 'Sanitize');
+INSERT INTO product (customer_id, description, special_treatment) VALUES (19, 'Stain removal', 'Remove red wine stains');
