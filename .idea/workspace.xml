@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="customer name unique constraint">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/72b255f7-4443-449b-a52b-599d4edebd59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/72b255f7-4443-449b-a52b-599d4edebd59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/diagrams/RelationalMapping.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/assets/diagrams/RelationalMapping.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/diagrams/UML.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/assets/diagrams/UML.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sql/CREATE.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sql/CREATE.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sql/INSERT.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sql/INSERT.sql" afterDir="false" />
-    </list>
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="product table added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -267,7 +260,7 @@
       <workItem from="1677924543002" duration="3877000" />
       <workItem from="1677929939328" duration="6957000" />
       <workItem from="1677951995005" duration="4844000" />
-      <workItem from="1678029566186" duration="5061000" />
+      <workItem from="1678029566186" duration="5492000" />
     </task>
     <task id="LOCAL-00001" summary="initial test for the project with no functionalities">
       <created>1675438707335</created>
@@ -472,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678034583463</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="product table added">
+      <created>1678049350116</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1678049350116</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +523,8 @@
     <MESSAGE value="customer crud operations" />
     <MESSAGE value="documentation" />
     <MESSAGE value="customer name unique constraint" />
-    <option name="LAST_COMMIT_MESSAGE" value="customer name unique constraint" />
+    <MESSAGE value="product table added" />
+    <option name="LAST_COMMIT_MESSAGE" value="product table added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CarpetCleaningServiceManagement$Navigator.ic" NAME="Navigator Coverage Results" MODIFIED="1675536773415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

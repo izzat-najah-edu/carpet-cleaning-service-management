@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.gui.fxml.CustomersController">
    <children>
-      <TabPane prefHeight="700.0" prefWidth="1000.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+      <TabPane prefHeight="700.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab fx:id="tabEditCustomer" text="Edit">
             <content>
@@ -22,7 +22,7 @@
                            <font>
                               <Font size="30.0" />
                            </font></Label>
-                        <TableView fx:id="tableCustomers" layoutX="455.0" layoutY="67.0" prefHeight="605.0" prefWidth="487.0">
+                        <TableView fx:id="tableCustomers" layoutX="455.0" layoutY="67.0" prefHeight="585.0" prefWidth="487.0">
                           <columns>
                             <TableColumn fx:id="tableCustomersColId" prefWidth="75.0" text="Id" />
                             <TableColumn fx:id="tableCustomersColName" prefWidth="120.0" text="Name" />
@@ -49,7 +49,7 @@
                      </children></AnchorPane>
             </content>
           </Tab>
-          <Tab fx:id="tab2" text="Tab2">
+          <Tab fx:id="tab2" text="Products">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>
