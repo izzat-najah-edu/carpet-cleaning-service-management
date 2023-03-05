@@ -2,10 +2,7 @@ package stu.najah.se.gui.fxml;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import stu.najah.se.Navigator;
 import stu.najah.se.dao.CustomerDAO;
 import stu.najah.se.gui.FXUtility;
@@ -18,34 +15,37 @@ public class CustomersController
         implements Initializable {
 
     @FXML
+    private ListView<CustomerEntity> listCustomers2;
+
+    @FXML
     private Tab tabEditCustomer;
 
     @FXML
-    private Tab tab2;
+    private Tab tabProducts;
 
     @FXML
     private TableView<CustomerEntity> tableCustomers;
 
     @FXML
-    private TableColumn<CustomerEntity, Integer> tableCustomersColId;
+    private TableView<?> tableProducts2;
 
     @FXML
-    private TableColumn<CustomerEntity, String> tableCustomersColName;
+    private TextField textFieldAddress;
 
     @FXML
-    private TableColumn<CustomerEntity, String> tableCustomersColPhone;
-
-    @FXML
-    private TableColumn<CustomerEntity, String> tableCustomersColAddress;
+    private TextField textFieldDescription2;
 
     @FXML
     private TextField textFieldName;
 
     @FXML
+    private TextField textFieldName2;
+
+    @FXML
     private TextField textFieldPhone;
 
     @FXML
-    private TextField textFieldAddress;
+    private TextField textFieldSpecialTreatment2;
 
     private final CustomerDAO customerDAO = new CustomerDAO();
     private CustomerEntity selectedCustomer = null;
@@ -69,6 +69,11 @@ public class CustomersController
     }
 
     @FXML
+    void refresh2() {
+
+    }
+
+    @FXML
     void clear() {
         selectedCustomer = null;
         textFieldName.clear();
@@ -84,6 +89,11 @@ public class CustomersController
         } else {
             clear();
         }
+    }
+
+    @FXML
+    void clear2() {
+
     }
 
     @FXML
@@ -118,5 +128,25 @@ public class CustomersController
         selectedCustomer.setAddress(textFieldAddress.getText());
         customerDAO.update(selectedCustomer);
         refresh();
+    }
+
+    @FXML
+    void searchCustomer() {
+
+    }
+
+    @FXML
+    void createProduct() {
+
+    }
+
+    @FXML
+    void updateProduct() {
+
+    }
+
+    @FXML
+    void deleteProduct() {
+
     }
 }
