@@ -13,7 +13,7 @@ create table admin
 create table customer
 (
     id      int auto_increment primary key,
-    name    varchar(256) not null,
+    name    varchar(256) unique not null,
     phone   char(10),
     address varchar(256)
 );

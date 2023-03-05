@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="customer crud operations">
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="documentation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +138,7 @@
       <recent name="stu.najah" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FeaturesTest (1)">
+  <component name="RunManager" selected="Application.Navigator">
     <configuration name="Navigator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.Navigator" />
       <module name="CarpetCleaningServiceManagement" />
@@ -213,8 +213,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FeaturesTest (1)" />
         <item itemvalue="Application.Navigator" />
+        <item itemvalue="JUnit.FeaturesTest (1)" />
         <item itemvalue="JUnit.NavigatorTest" />
         <item itemvalue="JUnit.NavigatorTest.getConnection" />
         <item itemvalue="Application.SceneManager" />
@@ -262,7 +262,7 @@
       <workItem from="1677924543002" duration="3877000" />
       <workItem from="1677929939328" duration="6957000" />
       <workItem from="1677951995005" duration="4844000" />
-      <workItem from="1678029566186" duration="568000" />
+      <workItem from="1678029566186" duration="1489000" />
     </task>
     <task id="LOCAL-00001" summary="initial test for the project with no functionalities">
       <created>1675438707335</created>
@@ -446,7 +446,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677966783189</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="customer crud operations">
+      <created>1678030272646</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1678030272646</updated>
+    </task>
+    <task id="LOCAL-00028" summary="documentation">
+      <created>1678030410522</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1678030410522</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +509,8 @@
     <MESSAGE value="panels navigation added" />
     <MESSAGE value="customers table added" />
     <MESSAGE value="customer crud operations" />
-    <option name="LAST_COMMIT_MESSAGE" value="customer crud operations" />
+    <MESSAGE value="documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="documentation" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CarpetCleaningServiceManagement$Navigator.ic" NAME="Navigator Coverage Results" MODIFIED="1675536773415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
