@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="product table added" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="small design change">
+      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/FastLogin.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,13 +138,13 @@
       <recent name="stu.najah" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Navigator">
-    <configuration name="Navigator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.Navigator" />
+  <component name="RunManager" selected="Application.FastLogin">
+    <configuration name="FastLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.FastLogin" />
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="features.*" />
+          <option name="PATTERN" value="stu.najah.se.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -150,12 +152,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.gui.SceneManager" />
+    <configuration name="Navigator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.Navigator" />
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.gui.fxml.*" />
+          <option name="PATTERN" value="features.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -211,11 +213,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FastLogin" />
         <item itemvalue="Application.Navigator" />
         <item itemvalue="JUnit.FeaturesTest (1)" />
         <item itemvalue="JUnit.NavigatorTest" />
         <item itemvalue="JUnit.NavigatorTest.getConnection" />
-        <item itemvalue="Application.SceneManager" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +262,7 @@
       <workItem from="1677924543002" duration="3877000" />
       <workItem from="1677929939328" duration="6957000" />
       <workItem from="1677951995005" duration="4844000" />
-      <workItem from="1678029566186" duration="5492000" />
+      <workItem from="1678029566186" duration="5838000" />
     </task>
     <task id="LOCAL-00001" summary="initial test for the project with no functionalities">
       <created>1675438707335</created>
@@ -472,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678049350116</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="small design change">
+      <created>1678049734320</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1678049734320</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +533,8 @@
     <MESSAGE value="documentation" />
     <MESSAGE value="customer name unique constraint" />
     <MESSAGE value="product table added" />
-    <option name="LAST_COMMIT_MESSAGE" value="product table added" />
+    <MESSAGE value="small design change" />
+    <option name="LAST_COMMIT_MESSAGE" value="small design change" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CarpetCleaningServiceManagement$Navigator.ic" NAME="Navigator Coverage Results" MODIFIED="1675536773415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
