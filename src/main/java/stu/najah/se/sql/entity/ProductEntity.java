@@ -8,11 +8,10 @@ import java.util.Objects;
 @Table(name = "product", schema = "carpet_cleaning_service_management")
 @IdClass(ProductEntityPK.class)
 public class ProductEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     @Column(name = "number", nullable = false)
     private int number;
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "customer_id", nullable = false)
     private int customerId;

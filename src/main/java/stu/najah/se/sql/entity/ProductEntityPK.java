@@ -10,11 +10,10 @@ import java.io.Serializable;
 public class ProductEntityPK implements Serializable {
     @Column(name = "number", nullable = false)
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int number;
     @Column(name = "customer_id", nullable = false)
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int customerId;
 
     public int getNumber() {
