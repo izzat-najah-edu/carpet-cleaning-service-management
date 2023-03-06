@@ -108,7 +108,7 @@ public class Navigator {
      * @param password will be checked in the database.
      */
     public static void login(String username, String password) {
-        var admin = adminDAO.find(username);
+        var admin = adminDAO.get(username);
         if (admin != null && admin.getPassword().equals(password)) {
             // the username exists, and the given password is correct
             Navigator.currentAdmin = admin;

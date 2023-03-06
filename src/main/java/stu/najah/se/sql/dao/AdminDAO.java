@@ -11,7 +11,7 @@ public class AdminDAO
      * @return the AdminEntity with the given username
      * or null if it's not found
      */
-    public AdminEntity find(String username) {
+    public AdminEntity get(String username) {
         return Navigator.getSession().find(AdminEntity.class, username);
     }
 }
