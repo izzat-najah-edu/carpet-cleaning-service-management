@@ -36,10 +36,14 @@ public class SceneManager extends Application {
         var loader = new FXMLLoader(getClass().getResource("fxml/login.fxml"));
         this.loginScene = new Scene(loader.load());
         this.loginController = loader.getController();
+        this.loginScene.getStylesheets().add(
+                String.valueOf(getClass().getResource("style/main.css")));
         // main scene
         loader = new FXMLLoader(getClass().getResource("fxml/main.fxml"));
         this.mainScene = new Scene(loader.load());
         this.mainController = loader.getController();
+        this.mainScene.getStylesheets().add(
+                String.valueOf(getClass().getResource("style/main.css")));
         // the stage
         this.stage.initStyle(StageStyle.TRANSPARENT);
         this.stage.setTitle("Carpet Cleaning Service Management");
