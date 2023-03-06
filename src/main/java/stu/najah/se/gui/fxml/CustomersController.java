@@ -146,6 +146,7 @@ public class CustomersController
 
     @FXML
     void t2refreshList() {
+        t2textFieldName.clear();
         t2listCustomers.setItems(customerDAO.getAll());
         t2listCustomers.getSelectionModel().clearSelection();
     }
@@ -212,7 +213,7 @@ public class CustomersController
 
     @FXML
     void t2searchCustomer() {
-
+        t2listCustomers.setItems(customerDAO.getAll(t2textFieldName.getText()));
     }
 
     @FXML
