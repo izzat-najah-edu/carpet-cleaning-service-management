@@ -4,7 +4,7 @@ import stu.najah.se.Navigator;
 
 /**
  * Data Access Object: a layer that separates
- * the sql operations (Hibernate) and any other service using it, like JavaFX
+ * the sql operations (Hibernate) from any other service using it, like JavaFX
  *
  * @param <T> an entity class (Admin, Customer...)
  */
@@ -12,7 +12,7 @@ public interface DAO<T> {
     default boolean update(T data) {
         var session = Navigator.getSession();
         var transaction = session.getTransaction();
-        try {
+        try (session) {
             transaction.begin();
             session.merge(data);
             transaction.commit();
@@ -23,15 +23,13 @@ public interface DAO<T> {
             }
             Navigator.prompt(e.getMessage());
             return false;
-        } finally {
-            session.close();
         }
     }
 
     default boolean insert(T data) {
         var session = Navigator.getSession();
         var transaction = session.getTransaction();
-        try {
+        try (session) {
             transaction.begin();
             session.persist(data);
             transaction.commit();
@@ -42,15 +40,13 @@ public interface DAO<T> {
             }
             Navigator.prompt(e.getMessage());
             return false;
-        } finally {
-            session.close();
         }
     }
 
     default boolean delete(T data) {
         var session = Navigator.getSession();
         var transaction = session.getTransaction();
-        try {
+        try (session) {
             transaction.begin();
             session.remove(data);
             transaction.commit();
@@ -61,8 +57,6 @@ public interface DAO<T> {
             }
             Navigator.prompt(e.getMessage());
             return false;
-        } finally {
-            session.close();
         }
     }
 }
