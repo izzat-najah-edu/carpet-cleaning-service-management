@@ -22,10 +22,10 @@ public class CustomersController
     private ListView<CustomerEntity> t2listCustomers;
 
     @FXML
-    private Tab t1;
+    private Tab tabAll;
 
     @FXML
-    private Tab t2;
+    private Tab tabProducts;
 
     @FXML
     private TableView<CustomerEntity> t1tableCustomers;

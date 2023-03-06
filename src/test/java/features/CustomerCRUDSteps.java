@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class CustomerCRUDSteps extends FxRobot {
 
     private final TableView<CustomerEntity> tableCustomers
-             = lookup("#tableCustomers").queryTableView();
+             = lookup("#t1tableCustomers").queryTableView();
 
     @And("customers panel is opened")
     public void customersPanelIsOpened() {
@@ -22,16 +22,16 @@ public class CustomerCRUDSteps extends FxRobot {
 
     @And("edit customer tab is opened")
     public void addCustomerTabIsOpened() {
-        clickOn("#tabEditCustomer");
+        clickOn("#tabAll");
     }
 
     @Given("I enter a customer name, phone, address")
     public void iEnterACustomerNamePhoneAddress() {
-        clickOn("#textFieldName");
+        clickOn("#t1textFieldName");
         write("some name");
-        clickOn("#textFieldPhone");
+        clickOn("#t1textFieldPhone");
         write("0123456789");
-        clickOn("#textFieldAddress");
+        clickOn("#t1textFieldAddress");
         write("some address");
     }
 
@@ -42,7 +42,7 @@ public class CustomerCRUDSteps extends FxRobot {
 
     @And("I click add customer button")
     public void iClickAddCustomerButton() {
-        clickOn("#buttonCreateCustomer");
+        clickOn("#t1buttonCreateCustomer");
     }
 
     @Then("a new customer is added to the list")
@@ -69,14 +69,14 @@ public class CustomerCRUDSteps extends FxRobot {
 
     @And("I enter a different customer information")
     public void iEnterADifferentCustomerInformation() {
-        clickOn("#textFieldAddress");
+        clickOn("#t1textFieldAddress");
         eraseText("some address".length());
         write("different address");
     }
 
     @And("I click update customer button")
     public void iClickUpdateCustomerButton() {
-        clickOn("#buttonUpdateCustomer");
+        clickOn("#t1buttonUpdateCustomer");
     }
 
     @Then("the selected customer is updated")
@@ -92,7 +92,7 @@ public class CustomerCRUDSteps extends FxRobot {
 
     @And("I click delete customer button")
     public void iClickDeleteCustomerButton() {
-        clickOn("#buttonDeleteCustomer");
+        clickOn("#t1buttonDeleteCustomer");
     }
 
     @Then("the selected customer is deleted")

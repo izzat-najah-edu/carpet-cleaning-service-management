@@ -16,7 +16,7 @@
     <children>
         <TabPane prefHeight="700.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
             <tabs>
-                <Tab fx:id="t1" text="Edit">
+                <Tab fx:id="tabAll" text="All">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="203.0" prefWidth="247.0">
                             <children>
@@ -34,7 +34,7 @@
                                         <TableColumn prefWidth="180.0" text="Address"/>
                                     </columns>
                                 </TableView>
-                                <Button fx:id="buttonRefresh" layoutX="610.0" layoutY="27.0" mnemonicParsing="false"
+                                <Button fx:id="t1buttonRefresh" layoutX="610.0" layoutY="27.0" mnemonicParsing="false"
                                         onAction="#t1refreshTable" prefHeight="22.0" prefWidth="56.0" text="Refresh"/>
                                 <TextField fx:id="t1textFieldName" layoutX="123.0" layoutY="144.0" prefHeight="25.0"
                                            prefWidth="232.0" promptText="Select to Show"/>
@@ -45,16 +45,16 @@
                                 <Label layoutX="61.0" layoutY="148.0" text="Name:"/>
                                 <Label layoutX="61.0" layoutY="188.0" text="Phone:"/>
                                 <Label layoutX="61.0" layoutY="229.0" text="Address:"/>
-                                <Button fx:id="buttonCreateCustomer" layoutX="80.0" layoutY="281.0"
+                                <Button fx:id="t1buttonCreateCustomer" layoutX="80.0" layoutY="281.0"
                                         mnemonicParsing="false" onAction="#t1createCustomer" prefHeight="36.0"
                                         prefWidth="259.0" text="Create New Customer"/>
-                                <Button fx:id="buttonUpdateCustomer" layoutX="81.0" layoutY="325.0"
+                                <Button fx:id="t1buttonUpdateCustomer" layoutX="81.0" layoutY="325.0"
                                         mnemonicParsing="false" onAction="#t1updateCustomer" prefHeight="36.0"
                                         prefWidth="258.0" text="Update Selected Customer"/>
-                                <Button fx:id="buttonDeleteCustomer" layoutX="80.0" layoutY="368.0"
+                                <Button fx:id="t1buttonDeleteCustomer" layoutX="80.0" layoutY="368.0"
                                         mnemonicParsing="false" onAction="#t1deleteCustomer" prefHeight="35.0"
                                         prefWidth="259.0" text="Delete Selected Customer"/>
-                                <Button fx:id="buttonClear" layoutX="123.0" layoutY="79.0" mnemonicParsing="false"
+                                <Button fx:id="t1buttonClear" layoutX="123.0" layoutY="79.0" mnemonicParsing="false"
                                         onAction="#t1clear" prefHeight="25.0" prefWidth="59.0" text="Clear"/>
                                 <Label layoutX="53.0" layoutY="69.0" text="Edit" underline="true">
                                     <font>
@@ -65,7 +65,7 @@
                         </AnchorPane>
                     </content>
                 </Tab>
-                <Tab fx:id="t2" text="Products">
+                <Tab fx:id="tabProducts" text="Products">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
@@ -92,14 +92,14 @@
                                         <Font size="30.0"/>
                                     </font>
                                 </Label>
-                                <Button fx:id="buttonRefresh2" layoutX="521.0" layoutY="43.0" mnemonicParsing="false"
+                                <Button fx:id="t2buttonRefreshTable" layoutX="521.0" layoutY="43.0" mnemonicParsing="false"
                                         onAction="#t2refreshTable" text="Refresh"/>
                                 <Label layoutX="409.0" layoutY="326.0" text="Edit:" underline="true">
                                     <font>
                                         <Font size="30.0"/>
                                     </font>
                                 </Label>
-                                <Button fx:id="buttonClear2" layoutX="499.0" layoutY="336.0" mnemonicParsing="false"
+                                <Button fx:id="t2buttonClear" layoutX="499.0" layoutY="336.0" mnemonicParsing="false"
                                         onAction="#t2clear" text="Clear"/>
                                 <Label layoutX="406.0" layoutY="394.0" text="Description:"/>
                                 <Label layoutX="406.0" layoutY="428.0" text="Special Treatment:"/>
@@ -107,16 +107,16 @@
                                            prefHeight="25.0" prefWidth="428.0" promptText="Select to Show"/>
                                 <TextField fx:id="t2textFieldSpecialTreatment" layoutX="521.0" layoutY="424.0"
                                            prefHeight="25.0" prefWidth="426.0" promptText="Select to Show"/>
-                                <Button fx:id="buttonCreateProduct2" layoutX="520.0" layoutY="468.0"
+                                <Button fx:id="t2buttonCreateProduct" layoutX="520.0" layoutY="468.0"
                                         mnemonicParsing="false" onAction="#t2createProduct" prefHeight="40.0"
                                         prefWidth="293.0" text="Create New Product"/>
-                                <Button fx:id="buttonUpdateProduct2" layoutX="520.0" layoutY="517.0"
+                                <Button fx:id="t2buttonUpdateProduct" layoutX="520.0" layoutY="517.0"
                                         mnemonicParsing="false" onAction="#t2updateProduct" prefHeight="40.0"
                                         prefWidth="293.0" text="Update Selected Product"/>
-                                <Button fx:id="buttonDeleteProduct2" layoutX="520.0" layoutY="566.0"
+                                <Button fx:id="t2buttonDeleteProduct" layoutX="520.0" layoutY="566.0"
                                         mnemonicParsing="false" onAction="#t2deleteProduct" prefHeight="40.0"
                                         prefWidth="293.0" text="Delete Selected Product"/>
-                                <Button fx:id="buttonRefresh21" layoutX="228.0" layoutY="43.0" mnemonicParsing="false"
+                                <Button fx:id="t2buttonRefreshList" layoutX="228.0" layoutY="43.0" mnemonicParsing="false"
                                         onAction="#t2refreshList" text="Refresh"/>
                                 <Label layoutX="603.0" layoutY="47.0" text="Selected Customer:"/>
                                 <Label fx:id="t2labelCustomer" layoutX="723.0" layoutY="47.0"/>

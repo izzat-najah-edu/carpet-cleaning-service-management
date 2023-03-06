@@ -13,15 +13,8 @@ import java.util.ResourceBundle;
 
 public class MainController
     implements Initializable {
-
     @FXML
     private AnchorPane navigationBar;
-
-    @FXML
-    private Button buttonExit;
-
-    @FXML
-    private Button buttonLogout;
 
     @FXML
     private Tab tabCustomers;
