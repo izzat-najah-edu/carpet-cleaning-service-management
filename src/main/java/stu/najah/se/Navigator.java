@@ -113,6 +113,8 @@ public class Navigator {
             // the username exists, and the given password is correct
             Navigator.currentAdmin = admin;
             sceneManager.setMainScene();
+        } else {
+            prompt("Invalid username or password!");
         }
     }
 
