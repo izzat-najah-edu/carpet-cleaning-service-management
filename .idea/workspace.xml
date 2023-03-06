@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="products tab added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/ProductEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/ProductEntityPK.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/CustomerEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/CustomerEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/hibernate.cfg.xml" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="product entity ORM">
+      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/dao/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/dao/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/dao/CustomerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/dao/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/CustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/CustomersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/customers.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,44 +84,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "JPA.DatabaseSchemaImportDialog": "72b255f7-4443-449b-a52b-599d4edebd59",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "dart.analysis.tool.window.visible": "false",
-    "last_directory_selection": "F:/Work/Projects/Java/CarpetCleaningServiceManagement/src/main/java/stu/najah/se/gui/fxml",
-    "last_opened_file_path": "C:/Users/Izzat Alsharif/AppData/Local/SceneBuilder/SceneBuilder.exe",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.fileTypes",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;72b255f7-4443-449b-a52b-599d4edebd59&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_directory_selection&quot;: &quot;F:/Work/Projects/Java/CarpetCleaningServiceManagement/src/main/java/stu/najah/se/gui/fxml&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Izzat Alsharif/AppData/Local/SceneBuilder/SceneBuilder.exe&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mongo",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;,
+      &quot;mysql&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
-      "MySQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
+      &quot;MySQL&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
-      "MySQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;MySQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="stu.najah.se.sql" />
@@ -140,6 +142,9 @@
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="stu.najah" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="stu.najah.se.sql.entity" />
     </key>
   </component>
   <component name="RunManager" selected="Application.FastLogin">
@@ -266,7 +271,9 @@
       <workItem from="1677924543002" duration="3877000" />
       <workItem from="1677929939328" duration="6957000" />
       <workItem from="1677951995005" duration="4844000" />
-      <workItem from="1678029566186" duration="8405000" />
+      <workItem from="1678029566186" duration="9881000" />
+      <workItem from="1678097563369" duration="2317000" />
+      <workItem from="1678101832909" duration="3592000" />
     </task>
     <task id="LOCAL-00001" summary="initial test for the project with no functionalities">
       <created>1675438707335</created>
@@ -499,7 +506,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678052313952</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="product entity ORM">
+      <created>1678052711984</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1678052711984</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +568,8 @@
     <MESSAGE value="small design change" />
     <MESSAGE value="fast login test class" />
     <MESSAGE value="products tab added" />
-    <option name="LAST_COMMIT_MESSAGE" value="products tab added" />
+    <MESSAGE value="product entity ORM" />
+    <option name="LAST_COMMIT_MESSAGE" value="product entity ORM" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CarpetCleaningServiceManagement$Navigator.ic" NAME="Navigator Coverage Results" MODIFIED="1675536773415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
