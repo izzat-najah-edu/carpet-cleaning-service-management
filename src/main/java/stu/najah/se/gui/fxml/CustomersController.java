@@ -1,12 +1,16 @@
 package stu.najah.se.gui.fxml;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.util.Callback;
 import stu.najah.se.Navigator;
-import stu.najah.se.dao.CustomerDAO;
+import stu.najah.se.sql.dao.CustomerDAO;
+import stu.najah.se.sql.dao.ProductDAO;
 import stu.najah.se.gui.FXUtility;
 import stu.najah.se.sql.entity.CustomerEntity;
+import stu.najah.se.sql.entity.ProductEntity;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -15,138 +19,243 @@ public class CustomersController
         implements Initializable {
 
     @FXML
-    private ListView<CustomerEntity> listCustomers2;
+    private ListView<CustomerEntity> t2listCustomers;
 
     @FXML
-    private Tab tabEditCustomer;
+    private Tab t1;
 
     @FXML
-    private Tab tabProducts;
+    private Tab t2;
 
     @FXML
-    private TableView<CustomerEntity> tableCustomers;
+    private TableView<CustomerEntity> t1tableCustomers;
 
     @FXML
-    private TableView<?> tableProducts2;
+    private TableView<ProductEntity> t2tableProducts;
 
     @FXML
-    private TextField textFieldAddress;
+    private TextField t1textFieldAddress;
 
     @FXML
-    private TextField textFieldDescription2;
+    private TextField t2textFieldDescription;
 
     @FXML
-    private TextField textFieldName;
+    private TextField t1textFieldName;
 
     @FXML
-    private TextField textFieldName2;
+    private TextField t2textFieldName;
 
     @FXML
-    private TextField textFieldPhone;
+    private TextField t1textFieldPhone;
 
     @FXML
-    private TextField textFieldSpecialTreatment2;
+    private TextField t2textFieldSpecialTreatment;
+
+    @FXML
+    private Label t2labelCustomer;
 
     private final CustomerDAO customerDAO = new CustomerDAO();
-    private CustomerEntity selectedCustomer = null;
+    private final ProductDAO productDAO = new ProductDAO();
+
+    private CustomerEntity t1selectedCustomer = null;
+    private CustomerEntity t2selectedCustomer = null;
+    private ProductEntity t2selectedProduct = null;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        FXUtility.setUpTable(tableCustomers);
-        tableCustomers.getSelectionModel().selectedItemProperty().addListener(
+        // tab Edit
+        FXUtility.setUpTable(t1tableCustomers);
+        t1tableCustomers.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
-                    selectedCustomer = newValue;
-                    fill();
+                    t1selectedCustomer = newValue;
+                    t1fill();
                 });
-        refresh();
+        t1refreshTable();
+        // tab Products
+        FXUtility.setUpTable(t2tableProducts);
+        t2listCustomers.setCellFactory(new Callback<>() {
+            // this is to avoid overriding toString() of CustomerEntity class
+            @Override
+            public ListCell<CustomerEntity> call(ListView<CustomerEntity> param) {
+                return new ListCell<>() {
+                    @Override
+                    protected void updateItem(CustomerEntity item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (item == null || empty) {
+                            setText(null);
+                        } else {
+                            setText(item.getName());
+                        }
+                    }
+                };
+            }
+        });
+        t2tableProducts.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> {
+                    t2selectedProduct = newValue;
+                    t2fill();
+                }
+        );
+        t2listCustomers.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> {
+                    t2selectedCustomer = newValue;
+                    t2labelCustomer.setText(
+                            t2selectedCustomer == null ? null : t2selectedCustomer.getName()
+                    );
+                    t2refreshTable();
+                });
+        t2refreshList();
+    }
+
+    public void reset() {
+        t1selectedCustomer = null;
+        t2selectedCustomer = null;
+        t2selectedProduct = null;
+        t1refreshTable();
+        t2refreshList();
+        t2refreshTable();
+        t1clear();
+        t2clear();
+    }
+
+    void t1fill() {
+        if (t1selectedCustomer != null) {
+            t1textFieldName.setText(t1selectedCustomer.getName());
+            t1textFieldPhone.setText(t1selectedCustomer.getPhone());
+            t1textFieldAddress.setText(t1selectedCustomer.getAddress());
+        } else {
+            t1clear();
+        }
+    }
+
+    void t2fill() {
+        if (t2selectedProduct != null) {
+            t2textFieldDescription.setText(t2selectedProduct.getDescription());
+            t2textFieldSpecialTreatment.setText(t2selectedProduct.getSpecialTreatment());
+        } else {
+            t2clear();
+        }
     }
 
     @FXML
-    void refresh() {
-        tableCustomers.setItems(customerDAO.getAll());
-        tableCustomers.getSelectionModel().clearSelection();
+    void t1refreshTable() {
+        t1tableCustomers.setItems(customerDAO.getAll());
+        t1tableCustomers.getSelectionModel().clearSelection();
         // implicitly calls clear()
     }
 
     @FXML
-    void refresh2() {
-
+    void t2refreshList() {
+        t2listCustomers.setItems(customerDAO.getAll());
+        t2listCustomers.getSelectionModel().clearSelection();
     }
 
     @FXML
-    void clear() {
-        selectedCustomer = null;
-        textFieldName.clear();
-        textFieldPhone.clear();
-        textFieldAddress.clear();
-    }
-
-    private void fill() {
-        if (selectedCustomer != null) {
-            textFieldName.setText(selectedCustomer.getName());
-            textFieldPhone.setText(selectedCustomer.getPhone());
-            textFieldAddress.setText(selectedCustomer.getAddress());
+    void t2refreshTable() {
+        if (t2selectedCustomer != null) {
+            t2tableProducts.setItems(productDAO.getAll(t2selectedCustomer.getId()));
+            t2tableProducts.getSelectionModel().clearSelection();
         } else {
-            clear();
+            t2tableProducts.setItems(FXCollections.observableArrayList());
         }
+        // implicitly calls clear2()
     }
 
     @FXML
-    void clear2() {
-
+    void t1clear() {
+        t1selectedCustomer = null;
+        t1textFieldName.clear();
+        t1textFieldPhone.clear();
+        t1textFieldAddress.clear();
     }
 
     @FXML
-    void createCustomer() {
+    void t2clear() {
+        t2selectedProduct = null;
+        t2textFieldDescription.clear();
+        t2textFieldSpecialTreatment.clear();
+    }
+
+    @FXML
+    void t1createCustomer() {
         var customer = new CustomerEntity();
-        customer.setName(textFieldName.getText());
-        customer.setPhone(textFieldPhone.getText());
-        customer.setAddress(textFieldAddress.getText());
+        customer.setName(t1textFieldName.getText());
+        customer.setPhone(t1textFieldPhone.getText());
+        customer.setAddress(t1textFieldAddress.getText());
         customerDAO.insert(customer);
-        refresh();
+        t1refreshTable();
     }
 
     @FXML
-    void deleteCustomer() {
-        if(selectedCustomer == null) {
-            Navigator.prompt("No customer selected!");
-            return;
-        }
-        customerDAO.delete(selectedCustomer);
-        refresh();
-    }
-
-    @FXML
-    void updateCustomer() {
-        if(selectedCustomer == null) {
+    void t1updateCustomer() {
+        if (t1selectedCustomer == null) {
             Navigator.prompt("No customer selected!");
             return;
         }
         // edit the selected customer then update it using the DAO
-        selectedCustomer.setName(textFieldName.getText());
-        selectedCustomer.setPhone(textFieldPhone.getText());
-        selectedCustomer.setAddress(textFieldAddress.getText());
-        customerDAO.update(selectedCustomer);
-        refresh();
+        t1selectedCustomer.setName(t1textFieldName.getText());
+        t1selectedCustomer.setPhone(t1textFieldPhone.getText());
+        t1selectedCustomer.setAddress(t1textFieldAddress.getText());
+        customerDAO.update(t1selectedCustomer);
+        t1refreshTable();
     }
 
     @FXML
-    void searchCustomer() {
+    void t1deleteCustomer() {
+        if (t1selectedCustomer == null) {
+            Navigator.prompt("No customer selected!");
+            return;
+        }
+        customerDAO.delete(t1selectedCustomer);
+        t1refreshTable();
+    }
+
+    @FXML
+    void t2searchCustomer() {
 
     }
 
     @FXML
-    void createProduct() {
-
+    void t2createProduct() {
+        if (t2selectedCustomer == null) {
+            Navigator.prompt("No customer selected!");
+            return;
+        }
+        var product = new ProductEntity();
+        product.setCustomerId(t2selectedCustomer.getId());
+        product.setDescription(t2textFieldDescription.getText());
+        product.setSpecialTreatment(t2textFieldSpecialTreatment.getText());
+        productDAO.insert(product);
+        t2refreshTable();
     }
 
     @FXML
-    void updateProduct() {
-
+    void t2updateProduct() {
+        if (t2selectedCustomer == null) {
+            Navigator.prompt("No customer selected!");
+            return;
+        }
+        if (t2selectedProduct == null) {
+            Navigator.prompt("No product selected!");
+            return;
+        }
+        t2selectedProduct.setDescription(t2textFieldDescription.getText());
+        t2selectedProduct.setSpecialTreatment(t2textFieldSpecialTreatment.getText());
+        productDAO.update(t2selectedProduct);
+        t2refreshTable();
     }
 
     @FXML
-    void deleteProduct() {
-
+    void t2deleteProduct() {
+        if (t2selectedCustomer == null) {
+            Navigator.prompt("No customer selected!");
+            return;
+        }
+        if (t2selectedProduct == null) {
+            Navigator.prompt("No product selected!");
+            return;
+        }
+        productDAO.delete(t2selectedProduct);
+        t2refreshTable();
     }
 }

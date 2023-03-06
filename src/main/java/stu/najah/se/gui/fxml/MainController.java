@@ -44,7 +44,7 @@ public class MainController
     /**
      * Temporary values for positioning
      */
-    double x, y;
+    private double x, y;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -60,16 +60,18 @@ public class MainController
     }
 
     @FXML
-    void exit(ActionEvent event) {
+    public void exit(ActionEvent event) {
         Navigator.exit();
     }
 
     @FXML
-    void logout(ActionEvent event) {
+    public void logout(ActionEvent event) {
         Navigator.logout();
     }
 
-    public void clear() {
-
+    @FXML
+    public void reset() {
+        paneCustomersController.reset();
+        paneOrdersController.reset();
     }
 }

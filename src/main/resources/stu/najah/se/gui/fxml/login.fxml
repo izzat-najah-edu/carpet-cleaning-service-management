@@ -5,11 +5,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.gui.fxml.LoginController">
-   <children>
-      <TextField fx:id="textFieldUsername" layoutX="226.0" layoutY="145.0" promptText="Enter Username" />
-      <PasswordField fx:id="textFieldPassword" layoutX="226.0" layoutY="188.0" promptText="Enter Password" />
-      <Button fx:id="buttonLogin" layoutX="255.0" layoutY="237.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="91.0" text="Login" />
-      <Button fx:id="buttonExit" layoutX="534.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" text="Exit" />
-   </children>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="stu.najah.se.gui.fxml.LoginController">
+    <children>
+        <TextField fx:id="textFieldUsername" layoutX="226.0" layoutY="145.0" promptText="Enter Username"/>
+        <PasswordField fx:id="textFieldPassword" layoutX="226.0" layoutY="188.0" promptText="Enter Password"/>
+        <Button fx:id="buttonLogin" layoutX="255.0" layoutY="237.0" mnemonicParsing="false" onAction="#login"
+                prefHeight="25.0" prefWidth="91.0" text="Login"/>
+        <Button fx:id="buttonExit" layoutX="534.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" text="Exit"/>
+    </children>
 </AnchorPane>

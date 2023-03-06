@@ -66,7 +66,7 @@ public class SceneManager extends Application {
         }
         stage.setScene(loginScene);
         stage.centerOnScreen();
-        mainController.clear();
+        mainController.reset();
         loggedIn = false;
     }
 
@@ -80,7 +80,7 @@ public class SceneManager extends Application {
         }
         stage.setScene(mainScene);
         stage.centerOnScreen();
-        loginController.clear();
+        loginController.reset();
         loggedIn = true;
     }
 

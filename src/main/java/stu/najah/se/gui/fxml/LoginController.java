@@ -27,7 +27,7 @@ public class LoginController {
         );
     }
 
-    public void clear() {
+    public void reset() {
         textFieldUsername.clear();
         textFieldPassword.clear();
     }

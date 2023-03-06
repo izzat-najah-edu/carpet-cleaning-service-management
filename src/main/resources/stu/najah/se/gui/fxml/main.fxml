@@ -6,33 +6,38 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="780.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.gui.fxml.MainController">
-   <top>
-      <AnchorPane fx:id="navigationBar" prefHeight="50.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="buttonExit" layoutX="951.0" layoutY="13.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="35.0" text="Exit" />
-            <Button fx:id="buttonLogout" layoutX="886.0" layoutY="12.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="55.0" text="Logout" />
-         </children>
-      </AnchorPane>
-   </top>
-   <center>
-      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
-        <tabs>
-          <Tab fx:id="tabCustomers" text="Customers">
-            <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                    <fx:include fx:id="paneCustomers" source="customers.fxml" />
-                </AnchorPane>
-            </content>
-          </Tab>
-          <Tab fx:id="tabOrders" text="Orders">
-            <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                    <fx:include fx:id="paneOrders" source="orders.fxml" />
-                </AnchorPane>
-            </content>
-          </Tab>
-        </tabs>
-      </TabPane>
-   </center>
+<BorderPane prefHeight="780.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.gui.fxml.MainController">
+    <top>
+        <AnchorPane fx:id="navigationBar" prefHeight="50.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="buttonExit" layoutX="951.0" layoutY="13.0" mnemonicParsing="false" onAction="#exit"
+                        prefHeight="25.0" prefWidth="35.0" text="Exit"/>
+                <Button fx:id="buttonLogout" layoutX="886.0" layoutY="12.0" mnemonicParsing="false" onAction="#logout"
+                        prefHeight="27.0" prefWidth="55.0" text="Logout"/>
+                <Button fx:id="buttonReset" layoutX="833.0" layoutY="13.0" mnemonicParsing="false" onAction="#reset"
+                        text="Reset"/>
+            </children>
+        </AnchorPane>
+    </top>
+    <center>
+        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab fx:id="tabCustomers" text="Customers">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <fx:include fx:id="paneCustomers" source="customers.fxml"/>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="tabOrders" text="Orders">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <fx:include fx:id="paneOrders" source="orders.fxml"/>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
 </BorderPane>
