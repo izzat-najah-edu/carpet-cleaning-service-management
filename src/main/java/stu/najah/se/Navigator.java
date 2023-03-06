@@ -6,8 +6,9 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import stu.najah.se.sql.dao.AdminDAO;
+import stu.najah.se.gui.FXUtility;
 import stu.najah.se.gui.SceneManager;
+import stu.najah.se.sql.dao.AdminDAO;
 import stu.najah.se.sql.entity.AdminEntity;
 
 import java.io.IOException;
@@ -125,8 +126,11 @@ public class Navigator {
         return sceneManager.isLoggedIn();
     }
 
+    /**
+     * Displays the given message graphically
+     * @param message to be displayed
+     */
     public static void prompt(String message) {
-        // todo graphically...
-        System.out.println(message);
+        FXUtility.promptAlert(message);
     }
 }
