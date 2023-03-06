@@ -102,7 +102,7 @@ public class Navigator {
 
     /**
      * Tries to logs into the main screen from the login panel using the given user information.
-     * If it fails nothing happens, check .isLoggedIn() to test the result
+     * If it fails a prompt is displayed. check .isLoggedIn() to test the result
      *
      * @param username will be checked in the database.
      * @param password will be checked in the database.

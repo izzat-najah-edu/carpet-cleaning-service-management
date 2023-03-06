@@ -25,10 +25,6 @@ public class LoginController {
                 textFieldUsername.getText(),
                 textFieldPassword.getText()
         );
-        // if it fails
-        if (!Navigator.isLoggedIn()) {
-            Navigator.prompt("Username or password incorrect!");
-        }
     }
 
     public void clear() {
