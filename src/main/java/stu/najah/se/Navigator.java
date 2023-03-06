@@ -6,6 +6,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import stu.najah.se.sql.dao.AdminDAO;
 import stu.najah.se.gui.SceneManager;
 import stu.najah.se.sql.entity.AdminEntity;
 
@@ -32,6 +33,7 @@ public class Navigator {
      * A detached object of the admin that is logged in the system
      */
     private static AdminEntity currentAdmin;
+    private static final AdminDAO adminDAO = new AdminDAO();
 
     public static void main(String[] args) {
         // initialize the session factory
@@ -58,6 +60,7 @@ public class Navigator {
     /**
      * Always close the session after, and don't keep references to it.
      * it's meant to be disregarded as soon as the transaction is finished
+     *
      * @return a new session object
      */
     public static Session getSession() throws HibernateException {
@@ -73,6 +76,7 @@ public class Navigator {
 
     /**
      * This entity is a detached object
+     *
      * @return the current admin if logged in. otherwise null
      */
     public static AdminEntity getCurrentAdmin() {
@@ -104,14 +108,12 @@ public class Navigator {
      * @param password will be checked in the database.
      */
     public static void login(String username, String password) {
-        var session = getSession();
-        var admin = session.get(AdminEntity.class, username);
-        if(admin != null && admin.getPassword().equals(password)) {
+        var admin = adminDAO.find(username);
+        if (admin != null && admin.getPassword().equals(password)) {
             // the username exists, and the given password is correct
             Navigator.currentAdmin = admin;
             sceneManager.setMainScene();
         }
-        session.close();
     }
 
     /**

@@ -1,4 +1,4 @@
-package stu.najah.se.dao;
+package stu.najah.se.sql.dao;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

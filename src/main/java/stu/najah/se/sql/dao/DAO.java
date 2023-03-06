@@ -1,4 +1,4 @@
-package stu.najah.se.dao;
+package stu.najah.se.sql.dao;
 
 import stu.najah.se.Navigator;
 
