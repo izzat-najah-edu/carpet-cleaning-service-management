@@ -124,7 +124,7 @@ public class SceneManager extends Application {
     public void login(String username, String password) {
         var admin = adminDAO.get(username);
         if(admin != null && admin.getPassword().equals(password)) {
-            // the username exists, and the given password is correct
+            // the username exists and the given password is correct
             currentAdmin = admin;
             setMainScene();
         } else {
