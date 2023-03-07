@@ -108,7 +108,7 @@ public class SceneManager extends Application {
     }
 
     /**
-     * Resets the admins, and logs out to login screen
+     * Resets the admins, and logs out to the login screen
      */
     public void logout() {
         currentAdmin = null;

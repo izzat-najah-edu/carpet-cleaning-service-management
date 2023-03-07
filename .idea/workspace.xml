@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="refactoring">
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/FastLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/FastLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/MainController.java" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="more refactoring">
       <change beforePath="$PROJECT_DIR$/src/test/java/features/CustomerCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/CustomerCRUDSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/NavigationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/NavigationSteps.java" afterDir="false" />
@@ -156,7 +150,7 @@
       <recent name="stu.najah.se.sql.entity" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FeaturesTest (1)">
+  <component name="RunManager" selected="Application.Navigator">
     <configuration name="FastLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.FastLogin" />
       <module name="CarpetCleaningServiceManagement" />
@@ -231,8 +225,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FeaturesTest (1)" />
         <item itemvalue="Application.Navigator" />
+        <item itemvalue="JUnit.FeaturesTest (1)" />
         <item itemvalue="JUnit.NavigatorTest.getConnection" />
         <item itemvalue="JUnit.NavigatorTest" />
         <item itemvalue="Application.FastLogin" />
@@ -289,21 +283,7 @@
       <workItem from="1678128207255" duration="5442000" />
       <workItem from="1678204347146" duration="6052000" />
       <workItem from="1678216400329" duration="15000" />
-      <workItem from="1678226679408" duration="2764000" />
-    </task>
-    <task id="LOCAL-00004" summary="initial test for the project with no functionalities">
-      <created>1675439699205</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1675439699205</updated>
-    </task>
-    <task id="LOCAL-00005" summary="initial test for the project with no functionalities">
-      <created>1675442162706</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1675442162706</updated>
+      <workItem from="1678226679408" duration="3239000" />
     </task>
     <task id="LOCAL-00006" summary="initial test">
       <created>1675504458626</created>
@@ -634,7 +614,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678226963903</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="big refactoring changes">
+      <created>1678229707006</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1678229707006</updated>
+    </task>
+    <task id="LOCAL-00054" summary="more refactoring">
+      <created>1678229899656</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1678229899656</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,8 +659,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="javafx tests" />
-    <MESSAGE value="database added" />
     <MESSAGE value="tests added" />
     <MESSAGE value="navigator test fixed" />
     <MESSAGE value="panels navigation added" />
@@ -690,7 +682,9 @@
     <MESSAGE value="gui alerts implemented" />
     <MESSAGE value="PromptManager class added" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="big refactoring changes" />
+    <MESSAGE value="more refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="more refactoring" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CarpetCleaningServiceManagement$Navigator.ic" NAME="Navigator Coverage Results" MODIFIED="1675536773415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

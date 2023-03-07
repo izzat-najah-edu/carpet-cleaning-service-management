@@ -8,8 +8,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import stu.najah.se.gui.PromptManager;
 import stu.najah.se.gui.SceneManager;
-import stu.najah.se.sql.dao.AdminDAO;
-import stu.najah.se.sql.entity.AdminEntity;
 
 import java.io.IOException;
 
