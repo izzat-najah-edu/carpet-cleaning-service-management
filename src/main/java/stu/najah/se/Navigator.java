@@ -68,8 +68,9 @@ public class Navigator {
     }
 
     /**
+     * Generates a new session object.
      * Always close the session after, and don't keep references to it.
-     * it's meant to be disregarded as soon as the transaction is finished
+     * The session is meant to be disregarded as soon as the transaction is finished
      *
      * @return a new session object
      */
