@@ -190,7 +190,7 @@ public class CustomersController
     @FXML
     void t1updateCustomer() {
         if (t1selectedCustomer == null) {
-            Navigator.prompt("No customer selected!");
+            Navigator.getPromptManager().warning("No customer selected!");
             return;
         }
         // edit the selected customer then update it using the DAO
@@ -204,7 +204,7 @@ public class CustomersController
     @FXML
     void t1deleteCustomer() {
         if (t1selectedCustomer == null) {
-            Navigator.prompt("No customer selected!");
+            Navigator.getPromptManager().warning("No customer selected!");
             return;
         }
         customerDAO.delete(t1selectedCustomer);
@@ -219,7 +219,7 @@ public class CustomersController
     @FXML
     void t2createProduct() {
         if (t2selectedCustomer == null) {
-            Navigator.prompt("No customer selected!");
+            Navigator.getPromptManager().warning("No customer selected!");
             return;
         }
         var product = new ProductEntity();
@@ -233,11 +233,11 @@ public class CustomersController
     @FXML
     void t2updateProduct() {
         if (t2selectedCustomer == null) {
-            Navigator.prompt("No customer selected!");
+            Navigator.getPromptManager().warning("No customer selected!");
             return;
         }
         if (t2selectedProduct == null) {
-            Navigator.prompt("No product selected!");
+            Navigator.getPromptManager().warning("No product selected!");
             return;
         }
         t2selectedProduct.setDescription(t2textFieldDescription.getText());
@@ -249,11 +249,11 @@ public class CustomersController
     @FXML
     void t2deleteProduct() {
         if (t2selectedCustomer == null) {
-            Navigator.prompt("No customer selected!");
+            Navigator.getPromptManager().warning("No customer selected!");
             return;
         }
         if (t2selectedProduct == null) {
-            Navigator.prompt("No product selected!");
+            Navigator.getPromptManager().warning("No product selected!");
             return;
         }
         productDAO.delete(t2selectedProduct);

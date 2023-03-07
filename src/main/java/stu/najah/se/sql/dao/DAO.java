@@ -21,7 +21,7 @@ public interface DAO<T> {
             if (transaction != null) {
                 transaction.rollback();
             }
-            Navigator.prompt(e.getMessage());
+            Navigator.getPromptManager().error(e);
             return false;
         }
     }
@@ -38,7 +38,7 @@ public interface DAO<T> {
             if (transaction != null) {
                 transaction.rollback();
             }
-            Navigator.prompt(e.getMessage());
+            Navigator.getPromptManager().error(e);
             return false;
         }
     }
@@ -55,7 +55,7 @@ public interface DAO<T> {
             if (transaction != null) {
                 transaction.rollback();
             }
-            Navigator.prompt(e.getMessage());
+            Navigator.getPromptManager().error(e);
             return false;
         }
     }

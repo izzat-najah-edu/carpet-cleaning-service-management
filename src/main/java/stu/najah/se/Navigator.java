@@ -1,12 +1,14 @@
 package stu.najah.se;
 
 import javafx.application.Platform;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import stu.najah.se.gui.FXUtility;
+import stu.najah.se.gui.PromptManager;
 import stu.najah.se.gui.SceneManager;
 import stu.najah.se.sql.dao.AdminDAO;
 import stu.najah.se.sql.entity.AdminEntity;
@@ -31,10 +33,17 @@ public class Navigator {
      */
     private static SceneManager sceneManager;
     /**
+     * The prompt controller, to show different alerts
+     */
+    private static final PromptManager promptManager = new PromptManager();
+    /**
+     * The admin data access object
+     */
+    private static final AdminDAO adminDAO = new AdminDAO();
+    /**
      * A detached object of the admin that is logged in the system
      */
     private static AdminEntity currentAdmin;
-    private static final AdminDAO adminDAO = new AdminDAO();
 
     public static void main(String[] args) {
         // initialize the session factory
@@ -73,6 +82,13 @@ public class Navigator {
      */
     public static SceneManager getSceneManager() {
         return sceneManager;
+    }
+
+    /**
+     * @return the prompt manager of the application
+     */
+    public static PromptManager getPromptManager() {
+        return promptManager;
     }
 
     /**
@@ -115,7 +131,7 @@ public class Navigator {
             Navigator.currentAdmin = admin;
             sceneManager.setMainScene();
         } else {
-            prompt("Invalid username or password!");
+            promptManager.warning("Invalid username or password!");
         }
     }
 
@@ -126,11 +142,4 @@ public class Navigator {
         return sceneManager.isLoggedIn();
     }
 
-    /**
-     * Displays the given message graphically
-     * @param message to be displayed
-     */
-    public static void prompt(String message) {
-        FXUtility.promptAlert(message);
-    }
 }
