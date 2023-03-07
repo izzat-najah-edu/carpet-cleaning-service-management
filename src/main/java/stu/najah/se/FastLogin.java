@@ -8,6 +8,7 @@ import javafx.application.Platform;
 public class FastLogin {
     public static void main(String[] args) {
         Navigator.main(new String[]{});
-        Platform.runLater(() -> Navigator.login("admin", "admin"));
+        Platform.runLater(() -> Navigator.getSceneManager().login(
+                "admin", "admin"));
     }
 }

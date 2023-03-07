@@ -1,6 +1,4 @@
 module CarpetCleaningServiceManagement {
-    requires org.jetbrains.annotations;
-
     requires java.sql;
     requires java.naming;
     requires jakarta.persistence;

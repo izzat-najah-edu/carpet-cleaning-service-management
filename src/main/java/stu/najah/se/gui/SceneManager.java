@@ -5,15 +5,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import org.jetbrains.annotations.NotNull;
+import stu.najah.se.Navigator;
 import stu.najah.se.gui.fxml.LoginController;
 import stu.najah.se.gui.fxml.MainController;
+import stu.najah.se.sql.dao.AdminDAO;
+import stu.najah.se.sql.entity.AdminEntity;
 
 import java.io.IOException;
 
 /**
  * This is the JavaFX application launcher.
  * it controls the scenes of the main stage.
+ * it controls the login authorization.
  * the initial scene of the stage is the login scene.
  */
 public class SceneManager extends Application {
@@ -26,6 +29,9 @@ public class SceneManager extends Application {
 
     private Scene loginScene;
     private Scene mainScene;
+
+    private final AdminDAO adminDAO = new AdminDAO();
+    private AdminEntity currentAdmin = null;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -55,7 +61,6 @@ public class SceneManager extends Application {
     /**
      * @return the primary stage of the application
      */
-    @NotNull
     public Stage getStage() {
         return stage;
     }
@@ -64,7 +69,7 @@ public class SceneManager extends Application {
      * Switches the scene of the application to the login scene.
      * if the login scene is already displayed nothing happens.
      */
-    public void setLoginScene() {
+    private void setLoginScene() {
         if (!loggedIn) {
             return;
         }
@@ -78,7 +83,7 @@ public class SceneManager extends Application {
      * Switches the scene of the application to the main scene.
      * if the main scene is already displayed nothing happens.
      */
-    public void setMainScene() {
+    private void setMainScene() {
         if (loggedIn) {
             return;
         }
@@ -95,5 +100,20 @@ public class SceneManager extends Application {
         return loggedIn;
     }
 
+    public void logout() {
+        currentAdmin = null;
+        setLoginScene();
+    }
+
+    public void login(String username, String password) {
+        var admin = adminDAO.get(username);
+        if(admin != null && admin.getPassword().equals(password)) {
+            // the username exists, and the given password is correct
+            currentAdmin = admin;
+            setMainScene();
+        } else {
+            Navigator.getPromptManager().warning("Invalid username or password!");
+        }
+    }
 
 }

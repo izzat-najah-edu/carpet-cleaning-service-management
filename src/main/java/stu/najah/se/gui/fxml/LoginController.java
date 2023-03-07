@@ -20,8 +20,8 @@ public class LoginController {
 
     @FXML
     public void login() {
-        // try to log-in
-        Navigator.login(
+        // send login request
+        Navigator.getSceneManager().login(
                 textFieldUsername.getText(),
                 textFieldPassword.getText()
         );

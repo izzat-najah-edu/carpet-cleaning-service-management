@@ -59,7 +59,7 @@ public class MainController
 
     @FXML
     public void logout(ActionEvent event) {
-        Navigator.logout();
+        Navigator.getSceneManager().logout();
     }
 
     @FXML
