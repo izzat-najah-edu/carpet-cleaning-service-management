@@ -94,17 +94,33 @@ public class SceneManager extends Application {
     }
 
     /**
+     * @return current logged in admin, or null if the application is logged out
+     */
+    public AdminEntity getCurrentAdmin() {
+        return currentAdmin;
+    }
+
+    /**
      * @return whether the user has logged in to the main scene or not
      */
     public boolean isLoggedIn() {
         return loggedIn;
     }
 
+    /**
+     * Resets the admins, and logs out to login screen
+     */
     public void logout() {
         currentAdmin = null;
         setLoginScene();
     }
 
+    /**
+     * Tries to authorize the given user information.
+     * If valid it the admin will be cashed and the application will log in
+     * @param username to be checked in the database
+     * @param password to be checked in the database
+     */
     public void login(String username, String password) {
         var admin = adminDAO.get(username);
         if(admin != null && admin.getPassword().equals(password)) {
