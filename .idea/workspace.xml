@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="gui alerts implemented">
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/PromptManager.java" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="PromptManager class added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/FXUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/FXUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/CustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/CustomersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/dao/DAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/CustomerCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/CustomerCRUDSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/NavigationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/NavigationSteps.java" afterDir="false" />
@@ -231,11 +226,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.NavigatorTest.getConnection" />
+        <item itemvalue="JUnit.NavigatorTest" />
+        <item itemvalue="JUnit.FeaturesTest (1)" />
         <item itemvalue="Application.Navigator" />
         <item itemvalue="Application.FastLogin" />
-        <item itemvalue="JUnit.FeaturesTest (1)" />
-        <item itemvalue="JUnit.NavigatorTest" />
-        <item itemvalue="JUnit.NavigatorTest.getConnection" />
       </list>
     </recent_temporary>
   </component>
@@ -287,14 +282,8 @@
       <workItem from="1678118549682" duration="1490000" />
       <workItem from="1678120125321" duration="5858000" />
       <workItem from="1678128207255" duration="5442000" />
-      <workItem from="1678204347146" duration="5629000" />
-    </task>
-    <task id="LOCAL-00001" summary="initial test for the project with no functionalities">
-      <created>1675438707335</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1675438707335</updated>
+      <workItem from="1678204347146" duration="6052000" />
+      <workItem from="1678216400329" duration="15000" />
     </task>
     <task id="LOCAL-00002" summary="initial test for the project with no functionalities">
       <created>1675438985420</created>
@@ -632,7 +621,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678140380473</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="PromptManager class added">
+      <created>1678216215274</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1678216215276</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +659,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="jfoenix added" />
     <MESSAGE value="javafx tests" />
     <MESSAGE value="database added" />
     <MESSAGE value="tests added" />
@@ -688,7 +683,8 @@
     <MESSAGE value="css classes and grouping" />
     <MESSAGE value="customer search added" />
     <MESSAGE value="gui alerts implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="gui alerts implemented" />
+    <MESSAGE value="PromptManager class added" />
+    <option name="LAST_COMMIT_MESSAGE" value="PromptManager class added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CarpetCleaningServiceManagement$Navigator.ic" NAME="Navigator Coverage Results" MODIFIED="1675536773415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

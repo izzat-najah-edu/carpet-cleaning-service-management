@@ -29,7 +29,7 @@ public class PromptManager {
      *
      * @param message to be displayed
      */
-    public void information(String message) {
+    public void info(String message) {
         prompt(message, Alert.AlertType.INFORMATION);
     }
 
