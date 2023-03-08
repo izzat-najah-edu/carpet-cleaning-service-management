@@ -8,7 +8,6 @@ import javafx.util.Callback;
 import stu.najah.se.Navigator;
 import stu.najah.se.sql.dao.CustomerDAO;
 import stu.najah.se.sql.dao.ProductDAO;
-import stu.najah.se.gui.FXUtility;
 import stu.najah.se.sql.entity.CustomerEntity;
 import stu.najah.se.sql.entity.ProductEntity;
 
@@ -16,7 +15,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class CustomersController
-        implements Initializable {
+        implements Controller, Initializable {
 
     @FXML
     private ListView<CustomerEntity> t2listCustomers;
@@ -64,7 +63,7 @@ public class CustomersController
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // tab Edit
-        FXUtility.setUpTable(t1tableCustomers);
+        Controller.setUpTable(t1tableCustomers);
         t1tableCustomers.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
                     t1selectedCustomer = newValue;
@@ -72,7 +71,7 @@ public class CustomersController
                 });
         t1refreshTable();
         // tab Products
-        FXUtility.setUpTable(t2tableProducts);
+        Controller.setUpTable(t2tableProducts);
         t2listCustomers.setCellFactory(new Callback<>() {
             // this is to avoid overriding toString() of CustomerEntity class
             @Override
@@ -107,6 +106,7 @@ public class CustomersController
         t2refreshList();
     }
 
+    @Override
     public void reset() {
         t1selectedCustomer = null;
         t2selectedCustomer = null;

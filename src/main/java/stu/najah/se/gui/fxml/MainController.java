@@ -11,7 +11,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainController
-    implements Initializable {
+    implements Controller, Initializable {
     @FXML
     private AnchorPane navigationBar;
 
@@ -52,6 +52,13 @@ public class MainController
     }
 
     @FXML
+    @Override
+    public void reset() {
+        paneCustomersController.reset();
+        paneOrdersController.reset();
+    }
+
+    @FXML
     public void exit(ActionEvent event) {
         Navigator.exit();
     }
@@ -59,11 +66,5 @@ public class MainController
     @FXML
     public void logout(ActionEvent event) {
         Navigator.getSceneManager().logout();
-    }
-
-    @FXML
-    public void reset() {
-        paneCustomersController.reset();
-        paneOrdersController.reset();
     }
 }

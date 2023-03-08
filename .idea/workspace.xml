@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="more refactoring">
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/FXUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/FXUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/CustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/CustomersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/CustomerCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/CustomerCRUDSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/NavigationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/NavigationSteps.java" afterDir="false" />
@@ -140,6 +142,7 @@
       <recent name="stu.najah.se.dao" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="stu.najah.se.gui.fxml" />
       <recent name="features" />
       <recent name="stu.najah.se.sql" />
     </key>
@@ -284,13 +287,7 @@
       <workItem from="1678204347146" duration="6052000" />
       <workItem from="1678216400329" duration="15000" />
       <workItem from="1678226679408" duration="3488000" />
-    </task>
-    <task id="LOCAL-00008" summary="admin class edited">
-      <created>1675717542154</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1675717542154</updated>
+      <workItem from="1678274721040" duration="478000" />
     </task>
     <task id="LOCAL-00009" summary="admin class edited">
       <created>1675757387882</created>
@@ -628,7 +625,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678230154766</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="more refactoring">
+      <created>1678274980113</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1678274980113</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -8,7 +8,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class OrdersController
-        implements Initializable {
+        implements Controller, Initializable {
 
     @FXML
     private Tab tab1;
@@ -21,6 +21,7 @@ public class OrdersController
 
     }
 
+    @Override
     public void reset() {
 
     }

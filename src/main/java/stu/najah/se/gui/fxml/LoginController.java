@@ -5,13 +5,20 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import stu.najah.se.Navigator;
 
-public class LoginController {
+public class LoginController
+        implements Controller {
 
     @FXML
     private TextField textFieldUsername;
 
     @FXML
     private PasswordField textFieldPassword;
+
+    @Override
+    public void reset() {
+        textFieldUsername.clear();
+        textFieldPassword.clear();
+    }
 
     @FXML
     public void exit() {
@@ -25,10 +32,5 @@ public class LoginController {
                 textFieldUsername.getText(),
                 textFieldPassword.getText()
         );
-    }
-
-    public void reset() {
-        textFieldUsername.clear();
-        textFieldPassword.clear();
     }
 }
