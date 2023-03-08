@@ -13,7 +13,7 @@ public class ProductDAO
      * @return all products with the given customerId
      */
     public ObservableList<ProductEntity> getAll(int customerId) {
-        var session = Navigator.getSession();
+        var session = Navigator.createSession();
         var builder = session.getCriteriaBuilder();
         var query = builder.createQuery(ProductEntity.class);
         var root = query.from(ProductEntity.class);

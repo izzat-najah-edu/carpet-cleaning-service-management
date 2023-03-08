@@ -28,7 +28,7 @@ public class Navigator {
      */
     private static final PromptManager promptManager = new PromptManager();
     /**
-     * The factory object, to generate the sessions
+     * The database connector object, to generate the sessions
      */
     private static SessionFactory sessionFactory;
 
@@ -81,7 +81,7 @@ public class Navigator {
      *
      * @return a new session object
      */
-    public static Session getSession() throws HibernateException {
+    public static Session createSession() throws HibernateException {
         return sessionFactory.openSession();
     }
 

@@ -12,7 +12,7 @@ public class CustomerDAO
      * @return all recorded customers
      */
     public ObservableList<CustomerEntity> getAll() {
-        var session = Navigator.getSession();
+        var session = Navigator.createSession();
         var builder = session.getCriteriaBuilder();
         var query = builder.createQuery(CustomerEntity.class);
         query.from(CustomerEntity.class);
@@ -26,7 +26,7 @@ public class CustomerDAO
      * @return all customers which names contain the given substring
      */
     public ObservableList<CustomerEntity> getAll(String nameSubstring) {
-        var session = Navigator.getSession();
+        var session = Navigator.createSession();
         var builder = session.getCriteriaBuilder();
         var query = builder.createQuery(CustomerEntity.class);
         var root = query.from(CustomerEntity.class);

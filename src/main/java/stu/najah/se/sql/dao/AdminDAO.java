@@ -12,6 +12,9 @@ public class AdminDAO
      * or null if it's not found
      */
     public AdminEntity get(String username) {
-        return Navigator.getSession().find(AdminEntity.class, username);
+        var session = Navigator.createSession();
+        var admin = session.find(AdminEntity.class, username);
+        session.close();
+        return admin;
     }
 }
