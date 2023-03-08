@@ -15,7 +15,7 @@ import java.io.IOException;
  * This is the main class where the application starts.
  * it includes a static method to generate database sessions.
  * it includes different manager objects to control the application.
- * calling the Navigator.main() will not stop the control flow.
+ * calling Navigator.main() will not stop the control flow.
  */
 public class Navigator {
 
