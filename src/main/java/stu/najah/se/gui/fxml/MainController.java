@@ -11,7 +11,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainController
-    implements Controller, Initializable {
+        implements Controller, Initializable {
     @FXML
     private AnchorPane navigationBar;
 

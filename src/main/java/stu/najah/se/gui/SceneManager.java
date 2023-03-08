@@ -118,12 +118,13 @@ public class SceneManager extends Application {
     /**
      * Tries to authorize the given user information.
      * If valid it the admin will be cashed and the application will log in
+     *
      * @param username to be checked in the database
      * @param password to be checked in the database
      */
     public void login(String username, String password) {
         var admin = adminDAO.get(username);
-        if(admin != null && admin.getPassword().equals(password)) {
+        if (admin != null && admin.getPassword().equals(password)) {
             // the username exists and the given password is correct
             currentAdmin = admin;
             setMainScene();
