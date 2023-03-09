@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="more refactoring">
+      <change afterPath="$PROJECT_DIR$/src/test/java/util/ContainedRobot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/CustomerCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/CustomerCRUDSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/NavigationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/NavigationSteps.java" afterDir="false" />
@@ -131,11 +135,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\test\resources\features" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\test\resources" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\test\resources\features\aya" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu\najah\edu\gui\fxml" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\java\stu\najah\se\sql" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="stu.najah.se.dao.DAO" />
@@ -153,7 +157,7 @@
       <recent name="stu.najah.se.sql.entity" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FastLogin">
+  <component name="RunManager" selected="JUnit.FeaturesTest (1)">
     <configuration name="FastLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.FastLogin" />
       <module name="CarpetCleaningServiceManagement" />
@@ -172,7 +176,7 @@
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="features.*" />
+          <option name="PATTERN" value="util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -228,9 +232,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FeaturesTest (1)" />
         <item itemvalue="Application.FastLogin" />
         <item itemvalue="Application.Navigator" />
-        <item itemvalue="JUnit.FeaturesTest (1)" />
         <item itemvalue="JUnit.NavigatorTest.getConnection" />
         <item itemvalue="JUnit.NavigatorTest" />
       </list>
@@ -287,14 +291,10 @@
       <workItem from="1678204347146" duration="6052000" />
       <workItem from="1678216400329" duration="15000" />
       <workItem from="1678226679408" duration="3488000" />
-      <workItem from="1678274721040" duration="1704000" />
-    </task>
-    <task id="LOCAL-00011" summary="cucumber dependencies added">
-      <created>1675761363637</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1675761363637</updated>
+      <workItem from="1678274721040" duration="2127000" />
+      <workItem from="1678295321334" duration="6738000" />
+      <workItem from="1678312200600" duration="387000" />
+      <workItem from="1678376397075" duration="790000" />
     </task>
     <task id="LOCAL-00012" summary="file ordering">
       <created>1675773181226</created>
@@ -632,7 +632,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678275919967</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="more refactoring">
+      <created>1678276581157</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1678276581157</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

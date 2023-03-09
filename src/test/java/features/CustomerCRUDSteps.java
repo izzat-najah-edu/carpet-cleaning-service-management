@@ -4,8 +4,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import javafx.scene.control.TableView;
+import javafx.scene.robot.Robot;
 import org.testfx.api.FxRobot;
 import stu.najah.se.sql.entity.CustomerEntity;
+import util.ContainedRobot;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -17,7 +19,7 @@ public class CustomerCRUDSteps extends FxRobot {
 
     @And("customers panel is opened")
     public void customersPanelIsOpened() {
-        clickOn("#tabCustomers");
+        clickOn("#tabAll");
     }
 
     @And("edit customer tab is opened")
@@ -27,11 +29,11 @@ public class CustomerCRUDSteps extends FxRobot {
 
     @Given("I enter a customer name, phone, address")
     public void iEnterACustomerNamePhoneAddress() {
-        clickOn("#t1textFieldName");
+        clickOn("#tabAll>TextField.name");
         write("some name");
-        clickOn("#t1textFieldPhone");
+        clickOn("#tabAll>TextField.phone");
         write("0123456789");
-        clickOn("#t1textFieldAddress");
+        clickOn("#tabAll>TextField.address");
         write("some address");
     }
 
@@ -42,7 +44,7 @@ public class CustomerCRUDSteps extends FxRobot {
 
     @And("I click add customer button")
     public void iClickAddCustomerButton() {
-        clickOn("#t1buttonCreateCustomer");
+        clickOn("#tabAll>Button.create");
     }
 
     @Then("a new customer is added to the list")
@@ -69,14 +71,14 @@ public class CustomerCRUDSteps extends FxRobot {
 
     @And("I enter a different customer information")
     public void iEnterADifferentCustomerInformation() {
-        clickOn("#t1textFieldAddress");
+        clickOn("#tabAll>TextField.address");
         eraseText("some address".length());
         write("different address");
     }
 
     @And("I click update customer button")
     public void iClickUpdateCustomerButton() {
-        clickOn("#t1buttonUpdateCustomer");
+        clickOn("#tabAll>Button.update");
     }
 
     @Then("the selected customer is updated")
@@ -92,7 +94,7 @@ public class CustomerCRUDSteps extends FxRobot {
 
     @And("I click delete customer button")
     public void iClickDeleteCustomerButton() {
-        clickOn("#t1buttonDeleteCustomer");
+        clickOn("#tabAll>Button.delete");
     }
 
     @Then("the selected customer is deleted")

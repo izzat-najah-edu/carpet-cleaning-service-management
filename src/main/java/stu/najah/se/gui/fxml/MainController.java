@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Tab;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import stu.najah.se.Navigator;
 
 import java.net.URL;
@@ -12,8 +13,12 @@ import java.util.ResourceBundle;
 
 public class MainController
         implements Controller, Initializable {
+
     @FXML
-    private AnchorPane navigationBar;
+    private BorderPane mainPane;
+
+    @FXML
+    private AnchorPane navbarPane;
 
     @FXML
     private Tab tabCustomers;
@@ -41,11 +46,11 @@ public class MainController
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         var stage = Navigator.getSceneManager().getStage();
-        navigationBar.setOnMousePressed(event -> {
+        navbarPane.setOnMousePressed(event -> {
             x = event.getSceneX();
             y = event.getSceneY();
         });
-        navigationBar.setOnMouseDragged(event -> {
+        navbarPane.setOnMouseDragged(event -> {
             stage.setX(event.getScreenX() - x);
             stage.setY(event.getScreenY() - y);
         });
