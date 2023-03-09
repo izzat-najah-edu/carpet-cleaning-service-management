@@ -7,7 +7,6 @@ import java.util.Objects;
 @Entity
 @Table(name = "admin", schema = "carpet_cleaning_service_management")
 public class AdminEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "username", nullable = false, length = 256)
     private String username;

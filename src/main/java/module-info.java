@@ -1,6 +1,4 @@
 module CarpetCleaningServiceManagement {
-    requires org.jetbrains.annotations;
-
     requires java.sql;
     requires java.naming;
     requires jakarta.persistence;
@@ -17,4 +15,5 @@ module CarpetCleaningServiceManagement {
     exports stu.najah.se.gui;
     exports stu.najah.se.gui.fxml;
     exports stu.najah.se.sql.entity;
+    exports stu.najah.se.sql.dao;
 }

@@ -13,17 +13,16 @@ create table admin
 create table customer
 (
     id      int auto_increment primary key,
-    name    varchar(256) not null,
+    name    varchar(256) unique not null,
     phone   char(10),
     address varchar(256)
 );
 
 create table product
 (
-    number            int,
+    number            int auto_increment,
     customer_id       int,
-    description       varchar(256),
-    picture           varchar(256), -- path to file
+    description       varchar(256) not null,
     special_treatment varchar(256),
     primary key (number, customer_id),
     foreign key (customer_id) references customer (id)

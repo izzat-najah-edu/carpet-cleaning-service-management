@@ -12,44 +12,42 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LoginSteps extends FxRobot {
 
+    static final String container = "#loginPane ";
+
     @Given("login screen is opened")
     public void loginScreenIsOpened() {
         // logout or stay at login screen
-        Platform.runLater(() -> {
-            if(Navigator.isLoggedIn()) {
-                Navigator.logout();
-            }
-        });
+        Platform.runLater(() -> Navigator.getSceneManager().logout());
     }
 
     @When("I enter correct username and correct password")
     public void iEnterCorrectUsernameAndCorrectPassword() {
-        clickOn("#textFieldUsername");
+        clickOn(container + "TextField.username");
         write("admin"); // test admin
-        clickOn("#textFieldPassword");
+        clickOn(container + "PasswordField.password");
         write("admin");
     }
 
     @And("I click on the login button")
     public void iClickOnTheLoginButton() {
-        clickOn("#buttonLogin");
+        clickOn(container + "Button.login");
     }
 
     @Then("login screen switches to main screen")
     public void loginScreenSwitchesToMainScreen() {
-        assertTrue(Navigator.isLoggedIn());
+        assertTrue(Navigator.getSceneManager().isLoggedIn());
     }
 
     @When("I enter wrong username or wrong password")
     public void iEnterWrongUsernameOrWrongPassword() {
-        clickOn("#textFieldUsername");
+        clickOn(container + "TextField.username");
         write("admin"); // test admin
-        clickOn("#textFieldPassword");
-        write("wrong password");
+        clickOn(container + "PasswordField.password");
+        write("wrong");
     }
 
     @Then("error message indicating failed login is prompted")
     public void errorMessageIndicatingFailedLoginIsPrompted() {
-        //lookup("#prompt").query();
+
     }
 }

@@ -6,32 +6,31 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import stu.najah.se.gui.PromptManager;
 import stu.najah.se.gui.SceneManager;
-import stu.najah.se.sql.entity.AdminEntity;
 
 import java.io.IOException;
 
 /**
- * This is the main class where the application starts,
+ * This is the main class where the application starts.
  * it includes a static method to generate database sessions.
- * it includes a static method to display prompt messages to the user.
- * it includes some static methods to control the application (e.g. logout, login, exit)
- * calling Navigator.main() will launch the application.
+ * it includes different manager objects to control the application.
+ * calling Navigator.main() will not stop the control flow.
  */
 public class Navigator {
 
     /**
-     * The factory object that generates the sessions
-     */
-    private static SessionFactory sessionFactory;
-    /**
      * The gui controller, to move between scenes
      */
-    private static SceneManager sceneManager;
+    private static final SceneManager sceneManager = new SceneManager();
     /**
-     * A detached object of the admin that is logged in the system
+     * The prompt controller, to show different alerts
      */
-    private static AdminEntity currentAdmin;
+    private static final PromptManager promptManager = new PromptManager();
+    /**
+     * The database connector object, to generate the sessions
+     */
+    private static SessionFactory sessionFactory;
 
     public static void main(String[] args) {
         // initialize the session factory
@@ -47,36 +46,11 @@ public class Navigator {
         // launch the application without blocking the control flow
         Platform.startup(() -> {
             try {
-                sceneManager = new SceneManager();
                 sceneManager.start(new Stage());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         });
-    }
-
-    /**
-     * Always close the session after, and don't keep references to it.
-     * it's meant to be disregarded as soon as the transaction is finished
-     * @return a new session object
-     */
-    public static Session getSession() throws HibernateException {
-        return sessionFactory.openSession();
-    }
-
-    /**
-     * @return the scene manager of the application
-     */
-    public static SceneManager getSceneManager() {
-        return sceneManager;
-    }
-
-    /**
-     * This entity is a detached object
-     * @return the current admin if logged in. otherwise null
-     */
-    public static AdminEntity getCurrentAdmin() {
-        return currentAdmin;
     }
 
     /**
@@ -87,37 +61,28 @@ public class Navigator {
     }
 
     /**
-     * Logs out of the main screen to the login panel.
-     * Or does nothing if the login panel is already displayed.
-     * The current admin will be set to null.
+     * @return the scene manager of the application
      */
-    public static void logout() {
-        currentAdmin = null;
-        sceneManager.setLoginScene();
+    public static SceneManager getSceneManager() {
+        return sceneManager;
     }
 
     /**
-     * Tries to logs into the main screen from the login panel using the given user information.
-     * If it fails nothing happens, check .isLoggedIn() to test the result
+     * @return the prompt manager of the application
+     */
+    public static PromptManager getPromptManager() {
+        return promptManager;
+    }
+
+    /**
+     * Generates a new session object.
+     * Always close the session after, and don't keep references to it.
+     * The session is meant to be disregarded as soon as the transaction is finished
      *
-     * @param username will be checked in the database.
-     * @param password will be checked in the database.
+     * @return a new session object
      */
-    public static void login(String username, String password) {
-        var session = getSession();
-        var admin = session.get(AdminEntity.class, username);
-        if(admin != null && admin.getPassword().equals(password)) {
-            // the username exists, and the given password is correct
-            Navigator.currentAdmin = admin;
-            sceneManager.setMainScene();
-        }
-        session.close();
+    public static Session createSession() throws HibernateException {
+        return sessionFactory.openSession();
     }
 
-    /**
-     * @return whether the user is logged in or not
-     */
-    public static boolean isLoggedIn() {
-        return sceneManager.isLoggedIn();
-    }
 }

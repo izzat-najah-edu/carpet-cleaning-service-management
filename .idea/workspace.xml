@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="hibernate implementation" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="more refactoring">
+      <change afterPath="$PROJECT_DIR$/src/test/java/util/ContainedRobot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/CustomerCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/CustomerCRUDSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/NavigationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/NavigationSteps.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +27,8 @@
         <option value="JavaFXApplication" />
         <option value="module-info" />
         <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -50,7 +62,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="aya" />
+        <entry key="$PROJECT_DIR$" value="izzat" />
       </map>
     </option>
     <option name="UPDATE_TYPE" value="REBASE" />
@@ -87,16 +99,17 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_directory_selection&quot;: &quot;F:/Work/Projects/Java/CarpetCleaningServiceManagement/src/main/java/stu/najah/se/gui/fxml&quot;,
+    &quot;last_directory_selection&quot;: &quot;F:/Work/Projects/Java/CarpetCleaningServiceManagement/src/main/java/stu/najah/se&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Izzat Alsharif/AppData/Local/SceneBuilder/SceneBuilder.exe&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.35287356&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -122,13 +135,18 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu\najah\se" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\test\resources\features" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\test\resources" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\test\resources\features\aya" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu\najah\edu\gui\fxml" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\java\stu\najah\se\sql" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="stu.najah.se.dao.DAO" />
+      <recent name="stu.najah.se.dao" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="stu.najah.se.gui.fxml" />
       <recent name="features" />
       <recent name="stu.najah.se.sql" />
     </key>
@@ -137,12 +155,11 @@
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="stu.najah.se.sql.entity" />
-      <recent name="stu.najah.se" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Navigator">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.Main" />
+  <component name="RunManager" selected="JUnit.FeaturesTest (1)">
+    <configuration name="FastLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.FastLogin" />
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
@@ -159,7 +176,7 @@
       <module name="CarpetCleaningServiceManagement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="features.*" />
+          <option name="PATTERN" value="util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -215,11 +232,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Navigator" />
         <item itemvalue="JUnit.FeaturesTest (1)" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.NavigatorTest" />
+        <item itemvalue="Application.FastLogin" />
+        <item itemvalue="Application.Navigator" />
         <item itemvalue="JUnit.NavigatorTest.getConnection" />
+        <item itemvalue="JUnit.NavigatorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -259,90 +276,25 @@
       <workItem from="1677345810750" duration="1294000" />
       <workItem from="1677501782401" duration="7683000" />
       <workItem from="1677578633431" duration="2047000" />
-      <workItem from="1677691809564" duration="2221000" />
-      <workItem from="1677694601292" duration="52000" />
-      <workItem from="1677697974270" duration="3153000" />
-      <workItem from="1677706070617" duration="1376000" />
-      <workItem from="1677770990404" duration="5212000" />
-      <workItem from="1677781104441" duration="605000" />
-      <workItem from="1677840811582" duration="2530000" />
-    </task>
-    <task id="LOCAL-00001" summary="initial test for the project with no functionalities">
-      <created>1675438707335</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1675438707335</updated>
-    </task>
-    <task id="LOCAL-00002" summary="initial test for the project with no functionalities">
-      <created>1675438985420</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1675438985420</updated>
-    </task>
-    <task id="LOCAL-00003" summary="initial test for the project with no functionalities">
-      <created>1675439499437</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1675439499437</updated>
-    </task>
-    <task id="LOCAL-00004" summary="initial test for the project with no functionalities">
-      <created>1675439699205</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1675439699205</updated>
-    </task>
-    <task id="LOCAL-00005" summary="initial test for the project with no functionalities">
-      <created>1675442162706</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1675442162706</updated>
-    </task>
-    <task id="LOCAL-00006" summary="initial test">
-      <created>1675504458626</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1675504458626</updated>
-    </task>
-    <task id="LOCAL-00007" summary="new tests">
-      <created>1675536980806</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1675536980806</updated>
-    </task>
-    <task id="LOCAL-00008" summary="admin class edited">
-      <created>1675717542154</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1675717542154</updated>
-    </task>
-    <task id="LOCAL-00009" summary="admin class edited">
-      <created>1675757387882</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1675757387882</updated>
-    </task>
-    <task id="LOCAL-00010" summary="small edit">
-      <created>1675760694953</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1675760694953</updated>
-    </task>
-    <task id="LOCAL-00011" summary="cucumber dependencies added">
-      <created>1675761363637</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1675761363637</updated>
+      <workItem from="1677860616101" duration="7029000" />
+      <workItem from="1677872811047" duration="1814000" />
+      <workItem from="1677924543002" duration="3877000" />
+      <workItem from="1677929939328" duration="6957000" />
+      <workItem from="1677951995005" duration="4844000" />
+      <workItem from="1678029566186" duration="9881000" />
+      <workItem from="1678097563369" duration="2317000" />
+      <workItem from="1678101832909" duration="5258000" />
+      <workItem from="1678113067311" duration="5300000" />
+      <workItem from="1678118549682" duration="1490000" />
+      <workItem from="1678120125321" duration="5858000" />
+      <workItem from="1678128207255" duration="5442000" />
+      <workItem from="1678204347146" duration="6052000" />
+      <workItem from="1678216400329" duration="15000" />
+      <workItem from="1678226679408" duration="3488000" />
+      <workItem from="1678274721040" duration="2127000" />
+      <workItem from="1678295321334" duration="6738000" />
+      <workItem from="1678312200600" duration="387000" />
+      <workItem from="1678376397075" duration="790000" />
     </task>
     <task id="LOCAL-00012" summary="file ordering">
       <created>1675773181226</created>
@@ -435,14 +387,259 @@
       <option name="project" value="LOCAL" />
       <updated>1677509145210</updated>
     </task>
-    <task id="LOCAL-00025" summary="hibernate implementation">
-      <created>1677843313636</created>
+    <task id="LOCAL-00025" summary="customers table added">
+      <created>1677870244976</created>
       <option name="number" value="00025" />
       <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
-      <updated>1677843313636</updated>
+      <updated>1677870244976</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="customer crud operations">
+      <created>1677966783189</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1677966783189</updated>
+    </task>
+    <task id="LOCAL-00027" summary="customer crud operations">
+      <created>1678030272646</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1678030272646</updated>
+    </task>
+    <task id="LOCAL-00028" summary="documentation">
+      <created>1678030410522</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1678030410522</updated>
+    </task>
+    <task id="LOCAL-00029" summary="customer name unique constraint">
+      <created>1678034583463</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1678034583463</updated>
+    </task>
+    <task id="LOCAL-00030" summary="product table added">
+      <created>1678049350116</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1678049350116</updated>
+    </task>
+    <task id="LOCAL-00031" summary="small design change">
+      <created>1678049734320</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1678049734320</updated>
+    </task>
+    <task id="LOCAL-00032" summary="fast login test class">
+      <created>1678050049049</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1678050049049</updated>
+    </task>
+    <task id="LOCAL-00033" summary="products tab added">
+      <created>1678052313952</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1678052313952</updated>
+    </task>
+    <task id="LOCAL-00034" summary="product entity ORM">
+      <created>1678052711984</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1678052711984</updated>
+    </task>
+    <task id="LOCAL-00035" summary="refactoring">
+      <created>1678106136539</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1678106136539</updated>
+    </task>
+    <task id="LOCAL-00036" summary="design change">
+      <created>1678106146976</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1678106146976</updated>
+    </task>
+    <task id="LOCAL-00037" summary="refactoring">
+      <created>1678106840394</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1678106840394</updated>
+    </task>
+    <task id="LOCAL-00038" summary="new admin DAO">
+      <created>1678106854902</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1678106854902</updated>
+    </task>
+    <task id="LOCAL-00039" summary="refactoring">
+      <created>1678106922687</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1678106922687</updated>
+    </task>
+    <task id="LOCAL-00040" summary="refactoring">
+      <created>1678113464757</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1678113464757</updated>
+    </task>
+    <task id="LOCAL-00041" summary="refactoring">
+      <created>1678113705367</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1678113705367</updated>
+    </task>
+    <task id="LOCAL-00042" summary="ORM fixes">
+      <created>1678116662714</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1678116662714</updated>
+    </task>
+    <task id="LOCAL-00043" summary="products CRUD operations">
+      <created>1678118799796</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1678118799796</updated>
+    </task>
+    <task id="LOCAL-00044" summary="refactoring">
+      <created>1678118989811</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1678118989811</updated>
+    </task>
+    <task id="LOCAL-00045" summary="tests fixed">
+      <created>1678120148964</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1678120148964</updated>
+    </task>
+    <task id="LOCAL-00046" summary="css styles implemented">
+      <created>1678125838335</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1678125838335</updated>
+    </task>
+    <task id="LOCAL-00047" summary="css classes and grouping">
+      <created>1678125871600</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1678125871600</updated>
+    </task>
+    <task id="LOCAL-00048" summary="customer search added">
+      <created>1678126565960</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1678126565960</updated>
+    </task>
+    <task id="LOCAL-00049" summary="gui alerts implemented">
+      <created>1678140380473</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1678140380473</updated>
+    </task>
+    <task id="LOCAL-00050" summary="PromptManager class added">
+      <created>1678216215274</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1678216215276</updated>
+    </task>
+    <task id="LOCAL-00051" summary="refactoring">
+      <created>1678226856660</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1678226856660</updated>
+    </task>
+    <task id="LOCAL-00052" summary="refactoring">
+      <created>1678226963903</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1678226963903</updated>
+    </task>
+    <task id="LOCAL-00053" summary="big refactoring changes">
+      <created>1678229707006</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1678229707006</updated>
+    </task>
+    <task id="LOCAL-00054" summary="more refactoring">
+      <created>1678229899656</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1678229899656</updated>
+    </task>
+    <task id="LOCAL-00055" summary="more refactoring">
+      <created>1678230118520</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1678230118520</updated>
+    </task>
+    <task id="LOCAL-00056" summary="more refactoring">
+      <created>1678230154766</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1678230154766</updated>
+    </task>
+    <task id="LOCAL-00057" summary="more refactoring">
+      <created>1678274980113</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1678274980113</updated>
+    </task>
+    <task id="LOCAL-00058" summary="more refactoring">
+      <created>1678275774786</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1678275774786</updated>
+    </task>
+    <task id="LOCAL-00059" summary="more refactoring">
+      <created>1678275919967</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1678275919967</updated>
+    </task>
+    <task id="LOCAL-00060" summary="more refactoring">
+      <created>1678276581157</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1678276581157</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +656,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="izzat" />
+                        <option value="origin/izzat" />
                       </list>
                     </value>
                   </entry>
@@ -473,34 +670,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="initial test for the project with no functionalities" />
-    <MESSAGE value="initial test" />
-    <MESSAGE value="new tests" />
-    <MESSAGE value="admin class edited" />
-    <MESSAGE value="small edit" />
-    <MESSAGE value="cucumber dependencies added" />
-    <MESSAGE value="file ordering" />
-    <MESSAGE value="login feature added" />
-    <MESSAGE value="files organization" />
-    <MESSAGE value="javafx added" />
-    <MESSAGE value="jfoenix added" />
-    <MESSAGE value="javafx tests" />
-    <MESSAGE value="database added" />
     <MESSAGE value="tests added" />
     <MESSAGE value="navigator test fixed" />
     <MESSAGE value="panels navigation added" />
-    <MESSAGE value="hibernate implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="hibernate implementation" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="jakarta.persistence.PersistenceException" package="jakarta.persistence" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="customers table added" />
+    <MESSAGE value="customer crud operations" />
+    <MESSAGE value="documentation" />
+    <MESSAGE value="customer name unique constraint" />
+    <MESSAGE value="product table added" />
+    <MESSAGE value="small design change" />
+    <MESSAGE value="fast login test class" />
+    <MESSAGE value="products tab added" />
+    <MESSAGE value="product entity ORM" />
+    <MESSAGE value="design change" />
+    <MESSAGE value="new admin DAO" />
+    <MESSAGE value="ORM fixes" />
+    <MESSAGE value="products CRUD operations" />
+    <MESSAGE value="tests fixed" />
+    <MESSAGE value="css styles implemented" />
+    <MESSAGE value="css classes and grouping" />
+    <MESSAGE value="customer search added" />
+    <MESSAGE value="gui alerts implemented" />
+    <MESSAGE value="PromptManager class added" />
+    <MESSAGE value="refactoring" />
+    <MESSAGE value="big refactoring changes" />
+    <MESSAGE value="more refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="more refactoring" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CarpetCleaningServiceManagement$Navigator.ic" NAME="Navigator Coverage Results" MODIFIED="1675536773415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

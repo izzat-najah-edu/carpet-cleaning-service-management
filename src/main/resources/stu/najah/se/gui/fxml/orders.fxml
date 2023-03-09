@@ -5,21 +5,23 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.gui.fxml.OrdersController">
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.gui.fxml.OrdersController">
     <children>
-        <TabPane prefHeight="750.0" prefWidth="1000.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+        <TabPane prefHeight="700.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
             <tabs>
                 <Tab fx:id="tab1" text="Tab1">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="203.0" prefWidth="247.0">
-                     <children>
-                        <Label layoutX="468.0" layoutY="367.0" text="Orders" />
-                     </children></AnchorPane>
+                            <children>
+                                <Label layoutX="468.0" layoutY="367.0" text="Orders"/>
+                            </children>
+                        </AnchorPane>
                     </content>
                 </Tab>
                 <Tab fx:id="tab2" text="Tab2">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
                     </content>
                 </Tab>
             </tabs>

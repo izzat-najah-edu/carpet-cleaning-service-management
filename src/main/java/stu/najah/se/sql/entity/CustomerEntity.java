@@ -61,7 +61,7 @@ public class CustomerEntity {
         if (!(o instanceof CustomerEntity that)) {
             return false;
         }
-        return id != that.id
+        return id == that.id
                 && Objects.equals(name, that.name)
                 && Objects.equals(phone, that.phone)
                 && Objects.equals(address, that.address);
