@@ -27,6 +27,20 @@ public final class Prompter {
     }
 
     /**
+     * Displays a confirmation dialog, with OK and Cancel buttons
+     *
+     * @param message to be displayed
+     * @return true if OK was pressed, false otherwise
+     */
+    public static boolean confirm(String message) {
+        var alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.initModality(Modality.APPLICATION_MODAL);
+        alert.setContentText(message);
+        var result = alert.showAndWait();
+        return result.isPresent() && result.get().equals(ButtonType.OK);
+    }
+
+    /**
      * Displays an information message on screen
      *
      * @param message to be displayed
@@ -60,20 +74,6 @@ public final class Prompter {
      */
     public static void error(Exception e) {
         prompt(e.getMessage(), Alert.AlertType.ERROR);
-    }
-
-    /**
-     * Displays a confirmation dialog, with OK and Cancel buttons
-     *
-     * @param message to be displayed
-     * @return true if OK was pressed, false otherwise
-     */
-    public static boolean confirm(String message) {
-        var alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.initModality(Modality.APPLICATION_MODAL);
-        alert.setContentText(message);
-        var result = alert.showAndWait();
-        return result.isPresent() && result.get().equals(ButtonType.OK);
     }
 
 }
