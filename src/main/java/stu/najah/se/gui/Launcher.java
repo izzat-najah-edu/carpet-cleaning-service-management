@@ -5,7 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import stu.najah.se.Navigator;
 import stu.najah.se.gui.fxml.LoginController;
 import stu.najah.se.gui.fxml.MainController;
 import stu.najah.se.sql.dao.AdminDAO;
@@ -19,7 +18,7 @@ import java.io.IOException;
  * it controls the login authorization.
  * the initial scene of the stage is the login scene.
  */
-public class SceneManager extends Application {
+public class Launcher extends Application {
 
     private Stage stage;
     private boolean loggedIn = false;
@@ -129,7 +128,7 @@ public class SceneManager extends Application {
             currentAdmin = admin;
             setMainScene();
         } else {
-            Navigator.getPromptManager().warning("Invalid username or password!");
+            Prompter.warning("Invalid username or password!");
         }
     }
 

@@ -5,10 +5,12 @@ import javafx.scene.control.ButtonType;
 import javafx.stage.Modality;
 
 /**
- * A manager class responsible for prompting
- * alerts, inputs texts, dialogs...
+ * Utility class for (graphically) prompting alerts, inputs texts, dialogs, etc...
  */
-public class PromptManager {
+public final class Prompter {
+
+    private Prompter() {
+    }
 
     /**
      * Displays a message alert, with no interaction options
@@ -17,7 +19,7 @@ public class PromptManager {
      * @param type    only use INFORMATION, WARNING, or ERROR
      *                because they don't have multiple buttons
      */
-    private void prompt(String message, Alert.AlertType type) {
+    private static void prompt(String message, Alert.AlertType type) {
         var alert = new Alert(type);
         alert.initModality(Modality.APPLICATION_MODAL);
         alert.setContentText(message);
@@ -29,7 +31,7 @@ public class PromptManager {
      *
      * @param message to be displayed
      */
-    public void info(String message) {
+    public static void info(String message) {
         prompt(message, Alert.AlertType.INFORMATION);
     }
 
@@ -38,7 +40,7 @@ public class PromptManager {
      *
      * @param message to be displayed
      */
-    public void warning(String message) {
+    public static void warning(String message) {
         prompt(message, Alert.AlertType.WARNING);
     }
 
@@ -47,7 +49,7 @@ public class PromptManager {
      *
      * @param message to be displayed
      */
-    public void error(String message) {
+    public static void error(String message) {
         prompt(message, Alert.AlertType.ERROR);
     }
 
@@ -56,7 +58,7 @@ public class PromptManager {
      *
      * @param e it's message will be displayed
      */
-    public void error(Exception e) {
+    public static void error(Exception e) {
         prompt(e.getMessage(), Alert.AlertType.ERROR);
     }
 
@@ -66,7 +68,7 @@ public class PromptManager {
      * @param message to be displayed
      * @return true if OK was pressed, false otherwise
      */
-    public boolean confirm(String message) {
+    public static boolean confirm(String message) {
         var alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initModality(Modality.APPLICATION_MODAL);
         alert.setContentText(message);

@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="more refactoring">
-      <change afterPath="$PROJECT_DIR$/src/test/java/util/ContainedRobot.java" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="product crud feature added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/fxml/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/CustomerCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/CustomerCRUDSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/NavigationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/NavigationSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/Navigator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/PromptManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/Prompter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/CustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/CustomersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/dao/AdminDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/dao/AdminDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/dao/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/dao/CustomerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/dao/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/dao/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/sql/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +30,9 @@
         <option value="JavaFXApplication" />
         <option value="module-info" />
         <option value="FxmlFile" />
-        <option value="Interface" />
         <option value="CSS File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -135,13 +138,14 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu\najah\se\sql" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\test\resources\features" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\test\resources" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\test\resources\features\aya" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu\najah\edu\gui\fxml" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="stu.najah.se.sql.Database" />
       <recent name="stu.najah.se.dao.DAO" />
       <recent name="stu.najah.se.dao" />
     </key>
@@ -157,7 +161,7 @@
       <recent name="stu.najah.se.sql.entity" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FeaturesTest (1)">
+  <component name="RunManager" selected="Application.FastLogin">
     <configuration name="FastLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.FastLogin" />
       <module name="CarpetCleaningServiceManagement" />
@@ -232,9 +236,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FeaturesTest (1)" />
         <item itemvalue="Application.FastLogin" />
         <item itemvalue="Application.Navigator" />
+        <item itemvalue="JUnit.FeaturesTest (1)" />
         <item itemvalue="JUnit.NavigatorTest.getConnection" />
         <item itemvalue="JUnit.NavigatorTest" />
       </list>
@@ -295,6 +299,10 @@
       <workItem from="1678295321334" duration="6738000" />
       <workItem from="1678312200600" duration="387000" />
       <workItem from="1678376397075" duration="790000" />
+      <workItem from="1679005492362" duration="236000" />
+      <workItem from="1680620179841" duration="9642000" />
+      <workItem from="1680649717396" duration="2147000" />
+      <workItem from="1680691010836" duration="1880000" />
     </task>
     <task id="LOCAL-00012" summary="file ordering">
       <created>1675773181226</created>

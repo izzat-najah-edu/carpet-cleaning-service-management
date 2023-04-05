@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.util.Callback;
 import stu.najah.se.Navigator;
+import stu.najah.se.gui.Prompter;
 import stu.najah.se.sql.dao.CustomerDAO;
 import stu.najah.se.sql.dao.ProductDAO;
 import stu.najah.se.sql.entity.CustomerEntity;
@@ -190,7 +191,7 @@ public class CustomersController
     @FXML
     void t1updateCustomer() {
         if (t1selectedCustomer == null) {
-            Navigator.getPromptManager().warning("No customer selected!");
+            Prompter.warning("No customer selected!");
             return;
         }
         // edit the selected customer then update it using the DAO
@@ -204,7 +205,7 @@ public class CustomersController
     @FXML
     void t1deleteCustomer() {
         if (t1selectedCustomer == null) {
-            Navigator.getPromptManager().warning("No customer selected!");
+            Prompter.warning("No customer selected!");
             return;
         }
         customerDAO.delete(t1selectedCustomer);
@@ -219,7 +220,7 @@ public class CustomersController
     @FXML
     void t2createProduct() {
         if (t2selectedCustomer == null) {
-            Navigator.getPromptManager().warning("No customer selected!");
+            Prompter.warning("No customer selected!");
             return;
         }
         var product = new ProductEntity();
@@ -233,11 +234,11 @@ public class CustomersController
     @FXML
     void t2updateProduct() {
         if (t2selectedCustomer == null) {
-            Navigator.getPromptManager().warning("No customer selected!");
+            Prompter.warning("No customer selected!");
             return;
         }
         if (t2selectedProduct == null) {
-            Navigator.getPromptManager().warning("No product selected!");
+            Prompter.warning("No product selected!");
             return;
         }
         t2selectedProduct.setDescription(t2textFieldDescription.getText());
@@ -249,11 +250,11 @@ public class CustomersController
     @FXML
     void t2deleteProduct() {
         if (t2selectedCustomer == null) {
-            Navigator.getPromptManager().warning("No customer selected!");
+            Prompter.warning("No customer selected!");
             return;
         }
         if (t2selectedProduct == null) {
-            Navigator.getPromptManager().warning("No product selected!");
+            Prompter.warning("No product selected!");
             return;
         }
         productDAO.delete(t2selectedProduct);
