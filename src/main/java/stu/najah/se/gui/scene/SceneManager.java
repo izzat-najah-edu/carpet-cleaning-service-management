@@ -5,7 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import stu.najah.se.gui.fxml.Controller;
+import stu.najah.se.gui.Controller;
 
 import java.io.IOException;
 

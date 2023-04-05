@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.util.Callback;
+import stu.najah.se.gui.Controller;
 import stu.najah.se.gui.Prompter;
 import stu.najah.se.sql.dao.CustomerDAO;
 import stu.najah.se.sql.dao.ProductDAO;

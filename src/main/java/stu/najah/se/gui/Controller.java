@@ -1,4 +1,4 @@
-package stu.najah.se.gui.fxml;
+package stu.najah.se.gui;
 
 /**
  * This interface groups methods common between all scene controllers.

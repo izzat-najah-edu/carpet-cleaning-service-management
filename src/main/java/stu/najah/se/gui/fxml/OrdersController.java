@@ -3,6 +3,7 @@ package stu.najah.se.gui.fxml;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Tab;
+import stu.najah.se.gui.Controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;

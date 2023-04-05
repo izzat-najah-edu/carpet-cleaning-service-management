@@ -8,6 +8,7 @@ import javafx.scene.control.Tab;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import stu.najah.se.gui.Controller;
 import stu.najah.se.gui.scene.Authenticator;
 
 import java.net.URL;
