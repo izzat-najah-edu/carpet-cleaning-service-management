@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.util.Callback;
-import stu.najah.se.Navigator;
 import stu.najah.se.gui.Prompter;
 import stu.najah.se.sql.dao.CustomerDAO;
 import stu.najah.se.sql.dao.ProductDAO;
@@ -64,7 +63,7 @@ public class CustomersController
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // tab Edit
-        Controller.setUpTable(t1tableCustomers);
+        FXUtility.setUpTable(t1tableCustomers);
         t1tableCustomers.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
                     t1selectedCustomer = newValue;
@@ -72,7 +71,7 @@ public class CustomersController
                 });
         t1refreshTable();
         // tab Products
-        Controller.setUpTable(t2tableProducts);
+        FXUtility.setUpTable(t2tableProducts);
         t2listCustomers.setCellFactory(new Callback<>() {
             // this is to avoid overriding toString() of CustomerEntity class
             @Override
@@ -184,8 +183,9 @@ public class CustomersController
         customer.setName(t1textFieldName.getText());
         customer.setPhone(t1textFieldPhone.getText());
         customer.setAddress(t1textFieldAddress.getText());
-        customerDAO.insert(customer);
-        t1refreshTable();
+        if (customerDAO.insert(customer)) {
+            t1refreshTable();
+        }
     }
 
     @FXML
@@ -198,8 +198,9 @@ public class CustomersController
         t1selectedCustomer.setName(t1textFieldName.getText());
         t1selectedCustomer.setPhone(t1textFieldPhone.getText());
         t1selectedCustomer.setAddress(t1textFieldAddress.getText());
-        customerDAO.update(t1selectedCustomer);
-        t1refreshTable();
+        if (customerDAO.update(t1selectedCustomer)) {
+            t1refreshTable();
+        }
     }
 
     @FXML
@@ -208,8 +209,9 @@ public class CustomersController
             Prompter.warning("No customer selected!");
             return;
         }
-        customerDAO.delete(t1selectedCustomer);
-        t1refreshTable();
+        if (customerDAO.delete(t1selectedCustomer)) {
+            t1refreshTable();
+        }
     }
 
     @FXML
@@ -227,8 +229,9 @@ public class CustomersController
         product.setCustomerId(t2selectedCustomer.getId());
         product.setDescription(t2textFieldDescription.getText());
         product.setSpecialTreatment(t2textFieldSpecialTreatment.getText());
-        productDAO.insert(product);
-        t2refreshTable();
+        if (productDAO.insert(product)) {
+            t2refreshTable();
+        }
     }
 
     @FXML
@@ -243,8 +246,9 @@ public class CustomersController
         }
         t2selectedProduct.setDescription(t2textFieldDescription.getText());
         t2selectedProduct.setSpecialTreatment(t2textFieldSpecialTreatment.getText());
-        productDAO.update(t2selectedProduct);
-        t2refreshTable();
+        if (productDAO.update(t2selectedProduct)) {
+            t2refreshTable();
+        }
     }
 
     @FXML
@@ -257,7 +261,8 @@ public class CustomersController
             Prompter.warning("No product selected!");
             return;
         }
-        productDAO.delete(t2selectedProduct);
-        t2refreshTable();
+        if (productDAO.delete(t2selectedProduct)) {
+            t2refreshTable();
+        }
     }
 }

@@ -1,6 +1,5 @@
 package stu.najah.se.sql.dao;
 
-import stu.najah.se.sql.Database;
 import stu.najah.se.sql.entity.AdminEntity;
 
 public class AdminDAO extends DAO<AdminEntity> {

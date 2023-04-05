@@ -2,7 +2,6 @@
 package stu.najah.se.sql.dao;
 
 import stu.najah.se.gui.Prompter;
-import stu.najah.se.sql.Database;
 
 /**
  * Data Access Object: a layer that separates
@@ -18,6 +17,7 @@ abstract class DAO<T> {
      * The object is found recognized by using the identifier.
      * A prompt message is shown and handled graphically if the operation fails.
      * No further exceptions thrown whether it fails or succeeds.
+     *
      * @param object to be updated in the database
      * @return whether the operation failed or succeeded
      */
@@ -42,6 +42,7 @@ abstract class DAO<T> {
      * Attempts to insert the given object in the database.
      * A prompt message is shown and handled graphically if the operation fails.
      * No further exceptions thrown whether it fails or succeeds.
+     *
      * @param object to be inserted in the database
      * @return whether the operation failed or succeeded
      */
@@ -67,6 +68,7 @@ abstract class DAO<T> {
      * The object is found recognized by using the identifier.
      * A prompt message is shown and handled graphically if the operation fails.
      * No further exceptions thrown whether it fails or succeeds.
+     *
      * @param object to be deleted from the database
      * @return whether the operation failed or succeeded
      */

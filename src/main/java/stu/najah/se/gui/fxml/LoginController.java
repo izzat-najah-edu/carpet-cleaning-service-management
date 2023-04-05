@@ -1,10 +1,11 @@
 package stu.najah.se.gui.fxml;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import stu.najah.se.Navigator;
+import stu.najah.se.gui.scene.Authenticator;
 
 public class LoginController
         implements Controller {
@@ -26,13 +27,13 @@ public class LoginController
 
     @FXML
     public void exit() {
-        Navigator.exit();
+        Platform.exit();
     }
 
     @FXML
     public void login() {
         // send login request
-        Navigator.getSceneManager().login(
+        Authenticator.login(
                 textFieldUsername.getText(),
                 textFieldPassword.getText()
         );

@@ -1,12 +1,14 @@
 package stu.najah.se.gui.fxml;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Tab;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import stu.najah.se.Navigator;
+import javafx.stage.Stage;
+import stu.najah.se.gui.scene.Authenticator;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -45,12 +47,12 @@ public class MainController
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        var stage = Navigator.getSceneManager().getStage();
         navbarPane.setOnMousePressed(event -> {
             x = event.getSceneX();
             y = event.getSceneY();
         });
         navbarPane.setOnMouseDragged(event -> {
+            var stage = (Stage) navbarPane.getScene().getWindow();
             stage.setX(event.getScreenX() - x);
             stage.setY(event.getScreenY() - y);
         });
@@ -65,11 +67,11 @@ public class MainController
 
     @FXML
     public void exit(ActionEvent event) {
-        Navigator.exit();
+        Platform.exit();
     }
 
     @FXML
     public void logout(ActionEvent event) {
-        Navigator.getSceneManager().logout();
+        Authenticator.logout();
     }
 }

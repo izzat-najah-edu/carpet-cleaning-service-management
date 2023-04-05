@@ -2,7 +2,6 @@ package stu.najah.se.sql.dao;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import stu.najah.se.sql.Database;
 import stu.najah.se.sql.entity.ProductEntity;
 
 public class ProductDAO extends DAO<ProductEntity> {

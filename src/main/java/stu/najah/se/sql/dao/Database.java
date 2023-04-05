@@ -1,42 +1,26 @@
-package stu.najah.se.sql;
+package stu.najah.se.sql.dao;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.model.naming.IllegalIdentifierException;
 import org.hibernate.cfg.Configuration;
-import stu.najah.se.sql.entity.AdminEntity;
 
 /**
  * Utility class for the database.
- * It must be initialized once before use.
  * It's configured using Hibernate Framework.
  * Contains a method to create sessions to the database.
  */
-public final class Database {
+final class Database {
 
     private Database() {
     }
 
     /**
-     * Database initialized flag
-     */
-    private static boolean initialized = false;
-    /**
      * The database connector object, to generate the sessions
      */
-    private static SessionFactory sessionFactory;
+    private static final SessionFactory sessionFactory;
 
-    /**
-     * Creates the session factory object.
-     * Should be called before using the other methods.
-     * Calls after the first time have no effect.
-     */
-    public static void initialize() {
-        // can only be initialized once
-        if (initialized) {
-            return;
-        }
+    static {
         // initialize the session factory
         try {
             var configuration = new Configuration().configure(
@@ -47,8 +31,6 @@ public final class Database {
         }
         // close the session factory after the application is shutdown
         Runtime.getRuntime().addShutdownHook(new Thread(sessionFactory::close));
-        // database initialized
-        initialized = true;
     }
 
     /**
@@ -58,7 +40,7 @@ public final class Database {
      *
      * @return a new session object
      */
-    public static Session createSession() throws HibernateException {
+    static Session createSession() throws HibernateException {
         return sessionFactory.openSession();
     }
 }
