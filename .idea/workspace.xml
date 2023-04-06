@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="extensive refactoring">
+      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/72b255f7-4443-449b-a52b-599d4edebd59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/72b255f7-4443-449b-a52b-599d4edebd59.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/diagrams/RelationalMapping.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/diagrams/UML.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/assets/diagrams/UML.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sql/CREATE.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sql/CREATE.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sql/INSERT.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sql/INSERT.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,45 +86,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;72b255f7-4443-449b-a52b-599d4edebd59&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_directory_selection&quot;: &quot;F:/Work/Projects/Java/CarpetCleaningServiceManagement/src/main/java/stu/najah/se&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Izzat Alsharif/AppData/Local/SceneBuilder/SceneBuilder.exe&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "JPA.DatabaseSchemaImportDialog": "72b255f7-4443-449b-a52b-599d4edebd59",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "dart.analysis.tool.window.visible": "false",
+    "last_directory_selection": "F:/Work/Projects/Java/CarpetCleaningServiceManagement/src/main/java/stu/najah/se",
+    "last_opened_file_path": "F:/Work/Projects/Java/CarpetCleaningServiceManagement/assets/diagrams",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mongo&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo",
+      "mysql"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
-      &quot;MySQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "MySQL"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
-      &quot;MySQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "MySQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="stu.najah.se.sql" />
@@ -152,7 +158,7 @@
       <recent name="stu.najah.se.sql.entity" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SceneManager">
+  <component name="RunManager" selected="Database Script.CREATE.sql">
     <configuration name="Authenticator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.gui.scene.Authenticator" />
       <module name="CarpetCleaningServiceManagement" />
@@ -205,28 +211,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FeaturesTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CarpetCleaningServiceManagement" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="main" />
-      <option name="MAIN_CLASS_NAME" value="main.FeaturesTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="CREATE.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/assets/sql/CREATE.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Database Script.CREATE.sql" />
         <item itemvalue="Application.SceneManager" />
         <item itemvalue="Application.FastLogin" />
         <item itemvalue="Application.Authenticator" />
         <item itemvalue="Application.Navigator" />
-        <item itemvalue="JUnit.FeaturesTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -290,14 +286,8 @@
       <workItem from="1680649717396" duration="2147000" />
       <workItem from="1680691010836" duration="18120000" />
       <workItem from="1680712554703" duration="13274000" />
-      <workItem from="1680770969461" duration="383000" />
-    </task>
-    <task id="LOCAL-00017" summary="javafx added">
-      <created>1676890834014</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1676890834014</updated>
+      <workItem from="1680770969461" duration="1334000" />
+      <workItem from="1680784310993" duration="9343000" />
     </task>
     <task id="LOCAL-00018" summary="javafx added">
       <created>1676893670720</created>
@@ -635,7 +625,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680737030459</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="extensive refactoring">
+      <created>1680771659578</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1680771659578</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -692,6 +689,10 @@
     <MESSAGE value="more refactoring" />
     <MESSAGE value="extensive refactoring" />
     <option name="LAST_COMMIT_MESSAGE" value="extensive refactoring" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CarpetCleaningServiceManagement$Navigator.ic" NAME="Navigator Coverage Results" MODIFIED="1675536773415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
