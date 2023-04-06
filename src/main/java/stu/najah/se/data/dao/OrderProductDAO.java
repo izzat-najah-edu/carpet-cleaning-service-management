@@ -1,8 +1,8 @@
-package stu.najah.se.sql.dao;
+package stu.najah.se.data.dao;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import stu.najah.se.sql.entity.OrderProductEntity;
+import stu.najah.se.data.entity.OrderProductEntity;
 
 public class OrderProductDAO extends DAO<OrderProductEntity> {
 

@@ -7,10 +7,10 @@ import javafx.scene.control.*;
 import javafx.util.Callback;
 import stu.najah.se.gui.Controller;
 import stu.najah.se.gui.Prompter;
-import stu.najah.se.sql.dao.CustomerDAO;
-import stu.najah.se.sql.dao.ProductDAO;
-import stu.najah.se.sql.entity.CustomerEntity;
-import stu.najah.se.sql.entity.ProductEntity;
+import stu.najah.se.data.dao.CustomerDAO;
+import stu.najah.se.data.dao.ProductDAO;
+import stu.najah.se.data.entity.CustomerEntity;
+import stu.najah.se.data.entity.ProductEntity;
 
 import java.net.URL;
 import java.util.ResourceBundle;

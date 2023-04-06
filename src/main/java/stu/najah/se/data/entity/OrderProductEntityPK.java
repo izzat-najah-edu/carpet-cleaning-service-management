@@ -1,4 +1,4 @@
-package stu.najah.se.sql.entity;
+package stu.najah.se.data.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package stu.najah.se.sql.dao;
+package stu.najah.se.data.dao;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;

@@ -1,5 +1,5 @@
 
-package stu.najah.se.sql.dao;
+package stu.najah.se.data.dao;
 
 import stu.najah.se.gui.Prompter;
 

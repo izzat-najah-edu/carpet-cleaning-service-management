@@ -3,7 +3,7 @@ module CarpetCleaningServiceManagement {
     requires java.naming;
     requires jakarta.persistence;
     requires org.hibernate.orm.core;
-    opens stu.najah.se.sql.entity to org.hibernate.orm.core;
+    opens stu.najah.se.data.entity to org.hibernate.orm.core;
 
     requires javafx.controls;
     requires javafx.fxml;
@@ -14,8 +14,8 @@ module CarpetCleaningServiceManagement {
     exports stu.najah.se;
     exports stu.najah.se.gui;
     exports stu.najah.se.gui.control;
-    exports stu.najah.se.sql.entity;
-    exports stu.najah.se.sql.dao;
+    exports stu.najah.se.data.entity;
+    exports stu.najah.se.data.dao;
     exports stu.najah.se.gui.scene;
     opens stu.najah.se.gui.scene to javafx.fxml;
 }

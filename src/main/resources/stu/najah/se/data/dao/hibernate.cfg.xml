@@ -14,11 +14,11 @@
         <property name="show_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
 
-        <mapping class="stu.najah.se.sql.entity.AdminEntity"/>
-        <mapping class="stu.najah.se.sql.entity.CustomerEntity"/>
-        <mapping class="stu.najah.se.sql.entity.ProductEntity"/>
-        <mapping class="stu.najah.se.sql.entity.OrderEntity"/>
-        <mapping class="stu.najah.se.sql.entity.OrderProductEntity"/>
+        <mapping class="stu.najah.se.data.entity.AdminEntity"/>
+        <mapping class="stu.najah.se.data.entity.CustomerEntity"/>
+        <mapping class="stu.najah.se.data.entity.ProductEntity"/>
+        <mapping class="stu.najah.se.data.entity.OrderEntity"/>
+        <mapping class="stu.najah.se.data.entity.OrderProductEntity"/>
 
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->

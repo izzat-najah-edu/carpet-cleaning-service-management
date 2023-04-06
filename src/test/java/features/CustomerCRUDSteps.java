@@ -4,9 +4,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import javafx.scene.control.TableView;
-import javafx.scene.robot.Robot;
 import org.testfx.api.FxRobot;
-import stu.najah.se.sql.entity.CustomerEntity;
+import stu.najah.se.data.entity.CustomerEntity;
 import util.ContainedRobot;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
