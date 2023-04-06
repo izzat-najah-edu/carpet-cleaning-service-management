@@ -60,4 +60,17 @@ public class OrderEntity {
     public void setOrderProductsById(Collection<OrderProductEntity> orderProductsById) {
         this.orderProductsById = orderProductsById;
     }
+
+    /**
+     * Calculates the price by summing prices of all associated OrderProduct entities
+     *
+     * @return the total price of this order entity
+     */
+    public int price() {
+        int price = 0;
+        for (var orderProductEntity : getOrderProductsById()) {
+            price += orderProductEntity.getPrice();
+        }
+        return price;
+    }
 }
