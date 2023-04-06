@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="fxml controllers bug fix">
-      <change beforePath="$PROJECT_DIR$/assets/sql/CREATE.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sql/CREATE.sql" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order view implemented">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/OrdersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/customers.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/orders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/orders.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/products.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/products.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +24,8 @@
         <option value="module-info" />
         <option value="CSS File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -149,8 +153,9 @@
       <recent name="stu.najah" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="" />
+      <recent name="stu.najah.se.data.entity" />
       <recent name="stu.najah.se.sql.entity" />
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Application.FastLogin">
@@ -282,14 +287,7 @@
       <workItem from="1680691010836" duration="18120000" />
       <workItem from="1680712554703" duration="13274000" />
       <workItem from="1680770969461" duration="1334000" />
-      <workItem from="1680784310993" duration="26455000" />
-    </task>
-    <task id="LOCAL-00024" summary="panels navigation added">
-      <created>1677509145210</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1677509145210</updated>
+      <workItem from="1680784310993" duration="28482000" />
     </task>
     <task id="LOCAL-00025" summary="customers table added">
       <created>1677870244976</created>
@@ -627,7 +625,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680819902184</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="order view implemented">
+      <created>1680820944931</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1680820944931</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -658,7 +663,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="customer name unique constraint" />
     <MESSAGE value="product table added" />
     <MESSAGE value="small design change" />
     <MESSAGE value="fast login test class" />
@@ -683,7 +687,8 @@
     <MESSAGE value="package rename" />
     <MESSAGE value="fxml controllers reimplemented" />
     <MESSAGE value="fxml controllers bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fxml controllers bug fix" />
+    <MESSAGE value="order view implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="order view implemented" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

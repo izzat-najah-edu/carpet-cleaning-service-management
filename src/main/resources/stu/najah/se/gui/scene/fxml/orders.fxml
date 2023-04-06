@@ -1,5 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
 <AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.gui.control.OrdersController"/>
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.gui.control.OrdersController">
+    <children>
+        <TableView fx:id="tableOrders" layoutX="24.0" layoutY="82.0" prefHeight="412.0" prefWidth="246.0">
+            <columns>
+                <TableColumn prefWidth="166.0" text="CustomerName"/>
+                <TableColumn prefWidth="75.0" text="OrderID"/>
+            </columns>
+        </TableView>
+        <Label layoutX="24.0" layoutY="29.0" prefHeight="34.0" prefWidth="156.0" text="Orders:" underline="true">
+            <font>
+                <Font size="30.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="textFieldCustomerName" layoutX="24.0" layoutY="508.0" prefHeight="25.0" prefWidth="246.0"
+                   promptText="Search By Customer Name"/>
+        <TableView fx:id="tableProducts" layoutX="292.0" layoutY="82.0" prefHeight="278.0" prefWidth="687.0">
+            <columns>
+                <TableColumn prefWidth="69.0" text="OrderID"/>
+                <TableColumn prefWidth="81.0" text="ProductID"/>
+                <TableColumn prefWidth="367.0" text="SpecialTreatment"/>
+                <TableColumn prefWidth="86.0" text="Finished"/>
+                <TableColumn prefWidth="72.0" text="Price"/>
+            </columns>
+        </TableView>
+        <Label layoutX="292.0" layoutY="29.0" prefHeight="45.0" prefWidth="254.0" text="Treated Products:"
+               underline="true">
+            <font>
+                <Font size="30.0"/>
+            </font>
+        </Label>
+        <Label layoutX="39.0" layoutY="560.0" prefHeight="30.0" prefWidth="126.0" text="Order Status:">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+        <Label fx:id="labelOrderStatus" layoutX="177.0" layoutY="560.0" text=" ">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+        <Button layoutX="24.0" layoutY="616.0" mnemonicParsing="false" onAction="#generateInvoice" prefHeight="30.0"
+                prefWidth="246.0" text="Generate Invoice"/>
+        <Label layoutX="386.0" layoutY="450.0" prefHeight="30.0" prefWidth="99.0" text="Special Treatment:"/>
+        <TextField fx:id="textFieldSpecialTreatment" layoutX="493.0" layoutY="450.0" prefHeight="30.0" prefWidth="355.0"
+                   promptText="Select to Show"/>
+        <Label layoutX="419.0" layoutY="382.0" prefHeight="46.0" prefWidth="66.0" text="Edit:" underline="true">
+            <font>
+                <Font size="31.0"/>
+            </font>
+        </Label>
+        <Button layoutX="139.0" layoutY="39.0" mnemonicParsing="false" onAction="#refreshOrdersTable" text="Refresh"/>
+        <Button layoutX="546.0" layoutY="39.0" mnemonicParsing="false" onAction="#refreshProductsTable" text="Refresh"/>
+        <Button layoutX="500.0" layoutY="393.0" mnemonicParsing="false" onAction="#clearSelectedProduct" text="Clear"/>
+        <CheckBox fx:id="checkBoxFinished" layoutX="735.0" layoutY="496.0" mnemonicParsing="false" prefHeight="25.0"
+                  prefWidth="85.0" text="Finished"/>
+        <Label layoutX="452.0" layoutY="500.0" text="Price:"/>
+        <TextField fx:id="textFieldPrice" layoutX="493.0" layoutY="493.0" prefHeight="30.0" prefWidth="205.0"
+                   promptText="Select to Show"/>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="106.0" layoutX="367.0" layoutY="434.0"
+                   mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" width="538.0"/>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="46.0" layoutX="24.0" layoutY="554.0"
+                   mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" width="246.0"/>
+        <Button layoutX="467.0" layoutY="554.0" mnemonicParsing="false" onAction="#updateProduct" prefHeight="30.0"
+                prefWidth="317.0" text="Update Product"/>
+        <Button layoutX="467.0" layoutY="590.0" mnemonicParsing="false" onAction="#createProduct" prefHeight="30.0"
+                prefWidth="317.0" text="Create Product"/>
+        <Button layoutX="467.0" layoutY="626.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="30.0"
+                prefWidth="317.0" text="Delete Product"/>
+    </children>
+</AnchorPane>

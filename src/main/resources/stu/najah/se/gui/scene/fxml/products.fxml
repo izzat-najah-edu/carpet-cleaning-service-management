@@ -16,8 +16,8 @@
                    prefWidth="301.0" promptText="Search By Name" styleClass="search"/>
         <TableView fx:id="tableProducts" layoutX="362.0" layoutY="98.0" prefHeight="197.0" prefWidth="599.0">
             <columns>
-                <TableColumn prefWidth="62.0" text="Id"/>
-                <TableColumn prefWidth="110.0" text="CustomerId"/>
+                <TableColumn prefWidth="62.0" text="ID"/>
+                <TableColumn prefWidth="110.0" text="CustomerID"/>
                 <TableColumn prefWidth="419.0" text="Description"/>
             </columns>
         </TableView>
