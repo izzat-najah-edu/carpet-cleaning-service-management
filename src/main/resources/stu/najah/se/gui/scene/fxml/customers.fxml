@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.gui.fxml.CustomersController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.gui.control.CustomersController">
     <children>
         <TabPane prefHeight="700.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
             <tabs>

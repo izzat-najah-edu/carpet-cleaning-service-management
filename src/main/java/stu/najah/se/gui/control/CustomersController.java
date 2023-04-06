@@ -1,4 +1,4 @@
-package stu.najah.se.gui.fxml;
+package stu.najah.se.gui.control;
 
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;

@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="extensive refactoring">
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/CustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/fxml/CustomersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,8 +140,8 @@
       <recent name="stu.najah.se.dao" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="stu.najah.se.gui.fxml" />
       <recent name="stu.najah.se.gui" />
+      <recent name="stu.najah.se.gui.fxml" />
       <recent name="stu.najah.se.sql" />
       <recent name="features" />
     </key>
@@ -289,14 +289,8 @@
       <workItem from="1680620179841" duration="9642000" />
       <workItem from="1680649717396" duration="2147000" />
       <workItem from="1680691010836" duration="18120000" />
-      <workItem from="1680712554703" duration="13124000" />
-    </task>
-    <task id="LOCAL-00016" summary="files organization">
-      <created>1675858063507</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1675858063507</updated>
+      <workItem from="1680712554703" duration="13274000" />
+      <workItem from="1680770969461" duration="383000" />
     </task>
     <task id="LOCAL-00017" summary="javafx added">
       <created>1676890834014</created>
@@ -634,7 +628,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680736898132</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="extensive refactoring">
+      <created>1680737030459</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1680737030459</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
