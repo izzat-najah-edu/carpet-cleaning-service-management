@@ -1,130 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 <AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.gui.control.CustomersController">
     <children>
-        <TabPane prefHeight="700.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
-            <tabs>
-                <Tab fx:id="tabAll" text="All">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="203.0" prefWidth="247.0">
-                            <children>
-                                <Label layoutX="455.0" layoutY="17.0" text="Customers" underline="true">
-                                    <font>
-                                        <Font size="30.0"/>
-                                    </font>
-                                </Label>
-                                <TableView fx:id="t1tableCustomers" layoutX="455.0" layoutY="67.0" prefHeight="585.0"
-                                           prefWidth="487.0">
-                                    <columns>
-                                        <TableColumn prefWidth="75.0" text="Id"/>
-                                        <TableColumn prefWidth="120.0" text="Name"/>
-                                        <TableColumn prefWidth="109.0" text="Phone"/>
-                                        <TableColumn prefWidth="180.0" text="Address"/>
-                                    </columns>
-                                </TableView>
-                                <Button styleClass="refresh" layoutX="610.0" layoutY="27.0" mnemonicParsing="false"
-                                        onAction="#t1refreshTable" prefHeight="22.0" prefWidth="56.0" text="Refresh"/>
-                                <TextField styleClass="name" fx:id="t1textFieldName" layoutX="123.0" layoutY="144.0" prefHeight="25.0"
-                                           prefWidth="232.0" promptText="Select to Show"/>
-                                <TextField styleClass="phone" fx:id="t1textFieldPhone" layoutX="123.0" layoutY="184.0" prefHeight="25.0"
-                                           prefWidth="232.0" promptText="Select to Show"/>
-                                <TextField styleClass="address" fx:id="t1textFieldAddress" layoutX="123.0" layoutY="225.0" prefHeight="25.0"
-                                           prefWidth="233.0" promptText="Select to Show"/>
-                                <Label layoutX="61.0" layoutY="148.0" text="Name:"/>
-                                <Label layoutX="61.0" layoutY="188.0" text="Phone:"/>
-                                <Label layoutX="61.0" layoutY="229.0" text="Address:"/>
-                                <Button styleClass="create" layoutX="80.0" layoutY="281.0"
-                                        mnemonicParsing="false" onAction="#t1createCustomer" prefHeight="36.0"
-                                        prefWidth="259.0" text="Create New Customer"/>
-                                <Button styleClass="update" layoutX="81.0" layoutY="325.0"
-                                        mnemonicParsing="false" onAction="#t1updateCustomer" prefHeight="36.0"
-                                        prefWidth="258.0" text="Update Selected Customer"/>
-                                <Button styleClass="delete" layoutX="80.0" layoutY="368.0"
-                                        mnemonicParsing="false" onAction="#t1deleteCustomer" prefHeight="35.0"
-                                        prefWidth="259.0" text="Delete Selected Customer"/>
-                                <Button styleClass="clear" layoutX="123.0" layoutY="79.0" mnemonicParsing="false"
-                                        onAction="#t1clear" prefHeight="25.0" prefWidth="59.0" text="Clear"/>
-                                <Label layoutX="53.0" layoutY="69.0" text="Edit" underline="true">
-                                    <font>
-                                        <Font size="30.0"/>
-                                    </font>
-                                </Label>
-                            </children>
-                        </AnchorPane>
-                    </content>
-                </Tab>
-                <Tab fx:id="tabProducts" text="Products">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                            <children>
-                                <ListView fx:id="t2listCustomers" layoutX="31.0" layoutY="119.0" prefHeight="523.0"
-                                          prefWidth="301.0"/>
-                                <Label layoutX="31.0" layoutY="40.0" text="Choose a Customer:" underline="true">
-                                    <font>
-                                        <Font size="20.0"/>
-                                    </font>
-                                </Label>
-                                <TextField styleClass="search" fx:id="t2textFieldName" layoutX="31.0" layoutY="85.0"
-                                           onKeyTyped="#t2searchCustomer" prefHeight="25.0" prefWidth="301.0"
-                                           promptText="Search By Name"/>
-                                <TableView fx:id="t2tableProducts" layoutX="362.0" layoutY="98.0" prefHeight="183.0"
-                                           prefWidth="609.0">
-                                    <columns>
-                                        <TableColumn prefWidth="109.0" text="Number"/>
-                                        <TableColumn prefWidth="221.0" text="Description"/>
-                                        <TableColumn prefWidth="233.0" text="SpecialTreatment"/>
-                                    </columns>
-                                </TableView>
-                                <Label layoutX="371.0" layoutY="33.0" text="Products:" underline="true">
-                                    <font>
-                                        <Font size="30.0"/>
-                                    </font>
-                                </Label>
-                                <Button styleClass="refresh" layoutX="521.0" layoutY="43.0" mnemonicParsing="false"
-                                        onAction="#t2refreshTable" text="Refresh"/>
-                                <Label layoutX="409.0" layoutY="326.0" text="Edit:" underline="true">
-                                    <font>
-                                        <Font size="30.0"/>
-                                    </font>
-                                </Label>
-                                <Button styleClass="clear" layoutX="499.0" layoutY="336.0" mnemonicParsing="false"
-                                        onAction="#t2clear" text="Clear"/>
-                                <Label layoutX="406.0" layoutY="394.0" text="Description:"/>
-                                <Label layoutX="406.0" layoutY="428.0" text="Special Treatment:"/>
-                                <TextField styleClass="description" fx:id="t2textFieldDescription" layoutX="520.0" layoutY="390.0"
-                                           prefHeight="25.0" prefWidth="428.0" promptText="Select to Show"/>
-                                <TextField styleClass="specialTreatment" fx:id="t2textFieldSpecialTreatment" layoutX="521.0" layoutY="424.0"
-                                           prefHeight="25.0" prefWidth="426.0" promptText="Select to Show"/>
-                                <Button styleClass="create" layoutX="520.0" layoutY="468.0"
-                                        mnemonicParsing="false" onAction="#t2createProduct" prefHeight="40.0"
-                                        prefWidth="293.0" text="Create New Product"/>
-                                <Button styleClass="update" layoutX="520.0" layoutY="517.0"
-                                        mnemonicParsing="false" onAction="#t2updateProduct" prefHeight="40.0"
-                                        prefWidth="293.0" text="Update Selected Product"/>
-                                <Button styleClass="delete" layoutX="520.0" layoutY="566.0"
-                                        mnemonicParsing="false" onAction="#t2deleteProduct" prefHeight="40.0"
-                                        prefWidth="293.0" text="Delete Selected Product"/>
-                                <Button styleClass="refresh" layoutX="228.0" layoutY="43.0" mnemonicParsing="false"
-                                        onAction="#t2refreshList" text="Refresh"/>
-                                <Label layoutX="603.0" layoutY="47.0" text="Selected Customer:"/>
-                                <Label fx:id="t2labelCustomer" layoutX="723.0" layoutY="47.0"/>
-                            </children>
-                        </AnchorPane>
-                    </content>
-                </Tab>
-            </tabs>
-        </TabPane>
+        <Label layoutX="455.0" layoutY="17.0" text="Customers" underline="true">
+            <font>
+                <Font size="30.0"/>
+            </font>
+        </Label>
+        <TableView fx:id="tableCustomers" layoutX="455.0" layoutY="67.0" prefHeight="585.0"
+                   prefWidth="487.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="Id"/>
+                <TableColumn prefWidth="120.0" text="Name"/>
+                <TableColumn prefWidth="109.0" text="Phone"/>
+                <TableColumn prefWidth="180.0" text="Address"/>
+            </columns>
+        </TableView>
+        <Button styleClass="refresh" layoutX="610.0" layoutY="27.0" mnemonicParsing="false"
+                onAction="#refreshTable" prefHeight="22.0" prefWidth="56.0" text="Refresh"/>
+        <TextField styleClass="name" fx:id="textFieldName" layoutX="123.0" layoutY="144.0" prefHeight="25.0"
+                   prefWidth="232.0" promptText="Select to Show"/>
+        <TextField styleClass="phone" fx:id="textFieldPhone" layoutX="123.0" layoutY="184.0" prefHeight="25.0"
+                   prefWidth="232.0" promptText="Select to Show"/>
+        <TextField styleClass="address" fx:id="textFieldAddress" layoutX="123.0" layoutY="225.0" prefHeight="25.0"
+                   prefWidth="233.0" promptText="Select to Show"/>
+        <Label layoutX="61.0" layoutY="148.0" text="Name:"/>
+        <Label layoutX="61.0" layoutY="188.0" text="Phone:"/>
+        <Label layoutX="61.0" layoutY="229.0" text="Address:"/>
+        <Button styleClass="create" layoutX="80.0" layoutY="281.0"
+                mnemonicParsing="false" onAction="#createCustomer" prefHeight="36.0"
+                prefWidth="259.0" text="Create New Customer"/>
+        <Button styleClass="update" layoutX="81.0" layoutY="325.0"
+                mnemonicParsing="false" onAction="#updateCustomer" prefHeight="36.0"
+                prefWidth="258.0" text="Update Selected Customer"/>
+        <Button styleClass="delete" layoutX="80.0" layoutY="368.0"
+                mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="35.0"
+                prefWidth="259.0" text="Delete Selected Customer"/>
+        <Button styleClass="clear" layoutX="123.0" layoutY="79.0" mnemonicParsing="false"
+                onAction="#clear" prefHeight="25.0" prefWidth="59.0" text="Clear"/>
+        <Label layoutX="53.0" layoutY="69.0" text="Edit" underline="true">
+            <font>
+                <Font size="30.0"/>
+            </font>
+        </Label>
     </children>
 </AnchorPane>

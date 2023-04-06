@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="660.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="stu.najah.se.gui.control.ProductsController">
+    <children>
+        <ListView fx:id="listCustomers" layoutX="31.0" layoutY="129.0" prefHeight="514.0" prefWidth="301.0"/>
+        <Label layoutX="31.0" layoutY="40.0" text="Choose a Customer:" underline="true">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="textFieldName" layoutX="31.0" layoutY="85.0" onKeyTyped="#searchCustomer" prefHeight="25.0"
+                   prefWidth="301.0" promptText="Search By Name" styleClass="search"/>
+        <TableView fx:id="tableProducts" layoutX="362.0" layoutY="98.0" prefHeight="197.0" prefWidth="599.0">
+            <columns>
+                <TableColumn prefWidth="62.0" text="Id"/>
+                <TableColumn prefWidth="110.0" text="CustomerId"/>
+                <TableColumn prefWidth="419.0" text="Description"/>
+            </columns>
+        </TableView>
+        <Label layoutX="371.0" layoutY="33.0" text="Products:" underline="true">
+            <font>
+                <Font size="30.0"/>
+            </font>
+        </Label>
+        <Button layoutX="521.0" layoutY="43.0" mnemonicParsing="false" onAction="#refreshTable" styleClass="refresh"
+                text="Refresh"/>
+        <Label layoutX="409.0" layoutY="326.0" text="Edit:" underline="true">
+            <font>
+                <Font size="30.0"/>
+            </font>
+        </Label>
+        <Button layoutX="499.0" layoutY="336.0" mnemonicParsing="false" onAction="#clear" styleClass="clear"
+                text="Clear"/>
+        <Label layoutX="423.0" layoutY="403.0" text="Description:"/>
+        <TextField fx:id="textFieldDescription" layoutX="499.0" layoutY="391.0" prefHeight="40.0" prefWidth="428.0"
+                   promptText="Select to Show" styleClass="description"/>
+        <Button layoutX="520.0" layoutY="468.0" mnemonicParsing="false" onAction="#createProduct" prefHeight="40.0"
+                prefWidth="293.0" styleClass="create" text="Create New Product"/>
+        <Button layoutX="520.0" layoutY="517.0" mnemonicParsing="false" onAction="#updateProduct" prefHeight="40.0"
+                prefWidth="293.0" styleClass="update" text="Update Selected Product"/>
+        <Button layoutX="520.0" layoutY="566.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="40.0"
+                prefWidth="293.0" styleClass="delete" text="Delete Selected Product"/>
+        <Button layoutX="228.0" layoutY="43.0" mnemonicParsing="false" onAction="#refreshList" styleClass="refresh"
+                text="Refresh"/>
+        <Label layoutX="603.0" layoutY="47.0" text="Selected Customer:"/>
+        <Label fx:id="labelSelectedCustomer" layoutX="723.0" layoutY="47.0"/>
+    </children>
+</AnchorPane>

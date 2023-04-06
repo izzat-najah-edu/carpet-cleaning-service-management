@@ -1,7 +1,6 @@
 package stu.najah.se.gui.control;
 
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Tab;
@@ -27,16 +26,25 @@ public class MainController
     private Tab tabCustomers;
 
     @FXML
+    private Tab tabProducts;
+
+    @FXML
     private Tab tabOrders;
 
     @FXML
     private CustomersController paneCustomersController;
 
     @FXML
+    private ProductsController paneProductsController;
+
+    @FXML
     private OrdersController paneOrdersController;
 
     @FXML
     private AnchorPane paneCustomers;
+
+    @FXML
+    private AnchorPane paneProducts;
 
     @FXML
     private AnchorPane paneOrders;
@@ -63,16 +71,17 @@ public class MainController
     @Override
     public void reset() {
         paneCustomersController.reset();
+        paneProductsController.reset();
         paneOrdersController.reset();
     }
 
     @FXML
-    public void exit(ActionEvent event) {
+    public void exit() {
         Platform.exit();
     }
 
     @FXML
-    public void logout(ActionEvent event) {
+    public void logout() {
         Authenticator.logout();
     }
 }

@@ -26,10 +26,12 @@ public class OrderProductEntity {
     @Column(name = "price")
     private Integer price;
     @ManyToOne
-    @JoinColumn(name = "order_id", referencedColumnName = "id", nullable = false)
+    @JoinColumn(name = "order_id", referencedColumnName = "id", nullable = false,
+            insertable = false, updatable = false)
     private OrderEntity orderByOrderId;
     @ManyToOne
-    @JoinColumn(name = "product_id", referencedColumnName = "id", nullable = false)
+    @JoinColumn(name = "product_id", referencedColumnName = "id", nullable = false,
+            insertable = false, updatable = false)
     private ProductEntity productByProductId;
 
     public int getOrderId() {
