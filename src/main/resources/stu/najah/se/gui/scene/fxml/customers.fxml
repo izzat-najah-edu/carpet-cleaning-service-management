@@ -41,7 +41,7 @@
                 mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="35.0"
                 prefWidth="259.0" text="Delete Selected Customer"/>
         <Button styleClass="clear" layoutX="123.0" layoutY="79.0" mnemonicParsing="false"
-                onAction="#clear" prefHeight="25.0" prefWidth="59.0" text="Clear"/>
+                onAction="#clearCustomer" prefHeight="25.0" prefWidth="59.0" text="Clear"/>
         <Label layoutX="53.0" layoutY="69.0" text="Edit" underline="true">
             <font>
                 <Font size="30.0"/>

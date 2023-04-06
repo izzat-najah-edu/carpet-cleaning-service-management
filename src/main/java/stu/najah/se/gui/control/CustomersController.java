@@ -37,9 +37,8 @@ public class CustomersController
         tableCustomers.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
                     selectedCustomer = newValue;
-                    fillCustomerFields();
+                    refreshToSelectedCustomer();
                 });
-        reset();
     }
 
     @Override
@@ -47,13 +46,13 @@ public class CustomersController
         refreshTable();
     }
 
-    private void fillCustomerFields() {
+    private void refreshToSelectedCustomer() {
         if (selectedCustomer != null) {
             textFieldName.setText(selectedCustomer.getName());
             textFieldPhone.setText(selectedCustomer.getPhone());
             textFieldAddress.setText(selectedCustomer.getAddress());
         } else {
-            clear();
+            clearCustomer();
         }
     }
 
@@ -64,7 +63,7 @@ public class CustomersController
     }
 
     @FXML
-    private void clear() {
+    private void clearCustomer() {
         selectedCustomer = null;
         textFieldName.clear();
         textFieldPhone.clear();

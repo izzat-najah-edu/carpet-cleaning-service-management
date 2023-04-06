@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.gui.control.OrdersController">
-    <children>
-        <Label text="Orders"/>
-    </children>
-</AnchorPane>
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.gui.control.OrdersController"/>

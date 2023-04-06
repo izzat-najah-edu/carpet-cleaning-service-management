@@ -76,12 +76,12 @@ public class MainController
     }
 
     @FXML
-    public void exit() {
+    private void exit() {
         Platform.exit();
     }
 
     @FXML
-    public void logout() {
+    private void logout() {
         Authenticator.logout();
     }
 }

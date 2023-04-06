@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="package rename">
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/ProductsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/products.fxml" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="fxml controllers reimplemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/entity/OrderProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/entity/OrderProductEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/CustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/CustomersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/OrdersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/scene/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/scene/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/data/dao/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/data/dao/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/ProductsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/customers.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/orders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/orders.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/CustomerCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/CustomerCRUDSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/products.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/products.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +160,7 @@
       <recent name="stu.najah.se.sql.entity" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SceneManager">
+  <component name="RunManager" selected="Application.FastLogin">
     <configuration name="Authenticator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.gui.scene.Authenticator" />
       <module name="CarpetCleaningServiceManagement" />
@@ -225,9 +220,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FastLogin" />
         <item itemvalue="Application.SceneManager" />
         <item itemvalue="Database Script.CREATE.sql" />
-        <item itemvalue="Application.FastLogin" />
         <item itemvalue="Application.Authenticator" />
         <item itemvalue="Application.Navigator" />
       </list>
@@ -294,14 +289,7 @@
       <workItem from="1680691010836" duration="18120000" />
       <workItem from="1680712554703" duration="13274000" />
       <workItem from="1680770969461" duration="1334000" />
-      <workItem from="1680784310993" duration="22436000" />
-    </task>
-    <task id="LOCAL-00022" summary="tests added">
-      <created>1677327495171</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1677327495171</updated>
+      <workItem from="1680784310993" duration="25623000" />
     </task>
     <task id="LOCAL-00023" summary="navigator test fixed">
       <created>1677327891010</created>
@@ -639,7 +627,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680809947144</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="fxml controllers reimplemented">
+      <created>1680815832486</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1680815832486</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -670,7 +665,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="customer crud operations" />
     <MESSAGE value="documentation" />
     <MESSAGE value="customer name unique constraint" />
     <MESSAGE value="product table added" />
@@ -695,7 +689,8 @@
     <MESSAGE value="database changes" />
     <MESSAGE value="new dao objects implemented" />
     <MESSAGE value="package rename" />
-    <option name="LAST_COMMIT_MESSAGE" value="package rename" />
+    <MESSAGE value="fxml controllers reimplemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="fxml controllers reimplemented" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

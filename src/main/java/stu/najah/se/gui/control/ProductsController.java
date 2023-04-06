@@ -43,7 +43,7 @@ public class ProductsController
     public void initialize(URL location, ResourceBundle resources) {
         FXUtility.setUpTable(tableProducts);
         listCustomers.setCellFactory(new Callback<>() {
-            // this is to avoid overriding toString() of CustomerEntity class
+            // to avoid overriding toString() of CustomerEntity
             @Override
             public ListCell<CustomerEntity> call(ListView<CustomerEntity> param) {
                 return new ListCell<>() {
@@ -62,47 +62,45 @@ public class ProductsController
         tableProducts.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
                     selectedProduct = newValue;
-                    refreshSelectedProduct();
+                    refreshToSelectedProduct();
                 }
         );
         listCustomers.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
                     selectedCustomer = newValue;
-                    refreshSelectedCustomer();
-                    refreshTable();
+                    refreshToSelectedCustomer();
                 });
-        reset();
     }
 
     @Override
     public void reset() {
         refreshList();
-        refreshTable();
     }
 
-    private void refreshSelectedProduct() {
+    private void refreshToSelectedProduct() {
         if (selectedProduct != null) {
             textFieldDescription.setText(selectedProduct.getDescription());
         } else {
-            clear();
+            clearProduct();
         }
     }
 
-    private void refreshSelectedCustomer() {
+    private void refreshToSelectedCustomer() {
         labelSelectedCustomer.setText(
                 selectedCustomer == null ? null : selectedCustomer.getName()
         );
+        refreshTable();
     }
 
     @FXML
-    void refreshList() {
+    private void refreshList() {
         textFieldName.clear();
         listCustomers.setItems(customerDAO.getAll());
         listCustomers.getSelectionModel().clearSelection();
     }
 
     @FXML
-    void refreshTable() {
+    private void refreshTable() {
         if (selectedCustomer != null) {
             tableProducts.setItems(productDAO.getAll(selectedCustomer.getId()));
             tableProducts.getSelectionModel().clearSelection();
@@ -112,18 +110,18 @@ public class ProductsController
     }
 
     @FXML
-    void clear() {
+    private void clearProduct() {
         selectedProduct = null;
         textFieldDescription.clear();
     }
 
     @FXML
-    void searchCustomer() {
+    private void searchCustomer() {
         listCustomers.setItems(customerDAO.getAll(textFieldName.getText()));
     }
 
     @FXML
-    void createProduct() {
+    private void createProduct() {
         if (selectedCustomer == null) {
             Prompter.warning("No customer selected!");
             return;
@@ -137,7 +135,7 @@ public class ProductsController
     }
 
     @FXML
-    void updateProduct() {
+    private void updateProduct() {
         if (selectedCustomer == null) {
             Prompter.warning("No customer selected!");
             return;
@@ -153,7 +151,7 @@ public class ProductsController
     }
 
     @FXML
-    void deleteProduct() {
+    private void deleteProduct() {
         if (selectedCustomer == null) {
             Prompter.warning("No customer selected!");
             return;

@@ -27,12 +27,12 @@ public class LoginController
     }
 
     @FXML
-    public void exit() {
+    private void exit() {
         Platform.exit();
     }
 
     @FXML
-    public void login() {
+    private void login() {
         // send login request
         Authenticator.login(
                 textFieldUsername.getText(),
