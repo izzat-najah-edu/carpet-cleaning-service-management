@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="extensive refactoring">
-      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/72b255f7-4443-449b-a52b-599d4edebd59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/72b255f7-4443-449b-a52b-599d4edebd59.xml" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="database changes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/OrderEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/OrderProductEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/OrderProductEntityPK.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/diagrams/RelationalMapping.drawio" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/diagrams/UML.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/assets/diagrams/UML.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sql/CREATE.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sql/CREATE.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sql/INSERT.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sql/INSERT.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/sql/entity/ProductEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/sql/dao/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/sql/dao/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +156,7 @@
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="stu.najah.se.sql.entity" />
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Database Script.CREATE.sql">
@@ -287,14 +288,7 @@
       <workItem from="1680691010836" duration="18120000" />
       <workItem from="1680712554703" duration="13274000" />
       <workItem from="1680770969461" duration="1334000" />
-      <workItem from="1680784310993" duration="9343000" />
-    </task>
-    <task id="LOCAL-00018" summary="javafx added">
-      <created>1676893670720</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1676893670721</updated>
+      <workItem from="1680784310993" duration="10362000" />
     </task>
     <task id="LOCAL-00019" summary="jfoenix added">
       <created>1676898932340</created>
@@ -632,7 +626,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680771659578</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="database changes">
+      <created>1680795459463</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1680795459463</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +664,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="navigator test fixed" />
     <MESSAGE value="panels navigation added" />
     <MESSAGE value="customers table added" />
     <MESSAGE value="customer crud operations" />
@@ -688,7 +688,8 @@
     <MESSAGE value="big refactoring changes" />
     <MESSAGE value="more refactoring" />
     <MESSAGE value="extensive refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="extensive refactoring" />
+    <MESSAGE value="database changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="database changes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

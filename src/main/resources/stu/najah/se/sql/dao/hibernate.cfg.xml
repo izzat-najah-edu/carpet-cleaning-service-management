@@ -7,7 +7,7 @@
         <!-- carpet_cleaning_service_management -->
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/carpet_cleaning_service_management</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306</property>
         <property name="connection.username">ccsm</property>
         <property name="connection.password">ccsm1234</property>
 
@@ -17,6 +17,8 @@
         <mapping class="stu.najah.se.sql.entity.AdminEntity"/>
         <mapping class="stu.najah.se.sql.entity.CustomerEntity"/>
         <mapping class="stu.najah.se.sql.entity.ProductEntity"/>
+        <mapping class="stu.najah.se.sql.entity.OrderEntity"/>
+        <mapping class="stu.najah.se.sql.entity.OrderProductEntity"/>
 
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
