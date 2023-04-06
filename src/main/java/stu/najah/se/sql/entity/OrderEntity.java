@@ -2,6 +2,7 @@ package stu.najah.se.sql.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -14,6 +15,8 @@ public class OrderEntity {
     @Basic
     @Column(name = "customer_id")
     private Integer customerId;
+    @OneToMany(mappedBy = "orderByOrderId")
+    private Collection<OrderProductEntity> orderProductsById;
 
     public int getId() {
         return id;
@@ -48,5 +51,13 @@ public class OrderEntity {
         int result = id;
         result = 31 * result + (customerId != null ? customerId.hashCode() : 0);
         return result;
+    }
+
+    public Collection<OrderProductEntity> getOrderProductsById() {
+        return orderProductsById;
+    }
+
+    public void setOrderProductsById(Collection<OrderProductEntity> orderProductsById) {
+        this.orderProductsById = orderProductsById;
     }
 }

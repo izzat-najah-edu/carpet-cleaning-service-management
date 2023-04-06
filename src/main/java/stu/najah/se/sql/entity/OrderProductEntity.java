@@ -28,6 +28,9 @@ public class OrderProductEntity {
     @ManyToOne
     @JoinColumn(name = "order_id", referencedColumnName = "id", nullable = false)
     private OrderEntity orderByOrderId;
+    @ManyToOne
+    @JoinColumn(name = "product_id", referencedColumnName = "id", nullable = false)
+    private ProductEntity productByProductId;
 
     public int getOrderId() {
         return orderId;
@@ -100,5 +103,13 @@ public class OrderProductEntity {
 
     public void setOrderByOrderId(OrderEntity orderByOrderId) {
         this.orderByOrderId = orderByOrderId;
+    }
+
+    public ProductEntity getProductByProductId() {
+        return productByProductId;
+    }
+
+    public void setProductByProductId(ProductEntity productByProductId) {
+        this.productByProductId = productByProductId;
     }
 }
