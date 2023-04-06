@@ -62,14 +62,28 @@ public class OrderEntity {
     }
 
     /**
+     * An order is finished if and only if all its products are finished
+     *
+     * @return whether the order has finished or not
+     */
+    public boolean finished() {
+        for (var entity : getOrderProductsById()) {
+            if (entity.getFinished() == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
      * Calculates the price by summing prices of all associated OrderProduct entities
      *
      * @return the total price of this order entity
      */
     public int price() {
         int price = 0;
-        for (var orderProductEntity : getOrderProductsById()) {
-            price += orderProductEntity.getPrice();
+        for (var entity : getOrderProductsById()) {
+            price += entity.getPrice();
         }
         return price;
     }
