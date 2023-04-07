@@ -36,24 +36,13 @@ public class CustomersController
         FXUtility.setUpTable(tableCustomers);
         tableCustomers.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
-                    selectedCustomer = newValue;
-                    refreshToSelectedCustomer();
+                    customerToTextFields(selectedCustomer = newValue);
                 });
     }
 
     @Override
     public void reset() {
         refreshTable();
-    }
-
-    private void refreshToSelectedCustomer() {
-        if (selectedCustomer != null) {
-            textFieldName.setText(selectedCustomer.getName());
-            textFieldPhone.setText(selectedCustomer.getPhone());
-            textFieldAddress.setText(selectedCustomer.getAddress());
-        } else {
-            clearCustomer();
-        }
     }
 
     @FXML
@@ -65,17 +54,13 @@ public class CustomersController
     @FXML
     private void clearCustomer() {
         selectedCustomer = null;
-        textFieldName.clear();
-        textFieldPhone.clear();
-        textFieldAddress.clear();
+        clearTextFields();
     }
 
     @FXML
     private void createCustomer() {
         var customer = new CustomerEntity();
-        customer.setName(textFieldName.getText());
-        customer.setPhone(textFieldPhone.getText());
-        customer.setAddress(textFieldAddress.getText());
+        textFieldsToCustomer(customer);
         if (customerDAO.insert(customer)) {
             refreshTable();
         }
@@ -84,13 +69,11 @@ public class CustomersController
     @FXML
     private void updateCustomer() {
         if (selectedCustomer == null) {
-            Prompter.warning("No customer selected!");
+            Prompter.warning(FXUtility.NO_SELECTED_CUSTOMER_MESSAGE);
             return;
         }
         // edit the selected customer then update it using the DAO
-        selectedCustomer.setName(textFieldName.getText());
-        selectedCustomer.setPhone(textFieldPhone.getText());
-        selectedCustomer.setAddress(textFieldAddress.getText());
+        textFieldsToCustomer(selectedCustomer);
         if (customerDAO.update(selectedCustomer)) {
             refreshTable();
         }
@@ -99,11 +82,33 @@ public class CustomersController
     @FXML
     private void deleteCustomer() {
         if (selectedCustomer == null) {
-            Prompter.warning("No customer selected!");
+            Prompter.warning(FXUtility.NO_SELECTED_CUSTOMER_MESSAGE);
             return;
         }
         if (customerDAO.delete(selectedCustomer)) {
             refreshTable();
+        }
+    }
+
+    private void clearTextFields() {
+        textFieldName.clear();
+        textFieldPhone.clear();
+        textFieldAddress.clear();
+    }
+
+    private void textFieldsToCustomer(CustomerEntity customer) {
+        customer.setName(textFieldName.getText());
+        customer.setPhone(textFieldPhone.getText());
+        customer.setAddress(textFieldAddress.getText());
+    }
+
+    private void customerToTextFields(CustomerEntity customer) {
+        if (customer != null) {
+            textFieldName.setText(customer.getName());
+            textFieldPhone.setText(customer.getPhone());
+            textFieldAddress.setText(customer.getAddress());
+        } else {
+            clearTextFields();
         }
     }
 

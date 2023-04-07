@@ -9,6 +9,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
  */
 final class FXUtility {
 
+    static final String NO_SELECTED_CUSTOMER_MESSAGE
+            = "No customer selected!";
+
     /**
      * Creates a cell value factory for the table column.
      * The title of the column must be exactly like the name of the property.
