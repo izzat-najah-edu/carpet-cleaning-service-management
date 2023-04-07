@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="orders panel redesign">
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="customer entity toString override">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/CustomerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/entity/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/entity/ProductEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/OrdersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/orders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/orders.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -289,21 +293,7 @@
       <workItem from="1680863521104" duration="6492000" />
       <workItem from="1680870108055" duration="41000" />
       <workItem from="1680889930145" duration="355000" />
-      <workItem from="1680890320882" duration="1629000" />
-    </task>
-    <task id="LOCAL-00037" summary="refactoring">
-      <created>1678106840394</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1678106840394</updated>
-    </task>
-    <task id="LOCAL-00038" summary="new admin DAO">
-      <created>1678106854902</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1678106854902</updated>
+      <workItem from="1680890320882" duration="7862000" />
     </task>
     <task id="LOCAL-00039" summary="refactoring">
       <created>1678106922687</created>
@@ -634,7 +624,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680890137340</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="orders panel redesign">
+      <created>1680900192262</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1680900192262</updated>
+    </task>
+    <task id="LOCAL-00087" summary="customer entity toString override">
+      <created>1680900457056</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1680900457056</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,7 +669,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="products CRUD operations" />
     <MESSAGE value="tests fixed" />
     <MESSAGE value="css styles implemented" />
     <MESSAGE value="css classes and grouping" />
@@ -690,7 +693,8 @@
     <MESSAGE value="bug fixes" />
     <MESSAGE value="controllers refactoring" />
     <MESSAGE value="orders panel redesign" />
-    <option name="LAST_COMMIT_MESSAGE" value="orders panel redesign" />
+    <MESSAGE value="customer entity toString override" />
+    <option name="LAST_COMMIT_MESSAGE" value="customer entity toString override" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

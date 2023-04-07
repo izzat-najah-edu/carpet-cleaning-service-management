@@ -7,6 +7,18 @@ import stu.najah.se.data.entity.CustomerEntity;
 public class CustomerDAO extends DAO<CustomerEntity> {
 
     /**
+     * @param id of the customer
+     * @return the customer entity with the given id.
+     * or null if it's not found
+     */
+    public CustomerEntity get(int id) {
+        var session = Database.createSession();
+        var customer = session.get(CustomerEntity.class, id);
+        session.close();
+        return customer;
+    }
+
+    /**
      * @return all recorded customers
      */
     public ObservableList<CustomerEntity> getAll() {

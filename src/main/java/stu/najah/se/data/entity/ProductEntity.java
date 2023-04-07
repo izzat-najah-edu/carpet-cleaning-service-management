@@ -73,4 +73,9 @@ public class ProductEntity {
     public void setOrderProductsById(Collection<OrderProductEntity> orderProductsById) {
         this.orderProductsById = orderProductsById;
     }
+
+    @Override
+    public String toString() {
+        return description;
+    }
 }
