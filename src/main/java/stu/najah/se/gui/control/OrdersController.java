@@ -49,8 +49,8 @@ public class OrdersController
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        FXUtility.setUpTable(tableOrders);
-        FXUtility.setUpTable(tableProducts);
+        Utility.setUpTable(tableOrders);
+        Utility.setUpTable(tableProducts);
         tableOrders.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
                     selectedOrder = newValue;

@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="bug fixes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/CustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/CustomersController.java" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="controllers refactoring">
       <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/FXUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/FXUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/ProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/products.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/products.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +136,7 @@
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\test\resources\features" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="stu.najah.se.gui.control.FXUtility" />
       <recent name="stu.najah.se.gui.fxml.FXUtility" />
       <recent name="stu.najah.se.sql.Database" />
       <recent name="stu.najah.se.dao.DAO" />
@@ -286,14 +287,7 @@
       <workItem from="1680712554703" duration="13274000" />
       <workItem from="1680770969461" duration="1334000" />
       <workItem from="1680784310993" duration="32204000" />
-      <workItem from="1680863521104" duration="4342000" />
-    </task>
-    <task id="LOCAL-00032" summary="fast login test class">
-      <created>1678050049049</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1678050049049</updated>
+      <workItem from="1680863521104" duration="5522000" />
     </task>
     <task id="LOCAL-00033" summary="products tab added">
       <created>1678052313952</created>
@@ -631,7 +625,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680866051817</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="controllers refactoring">
+      <created>1680868012366</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1680868012366</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -662,7 +663,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="new admin DAO" />
     <MESSAGE value="ORM fixes" />
     <MESSAGE value="products CRUD operations" />
     <MESSAGE value="tests fixed" />
@@ -687,7 +687,8 @@
     <MESSAGE value="orders controller implemented" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="bug fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixes" />
+    <MESSAGE value="controllers refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="controllers refactoring" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

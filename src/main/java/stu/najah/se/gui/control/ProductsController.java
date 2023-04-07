@@ -3,7 +3,10 @@ package stu.najah.se.gui.control;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.util.Callback;
 import stu.najah.se.data.dao.CustomerDAO;
 import stu.najah.se.data.dao.ProductDAO;
@@ -30,9 +33,6 @@ public class ProductsController
     @FXML
     private TextField textFieldName;
 
-    @FXML
-    private Label labelSelectedCustomer;
-
     private final CustomerDAO customerDAO = new CustomerDAO();
     private final ProductDAO productDAO = new ProductDAO();
 
@@ -41,7 +41,7 @@ public class ProductsController
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        FXUtility.setUpTable(tableProducts);
+        Utility.setUpTable(tableProducts);
         listCustomers.setCellFactory(new Callback<>() {
             // to avoid overriding toString() of CustomerEntity
             @Override
@@ -61,107 +61,111 @@ public class ProductsController
         });
         tableProducts.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
-                    selectedProduct = newValue;
-                    refreshToSelectedProduct();
+                    productToTextFields(selectedProduct = newValue);
                 }
         );
         listCustomers.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
                     selectedCustomer = newValue;
-                    refreshToSelectedCustomer();
+                    refreshTableThenFields();
                 });
     }
 
     @Override
     public void reset() {
-        refreshList();
-    }
-
-    private void refreshToSelectedProduct() {
-        if (selectedProduct != null) {
-            textFieldDescription.setText(selectedProduct.getDescription());
-        } else {
-            clearProduct();
-        }
-    }
-
-    private void refreshToSelectedCustomer() {
-        labelSelectedCustomer.setText(
-                selectedCustomer == null ? null : selectedCustomer.getName()
-        );
-        refreshTable();
+        refreshListThenTableThenFields();
     }
 
     @FXML
-    private void refreshList() {
-        textFieldName.clear();
+    private void refreshListThenTableThenFields() {
+        clearSearchFields();
         listCustomers.setItems(customerDAO.getAll());
         listCustomers.getSelectionModel().clearSelection();
     }
 
     @FXML
-    private void refreshTable() {
+    private void refreshTableThenFields() {
         if (selectedCustomer != null) {
             tableProducts.setItems(productDAO.getAll(selectedCustomer.getId()));
-            tableProducts.getSelectionModel().clearSelection();
         } else {
             tableProducts.setItems(FXCollections.observableArrayList());
         }
+        tableProducts.getSelectionModel().clearSelection();
     }
 
     @FXML
     private void clearProduct() {
         selectedProduct = null;
-        textFieldDescription.clear();
+        clearProductTextFields();
     }
 
     @FXML
     private void createProduct() {
         if (selectedCustomer == null) {
-            Prompter.warning("No customer selected!");
+            Prompter.warning(Utility.NO_SELECTED_CUSTOMER_MESSAGE);
             return;
         }
         var product = new ProductEntity();
         product.setCustomerId(selectedCustomer.getId());
-        product.setDescription(textFieldDescription.getText());
+        textFieldsToProduct(product);
         if (productDAO.insert(product)) {
-            refreshTable();
+            refreshTableThenFields();
         }
     }
 
     @FXML
     private void updateProduct() {
         if (selectedCustomer == null) {
-            Prompter.warning("No customer selected!");
+            Prompter.warning(Utility.NO_SELECTED_CUSTOMER_MESSAGE);
             return;
         }
         if (selectedProduct == null) {
-            Prompter.warning("No product selected!");
+            Prompter.warning(Utility.NO_SELECTED_PRODUCT_MESSAGE);
             return;
         }
-        selectedProduct.setDescription(textFieldDescription.getText());
+        textFieldsToProduct(selectedProduct);
         if (productDAO.update(selectedProduct)) {
-            refreshTable();
+            refreshTableThenFields();
         }
     }
 
     @FXML
     private void deleteProduct() {
         if (selectedCustomer == null) {
-            Prompter.warning("No customer selected!");
+            Prompter.warning(Utility.NO_SELECTED_CUSTOMER_MESSAGE);
             return;
         }
         if (selectedProduct == null) {
-            Prompter.warning("No product selected!");
+            Prompter.warning(Utility.NO_SELECTED_PRODUCT_MESSAGE);
             return;
         }
         if (productDAO.delete(selectedProduct)) {
-            refreshTable();
+            refreshTableThenFields();
         }
     }
 
     @FXML
     private void searchCustomer() {
         listCustomers.setItems(customerDAO.getAll(textFieldName.getText()));
+    }
+
+    private void clearSearchFields() {
+        textFieldName.clear();
+    }
+
+    private void clearProductTextFields() {
+        textFieldDescription.clear();
+    }
+
+    private void textFieldsToProduct(ProductEntity product) {
+        product.setDescription(textFieldDescription.getText());
+    }
+
+    private void productToTextFields(ProductEntity product) {
+        if (product != null) {
+            textFieldDescription.setText(product.getDescription());
+        } else {
+            clearProductTextFields();
+        }
     }
 }

@@ -5,12 +5,18 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
- * Contains JavaFX-related helper methods
+ * Contains constants helper methods for the controllers
  */
-final class FXUtility {
+final class Utility {
 
     static final String NO_SELECTED_CUSTOMER_MESSAGE
             = "No customer selected!";
+
+    static final String NO_SELECTED_PRODUCT_MESSAGE
+            = "No product selected!";
+
+    static final String NO_SELECTED_ORDER_MESSAGE
+            = "No order selected!";
 
     /**
      * Creates a cell value factory for the table column.
@@ -18,15 +24,15 @@ final class FXUtility {
      *
      * @param column uses the title of the column as the name of the property
      */
-    public static void setUpColumn(TableColumn<?, ?> column) {
+    static void setUpColumn(TableColumn<?, ?> column) {
         column.setCellValueFactory(new PropertyValueFactory<>(column.getText()));
     }
 
     /**
      * @param tableView applies setUpColumn() for every column in the table
      */
-    public static void setUpTable(TableView<?> tableView) {
-        tableView.getColumns().forEach(FXUtility::setUpColumn);
+    static void setUpTable(TableView<?> tableView) {
+        tableView.getColumns().forEach(Utility::setUpColumn);
     }
 
 }

@@ -33,7 +33,7 @@ public class CustomersController
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        FXUtility.setUpTable(tableCustomers);
+        Utility.setUpTable(tableCustomers);
         tableCustomers.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
                     customerToTextFields(selectedCustomer = newValue);
@@ -42,11 +42,11 @@ public class CustomersController
 
     @Override
     public void reset() {
-        refreshTable();
+        refreshTableThenFields();
     }
 
     @FXML
-    private void refreshTable() {
+    private void refreshTableThenFields() {
         tableCustomers.setItems(customerDAO.getAll());
         tableCustomers.getSelectionModel().clearSelection();
     }
@@ -62,31 +62,31 @@ public class CustomersController
         var customer = new CustomerEntity();
         textFieldsToCustomer(customer);
         if (customerDAO.insert(customer)) {
-            refreshTable();
+            refreshTableThenFields();
         }
     }
 
     @FXML
     private void updateCustomer() {
         if (selectedCustomer == null) {
-            Prompter.warning(FXUtility.NO_SELECTED_CUSTOMER_MESSAGE);
+            Prompter.warning(Utility.NO_SELECTED_CUSTOMER_MESSAGE);
             return;
         }
         // edit the selected customer then update it using the DAO
         textFieldsToCustomer(selectedCustomer);
         if (customerDAO.update(selectedCustomer)) {
-            refreshTable();
+            refreshTableThenFields();
         }
     }
 
     @FXML
     private void deleteCustomer() {
         if (selectedCustomer == null) {
-            Prompter.warning(FXUtility.NO_SELECTED_CUSTOMER_MESSAGE);
+            Prompter.warning(Utility.NO_SELECTED_CUSTOMER_MESSAGE);
             return;
         }
         if (customerDAO.delete(selectedCustomer)) {
-            refreshTable();
+            refreshTableThenFields();
         }
     }
 
