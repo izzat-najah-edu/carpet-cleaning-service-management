@@ -2,6 +2,7 @@ package stu.najah.se.data.dao;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import org.hibernate.Hibernate;
 import stu.najah.se.data.entity.OrderEntity;
 import stu.najah.se.data.entity.OrderViewEntity;
 
@@ -15,6 +16,7 @@ public class OrderDAO extends DAO<OrderEntity> {
     public OrderEntity get(int id) {
         var session = Database.createSession();
         var order = session.get(OrderEntity.class, id);
+        Hibernate.initialize(order.getOrderProductsById());
         session.close();
         return order;
     }
