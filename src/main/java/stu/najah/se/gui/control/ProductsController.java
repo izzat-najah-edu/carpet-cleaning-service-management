@@ -3,11 +3,9 @@ package stu.najah.se.gui.control;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.util.Callback;
 import stu.najah.se.data.dao.CustomerDAO;
 import stu.najah.se.data.dao.ProductDAO;
 import stu.najah.se.data.entity.CustomerEntity;
@@ -42,23 +40,6 @@ public class ProductsController
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Utility.setUpTable(tableProducts);
-        listCustomers.setCellFactory(new Callback<>() {
-            // to avoid overriding toString() of CustomerEntity
-            @Override
-            public ListCell<CustomerEntity> call(ListView<CustomerEntity> param) {
-                return new ListCell<>() {
-                    @Override
-                    protected void updateItem(CustomerEntity item, boolean empty) {
-                        super.updateItem(item, empty);
-                        if (item == null || empty) {
-                            setText(null);
-                        } else {
-                            setText(item.getName());
-                        }
-                    }
-                };
-            }
-        });
         tableProducts.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
                     productToTextFields(selectedProduct = newValue);

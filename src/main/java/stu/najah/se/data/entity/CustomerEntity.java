@@ -75,4 +75,9 @@ public class CustomerEntity {
         result = 31 * result + (address != null ? address.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }
