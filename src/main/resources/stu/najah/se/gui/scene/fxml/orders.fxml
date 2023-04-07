@@ -68,10 +68,10 @@
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="46.0" layoutX="24.0" layoutY="554.0"
                    mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" width="246.0"/>
         <Button layoutX="467.0" layoutY="554.0" mnemonicParsing="false" onAction="#updateProduct" prefHeight="30.0"
-                prefWidth="317.0" text="Update Product"/>
+                prefWidth="317.0" text="Update Treated Product"/>
         <Button layoutX="467.0" layoutY="590.0" mnemonicParsing="false" onAction="#createProduct" prefHeight="30.0"
-                prefWidth="317.0" text="Create Product"/>
+                prefWidth="317.0" text="Create Treated Product"/>
         <Button layoutX="467.0" layoutY="626.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="30.0"
-                prefWidth="317.0" text="Delete Product"/>
+                prefWidth="317.0" text="Delete Treated Product"/>
     </children>
 </AnchorPane>
