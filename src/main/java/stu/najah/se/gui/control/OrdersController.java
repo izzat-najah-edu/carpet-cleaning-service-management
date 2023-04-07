@@ -73,7 +73,7 @@ public class OrdersController
         if (selectedOrder != null) {
             var order = orderDAO.get(selectedOrder.getOrderId());
             labelOrderStatus.setText(
-                    order.finished() ? "Finished" : "In Progress"
+                    order.finished() ? "Finished" : "Waiting"
             );
         } else {
             labelOrderStatus.setText("-");
@@ -118,7 +118,7 @@ public class OrdersController
     @FXML
     private void createProduct() {
         if (selectedOrder == null) {
-            Prompter.warning("No order selected!");
+            Prompter.warning(Utility.NO_SELECTED_ORDER_MESSAGE);
             return;
         }
         var orderProduct = new OrderProductEntity();
@@ -128,7 +128,7 @@ public class OrdersController
         try {
             orderProduct.setPrice(Integer.parseInt(textFieldPrice.getText()));
         } catch (NumberFormatException e) {
-            Prompter.error("Incorrect number format!");
+            Prompter.error(Utility.NUMBER_FORMAT_ERROR_MESSAGE);
         }
         orderProduct.setFinished((byte) (checkBoxFinished.isSelected() ? 1 : 0));
         if (productDAO.insert(orderProduct)) {
@@ -139,18 +139,18 @@ public class OrdersController
     @FXML
     private void updateProduct() {
         if (selectedOrder == null) {
-            Prompter.warning("No order selected!");
+            Prompter.warning(Utility.NO_SELECTED_ORDER_MESSAGE);
             return;
         }
         if (selectedProduct == null) {
-            Prompter.warning("No product selected!");
+            Prompter.warning(Utility.NO_SELECTED_PRODUCT_MESSAGE);
             return;
         }
         selectedProduct.setSpecialTreatment(textFieldSpecialTreatment.getText());
         try {
             selectedProduct.setPrice(Integer.parseInt(textFieldPrice.getText()));
         } catch (NumberFormatException e) {
-            Prompter.error("Incorrect number format!");
+            Prompter.error(Utility.NUMBER_FORMAT_ERROR_MESSAGE);
         }
         selectedProduct.setFinished((byte) (checkBoxFinished.isSelected() ? 1 : 0));
         if (productDAO.update(selectedProduct)) {
@@ -161,11 +161,11 @@ public class OrdersController
     @FXML
     private void deleteProduct() {
         if (selectedOrder == null) {
-            Prompter.warning("No order selected!");
+            Prompter.warning(Utility.NO_SELECTED_ORDER_MESSAGE);
             return;
         }
         if (selectedProduct == null) {
-            Prompter.warning("No product selected!");
+            Prompter.warning(Utility.NO_SELECTED_PRODUCT_MESSAGE);
             return;
         }
         if (productDAO.delete(selectedProduct)) {

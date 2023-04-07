@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="controllers refactoring">
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/FXUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/FXUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/ProductsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/products.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/products.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="controllers refactoring" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,14 +283,7 @@
       <workItem from="1680712554703" duration="13274000" />
       <workItem from="1680770969461" duration="1334000" />
       <workItem from="1680784310993" duration="32204000" />
-      <workItem from="1680863521104" duration="5522000" />
-    </task>
-    <task id="LOCAL-00033" summary="products tab added">
-      <created>1678052313952</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1678052313952</updated>
+      <workItem from="1680863521104" duration="5986000" />
     </task>
     <task id="LOCAL-00034" summary="product entity ORM">
       <created>1678052711984</created>
@@ -632,7 +621,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680868012366</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="controllers refactoring">
+      <created>1680869582337</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1680869582337</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

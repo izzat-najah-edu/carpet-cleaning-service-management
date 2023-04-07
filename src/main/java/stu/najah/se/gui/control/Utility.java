@@ -18,6 +18,9 @@ final class Utility {
     static final String NO_SELECTED_ORDER_MESSAGE
             = "No order selected!";
 
+    static final String NUMBER_FORMAT_ERROR_MESSAGE
+            = "Incorrect number format!";
+
     /**
      * Creates a cell value factory for the table column.
      * The title of the column must be exactly like the name of the property.
