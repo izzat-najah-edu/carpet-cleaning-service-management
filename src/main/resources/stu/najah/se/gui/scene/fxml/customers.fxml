@@ -21,8 +21,7 @@
             </columns>
         </TableView>
         <Button layoutX="610.0" layoutY="27.0" mnemonicParsing="false" onAction="#refreshTableThenFields"
-                prefHeight="22.0"
-                prefWidth="56.0" styleClass="refresh" text="Refresh"/>
+                prefHeight="22.0" prefWidth="56.0" styleClass="refresh" text="Refresh"/>
         <TextField fx:id="textFieldName" layoutX="123.0" layoutY="144.0" prefHeight="25.0" prefWidth="232.0"
                    promptText="Select to Show" styleClass="name"/>
         <TextField fx:id="textFieldPhone" layoutX="123.0" layoutY="184.0" prefHeight="25.0" prefWidth="232.0"
@@ -45,7 +44,7 @@
                 <Font size="30.0"/>
             </font>
         </Label>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="135.0" layoutX="41.0" layoutY="129.0"
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="289.0" layoutX="41.0" layoutY="129.0"
                    mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" width="338.0"/>
     </children>
 </AnchorPane>
