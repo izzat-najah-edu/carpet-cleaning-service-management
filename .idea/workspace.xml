@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="orders panel redesign">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/orders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/orders.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,13 +288,8 @@
       <workItem from="1680784310993" duration="32204000" />
       <workItem from="1680863521104" duration="6492000" />
       <workItem from="1680870108055" duration="41000" />
-    </task>
-    <task id="LOCAL-00036" summary="design change">
-      <created>1678106146976</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1678106146976</updated>
+      <workItem from="1680889930145" duration="355000" />
+      <workItem from="1680890320882" duration="1629000" />
     </task>
     <task id="LOCAL-00037" summary="refactoring">
       <created>1678106840394</created>
@@ -631,7 +627,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680870069573</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="orders panel redesign">
+      <created>1680890137340</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1680890137340</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
