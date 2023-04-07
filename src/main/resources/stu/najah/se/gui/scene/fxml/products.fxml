@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <AnchorPane prefHeight="660.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="stu.najah.se.gui.control.ProductsController">
@@ -16,8 +17,8 @@
                    prefWidth="301.0" promptText="Search By Name" styleClass="search"/>
         <TableView fx:id="tableProducts" layoutX="362.0" layoutY="98.0" prefHeight="197.0" prefWidth="599.0">
             <columns>
-                <TableColumn prefWidth="62.0" text="ID"/>
-                <TableColumn prefWidth="110.0" text="CustomerID"/>
+                <TableColumn prefWidth="62.0" text="Id"/>
+                <TableColumn prefWidth="110.0" text="CustomerId"/>
                 <TableColumn prefWidth="419.0" text="Description"/>
             </columns>
         </TableView>
@@ -48,5 +49,7 @@
                 text="Refresh"/>
         <Label layoutX="603.0" layoutY="47.0" text="Selected Customer:"/>
         <Label fx:id="labelSelectedCustomer" layoutX="723.0" layoutY="47.0"/>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="66.0" layoutX="409.0" layoutY="378.0"
+                   mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" width="535.0"/>
     </children>
 </AnchorPane>

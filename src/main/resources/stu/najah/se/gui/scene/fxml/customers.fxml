@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.gui.control.CustomersController">
@@ -13,7 +14,7 @@
         </Label>
         <TableView fx:id="tableCustomers" layoutX="455.0" layoutY="67.0" prefHeight="585.0" prefWidth="487.0">
             <columns>
-                <TableColumn prefWidth="75.0" text="ID"/>
+                <TableColumn prefWidth="75.0" text="Id"/>
                 <TableColumn prefWidth="120.0" text="Name"/>
                 <TableColumn prefWidth="109.0" text="Phone"/>
                 <TableColumn prefWidth="180.0" text="Address"/>
@@ -43,5 +44,7 @@
                 <Font size="30.0"/>
             </font>
         </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="135.0" layoutX="41.0" layoutY="129.0"
+                   mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" width="338.0"/>
     </children>
 </AnchorPane>

@@ -10,7 +10,7 @@
         <TableView fx:id="tableOrders" layoutX="24.0" layoutY="82.0" prefHeight="412.0" prefWidth="246.0">
             <columns>
                 <TableColumn prefWidth="166.0" text="CustomerName"/>
-                <TableColumn prefWidth="75.0" text="OrderID"/>
+                <TableColumn prefWidth="75.0" text="OrderId"/>
             </columns>
         </TableView>
         <Label layoutX="24.0" layoutY="29.0" prefHeight="34.0" prefWidth="156.0" text="Orders:" underline="true">
@@ -18,12 +18,12 @@
                 <Font size="30.0"/>
             </font>
         </Label>
-        <TextField fx:id="textFieldCustomerName" layoutX="24.0" layoutY="508.0" onAction="#searchOrder"
+        <TextField fx:id="textFieldCustomerName" layoutX="24.0" layoutY="508.0" onKeyTyped="#searchOrder"
                    prefHeight="25.0" prefWidth="246.0" promptText="Search By Customer Name"/>
         <TableView fx:id="tableProducts" layoutX="292.0" layoutY="82.0" prefHeight="278.0" prefWidth="687.0">
             <columns>
-                <TableColumn prefWidth="69.0" text="OrderID"/>
-                <TableColumn prefWidth="81.0" text="ProductID"/>
+                <TableColumn prefWidth="69.0" text="OrderId"/>
+                <TableColumn prefWidth="81.0" text="ProductId"/>
                 <TableColumn prefWidth="367.0" text="SpecialTreatment"/>
                 <TableColumn prefWidth="86.0" text="Finished"/>
                 <TableColumn prefWidth="72.0" text="Price"/>
