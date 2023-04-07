@@ -116,11 +116,6 @@ public class ProductsController
     }
 
     @FXML
-    private void searchCustomer() {
-        listCustomers.setItems(customerDAO.getAll(textFieldName.getText()));
-    }
-
-    @FXML
     private void createProduct() {
         if (selectedCustomer == null) {
             Prompter.warning("No customer selected!");
@@ -163,5 +158,10 @@ public class ProductsController
         if (productDAO.delete(selectedProduct)) {
             refreshTable();
         }
+    }
+
+    @FXML
+    private void searchCustomer() {
+        listCustomers.setItems(customerDAO.getAll(textFieldName.getText()));
     }
 }

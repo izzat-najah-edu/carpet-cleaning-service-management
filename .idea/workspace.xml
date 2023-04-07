@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order view implemented">
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order entity finished method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/OrderDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/OrdersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/customers.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/ProductsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/orders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/orders.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/products.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/products.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,28 +287,7 @@
       <workItem from="1680691010836" duration="18120000" />
       <workItem from="1680712554703" duration="13274000" />
       <workItem from="1680770969461" duration="1334000" />
-      <workItem from="1680784310993" duration="28482000" />
-    </task>
-    <task id="LOCAL-00025" summary="customers table added">
-      <created>1677870244976</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1677870244976</updated>
-    </task>
-    <task id="LOCAL-00026" summary="customer crud operations">
-      <created>1677966783189</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1677966783189</updated>
-    </task>
-    <task id="LOCAL-00027" summary="customer crud operations">
-      <created>1678030272646</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1678030272646</updated>
+      <workItem from="1680784310993" duration="32102000" />
     </task>
     <task id="LOCAL-00028" summary="documentation">
       <created>1678030410522</created>
@@ -632,7 +611,28 @@
       <option name="project" value="LOCAL" />
       <updated>1680820944931</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="orders panel implemented">
+      <created>1680822859118</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1680822859118</updated>
+    </task>
+    <task id="LOCAL-00075" summary="order entity price method">
+      <created>1680823762684</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1680823762684</updated>
+    </task>
+    <task id="LOCAL-00076" summary="order entity finished method">
+      <created>1680823986319</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1680823986319</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,9 +663,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="product table added" />
-    <MESSAGE value="small design change" />
-    <MESSAGE value="fast login test class" />
     <MESSAGE value="products tab added" />
     <MESSAGE value="product entity ORM" />
     <MESSAGE value="design change" />
@@ -688,7 +685,10 @@
     <MESSAGE value="fxml controllers reimplemented" />
     <MESSAGE value="fxml controllers bug fix" />
     <MESSAGE value="order view implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="order view implemented" />
+    <MESSAGE value="orders panel implemented" />
+    <MESSAGE value="order entity price method" />
+    <MESSAGE value="order entity finished method" />
+    <option name="LAST_COMMIT_MESSAGE" value="order entity finished method" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

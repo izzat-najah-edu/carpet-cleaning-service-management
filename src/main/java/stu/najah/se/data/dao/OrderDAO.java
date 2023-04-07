@@ -8,6 +8,18 @@ import stu.najah.se.data.entity.OrderViewEntity;
 public class OrderDAO extends DAO<OrderEntity> {
 
     /**
+     * @param id of the order
+     * @return the order entity with the given id.
+     * or null if it's not found
+     */
+    public OrderEntity get(int id) {
+        var session = Database.createSession();
+        var order = session.get(OrderEntity.class, id);
+        session.close();
+        return order;
+    }
+
+    /**
      * @param customerId which all the orders share
      * @return all orders with the given customerId
      */
@@ -23,10 +35,23 @@ public class OrderDAO extends DAO<OrderEntity> {
     }
 
     /**
+     * @return all order view entities
+     */
+    public ObservableList<OrderViewEntity> getAllViews() {
+        var session = Database.createSession();
+        var builder = session.getCriteriaBuilder();
+        var query = builder.createQuery(OrderViewEntity.class);
+        query.from(OrderViewEntity.class);
+        var list = session.createQuery(query).getResultList();
+        session.close();
+        return FXCollections.observableArrayList(list);
+    }
+
+    /**
      * @param customerName which all the order view entities share
      * @return all order view entities with the given customerName
      */
-    public ObservableList<OrderViewEntity> getAll(String customerName) {
+    public ObservableList<OrderViewEntity> getAllViews(String customerName) {
         var session = Database.createSession();
         var builder = session.getCriteriaBuilder();
         var query = builder.createQuery(OrderViewEntity.class);
