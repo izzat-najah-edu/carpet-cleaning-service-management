@@ -12,23 +12,22 @@ public class CustomerDAO extends DAO<CustomerEntity> {
      * or null if it's not found
      */
     public CustomerEntity get(int id) {
-        var session = Database.createSession();
-        var customer = session.get(CustomerEntity.class, id);
-        session.close();
-        return customer;
+        try (var session = Database.createSession()) {
+            return session.get(CustomerEntity.class, id);
+        }
     }
 
     /**
      * @return all recorded customers
      */
     public ObservableList<CustomerEntity> getAll() {
-        var session = Database.createSession();
-        var builder = session.getCriteriaBuilder();
-        var query = builder.createQuery(CustomerEntity.class);
-        query.from(CustomerEntity.class);
-        var list = session.createQuery(query).getResultList();
-        session.close();
-        return FXCollections.observableArrayList(list);
+        try (var session = Database.createSession()) {
+            var builder = session.getCriteriaBuilder();
+            var query = builder.createQuery(CustomerEntity.class);
+            query.from(CustomerEntity.class);
+            var list = session.createQuery(query).getResultList();
+            return FXCollections.observableArrayList(list);
+        }
     }
 
     /**
@@ -36,13 +35,13 @@ public class CustomerDAO extends DAO<CustomerEntity> {
      * @return all customers which names contain the given substring
      */
     public ObservableList<CustomerEntity> getAll(String nameSubstring) {
-        var session = Database.createSession();
-        var builder = session.getCriteriaBuilder();
-        var query = builder.createQuery(CustomerEntity.class);
-        var root = query.from(CustomerEntity.class);
-        query.where(builder.like(root.get("name"), "%" + nameSubstring + "%"));
-        var list = session.createQuery(query).getResultList();
-        session.close();
-        return FXCollections.observableArrayList(list);
+        try (var session = Database.createSession()) {
+            var builder = session.getCriteriaBuilder();
+            var query = builder.createQuery(CustomerEntity.class);
+            var root = query.from(CustomerEntity.class);
+            query.where(builder.like(root.get("name"), "%" + nameSubstring + "%"));
+            var list = session.createQuery(query).getResultList();
+            return FXCollections.observableArrayList(list);
+        }
     }
 }

@@ -10,9 +10,8 @@ public class AdminDAO extends DAO<AdminEntity> {
      * or null if it's not found
      */
     public AdminEntity get(String username) {
-        var session = Database.createSession();
-        var admin = session.find(AdminEntity.class, username);
-        session.close();
-        return admin;
+        try (var session = Database.createSession()) {
+            return session.find(AdminEntity.class, username);
+        }
     }
 }
