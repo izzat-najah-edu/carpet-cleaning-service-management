@@ -1,91 +1,83 @@
-
 package stu.najah.se.data.dao;
 
-import stu.najah.se.gui.Prompter;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Predicate;
+import jakarta.persistence.criteria.Root;
+
+import java.util.List;
 
 /**
  * Data Access Object: a layer that separates
  * the SQL operations from any other service using it, like JavaFX.
- * This is a template DAO class with 3 default methods: update, insert, delete.
  *
  * @param <T> an entity class (Admin, Customer...)
  */
 abstract class DAO<T> {
 
     /**
-     * Attempts to update the given object in the database.
-     * The object is found recognized by using the identifier.
-     * A prompt message is shown and handled graphically if the operation fails.
-     * No further exceptions thrown whether it fails or succeeds.
-     *
-     * @param object to be updated in the database
-     * @return whether the operation failed or succeeded
+     * The class representing the entity type for which this DAO is responsible
      */
-    public final boolean update(T object) {
-        var session = Database.createSession();
-        var transaction = session.getTransaction();
-        try (session) {
-            transaction.begin();
-            session.merge(object);
-            transaction.commit();
-            return true;
-        } catch (Exception e) {
-            if (transaction != null) {
-                transaction.rollback();
-            }
-            Prompter.error(e);
-            return false;
+    private final Class<T> entityClass;
+
+    /**
+     * Constructs a new DAO instance for the given entity class.
+     *
+     * @param entityClass The entity class for which this DAO is responsible.
+     */
+    protected DAO(Class<T> entityClass) {
+        this.entityClass = entityClass;
+    }
+
+    /**
+     * @param identifier of the entity
+     * @return the entity object in the database with the given identifier,
+     * or null if it's not found
+     */
+    public T get(Object identifier) {
+        try (var session = Database.createSession()) {
+            return session.find(entityClass, identifier);
         }
     }
 
     /**
-     * Attempts to insert the given object in the database.
-     * A prompt message is shown and handled graphically if the operation fails.
-     * No further exceptions thrown whether it fails or succeeds.
+     * Retrieves a list of entities from the database based on the provided condition.
+     * This method creates a session, builds a query, and applies the given condition
+     * to the query, if any. The query is then executed, and the results are returned.
      *
-     * @param object to be inserted in the database
-     * @return whether the operation failed or succeeded
+     * @param condition A PredicateFunction representing the condition to be applied to the query.
+     * @return A list of entities of type T that match the given condition,
+     * or all entities if no condition is provided.
      */
-    public final boolean insert(T object) {
-        var session = Database.createSession();
-        var transaction = session.getTransaction();
-        try (session) {
-            transaction.begin();
-            session.persist(object);
-            transaction.commit();
-            return true;
-        } catch (Exception e) {
-            if (transaction != null) {
-                transaction.rollback();
+    protected List<T> getWithCondition(PredicateFunction<T> condition) {
+        try (var session = Database.createSession()) {
+            var builder = session.getCriteriaBuilder();
+            var query = builder.createQuery(entityClass);
+            var root = query.from(entityClass);
+            if (condition != null) {
+                query.where(condition.apply(builder, query, root));
             }
-            Prompter.error(e);
-            return false;
+            return session.createQuery(query).getResultList();
         }
     }
 
     /**
-     * Attempts to delete the given object from the database.
-     * The object is found recognized by using the identifier.
-     * A prompt message is shown and handled graphically if the operation fails.
-     * No further exceptions thrown whether it fails or succeeds.
+     * A functional interface representing a function that generates a {@link Predicate}
+     * for a given {@link CriteriaBuilder}, {@link CriteriaQuery}, and {@link Root}.
      *
-     * @param object to be deleted from the database
-     * @return whether the operation failed or succeeded
+     * @param <T> the type of the entity to which the predicate will be applied
      */
-    public final boolean delete(T object) {
-        var session = Database.createSession();
-        var transaction = session.getTransaction();
-        try (session) {
-            transaction.begin();
-            session.remove(object);
-            transaction.commit();
-            return true;
-        } catch (Exception e) {
-            if (transaction != null) {
-                transaction.rollback();
-            }
-            Prompter.error(e);
-            return false;
-        }
+    @FunctionalInterface
+    interface PredicateFunction<T> {
+
+        /**
+         * Applies this function to the given {@link CriteriaBuilder}, {@link CriteriaQuery}, and {@link Root}.
+         *
+         * @param builder the {@link CriteriaBuilder} used for constructing the {@link Predicate}
+         * @param query   the {@link CriteriaQuery} that represents the query being built
+         * @param root    the {@link Root} that defines the entity type and its corresponding metadata
+         * @return the {@link Predicate} generated by applying this function to the given parameters
+         */
+        Predicate apply(CriteriaBuilder builder, CriteriaQuery<T> query, Root<T> root);
     }
 }

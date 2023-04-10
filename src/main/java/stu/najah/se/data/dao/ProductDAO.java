@@ -5,21 +5,22 @@ import javafx.collections.ObservableList;
 import stu.najah.se.data.entity.OrderProductEntity;
 import stu.najah.se.data.entity.ProductEntity;
 
-public class ProductDAO extends DAO<ProductEntity> {
+public class ProductDAO extends FullDAO<ProductEntity> {
+
+    /**
+     * Constructs a new ProductDAO instance.
+     */
+    public ProductDAO() {
+        super(ProductEntity.class);
+    }
 
     /**
      * @param customerId which all the products share
      * @return all products with the given customerId
      */
     public ObservableList<ProductEntity> getAll(int customerId) {
-        try (var session = Database.createSession()) {
-            var builder = session.getCriteriaBuilder();
-            var query = builder.createQuery(ProductEntity.class);
-            var root = query.from(ProductEntity.class);
-            query.where(builder.equal(root.get("customerId"), customerId));
-            var list = session.createQuery(query).getResultList();
-            return FXCollections.observableArrayList(list);
-        }
+        return FXCollections.observableArrayList(getWithCondition((builder, query, root) ->
+                builder.equal(root.get("customerId"), customerId)));
     }
 
     /**
@@ -27,20 +28,14 @@ public class ProductDAO extends DAO<ProductEntity> {
      * @return all products with the given customerId that are not associated with any order
      */
     public ObservableList<ProductEntity> getAllAvailable(int customerId) {
-        try (var session = Database.createSession()) {
-            var builder = session.getCriteriaBuilder();
-            var query = builder.createQuery(ProductEntity.class);
-            var root = query.from(ProductEntity.class);
+        return FXCollections.observableArrayList(getWithCondition((builder, query, root) -> {
             // check if a product is not in the order_product table
             var subQuery = query.subquery(Long.class);
             var subQueryRoot = subQuery.from(OrderProductEntity.class);
             subQuery.select(builder.count(subQueryRoot));
             subQuery.where(builder.equal(subQueryRoot.get("productId"), root.get("id")));
             // add the subQuery and customerId condition to the main query's condition
-            query.where(builder.and(builder.equal(root.get("customerId"), customerId), builder.equal(subQuery, 0L)));
-            // query and return it
-            var list = session.createQuery(query).getResultList();
-            return FXCollections.observableArrayList(list);
-        }
+            return builder.and(builder.equal(root.get("customerId"), customerId), builder.equal(subQuery, 0L));
+        }));
     }
 }

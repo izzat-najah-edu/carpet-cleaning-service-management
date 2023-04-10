@@ -6,17 +6,38 @@ import org.hibernate.Hibernate;
 import stu.najah.se.data.entity.OrderEntity;
 import stu.najah.se.data.entity.OrderViewEntity;
 
-public class OrderDAO extends DAO<OrderEntity> {
+public class OrderDAO extends FullDAO<OrderEntity> {
+
+    private final OrderViewDAO orderViewDAO = new OrderViewDAO();
+
+    static class OrderViewDAO extends DAO<OrderViewEntity> {
+        /**
+         * Constructs a new OrderViewDAO instance.
+         */
+        protected OrderViewDAO() {
+            super(OrderViewEntity.class);
+        }
+    }
 
     /**
-     * @param id of the order
+     * Constructs a new OrderDAO instance.
+     */
+    public OrderDAO() {
+        super(OrderEntity.class);
+    }
+
+    /**
+     * @param identifier of the order
      * @return the order entity with the given id.
      * or null if it's not found
      */
-    public OrderEntity get(int id) {
+    @Override
+    public OrderEntity get(Object identifier) {
         try (var session = Database.createSession()) {
-            var order = session.get(OrderEntity.class, id);
-            Hibernate.initialize(order.getOrderProductsById());
+            var order = session.get(OrderEntity.class, identifier);
+            if (order != null) {
+                Hibernate.initialize(order.getOrderProductsById());
+            }
             return order;
         }
     }
@@ -26,27 +47,15 @@ public class OrderDAO extends DAO<OrderEntity> {
      * @return all orders with the given customerId
      */
     public ObservableList<OrderEntity> getAll(int customerId) {
-        try (var session = Database.createSession()) {
-            var builder = session.getCriteriaBuilder();
-            var query = builder.createQuery(OrderEntity.class);
-            var root = query.from(OrderEntity.class);
-            query.where(builder.equal(root.get("customerId"), customerId));
-            var list = session.createQuery(query).getResultList();
-            return FXCollections.observableArrayList(list);
-        }
+        return FXCollections.observableArrayList(getWithCondition((builder, query, root) ->
+                builder.equal(root.get("customerId"), customerId)));
     }
 
     /**
      * @return all order view entities
      */
     public ObservableList<OrderViewEntity> getAllViews() {
-        try (var session = Database.createSession()) {
-            var builder = session.getCriteriaBuilder();
-            var query = builder.createQuery(OrderViewEntity.class);
-            query.from(OrderViewEntity.class);
-            var list = session.createQuery(query).getResultList();
-            return FXCollections.observableArrayList(list);
-        }
+        return FXCollections.observableArrayList(orderViewDAO.getWithCondition(null));
     }
 
     /**
@@ -54,13 +63,7 @@ public class OrderDAO extends DAO<OrderEntity> {
      * @return all order view entities with the given customerName
      */
     public ObservableList<OrderViewEntity> getAllViews(String customerName) {
-        try (var session = Database.createSession()) {
-            var builder = session.getCriteriaBuilder();
-            var query = builder.createQuery(OrderViewEntity.class);
-            var root = query.from(OrderViewEntity.class);
-            query.where(builder.equal(root.get("customerName"), customerName));
-            var list = session.createQuery(query).getResultList();
-            return FXCollections.observableArrayList(list);
-        }
+        return FXCollections.observableArrayList(orderViewDAO.getWithCondition((builder, query, root) ->
+                builder.equal(root.get("customerName"), customerName)));
     }
 }

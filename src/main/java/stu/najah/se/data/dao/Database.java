@@ -18,19 +18,24 @@ final class Database {
     /**
      * The database connector object, to generate the sessions
      */
-    private static final SessionFactory sessionFactory;
+    private static final SessionFactory sessionFactory = buildSessionFactory();
 
-    static {
-        // initialize the session factory
+    /**
+     * Initialize the session factory
+     *
+     * @return the session factory object
+     */
+    private static SessionFactory buildSessionFactory() {
         try {
             var configuration = new Configuration().configure(
                     Database.class.getResource("hibernate.cfg.xml"));
-            sessionFactory = configuration.buildSessionFactory();
+            var sessionFactory = configuration.buildSessionFactory();
+            // close the session factory after the application is shutdown
+            Runtime.getRuntime().addShutdownHook(new Thread(sessionFactory::close));
+            return sessionFactory;
         } catch (Throwable ex) {
             throw new ExceptionInInitializerError(ex);
         }
-        // close the session factory after the application is shutdown
-        Runtime.getRuntime().addShutdownHook(new Thread(sessionFactory::close));
     }
 
     /**
@@ -42,5 +47,30 @@ final class Database {
      */
     static Session createSession() throws HibernateException {
         return sessionFactory.openSession();
+    }
+
+    /**
+     * Executes the given SessionUsage functional interface within a try-with-resources block,
+     * ensuring the session is properly closed after the operation.
+     *
+     * @param usage The SessionUsage functional interface to be executed with the session
+     * @param <T>   The type of the result returned from the session operation
+     * @return The result of the session operation
+     */
+    static <T> T useSession(SessionUsage<T> usage) {
+        try (var session = sessionFactory.openSession()) {
+            return usage.perform(session);
+        }
+    }
+
+    /**
+     * A functional interface to be used with the useSession method.
+     * Provides an abstract perform method to execute operations on the session.
+     *
+     * @param <T> The type of the result returned from the session operation
+     */
+    @FunctionalInterface
+    interface SessionUsage<T> {
+        T perform(Session session);
     }
 }

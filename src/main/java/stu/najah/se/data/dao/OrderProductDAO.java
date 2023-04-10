@@ -4,20 +4,21 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import stu.najah.se.data.entity.OrderProductEntity;
 
-public class OrderProductDAO extends DAO<OrderProductEntity> {
+public class OrderProductDAO extends FullDAO<OrderProductEntity> {
+
+    /**
+     * Constructs a new OrderProductDAO instance.
+     */
+    public OrderProductDAO() {
+        super(OrderProductEntity.class);
+    }
 
     /**
      * @param orderId which all the order product entities share
      * @return list of all the order products entities
      */
     public ObservableList<OrderProductEntity> getAll(int orderId) {
-        try (var session = Database.createSession()) {
-            var builder = session.getCriteriaBuilder();
-            var query = builder.createQuery(OrderProductEntity.class);
-            var root = query.from(OrderProductEntity.class);
-            query.where(builder.equal(root.get("orderId"), orderId));
-            var list = session.createQuery(query).getResultList();
-            return FXCollections.observableArrayList(list);
-        }
+        return FXCollections.observableArrayList(getWithCondition((builder, query, root) ->
+                builder.equal(root.get("orderId"), orderId)));
     }
 }
