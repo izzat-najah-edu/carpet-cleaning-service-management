@@ -4,13 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="panels redesign">
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="dao extensive refactoring">
+      <change afterPath="$PROJECT_DIR$/ccsm-core/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/service/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ccsm-ui/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/AdminDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/AdminDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/OrderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/OrderProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/OrderProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/FastLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/scene/FastLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/AdminDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/dao/AdminDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/dao/CustomerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/dao/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/dao/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/FullDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/dao/FullDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/dao/OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/OrderProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/dao/OrderProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/dao/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/entity/AdminEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/entity/AdminEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/entity/CustomerEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/entity/CustomerEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/entity/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/entity/OrderEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/entity/OrderProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/entity/OrderProductEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/entity/OrderProductEntityPK.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/entity/OrderProductEntityPK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/entity/OrderViewEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/entity/OrderViewEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/data/entity/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/entity/ProductEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/Prompter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/Prompter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/CustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/control/CustomersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/control/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/control/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/control/OrdersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/control/ProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/control/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/control/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/scene/Authenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/scene/Authenticator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stu/najah/se/gui/scene/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/scene/SceneManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/data/dao/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/resources/stu.najah.se.dao/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/scene/fxml/customers.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/scene/fxml/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/scene/fxml/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/orders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/scene/fxml/orders.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/fxml/products.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/scene/fxml/products.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stu/najah/se/gui/scene/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/scene/style/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,11 +58,11 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="JavaFXApplication" />
-        <option value="module-info" />
         <option value="CSS File" />
-        <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -85,45 +121,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;72b255f7-4443-449b-a52b-599d4edebd59&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_directory_selection&quot;: &quot;F:/Work/Projects/Java/CarpetCleaningServiceManagement/src/main/java/stu/najah/se&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Work/Projects/Java/CarpetCleaningServiceManagement/assets/diagrams&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "JPA.DatabaseSchemaImportDialog": "72b255f7-4443-449b-a52b-599d4edebd59",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "dart.analysis.tool.window.visible": "false",
+    "jdk.selected.JAVA_MODULE": "openjdk-19",
+    "last_directory_selection": "F:/Work/Projects/Java/CarpetCleaningServiceManagement/src/main/java/stu/najah/se",
+    "last_opened_file_path": "F:/Work/Projects/Java/CarpetCleaningServiceManagement/assets/diagrams",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mongo&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo",
+      "mysql"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
-      &quot;MySQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "MySQL"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
-      &quot;MySQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "MySQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="stu.najah.se.sql" />
@@ -132,11 +169,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu\najah\se\sql\dao" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu\najah\se\gui\scene" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu\najah\se\gui\fxml" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\main\resources\stu\najah\se\sql" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\src\test\resources\features" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-core\src\main\resources\stu.najah.se.dao" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\main\resources" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-core\src\main\resources" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\main\java\stu\najah\se" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-core\src\main\java\stu\najah\se" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="stu.najah.se.gui.control.FXUtility" />
@@ -175,11 +212,11 @@
       </method>
     </configuration>
     <configuration name="FastLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.FastLogin" />
-      <module name="CarpetCleaningServiceManagement" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.scene.FastLogin" />
+      <module name="ccsm-ui" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.*" />
+          <option name="PATTERN" value="stu.najah.se.scene.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -295,28 +332,31 @@
       <workItem from="1680889930145" duration="355000" />
       <workItem from="1680890320882" duration="8250000" />
       <workItem from="1680906552815" duration="92000" />
-      <workItem from="1680990803528" duration="624000" />
-    </task>
-    <task id="LOCAL-00041" summary="refactoring">
-      <created>1678113705367</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1678113705367</updated>
-    </task>
-    <task id="LOCAL-00042" summary="ORM fixes">
-      <created>1678116662714</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1678116662714</updated>
-    </task>
-    <task id="LOCAL-00043" summary="products CRUD operations">
-      <created>1678118799796</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1678118799796</updated>
+      <workItem from="1680990803528" duration="700000" />
+      <workItem from="1680993537235" duration="45000" />
+      <workItem from="1680993594818" duration="49000" />
+      <workItem from="1680993660678" duration="271000" />
+      <workItem from="1680993944749" duration="152000" />
+      <workItem from="1680994202034" duration="518000" />
+      <workItem from="1680994732850" duration="1156000" />
+      <workItem from="1680995904449" duration="41000" />
+      <workItem from="1680995956709" duration="173000" />
+      <workItem from="1681044462326" duration="104000" />
+      <workItem from="1681044580128" duration="73000" />
+      <workItem from="1681044664672" duration="1631000" />
+      <workItem from="1681046309430" duration="241000" />
+      <workItem from="1681046568453" duration="21000" />
+      <workItem from="1681046600257" duration="1153000" />
+      <workItem from="1681058894159" duration="5658000" />
+      <workItem from="1681068780107" duration="678000" />
+      <workItem from="1681076102203" duration="88000" />
+      <workItem from="1681082729181" duration="1594000" />
+      <workItem from="1681124517015" duration="73000" />
+      <workItem from="1681147195230" duration="276000" />
+      <workItem from="1681147495286" duration="2150000" />
+      <workItem from="1681157687705" duration="81000" />
+      <workItem from="1681157780839" duration="1585000" />
+      <workItem from="1681232535147" duration="6035000" />
     </task>
     <task id="LOCAL-00044" summary="refactoring">
       <created>1678118989811</created>
@@ -640,7 +680,28 @@
       <option name="project" value="LOCAL" />
       <updated>1680906621910</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="dao refactoring">
+      <created>1680991494927</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1680991494927</updated>
+    </task>
+    <task id="LOCAL-00091" summary="mysql setup explained">
+      <created>1681148345843</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1681148345844</updated>
+    </task>
+    <task id="LOCAL-00092" summary="dao extensive refactoring">
+      <created>1681157995546</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1681157995546</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -671,9 +732,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="css classes and grouping" />
-    <MESSAGE value="customer search added" />
-    <MESSAGE value="gui alerts implemented" />
     <MESSAGE value="PromptManager class added" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="big refactoring changes" />
@@ -696,7 +754,10 @@
     <MESSAGE value="customer entity toString override" />
     <MESSAGE value="orders controller implementation" />
     <MESSAGE value="panels redesign" />
-    <option name="LAST_COMMIT_MESSAGE" value="panels redesign" />
+    <MESSAGE value="dao refactoring" />
+    <MESSAGE value="mysql setup explained" />
+    <MESSAGE value="dao extensive refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="dao extensive refactoring" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
