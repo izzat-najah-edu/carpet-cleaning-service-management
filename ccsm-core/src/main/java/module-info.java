@@ -4,11 +4,12 @@ module ccsm.core {
     requires jakarta.persistence;
     requires org.hibernate.orm.core;
 
-    opens stu.najah.se.entity to org.hibernate.orm.core;
+    opens stu.najah.se.core.entity to org.hibernate.orm.core;
 
-    exports stu.najah.se.service;
+    exports stu.najah.se.core;
+    exports stu.najah.se.core.service;
 
     // this connection should be cut...
-    exports stu.najah.se.entity;
-    exports stu.najah.se.dao;
+    exports stu.najah.se.core.entity;
+    exports stu.najah.se.core.dao;
 }
