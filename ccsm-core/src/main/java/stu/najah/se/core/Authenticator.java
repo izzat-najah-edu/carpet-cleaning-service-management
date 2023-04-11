@@ -9,17 +9,17 @@ package stu.najah.se.core;
 public interface Authenticator {
 
     /**
-     * Request to transition the application to the logged-in state.
+     * Transition the application to the logged-in state.
      * Implementations should handle the necessary changes in the application
      * state and UI to reflect that a user has successfully logged in.
      */
-    void requestLogin();
+    void login();
 
     /**
-     * Request to transition the application to the logged-out state.
+     * Transition the application to the logged-out state.
      * Implementations should handle the necessary changes in the application
      * state and UI to reflect that a user has logged out, and prompt the user
      * to provide login credentials if needed.
      */
-    void requestLogout();
+    void logout();
 }

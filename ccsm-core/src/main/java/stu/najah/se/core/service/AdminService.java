@@ -44,7 +44,7 @@ public class AdminService {
      */
     public void logout() {
         currentAdmin = null;
-        authenticator.requestLogout();
+        authenticator.logout();
     }
 
     /**
@@ -54,7 +54,7 @@ public class AdminService {
      */
     private void login(AdminEntity admin) {
         currentAdmin = admin;
-        authenticator.requestLogin();
+        authenticator.login();
     }
 
     /**

@@ -67,12 +67,12 @@ public class SceneManager extends Application
     }
 
     @Override
-    public void requestLogin() {
+    public void login() {
         setMainScene();
     }
 
     @Override
-    public void requestLogout() {
+    public void logout() {
         setLoginScene();
     }
 
