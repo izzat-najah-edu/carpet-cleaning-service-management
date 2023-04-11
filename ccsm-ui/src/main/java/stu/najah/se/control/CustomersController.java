@@ -1,13 +1,14 @@
 package stu.najah.se.control;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import stu.najah.se.Controller;
 import stu.najah.se.Prompter;
-import stu.najah.se.data.dao.CustomerDAO;
-import stu.najah.se.data.entity.CustomerEntity;
+import stu.najah.se.dao.CustomerDAO;
+import stu.najah.se.entity.CustomerEntity;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -33,7 +34,7 @@ public class CustomersController
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Utility.setUpTable(tableCustomers);
+        FXUtility.setUpTable(tableCustomers);
         tableCustomers.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
                     customerToTextFields(selectedCustomer = newValue);
@@ -61,8 +62,11 @@ public class CustomersController
     private void createCustomer() {
         var customer = new CustomerEntity();
         textFieldsToCustomer(customer);
-        if (customerDAO.insert(customer)) {
+        try {
+            customerDAO.insert(customer);
             refreshTableThenFields();
+        } catch (Exception e) {
+            Prompter.error(e);
         }
     }
 
@@ -70,29 +74,37 @@ public class CustomersController
     private void updateCustomer() {
         if (ensureCustomerSelected()) {
             textFieldsToCustomer(selectedCustomer);
-            if (customerDAO.update(selectedCustomer)) {
+            try {
+                customerDAO.update(selectedCustomer);
                 refreshTableThenFields();
+            } catch (Exception e) {
+                Prompter.error(e);
             }
         }
     }
 
     @FXML
     private void deleteCustomer() {
-        if (ensureCustomerSelected() && customerDAO.delete(selectedCustomer)) {
-            refreshTableThenFields();
+        if (ensureCustomerSelected()) {
+            try {
+                customerDAO.delete(selectedCustomer);
+                refreshTableThenFields();
+            } catch (Exception e) {
+                Prompter.error(e);
+            }
         }
     }
 
     private boolean ensureCustomerSelected() {
         if (selectedCustomer == null) {
-            Prompter.warning(Utility.NO_SELECTED_PRODUCT_MESSAGE);
+            Prompter.warning(FXUtility.NO_SELECTED_PRODUCT_MESSAGE);
             return false;
         }
         return true;
     }
 
     private void refreshTable() {
-        tableCustomers.setItems(customerDAO.getAll());
+        tableCustomers.setItems(FXCollections.observableArrayList(customerDAO.getAll()));
         tableCustomers.getSelectionModel().clearSelection();
     }
 

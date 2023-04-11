@@ -1,10 +1,6 @@
-
 package stu.najah.se.dao;
 
 import org.hibernate.Session;
-import stu.najah.se.gui.Prompter;
-
-import java.util.function.BiConsumer;
 
 /**
  * A DAO class that supports DML Operations.
@@ -25,63 +21,80 @@ abstract class FullDAO<T> extends DAO<T> {
 
     /**
      * Attempts to update the given object in the database.
-     * A failure message is prompted if the operation fails.
      *
      * @param object to be updated in the database
-     * @return whether the operation succeeded
+     * @throws Exception if the transaction fails
      */
-    public final boolean update(T object) {
-        return performTransaction(object, Session::merge);
+    public void update(T object) throws Exception {
+        performTransaction(object, Session::merge);
     }
 
     /**
      * Attempts to insert the given object into the database.
-     * A failure message is prompted if the operation fails.
      *
      * @param object to be inserted in the database
-     * @return whether the operation succeeded
+     * @throws Exception if the transaction fails
      */
-    public final boolean insert(T object) {
-        return performTransaction(object, Session::persist);
+    public void insert(T object) throws Exception {
+        performTransaction(object, Session::persist);
     }
 
     /**
      * Attempts to delete the given object from the database.
-     * A failure message is prompted if the operation fails.
      *
      * @param object to be deleted from the database
-     * @return whether the operation succeeded
+     * @throws Exception if the transaction fails
      */
-    public final boolean delete(T object) {
-        return performTransaction(object, Session::remove);
+    public void delete(T object) throws Exception {
+        performTransaction(object, Session::remove);
     }
 
     /**
      * Performs a database transaction on the given object using the specified operation.
      * The transaction is wrapped in a try-with-resources block to ensure proper session
      * management. If an exception occurs during the transaction, it is rolled back,
-     * and an error message is displayed using the Prompter. Otherwise, the transaction
-     * is committed.
+     * and the exception is thrown. Otherwise, the transaction is committed.
      *
      * @param object    the object to perform the transaction on
-     * @param operation a BiConsumer functional interface representing the database operation
+     * @param operation a TransactionOperation functional interface representing the database operation
      *                  to perform; it accepts a Session and the object as arguments
-     * @return true if the transaction was successful, false otherwise
+     * @throws Exception if the transaction fails
      */
-    protected boolean performTransaction(T object, BiConsumer<Session, T> operation) {
+    protected void performTransaction(T object, TransactionOperation<T> operation) throws Exception {
         var session = Database.createSession();
         var transaction = session.getTransaction();
         try (session) {
             transaction.begin();
-            operation.accept(session, object);
+            operation.perform(session, object);
             transaction.commit();
-            return true;
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
             }
-            Prompter.error(e);
-            return false;
+            throw e;
         }
+    }
+
+    /**
+     * A functional interface that represents a database transaction operation
+     * to be performed on an object of type T, using a Hibernate Session.
+     * The perform method should contain the implementation of the transaction operation,
+     * and it may throw a checked exception.
+     *
+     * @param <T> the type of the object involved in the transaction operation
+     */
+    @FunctionalInterface
+    public interface TransactionOperation<T> {
+
+        /**
+         * Performs a database transaction operation on the given object using the provided Hibernate Session.
+         * This method should contain the implementation of the transaction operation
+         * and may throw a checked exception.
+         *
+         * @param session the Hibernate Session to be used for the transaction operation
+         * @param object  the object of type T involved in the transaction operation
+         * @throws Exception if any exception occurs during the transaction operation
+         */
+        void perform(Session session, T object) throws Exception;
     }
 }

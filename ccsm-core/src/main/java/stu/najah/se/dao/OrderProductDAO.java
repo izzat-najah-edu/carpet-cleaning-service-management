@@ -1,8 +1,8 @@
 package stu.najah.se.dao;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import stu.najah.se.entity.OrderProductEntity;
+
+import java.util.List;
 
 public class OrderProductDAO extends FullDAO<OrderProductEntity> {
 
@@ -17,8 +17,8 @@ public class OrderProductDAO extends FullDAO<OrderProductEntity> {
      * @param orderId which all the order product entities share
      * @return list of all the order products entities
      */
-    public ObservableList<OrderProductEntity> getAll(int orderId) {
-        return FXCollections.observableArrayList(getWithCondition((builder, query, root) ->
-                builder.equal(root.get("orderId"), orderId)));
+    public List<OrderProductEntity> getAll(int orderId) {
+        return getWithCondition((builder, query, root) ->
+                builder.equal(root.get("orderId"), orderId));
     }
 }

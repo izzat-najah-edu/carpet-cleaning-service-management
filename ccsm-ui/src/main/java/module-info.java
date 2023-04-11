@@ -5,4 +5,5 @@ module ccsm.ui {
     requires javafx.fxml;
 
     opens stu.najah.se.control to javafx.fxml;
+    opens stu.najah.se.scene to javafx.graphics;
 }

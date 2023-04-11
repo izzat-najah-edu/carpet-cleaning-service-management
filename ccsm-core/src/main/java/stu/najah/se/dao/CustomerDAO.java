@@ -1,8 +1,8 @@
 package stu.najah.se.dao;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import stu.najah.se.entity.CustomerEntity;
+
+import java.util.List;
 
 public class CustomerDAO extends FullDAO<CustomerEntity> {
 
@@ -16,16 +16,16 @@ public class CustomerDAO extends FullDAO<CustomerEntity> {
     /**
      * @return all recorded customers
      */
-    public ObservableList<CustomerEntity> getAll() {
-        return FXCollections.observableArrayList(getWithCondition(null));
+    public List<CustomerEntity> getAll() {
+        return getWithCondition(null);
     }
 
     /**
      * @param nameSubstring of the customer
      * @return all customers which names contain the given substring
      */
-    public ObservableList<CustomerEntity> getAll(String nameSubstring) {
-        return FXCollections.observableArrayList(getWithCondition((builder, query, root) ->
-                builder.like(root.get("name"), "%" + nameSubstring + "%")));
+    public List<CustomerEntity> getAll(String nameSubstring) {
+        return getWithCondition((builder, query, root) ->
+                builder.like(root.get("name"), "%" + nameSubstring + "%"));
     }
 }

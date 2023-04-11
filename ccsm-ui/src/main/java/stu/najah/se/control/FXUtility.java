@@ -7,7 +7,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 /**
  * Contains constants helper methods for the controllers
  */
-final class Utility {
+final class FXUtility {
 
     static final String NO_SELECTED_CUSTOMER_MESSAGE
             = "No customer selected!";
@@ -35,7 +35,7 @@ final class Utility {
      * @param tableView applies setUpColumn() for every column in the table
      */
     static void setUpTable(TableView<?> tableView) {
-        tableView.getColumns().forEach(Utility::setUpColumn);
+        tableView.getColumns().forEach(FXUtility::setUpColumn);
     }
 
 }

@@ -1,8 +1,8 @@
 package stu.najah.se.scene;
 
 import stu.najah.se.Prompter;
-import stu.najah.se.data.dao.AdminDAO;
-import stu.najah.se.data.entity.AdminEntity;
+import stu.najah.se.dao.AdminDAO;
+import stu.najah.se.entity.AdminEntity;
 
 /**
  * Utility class to control the login authorization.

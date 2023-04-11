@@ -6,11 +6,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import stu.najah.se.Controller;
 import stu.najah.se.Prompter;
-import stu.najah.se.data.dao.CustomerDAO;
-import stu.najah.se.data.dao.OrderDAO;
-import stu.najah.se.data.dao.OrderProductDAO;
-import stu.najah.se.data.dao.ProductDAO;
-import stu.najah.se.data.entity.*;
+import stu.najah.se.dao.CustomerDAO;
+import stu.najah.se.dao.OrderDAO;
+import stu.najah.se.dao.OrderProductDAO;
+import stu.najah.se.dao.ProductDAO;
+import stu.najah.se.entity.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -65,8 +65,8 @@ public class OrdersController
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Utility.setUpTable(tableOrders);
-        Utility.setUpTable(tableOrderProducts);
+        FXUtility.setUpTable(tableOrders);
+        FXUtility.setUpTable(tableOrderProducts);
         tableOrders.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
                     selectedOrderView = newValue;
@@ -92,14 +92,16 @@ public class OrdersController
     @FXML
     private void refreshOrdersThenProductsThenFields() {
         clearSearchFields();
-        tableOrders.setItems(orderDAO.getAllViews());
+        tableOrders.setItems(FXCollections.observableArrayList(orderDAO.getAllViews()));
         tableOrders.getSelectionModel().clearSelection();
     }
 
     @FXML
     private void refreshProductsThenFields() {
         if (selectedOrderProduct != null) {
-            tableOrderProducts.setItems(orderProductDAO.getAll(selectedOrderView.getOrderId()));
+            tableOrderProducts.setItems(FXCollections.observableArrayList(
+                    orderProductDAO.getAll(selectedOrderView.getOrderId())
+            ));
         } else {
             tableOrderProducts.setItems(FXCollections.observableArrayList());
         }
@@ -116,60 +118,69 @@ public class OrdersController
     @FXML
     private void updateOrderProduct() {
         if (selectedOrderView == null) {
-            Prompter.warning(Utility.NO_SELECTED_ORDER_MESSAGE);
+            Prompter.warning(FXUtility.NO_SELECTED_ORDER_MESSAGE);
             return;
         }
         if (selectedOrderProduct == null) {
-            Prompter.warning(Utility.NO_SELECTED_PRODUCT_MESSAGE);
+            Prompter.warning(FXUtility.NO_SELECTED_PRODUCT_MESSAGE);
             return;
         }
         try {
             textFieldsToProduct(selectedOrderProduct);
-            if (orderProductDAO.update(selectedOrderProduct)) {
-                refreshProductsThenFields();
-            }
+            orderProductDAO.update(selectedOrderProduct);
+            refreshProductsThenFields();
         } catch (NumberFormatException e) {
-            Prompter.error(Utility.NUMBER_FORMAT_ERROR_MESSAGE);
+            Prompter.error(FXUtility.NUMBER_FORMAT_ERROR_MESSAGE);
+        } catch (Exception e) {
+            Prompter.error(e);
         }
     }
 
     @FXML
     private void deleteOrderProduct() {
         if (selectedOrderView == null) {
-            Prompter.warning(Utility.NO_SELECTED_ORDER_MESSAGE);
+            Prompter.warning(FXUtility.NO_SELECTED_ORDER_MESSAGE);
             return;
         }
         if (selectedOrderProduct == null) {
-            Prompter.warning(Utility.NO_SELECTED_PRODUCT_MESSAGE);
+            Prompter.warning(FXUtility.NO_SELECTED_PRODUCT_MESSAGE);
             return;
         }
-        if (orderProductDAO.delete(selectedOrderProduct)) {
+        try {
+            orderProductDAO.delete(selectedOrderProduct);
             refreshProductsThenFields();
+        } catch (Exception e) {
+            Prompter.error(e);
         }
     }
 
     @FXML
     private void createOrderProduct() {
         if (selectedOrderView == null) {
-            Prompter.warning(Utility.NO_SELECTED_ORDER_MESSAGE);
+            Prompter.warning(FXUtility.NO_SELECTED_ORDER_MESSAGE);
             return;
         }
         if (selectedProduct == null) {
-            Prompter.warning(Utility.NO_SELECTED_PRODUCT_MESSAGE);
+            Prompter.warning(FXUtility.NO_SELECTED_PRODUCT_MESSAGE);
             return;
         }
         var orderProduct = new OrderProductEntity();
         orderProduct.setOrderId(selectedOrderView.getOrderId());
         orderProduct.setProductId(selectedProduct.getId());
         textFieldsToProduct(orderProduct);
-        if (orderProductDAO.insert(orderProduct)) {
+        try {
+            orderProductDAO.insert(orderProduct);
             refreshProductsThenFields();
+        } catch (Exception e) {
+            Prompter.error(e);
         }
     }
 
     @FXML
     private void searchOrder() {
-        tableOrders.setItems(orderDAO.getAllViews(textFieldCustomerName.getText()));
+        tableOrders.setItems(FXCollections.observableArrayList(
+                orderDAO.getAllViews(textFieldCustomerName.getText())
+        ));
     }
 
     @FXML
@@ -191,7 +202,9 @@ public class OrdersController
         if (selectedOrderView != null) {
             var customer = selectedCustomer();
             labelSelectedCustomer.setText(customer.getName());
-            comboBoxAvailableProducts.setItems(productDAO.getAllAvailable(customer.getId()));
+            comboBoxAvailableProducts.setItems(FXCollections.observableArrayList(
+                    productDAO.getAllAvailable(customer.getId())
+            ));
         } else {
             labelSelectedCustomer.setText(null);
         }

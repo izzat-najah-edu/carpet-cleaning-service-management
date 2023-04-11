@@ -28,7 +28,7 @@ final class Database {
     private static SessionFactory buildSessionFactory() {
         try {
             var configuration = new Configuration().configure(
-                    Database.class.getResource("stu/najah/se/dao/hibernate.cfg.xml"));
+                    Database.class.getResource("hibernate.cfg.xml"));
             var sessionFactory = configuration.buildSessionFactory();
             // close the session factory after the application is shutdown
             Runtime.getRuntime().addShutdownHook(new Thread(sessionFactory::close));

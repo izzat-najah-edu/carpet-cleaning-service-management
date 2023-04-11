@@ -1,10 +1,10 @@
 package stu.najah.se.dao;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import org.hibernate.Hibernate;
 import stu.najah.se.entity.OrderEntity;
 import stu.najah.se.entity.OrderViewEntity;
+
+import java.util.List;
 
 public class OrderDAO extends FullDAO<OrderEntity> {
 
@@ -46,24 +46,24 @@ public class OrderDAO extends FullDAO<OrderEntity> {
      * @param customerId which all the orders share
      * @return all orders with the given customerId
      */
-    public ObservableList<OrderEntity> getAll(int customerId) {
-        return FXCollections.observableArrayList(getWithCondition((builder, query, root) ->
-                builder.equal(root.get("customerId"), customerId)));
+    public List<OrderEntity> getAll(int customerId) {
+        return getWithCondition((builder, query, root) ->
+                builder.equal(root.get("customerId"), customerId));
     }
 
     /**
      * @return all order view entities
      */
-    public ObservableList<OrderViewEntity> getAllViews() {
-        return FXCollections.observableArrayList(orderViewDAO.getWithCondition(null));
+    public List<OrderViewEntity> getAllViews() {
+        return orderViewDAO.getWithCondition(null);
     }
 
     /**
      * @param customerName which all the order view entities share
      * @return all order view entities with the given customerName
      */
-    public ObservableList<OrderViewEntity> getAllViews(String customerName) {
-        return FXCollections.observableArrayList(orderViewDAO.getWithCondition((builder, query, root) ->
-                builder.equal(root.get("customerName"), customerName)));
+    public List<OrderViewEntity> getAllViews(String customerName) {
+        return orderViewDAO.getWithCondition((builder, query, root) ->
+                builder.equal(root.get("customerName"), customerName));
     }
 }
