@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import stu.najah.se.core.ServicesManager;
+import stu.najah.se.core.service.AdminService;
 import stu.najah.se.ui.Controller;
 
 public class LoginController
@@ -34,7 +34,7 @@ public class LoginController
     @FXML
     private void login() {
         // send login request
-        ServicesManager.getAdminService().authenticate(
+        AdminService.getInstance().authenticate(
                 textFieldUsername.getText(),
                 textFieldPassword.getText()
         );

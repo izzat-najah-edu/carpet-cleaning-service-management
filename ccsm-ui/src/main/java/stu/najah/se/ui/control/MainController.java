@@ -7,7 +7,7 @@ import javafx.scene.control.Tab;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import stu.najah.se.core.ServicesManager;
+import stu.najah.se.core.service.AdminService;
 import stu.najah.se.ui.Controller;
 
 import java.net.URL;
@@ -86,6 +86,6 @@ public class MainController
 
     @FXML
     private void logout() {
-        ServicesManager.getAdminService().logout();
+        AdminService.getInstance().logout();
     }
 }

@@ -6,7 +6,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import stu.najah.se.core.Authenticator;
-import stu.najah.se.core.ServicesManager;
+import stu.najah.se.core.ServiceManager;
+import stu.najah.se.core.service.AdminService;
 import stu.najah.se.ui.Controller;
 
 import java.io.IOException;
@@ -20,9 +21,8 @@ import java.io.IOException;
 public class SceneManager extends Application
         implements Authenticator {
 
-    /**
-     * The primary stage
-     */
+    private AdminService adminService;
+
     private Stage stage;
 
     private Scene loginScene;
@@ -58,7 +58,7 @@ public class SceneManager extends Application
     @Override
     public void start(Stage primaryStage) throws IOException {
         SceneManager.instance = this;
-        ServicesManager.initializeAdminService(this);
+        adminService = ServiceManager.initializeAdminService(this);
         instance.stage = primaryStage;
         instance.buildStage();
         instance.buildLoginScene();

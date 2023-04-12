@@ -1,25 +1,27 @@
 package stu.najah.se.core;
 
 /**
- * An interface for handling authentication-related actions in the application.
- * Implementations of this interface should handle the transition between
- * logged-in and logged-out states, such as displaying the appropriate UI
- * components and managing user session data.
+ * Authenticator is an interface that should be implemented by classes
+ * responsible for managing user session transitions (e.g., switching between
+ * login and main screens). Its goal is to connect and initialize the
+ * AdminService so that it receives login and logout when required.
+ * <p>
+ * An Authenticator implementation should initialize the AdminService
+ * by calling the ServiceManager.initializeAdminService() method,
+ * providing itself as the Authenticator instance.
+ * <p>
+ * Note that only one Authenticator can initialize the AdminService.
  */
 public interface Authenticator {
-
     /**
-     * Transition the application to the logged-in state.
-     * Implementations should handle the necessary changes in the application
-     * state and UI to reflect that a user has successfully logged in.
+     * Requests the main application to transition to the main scene
+     * after a successful login.
      */
     void login();
 
     /**
-     * Transition the application to the logged-out state.
-     * Implementations should handle the necessary changes in the application
-     * state and UI to reflect that a user has logged out, and prompt the user
-     * to provide login credentials if needed.
+     * Requests the main application to transition to the login scene
+     * after a logout.
      */
     void logout();
 }
