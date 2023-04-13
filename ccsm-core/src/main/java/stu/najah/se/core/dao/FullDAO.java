@@ -1,5 +1,6 @@
 package stu.najah.se.core.dao;
 
+import jakarta.persistence.RollbackException;
 import org.hibernate.Session;
 
 /**
@@ -23,7 +24,7 @@ abstract class FullDAO<T> extends DAO<T> {
      * Attempts to update the given object in the database.
      *
      * @param object to be updated in the database
-     * @throws Exception if the transaction fails
+     * @throws RollbackException if the transaction fails
      */
     public void update(T object) throws Exception {
         performTransaction(object, Session::merge);
@@ -33,7 +34,7 @@ abstract class FullDAO<T> extends DAO<T> {
      * Attempts to insert the given object into the database.
      *
      * @param object to be inserted in the database
-     * @throws Exception if the transaction fails
+     * @throws RollbackException if the transaction fails
      */
     public void insert(T object) throws Exception {
         performTransaction(object, Session::persist);
@@ -43,7 +44,7 @@ abstract class FullDAO<T> extends DAO<T> {
      * Attempts to delete the given object from the database.
      *
      * @param object to be deleted from the database
-     * @throws Exception if the transaction fails
+     * @throws RollbackException if the transaction fails
      */
     public void delete(T object) throws Exception {
         performTransaction(object, Session::remove);
@@ -58,19 +59,18 @@ abstract class FullDAO<T> extends DAO<T> {
      * @param object    the object to perform the transaction on
      * @param operation a TransactionOperation functional interface representing the database operation
      *                  to perform; it accepts a Session and the object as arguments
-     * @throws Exception if the transaction fails
+     * @throws RollbackException if the transaction fails
      */
-    protected void performTransaction(T object, TransactionOperation<T> operation) throws Exception {
+    protected void performTransaction(T object, TransactionOperation<T> operation)
+            throws RollbackException {
         var session = Database.createSession();
         var transaction = session.getTransaction();
         try (session) {
             transaction.begin();
             operation.perform(session, object);
             transaction.commit();
-        } catch (Exception e) {
-            if (transaction != null) {
-                transaction.rollback();
-            }
+        } catch (RollbackException e) {
+            transaction.rollback();
             throw e;
         }
     }
@@ -88,13 +88,11 @@ abstract class FullDAO<T> extends DAO<T> {
 
         /**
          * Performs a database transaction operation on the given object using the provided Hibernate Session.
-         * This method should contain the implementation of the transaction operation
-         * and may throw a checked exception.
+         * This method should contain the implementation of the transaction operation.
          *
          * @param session the Hibernate Session to be used for the transaction operation
          * @param object  the object of type T involved in the transaction operation
-         * @throws Exception if any exception occurs during the transaction operation
          */
-        void perform(Session session, T object) throws Exception;
+        void perform(Session session, T object);
     }
 }

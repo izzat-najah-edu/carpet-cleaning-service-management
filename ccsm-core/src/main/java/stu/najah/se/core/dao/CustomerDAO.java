@@ -14,6 +14,20 @@ public class CustomerDAO extends FullDAO<CustomerEntity> {
     }
 
     /**
+     * Searches for a single customer with the given name.
+     * Uniqueness is guaranteed, no two customers share a name.
+     *
+     * @param customerName of the customer
+     * @return the found customer with the given name,
+     * or null if none were found.
+     */
+    public CustomerEntity get(String customerName) {
+        var list = getWithCondition(((builder, query, root) ->
+                builder.equal(root.get("name"), customerName)));
+        return list.isEmpty() ? null : list.get(0);
+    }
+
+    /**
      * @return all recorded customers
      */
     public List<CustomerEntity> getAll() {
@@ -21,11 +35,11 @@ public class CustomerDAO extends FullDAO<CustomerEntity> {
     }
 
     /**
-     * @param nameSubstring of the customer
+     * @param customerNameSubstring of the customer
      * @return all customers which names contain the given substring
      */
-    public List<CustomerEntity> getAll(String nameSubstring) {
+    public List<CustomerEntity> getAllLike(String customerNameSubstring) {
         return getWithCondition((builder, query, root) ->
-                builder.like(root.get("name"), "%" + nameSubstring + "%"));
+                builder.like(root.get("name"), "%" + customerNameSubstring + "%"));
     }
 }
