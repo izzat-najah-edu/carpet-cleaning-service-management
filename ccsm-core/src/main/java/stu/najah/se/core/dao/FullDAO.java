@@ -26,7 +26,7 @@ abstract class FullDAO<T> extends DAO<T> {
      * @param object to be updated in the database
      * @throws RollbackException if the transaction fails
      */
-    public void update(T object) throws Exception {
+    public void update(T object) throws RollbackException {
         performTransaction(object, Session::merge);
     }
 
@@ -36,7 +36,7 @@ abstract class FullDAO<T> extends DAO<T> {
      * @param object to be inserted in the database
      * @throws RollbackException if the transaction fails
      */
-    public void insert(T object) throws Exception {
+    public void insert(T object) throws RollbackException {
         performTransaction(object, Session::persist);
     }
 
@@ -46,7 +46,7 @@ abstract class FullDAO<T> extends DAO<T> {
      * @param object to be deleted from the database
      * @throws RollbackException if the transaction fails
      */
-    public void delete(T object) throws Exception {
+    public void delete(T object) throws RollbackException {
         performTransaction(object, Session::remove);
     }
 
