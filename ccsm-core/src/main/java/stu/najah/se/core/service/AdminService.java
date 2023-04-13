@@ -4,13 +4,13 @@ import stu.najah.se.core.Authenticator;
 import stu.najah.se.core.dao.AdminDAO;
 import stu.najah.se.core.entity.AdminEntity;
 
+import java.util.Optional;
+
 /**
- * AdminService is a singleton class responsible for managing admin-related operations
+ * AdminService is a class responsible for managing admin-related operations
  * such as authentication and user session management.
  */
 public class AdminService {
-
-    private static AdminService instance;
 
     private final AdminDAO adminDAO;
 
@@ -28,48 +28,19 @@ public class AdminService {
      * @param adminDAO      the data access object for admin entities
      * @param authenticator the authenticator responsible for managing user sessions
      */
-    private AdminService(AdminDAO adminDAO, Authenticator authenticator) {
+    public AdminService(AdminDAO adminDAO, Authenticator authenticator) {
         this.adminDAO = adminDAO;
         this.authenticator = authenticator;
     }
 
     /**
-     * Initializes the singleton AdminService instance.
+     * Retrieves the current logged-in admin as an Optional.
      *
-     * @param adminDAO      the data access object for admin entities
-     * @param authenticator the authenticator responsible for managing user sessions
-     * @return the initialized AdminService instance
-     * @throws IllegalStateException if the AdminService has already been initialized
+     * @return an Optional containing the current logged-in admin.
+     * the Optional is empty if no admin is logged in
      */
-    public static AdminService initialize(AdminDAO adminDAO, Authenticator authenticator) throws IllegalStateException {
-        if (instance == null) {
-            return instance = new AdminService(adminDAO, authenticator);
-        } else {
-            throw new IllegalStateException("AdminService already initialized!");
-        }
-    }
-
-    /**
-     * Retrieves the singleton AdminService instance.
-     *
-     * @return the AdminService instance
-     * @throws IllegalStateException if the AdminService has not been initialized
-     */
-    public static AdminService getInstance() throws IllegalStateException {
-        if (instance == null) {
-            throw new IllegalStateException("AdminService not initialized!");
-        } else {
-            return instance;
-        }
-    }
-
-    /**
-     * Retrieves the current logged-in admin.
-     *
-     * @return the current logged-in admin, or null if no admin is logged in
-     */
-    public AdminEntity getCurrentAdmin() {
-        return currentAdmin;
+    public Optional<AdminEntity> getCurrentAdmin() {
+        return Optional.ofNullable(currentAdmin);
     }
 
     /**

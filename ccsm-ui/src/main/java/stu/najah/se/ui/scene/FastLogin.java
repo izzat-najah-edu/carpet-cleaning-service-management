@@ -2,7 +2,7 @@ package stu.najah.se.ui.scene;
 
 import javafx.application.Platform;
 import javafx.stage.Stage;
-import stu.najah.se.core.service.AdminService;
+import stu.najah.se.core.ServiceManager;
 
 /**
  * TEST CLASS
@@ -19,6 +19,6 @@ public class FastLogin {
             }
         });
         Platform.runLater(() ->
-                AdminService.getInstance().authenticate("admin", "admin"));
+                ServiceManager.getAdminService().authenticate("admin", "admin"));
     }
 }

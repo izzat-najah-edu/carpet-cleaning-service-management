@@ -3,60 +3,74 @@ package stu.najah.se.test.core;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import stu.najah.se.core.ServiceManager;
+import org.mockito.Mockito;
+import stu.najah.se.core.Authenticator;
+import stu.najah.se.core.dao.AdminDAO;
+import stu.najah.se.core.entity.AdminEntity;
 import stu.najah.se.core.service.AdminService;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+import static org.mockito.internal.verification.VerificationModeFactory.times;
 
 public class AdminServiceTest {
 
+    private static AdminDAO adminDAO;
+
+    private AdminService adminService;
+
+    private Authenticator authenticator;
+
     @BeforeAll
-    public static void initialize() {
-        ServiceManager.initializeAdminService(AuthenticatorMock.getInstance());
+    public static void initializeAdminMocks() {
+        adminDAO = Mockito.mock(AdminDAO.class);
+        AdminEntity testAdmin = new AdminEntity();
+        testAdmin.setUsername("username");
+        testAdmin.setPassword("password");
+        when(adminDAO.get("username")).thenReturn(testAdmin);
     }
 
-    private final AuthenticatorMock authenticatorMock = AuthenticatorMock.getInstance();
-    private final AdminService adminService = AdminService.getInstance();
-
     @BeforeEach
-    public void reset() {
-        authenticatorMock.resetRequests();
+    public void setUp() {
+        authenticator = Mockito.mock(Authenticator.class);
+        adminService = new AdminService(adminDAO, authenticator);
     }
 
     @Test
     public void testLoginInvalidUsername() {
         assertThrows(IllegalArgumentException.class, () ->
-                adminService.authenticate("invalid", "admin"));
-        assertFalse(authenticatorMock.isLoginRequested());
-        assertFalse(authenticatorMock.isLogoutRequested());
-        assertNull(adminService.getCurrentAdmin());
+                adminService.authenticate("invalid", "password"));
+        verify(authenticator, never()).login();
+        verify(authenticator, never()).logout();
+        assertTrue(adminService.getCurrentAdmin().isEmpty());
     }
 
     @Test
     public void testLoginInvalidPassword() {
         assertThrows(IllegalArgumentException.class, () ->
-                adminService.authenticate("admin", "invalid"));
-        assertFalse(authenticatorMock.isLoginRequested());
-        assertFalse(authenticatorMock.isLogoutRequested());
-        assertNull(adminService.getCurrentAdmin());
+                adminService.authenticate("username", "invalid"));
+        verify(authenticator, never()).login();
+        verify(authenticator, never()).logout();
+        assertTrue(adminService.getCurrentAdmin().isEmpty());
     }
 
     @Test
     public void testLoginValid() {
-        adminService.authenticate("admin", "admin");
-        assertTrue(authenticatorMock.isLoginRequested());
-        assertFalse(authenticatorMock.isLogoutRequested());
-        var admin = adminService.getCurrentAdmin();
-        assertNotNull(admin);
-        assertEquals("admin", admin.getUsername());
-        assertEquals("admin", admin.getPassword());
+        adminService.authenticate("username", "password");
+        verify(authenticator, times(1)).login();
+        verify(authenticator, never()).logout();
+        var optional = adminService.getCurrentAdmin();
+        assertTrue(optional.isPresent());
+        var admin = optional.get();
+        assertEquals("username", admin.getUsername());
+        assertEquals("password", admin.getPassword());
     }
 
     @Test
     public void testLogout() {
         adminService.logout();
-        assertFalse(authenticatorMock.isLoginRequested());
-        assertTrue(authenticatorMock.isLogoutRequested());
-        assertNull(adminService.getCurrentAdmin());
+        verify(authenticator, never()).login();
+        verify(authenticator, times(1)).logout();
+        assertTrue(adminService.getCurrentAdmin().isEmpty());
     }
 }
