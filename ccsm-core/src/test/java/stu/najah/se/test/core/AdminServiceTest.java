@@ -24,36 +24,39 @@ public class AdminServiceTest {
     }
 
     @Test
-    public void testInvalidLogin() {
+    public void testLoginInvalidUsername() {
         assertThrows(IllegalArgumentException.class, () ->
-                adminService.authenticate("invalid", "invalid"));
-
+                adminService.authenticate("invalid", "admin"));
         assertFalse(authenticatorMock.isLoginRequested());
         assertFalse(authenticatorMock.isLogoutRequested());
-
         assertNull(adminService.getCurrentAdmin());
     }
 
     @Test
-    public void testValidLogin() {
-        adminService.authenticate("admin", "admin");
+    public void testLoginInvalidPassword() {
+        assertThrows(IllegalArgumentException.class, () ->
+                adminService.authenticate("admin", "invalid"));
+        assertFalse(authenticatorMock.isLoginRequested());
+        assertFalse(authenticatorMock.isLogoutRequested());
+        assertNull(adminService.getCurrentAdmin());
+    }
 
+    @Test
+    public void testLoginValid() {
+        adminService.authenticate("admin", "admin");
         assertTrue(authenticatorMock.isLoginRequested());
         assertFalse(authenticatorMock.isLogoutRequested());
-
         var admin = adminService.getCurrentAdmin();
         assertNotNull(admin);
-        assertEquals(admin.getUsername(), "admin");
-        assertEquals(admin.getPassword(), "admin");
+        assertEquals("admin", admin.getUsername());
+        assertEquals("admin", admin.getPassword());
     }
 
     @Test
     public void testLogout() {
         adminService.logout();
-
         assertFalse(authenticatorMock.isLoginRequested());
         assertTrue(authenticatorMock.isLogoutRequested());
-
         assertNull(adminService.getCurrentAdmin());
     }
 }

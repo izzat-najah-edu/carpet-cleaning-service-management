@@ -7,6 +7,9 @@ class AuthenticatorMock
 
     private static AuthenticatorMock instance;
 
+    private AuthenticatorMock() {
+    }
+
     public static AuthenticatorMock getInstance() {
         if (instance == null) {
             instance = new AuthenticatorMock();
