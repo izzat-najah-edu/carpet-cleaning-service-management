@@ -26,7 +26,7 @@ public class CustomerService {
 
     private final DatabaseErrorListener errorHandler;
 
-    private CustomerEntity customer;
+    private final ObservedEntity<CustomerEntity> observedCustomer = new ObservedEntity<>();
 
     /**
      * Constructs a new CustomerService instance.
@@ -45,23 +45,24 @@ public class CustomerService {
      * @return An Optional containing the current customer or empty if no customer is set.
      */
     public Optional<CustomerEntity> getCustomer() {
-        return Optional.ofNullable(customer);
+        return observedCustomer.get();
     }
 
     /**
      * Sets the current customer.
+     * providing null value has the same effect as calling clearCustomer().
      *
      * @param customer The customer to set as the current customer.
      */
     public void setCustomer(CustomerEntity customer) {
-        this.customer = customer;
+        observedCustomer.set(customer);
     }
 
     /**
      * Clears the current customer.
      */
     public void clearCustomer() {
-        this.customer = null;
+        observedCustomer.clear();
     }
 
     /**
@@ -71,7 +72,7 @@ public class CustomerService {
      * @return An Optional containing the selected customer or empty if not found.
      */
     public Optional<CustomerEntity> selectCustomer(int customerId) {
-        customer = customerDAO.get(customerId);
+        observedCustomer.set(customerDAO.get(customerId));
         return getCustomer();
     }
 
@@ -82,7 +83,7 @@ public class CustomerService {
      * @return An Optional containing the selected customer or empty if not found.
      */
     public Optional<CustomerEntity> selectCustomer(String customerName) {
-        customer = customerDAO.get(customerName);
+        observedCustomer.set(customerDAO.get(customerName));
         return getCustomer();
     }
 
@@ -124,12 +125,14 @@ public class CustomerService {
      * @throws IllegalStateException if no customer has been selected.
      */
     public void updateCustomer(CustomerEntity customer) throws IllegalStateException {
-        if (customer == null) {
+        var optional = getCustomer();
+        if (optional.isEmpty()) {
             throw new IllegalStateException("No customer has been selected");
         }
-        this.customer.setAllBasic(customer);
+        var entity = optional.get();
+        entity.setAllBasic(customer);
         try {
-            customerDAO.update(this.customer);
+            customerDAO.update(entity);
         } catch (DatabaseOperationException e) {
             errorHandler.onTransactionError(e.getMessage());
             clearCustomer();
@@ -139,10 +142,16 @@ public class CustomerService {
     /**
      * Deletes the current customer from the database.
      * Whether the transaction fails or not, the current customer is cleared.
+     *
+     * @throws IllegalStateException if no customer has been selected.
      */
-    public void deleteCustomer() {
+    public void deleteCustomer() throws IllegalStateException {
+        var optional = getCustomer();
+        if (optional.isEmpty()) {
+            throw new IllegalStateException("No customer has been selected");
+        }
         try {
-            customerDAO.delete(this.customer);
+            customerDAO.delete(optional.get());
         } catch (DatabaseOperationException e) {
             errorHandler.onTransactionError(e.getMessage());
         } finally {
