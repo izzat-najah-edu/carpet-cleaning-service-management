@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import stu.najah.se.core.Authenticator;
+import stu.najah.se.core.UserSessionListener;
 import stu.najah.se.core.dao.AdminDAO;
 import stu.najah.se.core.entity.AdminEntity;
 import stu.najah.se.core.service.AdminService;
@@ -19,7 +19,7 @@ public class AdminServiceTest {
 
     private AdminService adminService;
 
-    private Authenticator authenticator;
+    private UserSessionListener sessionListener;
 
     @BeforeAll
     public static void initializeAdminMocks() {
@@ -32,16 +32,16 @@ public class AdminServiceTest {
 
     @BeforeEach
     public void setUp() {
-        authenticator = Mockito.mock(Authenticator.class);
-        adminService = new AdminService(adminDAO, authenticator);
+        sessionListener = Mockito.mock(UserSessionListener.class);
+        adminService = new AdminService(adminDAO, sessionListener);
     }
 
     @Test
     public void testLoginInvalidUsername() {
         assertThrows(IllegalArgumentException.class, () ->
                 adminService.authenticate("invalid", "password"));
-        verify(authenticator, never()).login();
-        verify(authenticator, never()).logout();
+        verify(sessionListener, never()).login();
+        verify(sessionListener, never()).logout();
         assertTrue(adminService.getCurrentAdmin().isEmpty());
     }
 
@@ -49,16 +49,16 @@ public class AdminServiceTest {
     public void testLoginInvalidPassword() {
         assertThrows(IllegalArgumentException.class, () ->
                 adminService.authenticate("username", "invalid"));
-        verify(authenticator, never()).login();
-        verify(authenticator, never()).logout();
+        verify(sessionListener, never()).login();
+        verify(sessionListener, never()).logout();
         assertTrue(adminService.getCurrentAdmin().isEmpty());
     }
 
     @Test
     public void testLoginValid() {
         adminService.authenticate("username", "password");
-        verify(authenticator, times(1)).login();
-        verify(authenticator, never()).logout();
+        verify(sessionListener, times(1)).login();
+        verify(sessionListener, never()).logout();
         var optional = adminService.getCurrentAdmin();
         assertTrue(optional.isPresent());
         var admin = optional.get();
@@ -69,8 +69,8 @@ public class AdminServiceTest {
     @Test
     public void testLogout() {
         adminService.logout();
-        verify(authenticator, never()).login();
-        verify(authenticator, times(1)).logout();
+        verify(sessionListener, never()).login();
+        verify(sessionListener, times(1)).logout();
         assertTrue(adminService.getCurrentAdmin().isEmpty());
     }
 }

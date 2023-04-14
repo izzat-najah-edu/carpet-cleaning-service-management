@@ -1,6 +1,6 @@
 package stu.najah.se.core.service;
 
-import stu.najah.se.core.Authenticator;
+import stu.najah.se.core.UserSessionListener;
 import stu.najah.se.core.dao.AdminDAO;
 import stu.najah.se.core.entity.AdminEntity;
 
@@ -14,7 +14,7 @@ public class AdminService {
 
     private final AdminDAO adminDAO;
 
-    private final Authenticator authenticator;
+    private final UserSessionListener sessionListener;
 
     /**
      * Holds the current logged-in admin.
@@ -25,12 +25,12 @@ public class AdminService {
      * Creates a new AdminService instance
      * with the provided AdminDAO and Authenticator.
      *
-     * @param adminDAO      the data access object for admin entities
-     * @param authenticator the authenticator responsible for managing user sessions
+     * @param adminDAO        the data access object for admin entities
+     * @param sessionListener the listener responsible for managing user sessions
      */
-    public AdminService(AdminDAO adminDAO, Authenticator authenticator) {
+    public AdminService(AdminDAO adminDAO, UserSessionListener sessionListener) {
         this.adminDAO = adminDAO;
-        this.authenticator = authenticator;
+        this.sessionListener = sessionListener;
     }
 
     /**
@@ -57,7 +57,7 @@ public class AdminService {
      */
     public void logout() {
         currentAdmin = null;
-        authenticator.logout();
+        sessionListener.logout();
     }
 
     /**
@@ -67,7 +67,7 @@ public class AdminService {
      */
     private void login(AdminEntity admin) {
         currentAdmin = admin;
-        authenticator.login();
+        sessionListener.login();
     }
 
     /**
