@@ -2,6 +2,7 @@ package stu.najah.se.core.service;
 
 import stu.najah.se.core.DatabaseErrorListener;
 import stu.najah.se.core.DatabaseOperationException;
+import stu.najah.se.core.EntityListener;
 import stu.najah.se.core.dao.CustomerDAO;
 import stu.najah.se.core.entity.CustomerEntity;
 
@@ -37,6 +38,24 @@ public class CustomerService {
     public CustomerService(CustomerDAO customerDAO, DatabaseErrorListener errorListener) {
         this.customerDAO = customerDAO;
         this.errorHandler = errorListener;
+    }
+
+    /**
+     * Subscribes a listener to be notified of changes or clearing of the customer.
+     *
+     * @param listener The EntityListener to subscribe for notifications.
+     */
+    public void subscribe(EntityListener<CustomerEntity> listener) {
+        observedCustomer.addListener(listener);
+    }
+
+    /**
+     * Unsubscribes a listener from receiving notifications about changes or clearing of the customer.
+     *
+     * @param listener The EntityListener to unsubscribe from notifications.
+     */
+    public void unsubscribe(EntityListener<CustomerEntity> listener) {
+        observedCustomer.removeListener(listener);
     }
 
     /**
