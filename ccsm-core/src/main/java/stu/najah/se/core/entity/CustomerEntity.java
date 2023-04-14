@@ -21,6 +21,12 @@ public class CustomerEntity {
     @Column(name = "address", length = 256)
     private String address;
 
+    public CustomerEntity(String name, String phone, String address) {
+        setName(name);
+        setPhone(phone);
+        setAddress(address);
+    }
+
     public int getId() {
         return id;
     }

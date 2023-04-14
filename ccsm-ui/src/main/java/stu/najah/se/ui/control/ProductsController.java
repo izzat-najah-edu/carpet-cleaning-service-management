@@ -139,7 +139,7 @@ public class ProductsController
     @FXML
     private void searchCustomer() {
         listCustomers.setItems(FXCollections.observableArrayList(
-                customerDAO.getAll(textFieldName.getText())
+                customerDAO.getAllLike(textFieldName.getText())
         ));
     }
 

@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="admin service tests implemented">
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="transaction exception refactoring">
+      <change afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/DatabaseErrorHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/ServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/ServiceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/AdminServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/AdminServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/AuthenticatorMock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/scene/FastLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/scene/FastLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/ProductsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +22,9 @@
         <option value="JavaFXApplication" />
         <option value="CSS File" />
         <option value="FxmlFile" />
-        <option value="Interface" />
         <option value="module-info" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -172,7 +166,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AdminServiceTest">
+  <component name="RunManager" selected="Application.stu.najah.se.ui.scene.FastLogin">
     <configuration name="stu.najah.se.scene.SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.scene.SceneManager" />
       <module name="ccsm-ui" />
@@ -245,10 +239,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.stu.najah.se.ui.scene.FastLogin" />
         <item itemvalue="JUnit.AdminServiceTest" />
         <item itemvalue="JUnit.AdminServiceTest.validLogin" />
         <item itemvalue="Application.stu.najah.se.ui.scene.SceneManager" />
-        <item itemvalue="Application.stu.najah.se.ui.scene.FastLogin" />
         <item itemvalue="Application.stu.najah.se.scene.SceneManager" />
       </list>
     </recent_temporary>
@@ -354,28 +348,7 @@
       <workItem from="1681401434140" duration="13000" />
       <workItem from="1681401465054" duration="5135000" />
       <workItem from="1681414420964" duration="1300000" />
-      <workItem from="1681415736925" duration="4943000" />
-    </task>
-    <task id="LOCAL-00050" summary="PromptManager class added">
-      <created>1678216215274</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1678216215276</updated>
-    </task>
-    <task id="LOCAL-00051" summary="refactoring">
-      <created>1678226856660</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1678226856660</updated>
-    </task>
-    <task id="LOCAL-00052" summary="refactoring">
-      <created>1678226963903</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1678226963903</updated>
+      <workItem from="1681415736925" duration="9906000" />
     </task>
     <task id="LOCAL-00053" summary="big refactoring changes">
       <created>1678229707006</created>
@@ -699,7 +672,28 @@
       <option name="project" value="LOCAL" />
       <updated>1681404530623</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="admin service tests implemented">
+      <created>1681424098291</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1681424098291</updated>
+    </task>
+    <task id="LOCAL-00100" summary="transaction exception refactoring">
+      <created>1681427390943</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1681427390943</updated>
+    </task>
+    <task id="LOCAL-00101" summary="transaction exception refactoring">
+      <created>1681427528666</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1681427528666</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -730,7 +724,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="database changes" />
     <MESSAGE value="new dao objects implemented" />
     <MESSAGE value="package rename" />
     <MESSAGE value="fxml controllers reimplemented" />
@@ -755,7 +748,8 @@
     <MESSAGE value="admin service implementation" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="admin service tests implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin service tests implemented" />
+    <MESSAGE value="transaction exception refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="transaction exception refactoring" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
