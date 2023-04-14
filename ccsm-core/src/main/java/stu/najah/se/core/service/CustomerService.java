@@ -1,7 +1,7 @@
 package stu.najah.se.core.service;
 
-import jakarta.persistence.RollbackException;
 import stu.najah.se.core.DatabaseErrorListener;
+import stu.najah.se.core.DatabaseOperationException;
 import stu.najah.se.core.dao.CustomerDAO;
 import stu.najah.se.core.entity.CustomerEntity;
 
@@ -109,7 +109,7 @@ public class CustomerService {
         try {
             customerDAO.insert(customer);
             return selectCustomer(customer);
-        } catch (RollbackException e) {
+        } catch (DatabaseOperationException e) {
             errorHandler.onTransactionError(e.getMessage());
             clearCustomer();
         }
@@ -130,7 +130,7 @@ public class CustomerService {
         this.customer.setAllBasic(customer);
         try {
             customerDAO.update(this.customer);
-        } catch (RollbackException e) {
+        } catch (DatabaseOperationException e) {
             errorHandler.onTransactionError(e.getMessage());
             clearCustomer();
         }
@@ -138,13 +138,15 @@ public class CustomerService {
 
     /**
      * Deletes the current customer from the database.
-     * If the transaction fails, the current customer is not cleared.
+     * Whether the transaction fails or not, the current customer is cleared.
      */
     public void deleteCustomer() {
         try {
             customerDAO.delete(this.customer);
-        } catch (RollbackException e) {
+        } catch (DatabaseOperationException e) {
             errorHandler.onTransactionError(e.getMessage());
+        } finally {
+            clearCustomer();
         }
     }
 

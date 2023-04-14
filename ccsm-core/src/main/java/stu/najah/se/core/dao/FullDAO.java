@@ -2,6 +2,7 @@ package stu.najah.se.core.dao;
 
 import jakarta.persistence.RollbackException;
 import org.hibernate.Session;
+import stu.najah.se.core.DatabaseOperationException;
 
 /**
  * A DAO class that supports DML Operations.
@@ -24,9 +25,9 @@ abstract class FullDAO<T> extends DAO<T> {
      * Attempts to update the given object in the database.
      *
      * @param object to be updated in the database
-     * @throws RollbackException if the transaction fails
+     * @throws DatabaseOperationException if the transaction fails
      */
-    public void update(T object) throws RollbackException {
+    public void update(T object) throws DatabaseOperationException {
         performTransaction(object, Session::merge);
     }
 
@@ -34,9 +35,9 @@ abstract class FullDAO<T> extends DAO<T> {
      * Attempts to insert the given object into the database.
      *
      * @param object to be inserted in the database
-     * @throws RollbackException if the transaction fails
+     * @throws DatabaseOperationException if the transaction fails
      */
-    public void insert(T object) throws RollbackException {
+    public void insert(T object) throws DatabaseOperationException {
         performTransaction(object, Session::persist);
     }
 
@@ -44,9 +45,9 @@ abstract class FullDAO<T> extends DAO<T> {
      * Attempts to delete the given object from the database.
      *
      * @param object to be deleted from the database
-     * @throws RollbackException if the transaction fails
+     * @throws DatabaseOperationException if the transaction fails
      */
-    public void delete(T object) throws RollbackException {
+    public void delete(T object) throws DatabaseOperationException {
         performTransaction(object, Session::remove);
     }
 
@@ -59,10 +60,10 @@ abstract class FullDAO<T> extends DAO<T> {
      * @param object    the object to perform the transaction on
      * @param operation a TransactionOperation functional interface representing the database operation
      *                  to perform; it accepts a Session and the object as arguments
-     * @throws RollbackException if the transaction fails
+     * @throws DatabaseOperationException if the transaction fails
      */
     protected void performTransaction(T object, TransactionOperation<T> operation)
-            throws RollbackException {
+            throws DatabaseOperationException {
         var session = Database.createSession();
         var transaction = session.getTransaction();
         try (session) {
@@ -71,7 +72,7 @@ abstract class FullDAO<T> extends DAO<T> {
             transaction.commit();
         } catch (RollbackException e) {
             transaction.rollback();
-            throw e;
+            throw new DatabaseOperationException(e);
         }
     }
 
