@@ -26,7 +26,8 @@ public class ServiceManager {
      * @return an instance of the initialized AdminService
      * @throws IllegalStateException if the AdminService is already initialized
      */
-    public static AdminService initializeAdminService(Authenticator authenticator) throws IllegalStateException {
+    public static AdminService initializeAdminService(Authenticator authenticator)
+            throws IllegalStateException {
         if (adminServiceInstance == null) {
             return adminServiceInstance = new AdminService(new AdminDAO(), authenticator);
         } else {
@@ -56,7 +57,8 @@ public class ServiceManager {
      * @return an instance of the initialized CustomerService
      * @throws IllegalStateException if the CustomerService is already initialized
      */
-    public static CustomerService initializeCustomerService(DatabaseErrorListener errorListener) throws IllegalStateException {
+    public static CustomerService initializeCustomerService(DatabaseErrorListener errorListener)
+            throws IllegalStateException {
         if (customerServiceInstance == null) {
             return customerServiceInstance = new CustomerService(new CustomerDAO(), errorListener);
         } else {
