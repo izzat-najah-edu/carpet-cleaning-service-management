@@ -1,5 +1,6 @@
 package stu.najah.se.core.dao;
 
+import jakarta.persistence.PersistenceException;
 import jakarta.persistence.RollbackException;
 import org.hibernate.Session;
 import stu.najah.se.core.DatabaseOperationException;
@@ -72,6 +73,8 @@ abstract class FullDAO<T> extends DAO<T> {
             transaction.commit();
         } catch (RollbackException e) {
             transaction.rollback();
+            throw new DatabaseOperationException(e);
+        } catch (PersistenceException e) {
             throw new DatabaseOperationException(e);
         }
     }
