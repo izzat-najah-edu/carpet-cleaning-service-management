@@ -115,7 +115,7 @@ public class CustomerService {
      * @return An Optional containing the selected customer or empty if not found.
      */
     public Optional<CustomerEntity> selectCustomer(CustomerEntity customer) {
-        return selectCustomer(customer.getName());
+        return selectCustomer(customer != null ? customer.getName() : null);
     }
 
     /**
