@@ -22,14 +22,14 @@ public class ServiceManager {
      * Initializes the AdminService with the provided Authenticator.
      * This method ensures that a single AdminService instance is shared between all users.
      *
-     * @param authenticator the authenticator responsible for managing user sessions
+     * @param sessionListener the listener responsible for managing user sessions
      * @return an instance of the initialized AdminService
      * @throws IllegalStateException if the AdminService is already initialized
      */
-    public static AdminService initializeAdminService(Authenticator authenticator)
+    public static AdminService initializeAdminService(UserSessionListener sessionListener)
             throws IllegalStateException {
         if (adminServiceInstance == null) {
-            return adminServiceInstance = new AdminService(new AdminDAO(), authenticator);
+            return adminServiceInstance = new AdminService(new AdminDAO(), sessionListener);
         } else {
             throw new IllegalStateException("AdminService has already been initialized!");
         }
