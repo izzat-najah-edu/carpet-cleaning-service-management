@@ -62,6 +62,12 @@ public class CustomerEntity {
         this.address = address;
     }
 
+    public void setAllBasic(CustomerEntity customer) {
+        setName(customer.getName());
+        setPhone(customer.getPhone());
+        setAddress(customer.getAddress());
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {

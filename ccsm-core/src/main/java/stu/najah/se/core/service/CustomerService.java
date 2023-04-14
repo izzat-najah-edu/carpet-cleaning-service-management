@@ -121,11 +121,13 @@ public class CustomerService {
      * If the transaction fails, the current customer is cleared.
      *
      * @param customer The CustomerEntity containing the new data.
+     * @throws IllegalStateException if no customer has been selected.
      */
-    public void updateCustomer(CustomerEntity customer) {
-        this.customer.setName(customer.getName());
-        this.customer.setAddress(customer.getAddress());
-        this.customer.setPhone(customer.getPhone());
+    public void updateCustomer(CustomerEntity customer) throws IllegalStateException {
+        if (customer == null) {
+            throw new IllegalStateException("No customer has been selected");
+        }
+        this.customer.setAllBasic(customer);
         try {
             customerDAO.update(this.customer);
         } catch (RollbackException e) {
