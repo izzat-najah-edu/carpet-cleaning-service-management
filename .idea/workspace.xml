@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="customer service tests implementation">
-      <change afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/DatabaseOperationException.java" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="DatabaseOperationException created and implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/dao/FullDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/dao/FullDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/CustomerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/CustomerServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +165,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomerServiceTest.testCreateAndSelectCustomerError">
+  <component name="RunManager" selected="JUnit.CustomerServiceTest">
     <configuration name="CustomerServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccsm-core" />
       <extension name="coverage">
@@ -195,22 +192,6 @@
       <option name="PACKAGE_NAME" value="stu.najah.se.test.core" />
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.CustomerServiceTest" />
       <option name="METHOD_NAME" value="testCreateAndSelectCustomerError" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomerServiceTest.testDeleteCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.core.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.core" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.CustomerServiceTest" />
-      <option name="METHOD_NAME" value="testDeleteCustomer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -248,13 +229,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CustomerServiceTest.testUpdateCustomerError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccsm-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stu.najah.se.test.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stu.najah.se.test.core" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.CustomerServiceTest" />
+      <option name="METHOD_NAME" value="testUpdateCustomerError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CustomerServiceTest" />
         <item itemvalue="JUnit.CustomerServiceTest.testCreateAndSelectCustomerError" />
         <item itemvalue="JUnit.CustomerServiceTest.testGetAllCustomersWith" />
+        <item itemvalue="JUnit.CustomerServiceTest.testUpdateCustomerError" />
         <item itemvalue="JUnit.CustomerServiceTest.testGetAllCustomers" />
-        <item itemvalue="JUnit.CustomerServiceTest.testDeleteCustomer" />
-        <item itemvalue="JUnit.CustomerServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -360,14 +357,7 @@
       <workItem from="1681401465054" duration="5135000" />
       <workItem from="1681414420964" duration="1300000" />
       <workItem from="1681415736925" duration="18483000" />
-      <workItem from="1681468860809" duration="2190000" />
-    </task>
-    <task id="LOCAL-00057" summary="more refactoring">
-      <created>1678274980113</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1678274980113</updated>
+      <workItem from="1681468860809" duration="2496000" />
     </task>
     <task id="LOCAL-00058" summary="more refactoring">
       <created>1678275774786</created>
@@ -705,7 +695,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681439285564</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="DatabaseOperationException created and implemented">
+      <created>1681471203712</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1681471203712</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -741,8 +738,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="order view implemented" />
-    <MESSAGE value="orders panel implemented" />
     <MESSAGE value="order entity price method" />
     <MESSAGE value="order entity finished method" />
     <MESSAGE value="orders controller implemented" />
@@ -766,7 +761,9 @@
     <MESSAGE value="customer service refactoring" />
     <MESSAGE value="error fix" />
     <MESSAGE value="customer service tests implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="customer service tests implementation" />
+    <MESSAGE value="DatabaseOperationException created" />
+    <MESSAGE value="DatabaseOperationException created and implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="DatabaseOperationException created and implemented" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

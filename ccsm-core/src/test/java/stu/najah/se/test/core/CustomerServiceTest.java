@@ -1,10 +1,10 @@
 package stu.najah.se.test.core;
 
-import org.junit.Ignore;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import stu.najah.se.core.DatabaseErrorListener;
+import stu.najah.se.core.DatabaseOperationException;
 import stu.najah.se.core.dao.CustomerDAO;
 import stu.najah.se.core.entity.CustomerEntity;
 import stu.najah.se.core.service.CustomerService;
@@ -14,8 +14,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.doAnswer;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class CustomerServiceTest {
 
@@ -120,51 +119,56 @@ public class CustomerServiceTest {
         assertEquals(updatedCustomer.getPhone(), customer.getPhone());
     }
 
-    @Ignore
     @Test
     public void testDeleteCustomer() {
-        //var testCustomer = createNewTestCustomer("");
-        //customerService.setCustomer(testCustomer);
-        //customerService.deleteCustomer();
-        //var optional = customerService.selectCustomer(testCustomer);
-        //verify(optional.isEmpty());
+        customerList.add(CUSTOMER);
+        doAnswer(invocation -> {
+            customerList.remove(CUSTOMER);
+            return null;
+        }).when(customerDAO).delete(CUSTOMER);
+        customerService.setCustomer(CUSTOMER);
+        customerService.deleteCustomer();
+        assertTrue(customerList.isEmpty());
+        assertTrue(customerService.getCustomer().isEmpty());
+        assertTrue(customerService.selectCustomer(CUSTOMER).isEmpty());
     }
 
-    @Ignore
     @Test
     public void testGetAllCustomers() {
-        //var result = customerService.getAllCustomers();
-        //assertEquals(2, result.size());
-        //assertEquals(createNewTestCustomer("1"), result.get(0));
-        //assertEquals(createNewTestCustomer("2"), result.get(1));
+        var user1 = new CustomerEntity("user1", "phone", "address");
+        var user2 = new CustomerEntity("user2", "phone", "address");
+        when(customerDAO.getAll()).thenReturn(List.of(user1, user2));
+        var result = customerService.getAllCustomers();
+        assertEquals(2, result.size());
+        assertEquals(user1, result.get(0));
+        assertEquals(user2, result.get(1));
     }
 
-    @Ignore
     @Test
     public void testGetAllCustomersWith() {
-        //var result = customerService.getAllCustomersWith(TEST_NAME);
-        //assertEquals(2, result.size());
-        //assertEquals(createNewTestCustomer("1"), result.get(0));
-        //assertEquals(createNewTestCustomer("2"), result.get(1));
+        var user1 = new CustomerEntity("user1", "phone", "address");
+        var user2 = new CustomerEntity("user2", "phone", "address");
+        when(customerDAO.getAllLike("user")).thenReturn(List.of(user1, user2));
+        var result = customerService.getAllCustomersWith("user");
+        assertEquals(2, result.size());
+        assertEquals(user1, result.get(0));
+        assertEquals(user2, result.get(1));
     }
 
-    @Ignore
     @Test
     public void testCreateAndSelectCustomerError() {
-        //var invalidCustomer = createNewTestCustomer("");
-        //invalidCustomer.setName("");
-        //var optional = customerService.createAndSelectCustomer(invalidCustomer);
-        //assertTrue(optional.isEmpty());
-        //verify(errorListener, times(1)).onTransactionError("Error creating customer");
+        doThrow(new DatabaseOperationException("Error creating customer")).when(customerDAO).insert(CUSTOMER);
+        assertTrue(customerService.createAndSelectCustomer(CUSTOMER).isEmpty());
+        verify(errorListener, times(1)).onTransactionError("Error creating customer");
     }
 
-    @Ignore
     @Test
     public void testUpdateCustomerError() {
-        //var invalidCustomer = createNewTestCustomer("");
-        //invalidCustomer.setName("");
-        //customerService.updateCustomer(invalidCustomer);
-        //verify(errorListener, times(1)).onTransactionError("Error updating customer");
+        var newCustomer = new CustomerEntity("user", "phone", "address");
+        doThrow(new DatabaseOperationException("Error updating customer")).when(customerDAO).update(newCustomer);
+        customerService.setCustomer(CUSTOMER);
+        customerService.updateCustomer(newCustomer);
+        verify(errorListener, times(1)).onTransactionError("Error updating customer");
     }
 
 }
