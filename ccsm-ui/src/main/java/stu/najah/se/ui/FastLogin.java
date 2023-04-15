@@ -1,4 +1,4 @@
-package stu.najah.se.ui.scene;
+package stu.najah.se.ui;
 
 import javafx.application.Platform;
 import javafx.stage.Stage;

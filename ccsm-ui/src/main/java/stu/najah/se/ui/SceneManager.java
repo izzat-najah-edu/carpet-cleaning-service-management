@@ -1,14 +1,13 @@
-package stu.najah.se.ui.scene;
+package stu.najah.se.ui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import stu.najah.se.core.Authenticator;
 import stu.najah.se.core.ServiceManager;
+import stu.najah.se.core.UserSessionListener;
 import stu.najah.se.core.service.AdminService;
-import stu.najah.se.ui.Controller;
 
 import java.io.IOException;
 
@@ -19,7 +18,7 @@ import java.io.IOException;
  * All FXML files & Stylesheets resource files must be in this class's directory
  */
 public class SceneManager extends Application
-        implements Authenticator {
+        implements UserSessionListener {
 
     private AdminService adminService;
 

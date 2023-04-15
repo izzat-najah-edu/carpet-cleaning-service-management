@@ -3,13 +3,29 @@ package stu.najah.se.ui;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Modality;
+import stu.najah.se.core.DatabaseErrorListener;
 
 /**
  * Utility class for (graphically) prompting alerts, inputs texts, dialogs, etc...
  */
-public final class Prompter {
+public final class Prompter
+        implements DatabaseErrorListener {
+
+    private static Prompter instance;
+
+    public static Prompter getInstance() {
+        if (instance == null) {
+            instance = new Prompter();
+        }
+        return instance;
+    }
 
     private Prompter() {
+    }
+
+    @Override
+    public void onTransactionError(String message) {
+        error(message);
     }
 
     /**
@@ -75,5 +91,4 @@ public final class Prompter {
     public static void error(Exception e) {
         prompt(e.getMessage(), Alert.AlertType.ERROR);
     }
-
 }

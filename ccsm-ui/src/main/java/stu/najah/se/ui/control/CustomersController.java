@@ -5,8 +5,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import stu.najah.se.core.dao.CustomerDAO;
+import stu.najah.se.core.EntityListener;
+import stu.najah.se.core.ServiceManager;
 import stu.najah.se.core.entity.CustomerEntity;
+import stu.najah.se.core.service.CustomerService;
 import stu.najah.se.ui.Controller;
 import stu.najah.se.ui.Prompter;
 
@@ -14,7 +16,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class CustomersController
-        implements Controller, Initializable {
+        implements Controller, Initializable, EntityListener<CustomerEntity> {
+
+    private CustomerService customerService;
 
     @FXML
     private TableView<CustomerEntity> tableCustomers;
@@ -28,106 +32,70 @@ public class CustomersController
     @FXML
     private TextField textFieldPhone;
 
-    private final CustomerDAO customerDAO = new CustomerDAO();
-
-    private CustomerEntity selectedCustomer = null;
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        customerService = ServiceManager.initializeCustomerService(Prompter.getInstance());
+        customerService.subscribe(this);
         FXUtility.setUpTable(tableCustomers);
         tableCustomers.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> {
-                    customerToTextFields(selectedCustomer = newValue);
-                });
+                (observable, oldValue, newValue) -> customerService.selectCustomer(newValue));
     }
 
     @Override
     public void reset() {
-        refreshTableThenFields();
-    }
-
-    @FXML
-    private void refreshTableThenFields() {
         refreshTable();
-        clearTextFields();
     }
 
-    @FXML
-    private void clearCustomer() {
-        selectedCustomer = null;
-        clearTextFields();
+    @Override
+    public void onEntityChanged(CustomerEntity newEntity) {
+        textFieldName.setText(newEntity.getName());
+        textFieldPhone.setText(newEntity.getPhone());
+        textFieldAddress.setText(newEntity.getAddress());
     }
 
-    @FXML
-    private void createCustomer() {
-        var customer = new CustomerEntity();
-        textFieldsToCustomer(customer);
-        try {
-            customerDAO.insert(customer);
-            refreshTableThenFields();
-        } catch (Exception e) {
-            Prompter.error(e);
-        }
-    }
-
-    @FXML
-    private void updateCustomer() {
-        if (ensureCustomerSelected()) {
-            textFieldsToCustomer(selectedCustomer);
-            try {
-                customerDAO.update(selectedCustomer);
-                refreshTableThenFields();
-            } catch (Exception e) {
-                Prompter.error(e);
-            }
-        }
-    }
-
-    @FXML
-    private void deleteCustomer() {
-        if (ensureCustomerSelected()) {
-            try {
-                customerDAO.delete(selectedCustomer);
-                refreshTableThenFields();
-            } catch (Exception e) {
-                Prompter.error(e);
-            }
-        }
-    }
-
-    private boolean ensureCustomerSelected() {
-        if (selectedCustomer == null) {
-            Prompter.warning(FXUtility.NO_SELECTED_PRODUCT_MESSAGE);
-            return false;
-        }
-        return true;
-    }
-
-    private void refreshTable() {
-        tableCustomers.setItems(FXCollections.observableArrayList(customerDAO.getAll()));
-        tableCustomers.getSelectionModel().clearSelection();
-    }
-
-    private void clearTextFields() {
+    @Override
+    public void onEntityCleared() {
         textFieldName.clear();
         textFieldPhone.clear();
         textFieldAddress.clear();
     }
 
-    private void textFieldsToCustomer(CustomerEntity customer) {
+    @FXML
+    private void refreshTable() {
+        tableCustomers.setItems(FXCollections.observableArrayList(customerService.getAllCustomers()));
+        tableCustomers.getSelectionModel().clearSelection();
+    }
+
+    @FXML
+    private void clearCustomer() {
+        customerService.clearCustomer();
+    }
+
+    @FXML
+    private void createCustomer() {
+        var customer = createCustomerFromTextFields();
+        customerService.createAndSelectCustomer(customer);
+        refreshTable();
+    }
+
+    @FXML
+    private void updateCustomer() {
+        var customer = createCustomerFromTextFields();
+        customerService.updateCustomer(customer);
+        refreshTable();
+    }
+
+    @FXML
+    private void deleteCustomer() {
+        customerService.deleteCustomer();
+        refreshTable();
+    }
+
+    private CustomerEntity createCustomerFromTextFields() {
+        var customer = new CustomerEntity();
         customer.setName(textFieldName.getText());
         customer.setPhone(textFieldPhone.getText());
         customer.setAddress(textFieldAddress.getText());
+        return customer;
     }
-
-    private void customerToTextFields(CustomerEntity customer) {
-        if (customer != null) {
-            textFieldName.setText(customer.getName());
-            textFieldPhone.setText(customer.getPhone());
-            textFieldAddress.setText(customer.getAddress());
-        } else {
-            clearTextFields();
-        }
-    }
-
 }
