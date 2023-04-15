@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import stu.najah.se.core.DatabaseErrorListener;
 import stu.najah.se.core.DatabaseOperationException;
+import stu.najah.se.core.EntityListener;
 import stu.najah.se.core.dao.CustomerDAO;
 import stu.najah.se.core.entity.CustomerEntity;
 import stu.najah.se.core.service.CustomerService;
@@ -12,8 +13,7 @@ import stu.najah.se.core.service.CustomerService;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 public class CustomerServiceTest {
@@ -51,6 +51,13 @@ public class CustomerServiceTest {
     }
 
     @Test
+    public void testSelectCustomerByEntityNotFound() {
+        when(customerDAO.get(CUSTOMER.getName())).thenReturn(null);
+        var optional = customerService.selectCustomer(CUSTOMER);
+        assertTrue(optional.isEmpty());
+    }
+
+    @Test
     public void testSelectCustomerByNameFound() {
         when(customerDAO.get(CUSTOMER.getName())).thenReturn(CUSTOMER);
         var optional = customerService.selectCustomer(CUSTOMER.getName());
@@ -62,7 +69,7 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void testSelectCustomerById() {
+    public void testSelectCustomerByIdFound() {
         when(customerDAO.get(0)).thenReturn(CUSTOMER);
         var optional = customerService.selectCustomer(0);
         assertTrue(optional.isPresent());
@@ -70,6 +77,24 @@ public class CustomerServiceTest {
         assertEquals(CUSTOMER.getName(), customer.getName());
         assertEquals(CUSTOMER.getPhone(), customer.getPhone());
         assertEquals(CUSTOMER.getAddress(), customer.getAddress());
+    }
+
+    @Test
+    public void testSelectCustomerByEntityFound() {
+        when(customerDAO.get(CUSTOMER.getName())).thenReturn(CUSTOMER);
+        var optional = customerService.selectCustomer(CUSTOMER);
+        assertTrue(optional.isPresent());
+        var customer = optional.get();
+        assertEquals(CUSTOMER.getName(), customer.getName());
+        assertEquals(CUSTOMER.getPhone(), customer.getPhone());
+        assertEquals(CUSTOMER.getAddress(), customer.getAddress());
+    }
+
+    @Test
+    public void testClearCustomer() {
+        customerService.setCustomer(CUSTOMER);
+        customerService.clearCustomer();
+        assertTrue(customerService.getCustomer().isEmpty());
     }
 
     @Test
@@ -90,6 +115,11 @@ public class CustomerServiceTest {
         assertEquals(CUSTOMER.getName(), customer.getName());
         assertEquals(CUSTOMER.getPhone(), customer.getPhone());
         assertEquals(CUSTOMER.getAddress(), customer.getAddress());
+    }
+
+    @Test
+    public void testUpdateCustomerNoCustomerSelected() {
+        assertThrows(IllegalStateException.class, () -> customerService.updateCustomer(CUSTOMER));
     }
 
     @Test
@@ -117,6 +147,11 @@ public class CustomerServiceTest {
         assertEquals(updatedCustomer.getName(), customer.getName());
         assertEquals(updatedCustomer.getAddress(), customer.getAddress());
         assertEquals(updatedCustomer.getPhone(), customer.getPhone());
+    }
+
+    @Test
+    public void testDeleteCustomerNoCustomerSelected() {
+        assertThrows(IllegalStateException.class, () -> customerService.deleteCustomer());
     }
 
     @Test
@@ -169,6 +204,19 @@ public class CustomerServiceTest {
         customerService.setCustomer(CUSTOMER);
         customerService.updateCustomer(newCustomer);
         verify(errorListener, times(1)).onTransactionError("Error updating customer");
+    }
+
+    @Test
+    public void testSubscribeAndUnsubscribe() {
+        EntityListener<CustomerEntity> listener = Mockito.mock(EntityListener.class);
+        customerService.watchCustomer(listener);
+        customerService.setCustomer(CUSTOMER);
+        verify(listener, times(1)).onEntityChanged(CUSTOMER);
+        customerService.setCustomer(null);
+        verify(listener, times(1)).onEntityCleared();
+        customerService.unwatchCustomer(listener);
+        customerService.clearCustomer();
+        verify(listener, times(1)).onEntityCleared();
     }
 
 }
