@@ -34,6 +34,7 @@ abstract class FullDAO<T> extends DAO<T> {
 
     /**
      * Attempts to insert the given object into the database.
+     * Note that any generated field will reflect on the passed object.
      *
      * @param object to be inserted in the database
      * @throws DatabaseOperationException if the transaction fails
