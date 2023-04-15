@@ -45,7 +45,7 @@ public class CustomerService {
      *
      * @param listener The EntityListener to subscribe for notifications.
      */
-    public void subscribe(EntityListener<CustomerEntity> listener) {
+    public void watchCustomer(EntityListener<CustomerEntity> listener) {
         observedCustomer.addListener(listener);
     }
 
@@ -54,7 +54,7 @@ public class CustomerService {
      *
      * @param listener The EntityListener to unsubscribe from notifications.
      */
-    public void unsubscribe(EntityListener<CustomerEntity> listener) {
+    public void unwatchCustomer(EntityListener<CustomerEntity> listener) {
         observedCustomer.removeListener(listener);
     }
 
