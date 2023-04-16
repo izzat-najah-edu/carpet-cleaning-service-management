@@ -7,11 +7,14 @@ import stu.najah.se.core.DatabaseErrorListener;
 import stu.najah.se.core.DatabaseOperationException;
 import stu.najah.se.core.EntityListener;
 import stu.najah.se.core.dao.ProductDAO;
+import stu.najah.se.core.entity.CustomerEntity;
 import stu.najah.se.core.entity.ProductEntity;
+import stu.najah.se.core.service.CustomerService;
 import stu.najah.se.core.service.ProductService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -28,11 +31,14 @@ public class ProductServiceTest {
 
     private DatabaseErrorListener errorListener;
 
+    private CustomerService customerService;
+
     @BeforeEach
     public void setUp() {
         productDAO = Mockito.mock(ProductDAO.class);
         errorListener = Mockito.mock(DatabaseErrorListener.class);
-        productService = new ProductService(productDAO, errorListener);
+        customerService = Mockito.mock(CustomerService.class);
+        productService = new ProductService(productDAO, errorListener, customerService);
     }
 
     @Test
@@ -119,8 +125,11 @@ public class ProductServiceTest {
         int customerId = 1;
         var product1 = new ProductEntity(1, "Product 1");
         var product2 = new ProductEntity(1, "Product 2");
+        var customer = new CustomerEntity("name", "phone", "address");
+        customer.setId(1);
+        when(customerService.getCustomer()).thenReturn(Optional.of(customer));
         when(productDAO.getAll(customerId)).thenReturn(List.of(product1, product2));
-        var result = productService.getProductsByCustomer(customerId);
+        var result = productService.getAllCustomerProducts();
         assertEquals(2, result.size());
         assertEquals(product1, result.get(0));
         assertEquals(product2, result.get(1));

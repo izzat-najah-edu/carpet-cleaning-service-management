@@ -66,7 +66,7 @@ public class ServiceManager {
             throw new IllegalStateException("Services have already been initialized!");
         }
         customerServiceInstance = new CustomerService(new CustomerDAO(), errorListener);
-        productServiceInstance = new ProductService(new ProductDAO(), errorListener);
+        productServiceInstance = new ProductService(new ProductDAO(), errorListener, customerServiceInstance);
     }
 
     /**

@@ -4,6 +4,7 @@ import stu.najah.se.core.DatabaseErrorListener;
 import stu.najah.se.core.DatabaseOperationException;
 import stu.najah.se.core.EntityListener;
 import stu.najah.se.core.dao.ProductDAO;
+import stu.najah.se.core.entity.CustomerEntity;
 import stu.najah.se.core.entity.ProductEntity;
 
 import java.util.List;
@@ -20,13 +21,24 @@ import java.util.Optional;
  * </p><p>
  * DatabaseErrorHandler is required for handling and logging database errors,
  * any error that occurs during transactions will be sent to the handler to deal with.
- * </p>
+ * </p><p>
+ * ProductService also implements EntityListener[CustomerEntity] to react to changes in the customer
+ * managed by CustomerService. This allows ProductService to update its internal state and the products it manages
+ * based on the selected customer. The implications of this design choice are:
+ * </p><ul>
+ * <li>ProductService stays synchronized with CustomerService, ensuring that it manages products related to the current customer.</li>
+ * <li>It establishes a clear relationship between customers and their products, making the system more cohesive and easier to reason about.</li>
+ * <li>As ProductService reacts to customer changes, it can notify its listeners (e.g., UI components) about product updates, ensuring a consistent view of the data.</li>
+ * </ul>
  */
-public class ProductService {
+public class ProductService
+        implements EntityListener<CustomerEntity> {
 
     private final ProductDAO productDAO;
 
     private final DatabaseErrorListener errorHandler;
+
+    private final CustomerService customerService;
 
     private final ObservedEntity<ProductEntity> observedProduct = new ObservedEntity<>();
 
@@ -36,9 +48,36 @@ public class ProductService {
      * @param productDAO    The data access object to interact with the database.
      * @param errorListener The handler for database errors.
      */
-    public ProductService(ProductDAO productDAO, DatabaseErrorListener errorListener) {
+    public ProductService(ProductDAO productDAO, DatabaseErrorListener errorListener, CustomerService customerService) {
         this.productDAO = productDAO;
         this.errorHandler = errorListener;
+        this.customerService = customerService;
+        customerService.watchCustomer(this);
+    }
+
+    @Override
+    public void onEntityChanged(CustomerEntity newEntity) {
+        clearProduct();
+    }
+
+    @Override
+    public void onEntityCleared() {
+        clearProduct();
+    }
+
+    /**
+     * Retrieves a list of all products for the current customer in the customer service.
+     *
+     * @return A list of ProductEntity objects associated with the current customer.
+     * @throws IllegalStateException if no customer is selected in the customer service.
+     */
+    public List<ProductEntity> getAllCustomerProducts() throws IllegalStateException {
+        try {
+            var customer = customerService.getCustomer().orElseThrow();
+            return productDAO.getAll(customer.getId());
+        } catch (NoSuchElementException e) {
+            throw new IllegalStateException("No customer selected in the customer service");
+        }
     }
 
     /**
@@ -151,15 +190,5 @@ public class ProductService {
         } finally {
             clearProduct();
         }
-    }
-
-    /**
-     * Retrieves a list of all products for a specific customer from the database.
-     *
-     * @param customerId The ID of the customer for which to retrieve the products.
-     * @return A list of ProductEntity objects associated with the specified customer.
-     */
-    public List<ProductEntity> getProductsByCustomer(int customerId) {
-        return productDAO.getAll(customerId);
     }
 }
