@@ -3,10 +3,12 @@ package features;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.BeforeStep;
+import javafx.application.Platform;
 import org.testfx.api.FxRobot;
 import org.testfx.matcher.base.NodeMatchers;
 import org.testfx.util.WaitForAsyncUtils;
-import stu.najah.se.Navigator;
+import stu.najah.se.gui.scene.Authenticator;
+import stu.najah.se.gui.scene.SceneManager;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -15,13 +17,13 @@ public class Utility {
     @BeforeAll
     public static void launch() {
         // start the application
-        Navigator.main(new String[]{});
+        SceneManager.main(new String[]{});
     }
 
     @AfterAll
     public static void exit() {
         // close the application
-        Navigator.exit();
+        Platform.exit();
     }
 
     @BeforeStep

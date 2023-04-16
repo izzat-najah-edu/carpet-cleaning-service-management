@@ -18,12 +18,34 @@ create table customer
     address varchar(256)
 );
 
-create table product
+create table `order`
 (
-    number            int auto_increment,
-    customer_id       int,
-    description       varchar(256) not null,
-    special_treatment varchar(256),
-    primary key (number, customer_id),
+    id          int primary key auto_increment,
+    customer_id int,
     foreign key (customer_id) references customer (id)
 );
+
+create table product
+(
+    id          int primary key auto_increment,
+    customer_id int,
+    description varchar(256) not null,
+    foreign key (customer_id) references customer (id)
+);
+
+create table order_product
+(
+    order_id          int,
+    product_id        int,
+    special_treatment varchar(256),
+    finished          boolean default (false),
+    price             int check ( price >= 0 ),
+    primary key (order_id, product_id),
+    foreign key (order_id) references `order` (id),
+    foreign key (product_id) references product (id)
+);
+
+create view order_view as
+select o.id as order_id, c.name as customer_name
+from `order` o
+         join customer c on o.customer_id = c.id;
