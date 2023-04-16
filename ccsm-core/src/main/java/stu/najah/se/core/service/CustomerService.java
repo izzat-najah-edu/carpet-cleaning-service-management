@@ -7,6 +7,7 @@ import stu.najah.se.core.dao.CustomerDAO;
 import stu.najah.se.core.entity.CustomerEntity;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 /**
@@ -144,14 +145,12 @@ public class CustomerService {
      * @throws IllegalStateException if no customer has been selected.
      */
     public void updateCustomer(CustomerEntity customer) throws IllegalStateException {
-        var optional = getCustomer();
-        if (optional.isEmpty()) {
-            throw new IllegalStateException("No customer has been selected");
-        }
-        var entity = optional.get();
-        entity.setAllBasic(customer);
         try {
+            var entity = getCustomer().orElseThrow();
+            entity.setAllBasic(customer);
             customerDAO.update(entity);
+        } catch (NoSuchElementException e) {
+            throw new IllegalStateException("No customer has been selected");
         } catch (DatabaseOperationException e) {
             errorHandler.onTransactionError(e.getMessage());
             clearCustomer();
@@ -165,12 +164,11 @@ public class CustomerService {
      * @throws IllegalStateException if no customer has been selected.
      */
     public void deleteCustomer() throws IllegalStateException {
-        var optional = getCustomer();
-        if (optional.isEmpty()) {
-            throw new IllegalStateException("No customer has been selected");
-        }
         try {
-            customerDAO.delete(optional.get());
+            var entity = getCustomer().orElseThrow();
+            customerDAO.delete(entity);
+        } catch (NoSuchElementException e) {
+            throw new IllegalStateException("No customer has been selected");
         } catch (DatabaseOperationException e) {
             errorHandler.onTransactionError(e.getMessage());
         } finally {

@@ -4,25 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="bug fix">
-      <change afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/customers.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/login.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/main.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/orders.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/products.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/style/main.css" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="documentation change">
+      <change afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/ProductServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/Prompter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/Prompter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/ServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/ServiceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/ProductEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/AdminServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/AdminServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/CustomerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/CustomerServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/SceneManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/CustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/CustomersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/scene/FastLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/FastLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/scene/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/scene/fxml/customers.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/scene/fxml/login.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/scene/fxml/main.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/scene/fxml/orders.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/scene/fxml/products.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/scene/style/main.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,11 +142,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-core" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\main\resources\stu\najah\se\ui\scene" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-core\src\main\resources\stu\najah\se\core\dao" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\main\resources\stu\najah\se" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-core\src\main\resources\stu\najah\se\dao" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-core\src\main\resources\stu\najah\se" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="stu.najah.se.gui.control.FXUtility" />
@@ -181,20 +174,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FastLogin">
-    <configuration name="FastLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.FastLogin" />
-      <module name="ccsm-ui" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.service in ccsm-core">
     <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.SceneManager" />
       <module name="ccsm-ui" />
@@ -208,50 +188,66 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.core.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.core" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.AdminServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CustomerServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccsm-core" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.core.*" />
+          <option name="PATTERN" value="stu.najah.se.test.core.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.core" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.CustomerServiceTest" />
+      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.CustomerServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="core in ccsm-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DAOTest.example" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccsm-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stu.najah.se.test.core.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.dao" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.dao.DAOTest" />
+      <option name="METHOD_NAME" value="example" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccsm-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stu.najah.se.test.core.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.ProductServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="service in ccsm-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccsm-core" />
       <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core" />
+      <dir value="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FastLogin" />
+        <item itemvalue="JUnit.service in ccsm-core" />
+        <item itemvalue="JUnit.ProductServiceTest" />
         <item itemvalue="Application.SceneManager" />
-        <item itemvalue="JUnit.core in ccsm-core" />
-        <item itemvalue="JUnit.AdminServiceTest" />
+        <item itemvalue="JUnit.DAOTest.example" />
         <item itemvalue="JUnit.CustomerServiceTest" />
       </list>
     </recent_temporary>
@@ -359,35 +355,10 @@
       <workItem from="1681414420964" duration="1300000" />
       <workItem from="1681415736925" duration="18483000" />
       <workItem from="1681468860809" duration="14177000" />
-      <workItem from="1681515677131" duration="1552000" />
-    </task>
-    <task id="LOCAL-00065" summary="extensive refactoring">
-      <created>1680737030459</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1680737030459</updated>
-    </task>
-    <task id="LOCAL-00066" summary="extensive refactoring">
-      <created>1680771659578</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1680771659578</updated>
-    </task>
-    <task id="LOCAL-00067" summary="database changes">
-      <created>1680795459463</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1680795459463</updated>
-    </task>
-    <task id="LOCAL-00068" summary="database changes">
-      <created>1680797169572</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1680797169572</updated>
+      <workItem from="1681515677131" duration="6762000" />
+      <workItem from="1681577244753" duration="3098000" />
+      <workItem from="1681590126552" duration="4890000" />
+      <workItem from="1681657527871" duration="410000" />
     </task>
     <task id="LOCAL-00069" summary="new dao objects implemented">
       <created>1680809825908</created>
@@ -704,7 +675,35 @@
       <option name="project" value="LOCAL" />
       <updated>1681516787049</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="reimplementation">
+      <created>1681517700889</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1681517700889</updated>
+    </task>
+    <task id="LOCAL-00115" summary="refactoring">
+      <created>1681578360541</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1681578360542</updated>
+    </task>
+    <task id="LOCAL-00116" summary="customer service test fixes">
+      <created>1681579688693</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1681579688693</updated>
+    </task>
+    <task id="LOCAL-00117" summary="documentation change">
+      <created>1681590567856</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1681590567857</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -740,9 +739,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="orders controller implemented" />
-    <MESSAGE value="bug fixes" />
-    <MESSAGE value="controllers refactoring" />
     <MESSAGE value="orders panel redesign" />
     <MESSAGE value="customer entity toString override" />
     <MESSAGE value="orders controller implementation" />
@@ -762,10 +758,13 @@
     <MESSAGE value="DatabaseOperationException created" />
     <MESSAGE value="DatabaseOperationException created and implemented" />
     <MESSAGE value="customer service test bug fixes" />
-    <MESSAGE value="refactoring" />
     <MESSAGE value="entity listener implemented" />
     <MESSAGE value="bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
+    <MESSAGE value="reimplementation" />
+    <MESSAGE value="refactoring" />
+    <MESSAGE value="customer service test fixes" />
+    <MESSAGE value="documentation change" />
+    <option name="LAST_COMMIT_MESSAGE" value="documentation change" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

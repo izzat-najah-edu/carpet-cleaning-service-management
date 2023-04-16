@@ -51,6 +51,7 @@ public class SceneManager extends Application
      * Platform.startup(() -> new SceneManager().start(new Stage()))
      */
     public static void main(String[] args) {
+        ServiceManager.initializeEntityServices(Prompter.getInstance());
         Application.launch(args);
     }
 

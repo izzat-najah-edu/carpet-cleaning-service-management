@@ -21,6 +21,14 @@ public class ProductEntity {
     @OneToMany(mappedBy = "productByProductId")
     private Collection<OrderProductEntity> orderProductsById;
 
+    public ProductEntity() {
+    }
+
+    public ProductEntity(int customerId, String description) {
+        this.customerId = customerId;
+        this.description = description;
+    }
+
     public int getId() {
         return id;
     }
@@ -43,6 +51,11 @@ public class ProductEntity {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setAllBasic(ProductEntity product) {
+        setCustomerId(product.customerId);
+        setDescription(product.description);
     }
 
     @Override

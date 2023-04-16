@@ -10,7 +10,6 @@ import stu.najah.se.core.ServiceManager;
 import stu.najah.se.core.entity.CustomerEntity;
 import stu.najah.se.core.service.CustomerService;
 import stu.najah.se.ui.Controller;
-import stu.najah.se.ui.Prompter;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -34,8 +33,8 @@ public class CustomersController
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        customerService = ServiceManager.initializeCustomerService(Prompter.getInstance());
-        customerService.subscribe(this);
+        customerService = ServiceManager.getCustomerService();
+        customerService.watchCustomer(this);
         FXUtility.setUpTable(tableCustomers);
         tableCustomers.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> customerService.selectCustomer(newValue));

@@ -1,4 +1,4 @@
-package stu.najah.se.test.core;
+package stu.najah.se.test.core.service;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
