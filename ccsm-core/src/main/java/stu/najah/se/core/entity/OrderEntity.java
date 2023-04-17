@@ -2,11 +2,12 @@ package stu.najah.se.core.entity;
 
 import jakarta.persistence.*;
 
+import java.sql.Timestamp;
 import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-@Table(name = "`order`", schema = "carpet_cleaning_service_management")
+@Table(name = "order", schema = "carpet_cleaning_service_management")
 public class OrderEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -15,6 +16,9 @@ public class OrderEntity {
     @Basic
     @Column(name = "customer_id")
     private Integer customerId;
+    @Basic
+    @Column(name = "created_at", nullable = false)
+    private Timestamp createdAt;
     @OneToMany(mappedBy = "orderByOrderId")
     private Collection<OrderProductEntity> orderProductsById;
 
@@ -32,6 +36,14 @@ public class OrderEntity {
 
     public void setCustomerId(Integer customerId) {
         this.customerId = customerId;
+    }
+
+    public Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
     }
 
     @Override
