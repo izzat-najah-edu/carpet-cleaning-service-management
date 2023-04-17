@@ -136,16 +136,20 @@ public class ProductService
     }
 
     /**
-     * Creates a new product in the database and sets it as the current product.
+     * Creates a new product for the current customer and sets it as the current product.
      * If the transaction fails, the current product is cleared.
      *
      * @param product The product to create.
      * @return An Optional containing the created product or empty if the transaction failed.
+     * @throws IllegalStateException if no customer is selected
      */
-    public Optional<ProductEntity> createAndSelectProduct(ProductEntity product) {
+    public Optional<ProductEntity> createAndSelectProduct(ProductEntity product) throws IllegalStateException {
         try {
+            product.setCustomerId(customerService.getCustomer().orElseThrow().getId());
             productDAO.insert(product);
             return selectProduct(product.getId());
+        } catch (NoSuchElementException e) {
+            throw new IllegalStateException("No customer selected!");
         } catch (DatabaseOperationException e) {
             errorHandler.onTransactionError(e.getMessage());
             clearProduct();

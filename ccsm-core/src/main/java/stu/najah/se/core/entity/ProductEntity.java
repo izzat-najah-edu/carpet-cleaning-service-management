@@ -24,8 +24,7 @@ public class ProductEntity {
     public ProductEntity() {
     }
 
-    public ProductEntity(int customerId, String description) {
-        this.customerId = customerId;
+    public ProductEntity(String description) {
         this.description = description;
     }
 
@@ -54,7 +53,6 @@ public class ProductEntity {
     }
 
     public void setAllBasic(ProductEntity product) {
-        setCustomerId(product.customerId);
         setDescription(product.description);
     }
 

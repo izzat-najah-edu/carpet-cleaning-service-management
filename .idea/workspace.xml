@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="documentation change">
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="product service now depends on customer service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/ServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/ServiceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/ProductEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/ProductServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/ProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/products.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/products.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +169,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.service in ccsm-core">
+  <component name="RunManager" selected="Application.SceneManager">
     <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.SceneManager" />
       <module name="ccsm-ui" />
@@ -177,37 +179,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomerServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.core.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.CustomerServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DAOTest.example" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.core.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.dao" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.dao.DAOTest" />
-      <option name="METHOD_NAME" value="example" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -227,6 +198,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductServiceTest.testUpdateProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccsm-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stu.najah.se.test.core.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.ProductServiceTest" />
+      <option name="METHOD_NAME" value="testUpdateProduct" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceTest.testUpdateProductError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccsm-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stu.najah.se.test.core.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.ProductServiceTest" />
+      <option name="METHOD_NAME" value="testUpdateProductError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="service in ccsm-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccsm-core" />
       <option name="TEST_OBJECT" value="directory" />
@@ -237,11 +240,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.service in ccsm-core" />
-        <item itemvalue="JUnit.ProductServiceTest" />
         <item itemvalue="Application.SceneManager" />
-        <item itemvalue="JUnit.DAOTest.example" />
-        <item itemvalue="JUnit.CustomerServiceTest" />
+        <item itemvalue="JUnit.service in ccsm-core" />
+        <item itemvalue="JUnit.ProductServiceTest.testUpdateProductError" />
+        <item itemvalue="JUnit.ProductServiceTest" />
+        <item itemvalue="JUnit.ProductServiceTest.testUpdateProduct" />
       </list>
     </recent_temporary>
   </component>
@@ -352,13 +355,7 @@
       <workItem from="1681577244753" duration="3098000" />
       <workItem from="1681590126552" duration="4890000" />
       <workItem from="1681657527871" duration="410000" />
-    </task>
-    <task id="LOCAL-00069" summary="new dao objects implemented">
-      <created>1680809825908</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1680809825908</updated>
+      <workItem from="1681734911253" duration="3595000" />
     </task>
     <task id="LOCAL-00070" summary="package rename">
       <created>1680809947144</created>
@@ -696,7 +693,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681590567857</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="product service now depends on customer service">
+      <created>1681682962342</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1681682962342</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -732,7 +736,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="orders panel redesign" />
     <MESSAGE value="customer entity toString override" />
     <MESSAGE value="orders controller implementation" />
     <MESSAGE value="panels redesign" />
@@ -757,7 +760,8 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="customer service test fixes" />
     <MESSAGE value="documentation change" />
-    <option name="LAST_COMMIT_MESSAGE" value="documentation change" />
+    <MESSAGE value="product service now depends on customer service" />
+    <option name="LAST_COMMIT_MESSAGE" value="product service now depends on customer service" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

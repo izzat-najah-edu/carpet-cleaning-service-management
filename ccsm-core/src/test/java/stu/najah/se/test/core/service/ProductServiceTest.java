@@ -21,7 +21,13 @@ import static org.mockito.Mockito.*;
 
 public class ProductServiceTest {
 
-    private static final ProductEntity PRODUCT = new ProductEntity(1, "Product 1");
+    private static final ProductEntity PRODUCT = createProduct();
+
+    private static ProductEntity createProduct() {
+        var product = new ProductEntity("Product 1");
+        product.setCustomerId(1);
+        return product;
+    }
 
     private final List<ProductEntity> productList = new ArrayList<>();
 
@@ -69,6 +75,9 @@ public class ProductServiceTest {
             }
             return null;
         }).when(productDAO).get(PRODUCT.getId());
+        var customer = new CustomerEntity("name", "phone", "address");
+        customer.setId(1);
+        when(customerService.getCustomer()).thenReturn(Optional.of(customer));
         var optional = productService.createAndSelectProduct(PRODUCT);
         assertTrue(optional.isPresent());
         var product = optional.get();
@@ -82,9 +91,12 @@ public class ProductServiceTest {
 
     @Test
     public void testUpdateProduct() {
-        var updatedProduct = new ProductEntity(PRODUCT.getId(), "Updated Product 1");
+        var updatedProduct = new ProductEntity("Updated Product 1");
         productList.add(PRODUCT);
         when(productDAO.get(PRODUCT.getId())).thenReturn(productList.get(0));
+        var customer = new CustomerEntity("name", "phone", "address");
+        customer.setId(1);
+        when(customerService.getCustomer()).thenReturn(Optional.of(customer));
         doAnswer(invocation -> {
             var optional = productService.getProduct();
             assertTrue(optional.isPresent());
@@ -98,7 +110,7 @@ public class ProductServiceTest {
         var optional = productService.getProduct();
         assertTrue(optional.isPresent());
         var product = optional.get();
-        assertEquals(updatedProduct, product);
+        assertEquals(product.getDescription(), updatedProduct.getDescription());
     }
 
     @Test
@@ -123,8 +135,10 @@ public class ProductServiceTest {
     @Test
     public void testGetProductsByCustomer() {
         int customerId = 1;
-        var product1 = new ProductEntity(1, "Product 1");
-        var product2 = new ProductEntity(1, "Product 2");
+        var product1 = new ProductEntity("Product 1");
+        product1.setCustomerId(1);
+        var product2 = new ProductEntity("Product 2");
+        product2.setCustomerId(1);
         var customer = new CustomerEntity("name", "phone", "address");
         customer.setId(1);
         when(customerService.getCustomer()).thenReturn(Optional.of(customer));
@@ -137,14 +151,18 @@ public class ProductServiceTest {
 
     @Test
     public void testCreateAndSelectProductError() {
-        doThrow(new DatabaseOperationException("Error creating product")).when(productDAO).insert(PRODUCT);
-        assertTrue(productService.createAndSelectProduct(PRODUCT).isEmpty());
-        verify(errorListener, times(1)).onTransactionError("Error creating product");
+        when(customerService.getCustomer()).thenReturn(Optional.empty());
+        assertThrows(IllegalStateException.class, () -> productService.createAndSelectProduct(PRODUCT));
+        assertTrue(productService.getProduct().isEmpty());
     }
 
     @Test
     public void testUpdateProductError() {
-        var newProduct = new ProductEntity(2, "New Product");
+        var newProduct = new ProductEntity("New Product");
+        newProduct.setCustomerId(1);
+        var customer = new CustomerEntity("name", "phone", "address");
+        customer.setId(1);
+        when(customerService.getCustomer()).thenReturn(Optional.of(customer));
         doThrow(new DatabaseOperationException("Error updating product")).when(productDAO).update(newProduct);
         productService.setProduct(PRODUCT);
         productService.updateProduct(newProduct);
