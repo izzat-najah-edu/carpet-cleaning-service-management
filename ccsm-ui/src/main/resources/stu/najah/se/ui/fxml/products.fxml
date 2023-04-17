@@ -27,7 +27,7 @@
                 <Font size="30.0"/>
             </font>
         </Label>
-        <Button layoutX="521.0" layoutY="43.0" mnemonicParsing="false" onAction="#refreshTableThenFields"
+        <Button layoutX="521.0" layoutY="43.0" mnemonicParsing="false" onAction="#refreshTable"
                 styleClass="refresh" text="Refresh"/>
         <Label layoutX="409.0" layoutY="326.0" text="Edit:" underline="true">
             <font>
@@ -45,7 +45,7 @@
                 prefWidth="293.0" styleClass="update" text="Update Selected Product"/>
         <Button layoutX="520.0" layoutY="554.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="40.0"
                 prefWidth="293.0" styleClass="delete" text="Delete Selected Product"/>
-        <Button layoutX="228.0" layoutY="43.0" mnemonicParsing="false" onAction="#refreshListThenTableThenFields"
+        <Button layoutX="228.0" layoutY="43.0" mnemonicParsing="false" onAction="#refreshList"
                 styleClass="refresh" text="Refresh"/>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="229.0" layoutX="409.0" layoutY="378.0"
                    mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" width="535.0"/>

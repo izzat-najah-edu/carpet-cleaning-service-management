@@ -74,6 +74,12 @@ public class OrderProductEntity {
         this.price = price;
     }
 
+    public void setAllBasic(OrderProductEntity orderProduct) {
+        setSpecialTreatment(orderProduct.getSpecialTreatment());
+        setFinished(orderProduct.getFinished());
+        setPrice(orderProduct.getPrice());
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {

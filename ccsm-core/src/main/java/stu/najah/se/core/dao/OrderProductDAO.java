@@ -1,6 +1,7 @@
 package stu.najah.se.core.dao;
 
 import stu.najah.se.core.entity.OrderProductEntity;
+import stu.najah.se.core.entity.OrderProductEntityPK;
 
 import java.util.List;
 
@@ -11,6 +12,15 @@ public class OrderProductDAO extends FullDAO<OrderProductEntity> {
      */
     public OrderProductDAO() {
         super(OrderProductEntity.class);
+    }
+
+    /**
+     * @param orderId   of the order product
+     * @param productId of the order product
+     * @return the order product in the database, or null if it's not found
+     */
+    public OrderProductEntity get(int orderId, int productId) {
+        return get(new OrderProductEntityPK(orderId, productId));
     }
 
     /**

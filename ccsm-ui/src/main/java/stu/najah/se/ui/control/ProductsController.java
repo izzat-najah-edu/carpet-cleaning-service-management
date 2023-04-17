@@ -6,18 +6,23 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import stu.najah.se.core.dao.CustomerDAO;
-import stu.najah.se.core.dao.ProductDAO;
+import stu.najah.se.core.EntityListener;
+import stu.najah.se.core.ServiceManager;
 import stu.najah.se.core.entity.CustomerEntity;
 import stu.najah.se.core.entity.ProductEntity;
+import stu.najah.se.core.service.CustomerService;
+import stu.najah.se.core.service.ProductService;
 import stu.najah.se.ui.Controller;
-import stu.najah.se.ui.Prompter;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ProductsController
-        implements Controller, Initializable {
+        implements Controller, Initializable, EntityListener<ProductEntity> {
+
+    private CustomerService customerService;
+
+    private ProductService productService;
 
     @FXML
     private ListView<CustomerEntity> listCustomers;
@@ -31,135 +36,93 @@ public class ProductsController
     @FXML
     private TextField textFieldName;
 
-    private final CustomerDAO customerDAO = new CustomerDAO();
-    private final ProductDAO productDAO = new ProductDAO();
-
-    private CustomerEntity selectedCustomer = null;
-    private ProductEntity selectedProduct = null;
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        customerService = ServiceManager.getCustomerService();
+        productService = ServiceManager.getProductService();
+        productService.watchProduct(this);
         FXUtility.setUpTable(tableProducts);
         tableProducts.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
-                    productToTextFields(selectedProduct = newValue);
+                    if (newValue == null) {
+                        productService.clearProduct();
+                    } else {
+                        productService.selectProduct(newValue.getId());
+                    }
                 }
         );
         listCustomers.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
-                    selectedCustomer = newValue;
-                    refreshTableThenFields();
+                    customerService.selectCustomer(newValue);
+                    refreshTable();
                 });
     }
 
     @Override
+    public void onEntityChanged(ProductEntity newEntity) {
+        textFieldDescription.setText(newEntity.getDescription());
+    }
+
+    @Override
+    public void onEntityCleared() {
+        textFieldDescription.clear();
+    }
+
+    @Override
     public void reset() {
-        refreshListThenTableThenFields();
+        refreshList();
     }
 
     @FXML
-    private void refreshListThenTableThenFields() {
-        clearSearchFields();
-        listCustomers.setItems(FXCollections.observableArrayList(customerDAO.getAll()));
+    private void refreshList() {
+        textFieldName.clear();
+        listCustomers.setItems(FXCollections.observableArrayList(customerService.getAllCustomers()));
         listCustomers.getSelectionModel().clearSelection();
-    }
-
-    @FXML
-    private void refreshTableThenFields() {
-        if (selectedCustomer != null) {
-            tableProducts.setItems(FXCollections.observableArrayList(
-                    productDAO.getAll(selectedCustomer.getId())
-            ));
-        } else {
-            tableProducts.setItems(FXCollections.observableArrayList());
-        }
-        tableProducts.getSelectionModel().clearSelection();
-    }
-
-    @FXML
-    private void clearProduct() {
-        selectedProduct = null;
-        clearProductTextFields();
-    }
-
-    @FXML
-    private void createProduct() {
-        if (selectedCustomer == null) {
-            Prompter.warning(FXUtility.NO_SELECTED_CUSTOMER_MESSAGE);
-            return;
-        }
-        var product = new ProductEntity();
-        product.setCustomerId(selectedCustomer.getId());
-        textFieldsToProduct(product);
-        try {
-            productDAO.insert(product);
-            refreshTableThenFields();
-        } catch (Exception e) {
-            Prompter.error(e);
-        }
-    }
-
-    @FXML
-    private void updateProduct() {
-        if (selectedCustomer == null) {
-            Prompter.warning(FXUtility.NO_SELECTED_CUSTOMER_MESSAGE);
-            return;
-        }
-        if (selectedProduct == null) {
-            Prompter.warning(FXUtility.NO_SELECTED_PRODUCT_MESSAGE);
-            return;
-        }
-        textFieldsToProduct(selectedProduct);
-        try {
-            productDAO.update(selectedProduct);
-            refreshTableThenFields();
-        } catch (Exception e) {
-            Prompter.error(e);
-        }
-    }
-
-    @FXML
-    private void deleteProduct() {
-        if (selectedCustomer == null) {
-            Prompter.warning(FXUtility.NO_SELECTED_CUSTOMER_MESSAGE);
-            return;
-        }
-        if (selectedProduct == null) {
-            Prompter.warning(FXUtility.NO_SELECTED_PRODUCT_MESSAGE);
-            return;
-        }
-        try {
-            productDAO.delete(selectedProduct);
-            refreshTableThenFields();
-        } catch (Exception e) {
-            Prompter.error(e);
-        }
     }
 
     @FXML
     private void searchCustomer() {
         listCustomers.setItems(FXCollections.observableArrayList(
-                customerDAO.getAllLike(textFieldName.getText())
+                customerService.getAllCustomersWith(textFieldName.getText())
         ));
     }
 
-    private void clearSearchFields() {
-        textFieldName.clear();
-    }
-
-    private void clearProductTextFields() {
-        textFieldDescription.clear();
-    }
-
-    private void textFieldsToProduct(ProductEntity product) {
-        product.setDescription(textFieldDescription.getText());
-    }
-
-    private void productToTextFields(ProductEntity product) {
-        if (product != null) {
-            textFieldDescription.setText(product.getDescription());
-        } else {
-            clearProductTextFields();
+    @FXML
+    private void refreshTable() {
+        try {
+            var list = FXCollections.observableArrayList(productService.getAllCustomerProducts());
+            tableProducts.setItems(list);
+        } catch (IllegalStateException e) {
+            tableProducts.setItems(FXCollections.observableArrayList());
+        } finally {
+            tableProducts.getSelectionModel().clearSelection();
         }
+    }
+
+    @FXML
+    private void clearProduct() {
+        productService.clearProduct();
+    }
+
+    @FXML
+    private void createProduct() {
+        productService.createAndSelectProduct(new ProductEntity(
+                textFieldDescription.getText()
+        ));
+        refreshTable();
+    }
+
+    @FXML
+    private void updateProduct() {
+        productService.updateProduct(new ProductEntity(
+                textFieldDescription.getText()
+        ));
+        refreshTable();
+    }
+
+    @FXML
+    private void deleteProduct() {
+        productService.deleteProduct();
+        refreshTable();
     }
 }

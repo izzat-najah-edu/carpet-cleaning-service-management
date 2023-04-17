@@ -18,11 +18,12 @@ create table customer
     address varchar(256)
 );
 
-create table `order`
+CREATE TABLE `order`
 (
-    id          int primary key auto_increment,
-    customer_id int,
-    foreign key (customer_id) references customer (id)
+    id          INT PRIMARY KEY AUTO_INCREMENT,
+    customer_id INT,
+    created_at  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (customer_id) REFERENCES customer (id)
 );
 
 create table product

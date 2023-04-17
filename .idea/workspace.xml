@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="documentation change">
-      <change afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/ProductServiceTest.java" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order product service created">
+      <change afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/EmailUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/ServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/ServiceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/ProductEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/AdminServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/AdminServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/CustomerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/CustomerServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/CustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/CustomersController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,9 +64,6 @@
     </option>
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/5.3.0/mockito-core-5.3.0.jar!/META-INF/MANIFEST.MF" root0="SKIP_INSPECTION" />
-  </component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
   </component>
@@ -117,7 +109,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.35287356&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.obiscr.chatgpt.settings.GPT3-3.5-Turbo&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -169,12 +161,26 @@
       <recent name="stu.najah" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="stu.najah.se.core.entity" />
       <recent name="stu.najah.se.data.entity" />
       <recent name="stu.najah.se.sql.entity" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.service in ccsm-core">
+  <component name="RunManager" selected="Application.SceneManager">
+    <configuration name="EmailUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.core.service.EmailUtil" />
+      <module name="ccsm-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stu.najah.se.core.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.SceneManager" />
       <module name="ccsm-ui" />
@@ -184,37 +190,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomerServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.core.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.CustomerServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DAOTest.example" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.core.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.dao" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.dao.DAOTest" />
-      <option name="METHOD_NAME" value="example" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -234,6 +209,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductServiceTest.testUpdateProductError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccsm-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stu.najah.se.test.core.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.ProductServiceTest" />
+      <option name="METHOD_NAME" value="testUpdateProductError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="service in ccsm-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccsm-core" />
       <option name="TEST_OBJECT" value="directory" />
@@ -244,11 +235,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.service in ccsm-core" />
-        <item itemvalue="JUnit.ProductServiceTest" />
         <item itemvalue="Application.SceneManager" />
-        <item itemvalue="JUnit.DAOTest.example" />
-        <item itemvalue="JUnit.CustomerServiceTest" />
+        <item itemvalue="Application.EmailUtil" />
+        <item itemvalue="JUnit.service in ccsm-core" />
+        <item itemvalue="JUnit.ProductServiceTest.testUpdateProductError" />
+        <item itemvalue="JUnit.ProductServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -359,62 +350,9 @@
       <workItem from="1681577244753" duration="3098000" />
       <workItem from="1681590126552" duration="4890000" />
       <workItem from="1681657527871" duration="410000" />
-    </task>
-    <task id="LOCAL-00069" summary="new dao objects implemented">
-      <created>1680809825908</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1680809825908</updated>
-    </task>
-    <task id="LOCAL-00070" summary="package rename">
-      <created>1680809947144</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1680809947144</updated>
-    </task>
-    <task id="LOCAL-00071" summary="fxml controllers reimplemented">
-      <created>1680815832486</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1680815832486</updated>
-    </task>
-    <task id="LOCAL-00072" summary="fxml controllers bug fix">
-      <created>1680819902184</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1680819902184</updated>
-    </task>
-    <task id="LOCAL-00073" summary="order view implemented">
-      <created>1680820944931</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1680820944931</updated>
-    </task>
-    <task id="LOCAL-00074" summary="orders panel implemented">
-      <created>1680822859118</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1680822859118</updated>
-    </task>
-    <task id="LOCAL-00075" summary="order entity price method">
-      <created>1680823762684</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1680823762684</updated>
-    </task>
-    <task id="LOCAL-00076" summary="order entity finished method">
-      <created>1680823986319</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1680823986319</updated>
+      <workItem from="1681734911253" duration="8822000" />
+      <workItem from="1681758281399" duration="5604000" />
+      <workItem from="1681765727681" duration="671000" />
     </task>
     <task id="LOCAL-00077" summary="orders controller implemented">
       <created>1680826389002</created>
@@ -703,7 +641,63 @@
       <option name="project" value="LOCAL" />
       <updated>1681590567857</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="product service now depends on customer service">
+      <created>1681682962342</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1681682962342</updated>
+    </task>
+    <task id="LOCAL-00119" summary="product controller reimplemented">
+      <created>1681738704318</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1681738704318</updated>
+    </task>
+    <task id="LOCAL-00120" summary="order table change">
+      <created>1681741463900</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1681741463900</updated>
+    </task>
+    <task id="LOCAL-00121" summary="order table change">
+      <created>1681741488954</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1681741488954</updated>
+    </task>
+    <task id="LOCAL-00122" summary="order table change">
+      <created>1681741517205</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1681741517205</updated>
+    </task>
+    <task id="LOCAL-00123" summary="order service created">
+      <created>1681741528233</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1681741528233</updated>
+    </task>
+    <task id="LOCAL-00124" summary="order dao new method">
+      <created>1681743826590</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1681743826590</updated>
+    </task>
+    <task id="LOCAL-00125" summary="order dao new method">
+      <created>1681743832142</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1681743832142</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -739,11 +733,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="orders panel redesign" />
-    <MESSAGE value="customer entity toString override" />
-    <MESSAGE value="orders controller implementation" />
-    <MESSAGE value="panels redesign" />
-    <MESSAGE value="dao refactoring" />
     <MESSAGE value="mysql setup explained" />
     <MESSAGE value="dao extensive refactoring" />
     <MESSAGE value="project split into two modules" />
@@ -764,7 +753,12 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="customer service test fixes" />
     <MESSAGE value="documentation change" />
-    <option name="LAST_COMMIT_MESSAGE" value="documentation change" />
+    <MESSAGE value="product service now depends on customer service" />
+    <MESSAGE value="product controller reimplemented" />
+    <MESSAGE value="order table change" />
+    <MESSAGE value="order service created" />
+    <MESSAGE value="order dao new method" />
+    <option name="LAST_COMMIT_MESSAGE" value="order dao new method" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
