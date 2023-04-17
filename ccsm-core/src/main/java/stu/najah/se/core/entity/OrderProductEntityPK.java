@@ -18,6 +18,14 @@ public class OrderProductEntityPK implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int productId;
 
+    public OrderProductEntityPK() {
+    }
+
+    public OrderProductEntityPK(int orderId, int productId) {
+        setOrderId(orderId);
+        setProductId(productId);
+    }
+
     public int getOrderId() {
         return orderId;
     }
