@@ -2,9 +2,11 @@ package stu.najah.se.core;
 
 import stu.najah.se.core.dao.AdminDAO;
 import stu.najah.se.core.dao.CustomerDAO;
+import stu.najah.se.core.dao.OrderDAO;
 import stu.najah.se.core.dao.ProductDAO;
 import stu.najah.se.core.service.AdminService;
 import stu.najah.se.core.service.CustomerService;
+import stu.najah.se.core.service.OrderService;
 import stu.najah.se.core.service.ProductService;
 
 /**
@@ -21,6 +23,8 @@ public class ServiceManager {
     private static CustomerService customerServiceInstance;
 
     private static ProductService productServiceInstance;
+
+    private static OrderService orderServiceInstance;
 
     /**
      * Initializes the AdminService with the provided Authenticator.
@@ -67,6 +71,7 @@ public class ServiceManager {
         }
         customerServiceInstance = new CustomerService(new CustomerDAO(), errorListener);
         productServiceInstance = new ProductService(new ProductDAO(), errorListener, customerServiceInstance);
+        orderServiceInstance = new OrderService(new OrderDAO(), errorListener, customerServiceInstance);
     }
 
     /**
@@ -94,6 +99,20 @@ public class ServiceManager {
             throw new IllegalStateException("ProductService has not been initialized!");
         } else {
             return productServiceInstance;
+        }
+    }
+
+    /**
+     * Retrieves the shared instance of the OrderService.
+     *
+     * @return the OrderService instance
+     * @throws IllegalStateException if the OrderService has not been initialized
+     */
+    public static OrderService getOrderService() throws IllegalStateException {
+        if (orderServiceInstance == null) {
+            throw new IllegalStateException("OrderService has not been initialized!");
+        } else {
+            return orderServiceInstance;
         }
     }
 }
