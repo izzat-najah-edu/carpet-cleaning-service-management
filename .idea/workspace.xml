@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="product service now depends on customer service">
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order dao new method">
+      <change afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/OrderProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/72b255f7-4443-449b-a52b-599d4edebd59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/72b255f7-4443-449b-a52b-599d4edebd59.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/ProductEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/ProductServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/ProductsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/products.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/products.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/OrderProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/OrderProductEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,12 +162,13 @@
       <recent name="stu.najah" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="stu.najah.se.core.entity" />
       <recent name="stu.najah.se.data.entity" />
       <recent name="stu.najah.se.sql.entity" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SceneManager">
+  <component name="RunManager" selected="JUnit.service in ccsm-core">
     <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.SceneManager" />
       <module name="ccsm-ui" />
@@ -240,8 +239,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SceneManager" />
         <item itemvalue="JUnit.service in ccsm-core" />
+        <item itemvalue="Application.SceneManager" />
         <item itemvalue="JUnit.ProductServiceTest.testUpdateProductError" />
         <item itemvalue="JUnit.ProductServiceTest" />
         <item itemvalue="JUnit.ProductServiceTest.testUpdateProduct" />
@@ -355,56 +354,7 @@
       <workItem from="1681577244753" duration="3098000" />
       <workItem from="1681590126552" duration="4890000" />
       <workItem from="1681657527871" duration="410000" />
-      <workItem from="1681734911253" duration="3595000" />
-    </task>
-    <task id="LOCAL-00070" summary="package rename">
-      <created>1680809947144</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1680809947144</updated>
-    </task>
-    <task id="LOCAL-00071" summary="fxml controllers reimplemented">
-      <created>1680815832486</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1680815832486</updated>
-    </task>
-    <task id="LOCAL-00072" summary="fxml controllers bug fix">
-      <created>1680819902184</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1680819902184</updated>
-    </task>
-    <task id="LOCAL-00073" summary="order view implemented">
-      <created>1680820944931</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1680820944931</updated>
-    </task>
-    <task id="LOCAL-00074" summary="orders panel implemented">
-      <created>1680822859118</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1680822859118</updated>
-    </task>
-    <task id="LOCAL-00075" summary="order entity price method">
-      <created>1680823762684</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1680823762684</updated>
-    </task>
-    <task id="LOCAL-00076" summary="order entity finished method">
-      <created>1680823986319</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1680823986319</updated>
+      <workItem from="1681734911253" duration="8822000" />
     </task>
     <task id="LOCAL-00077" summary="orders controller implemented">
       <created>1680826389002</created>
@@ -700,7 +650,56 @@
       <option name="project" value="LOCAL" />
       <updated>1681682962342</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="product controller reimplemented">
+      <created>1681738704318</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1681738704318</updated>
+    </task>
+    <task id="LOCAL-00120" summary="order table change">
+      <created>1681741463900</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1681741463900</updated>
+    </task>
+    <task id="LOCAL-00121" summary="order table change">
+      <created>1681741488954</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1681741488954</updated>
+    </task>
+    <task id="LOCAL-00122" summary="order table change">
+      <created>1681741517205</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1681741517205</updated>
+    </task>
+    <task id="LOCAL-00123" summary="order service created">
+      <created>1681741528233</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1681741528233</updated>
+    </task>
+    <task id="LOCAL-00124" summary="order dao new method">
+      <created>1681743826590</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1681743826590</updated>
+    </task>
+    <task id="LOCAL-00125" summary="order dao new method">
+      <created>1681743832142</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1681743832142</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -736,10 +735,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="customer entity toString override" />
-    <MESSAGE value="orders controller implementation" />
-    <MESSAGE value="panels redesign" />
-    <MESSAGE value="dao refactoring" />
     <MESSAGE value="mysql setup explained" />
     <MESSAGE value="dao extensive refactoring" />
     <MESSAGE value="project split into two modules" />
@@ -761,7 +756,11 @@
     <MESSAGE value="customer service test fixes" />
     <MESSAGE value="documentation change" />
     <MESSAGE value="product service now depends on customer service" />
-    <option name="LAST_COMMIT_MESSAGE" value="product service now depends on customer service" />
+    <MESSAGE value="product controller reimplemented" />
+    <MESSAGE value="order table change" />
+    <MESSAGE value="order service created" />
+    <MESSAGE value="order dao new method" />
+    <option name="LAST_COMMIT_MESSAGE" value="order dao new method" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
