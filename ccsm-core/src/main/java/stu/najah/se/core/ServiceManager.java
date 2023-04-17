@@ -1,13 +1,7 @@
 package stu.najah.se.core;
 
-import stu.najah.se.core.dao.AdminDAO;
-import stu.najah.se.core.dao.CustomerDAO;
-import stu.najah.se.core.dao.OrderDAO;
-import stu.najah.se.core.dao.ProductDAO;
-import stu.najah.se.core.service.AdminService;
-import stu.najah.se.core.service.CustomerService;
-import stu.najah.se.core.service.OrderService;
-import stu.najah.se.core.service.ProductService;
+import stu.najah.se.core.dao.*;
+import stu.najah.se.core.service.*;
 
 /**
  * Utility class responsible for managing services and their dependencies
@@ -25,6 +19,8 @@ public class ServiceManager {
     private static ProductService productServiceInstance;
 
     private static OrderService orderServiceInstance;
+
+    private static OrderProductService orderProductServiceInstance;
 
     /**
      * Initializes the AdminService with the provided Authenticator.
@@ -72,6 +68,9 @@ public class ServiceManager {
         customerServiceInstance = new CustomerService(new CustomerDAO(), errorListener);
         productServiceInstance = new ProductService(new ProductDAO(), errorListener, customerServiceInstance);
         orderServiceInstance = new OrderService(new OrderDAO(), errorListener, customerServiceInstance);
+        orderProductServiceInstance = new OrderProductService(
+                new OrderProductDAO(), errorListener, orderServiceInstance, productServiceInstance
+        );
     }
 
     /**
@@ -113,6 +112,20 @@ public class ServiceManager {
             throw new IllegalStateException("OrderService has not been initialized!");
         } else {
             return orderServiceInstance;
+        }
+    }
+
+    /**
+     * Retrieves the shared instance of the OrderProductService.
+     *
+     * @return the OrderProductService instance
+     * @throws IllegalStateException if the OrderProductService has not been initialized
+     */
+    public static OrderProductService getOrderProductService() throws IllegalStateException {
+        if (orderProductServiceInstance == null) {
+            throw new IllegalStateException("OrderProductService has not been initialized!");
+        } else {
+            return orderProductServiceInstance;
         }
     }
 }

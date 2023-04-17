@@ -19,6 +19,9 @@ import java.util.Optional;
  * The class maintains a reference to a specific order-product, which is set or cleared during various operations.
  * When an operation fails due to a database error, the current order-product is cleared.
  * </p><p>
+ * Some methods in this class interact with the ProductService to access or modify the product associated with the order-product.
+ * It is important to keep track of the product in the ProductService to ensure correct operation.
+ * </p><p>
  * DatabaseErrorHandler is required for handling and logging database errors,
  * any error that occurs during transactions will be sent to the handler to deal with.
  * </p><p>
