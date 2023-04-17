@@ -3,6 +3,7 @@ module ccsm.core {
     requires java.naming;
     requires jakarta.persistence;
     requires org.hibernate.orm.core;
+    requires jakarta.mail;
 
     opens stu.najah.se.core.entity to org.hibernate.orm.core;
 

@@ -52,7 +52,7 @@ To execute these files, follow these steps:
 3. Similarly, execute the contents of the `INSERT.sql` file in your MySQL shell or client. Use the same method as you
    did for the `CREATE.sql` file.
 
-# Adding Features
+## Adding Features
 
 - The directory `/src/test/java/resources/features` includes the features of the project
 - Each feature has a corresponding -Step Definitions- Class located at src/test/java/features
@@ -66,3 +66,34 @@ To execute these files, follow these steps:
 2. create a step definitions class in src/test/java/features to link every step to an actual code
    (e.g. if the step is: "login screen closes" link it to a code like: "loginScreen.close()")
 3. create another test class and configure it to run the cucumber tests
+
+## Email Setup and Environment Variables
+
+This project uses an email service to send notifications to customers. To protect sensitive information, the email
+credentials should be stored as environment variables. Please follow these steps to set up the environment variables:
+
+- Create two environment variables `JAVAMAIL_USER` and `JAVAMAIL_PASS`, where `JAVAMAIL_USER` stores your email
+  address,
+  and `JAVAMAIL_PASS` stores your email password.
+
+**For Windows:**
+
+- Open the Command Prompt as an administrator.
+- Run the following commands, replacing "your_email@example.com" and "your_password" with your actual email and
+  password:
+
+```cmd
+setx JAVAMAIL_USER "your_email@example.com"
+setx JAVAMAIL_PASS "your_password"
+```
+
+**For Linux/macOS:**
+
+- Open a terminal.
+- Run the following commands, replacing "your_email@example.com" and "your_password" with your actual email and
+  password:
+
+```cmd
+export JAVAMAIL_USER="your_email@example.com"
+export JAVAMAIL_PASS="your_password"
+```
