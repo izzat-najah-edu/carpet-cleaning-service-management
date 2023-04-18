@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order product service created" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="refactoring" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -344,13 +344,6 @@
       <workItem from="1681811045663" duration="2681000" />
       <workItem from="1681831197201" duration="9087000" />
     </task>
-    <task id="LOCAL-00085" summary="orders panel redesign">
-      <created>1680890137340</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1680890137340</updated>
-    </task>
     <task id="LOCAL-00086" summary="orders panel redesign">
       <created>1680900192262</created>
       <option name="number" value="00086" />
@@ -687,7 +680,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681841526440</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="refactoring">
+      <created>1681842994052</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1681842994052</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -739,7 +739,6 @@
     <MESSAGE value="entity listener implemented" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="reimplementation" />
-    <MESSAGE value="refactoring" />
     <MESSAGE value="customer service test fixes" />
     <MESSAGE value="documentation change" />
     <MESSAGE value="product service now depends on customer service" />
@@ -748,7 +747,8 @@
     <MESSAGE value="order service created" />
     <MESSAGE value="order dao new method" />
     <MESSAGE value="order product service created" />
-    <option name="LAST_COMMIT_MESSAGE" value="order product service created" />
+    <MESSAGE value="refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
