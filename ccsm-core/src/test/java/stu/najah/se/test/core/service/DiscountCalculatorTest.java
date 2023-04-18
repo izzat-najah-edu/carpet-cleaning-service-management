@@ -1,12 +1,12 @@
 package stu.najah.se.test.core.service;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import stu.najah.se.core.service.DiscountCalculator;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DiscountCalculatorTest {
 
