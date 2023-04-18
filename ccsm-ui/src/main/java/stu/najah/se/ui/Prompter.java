@@ -91,4 +91,11 @@ public final class Prompter
     public static void error(Exception e) {
         prompt(e.getMessage(), Alert.AlertType.ERROR);
     }
+
+
+    public static void loginError() {
+        error("Login failed. Please check your username and password and try again.");
+    }
+
+
 }
