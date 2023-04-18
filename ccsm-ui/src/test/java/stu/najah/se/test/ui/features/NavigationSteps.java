@@ -1,12 +1,9 @@
-package features;
+package stu.najah.se.test.ui.features;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import javafx.application.Platform;
 import org.testfx.api.FxRobot;
-
-import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class NavigationSteps extends FxRobot {
 

@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order product controller reimplemented">
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="bug fix">
+      <change afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/CustomerCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/CustomerCRUDSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/LoginSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/NavigationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/NavigationSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/ProductCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/ProductCRUDSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/main/FeaturesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/FeaturesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/CustomerCRUD.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/CustomerCRUD.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/Login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Logout.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/Logout.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Navigation.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/Navigation.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/ProductCRUD.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/ProductCRUD.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +36,9 @@
         <option value="JavaFXApplication" />
         <option value="CSS File" />
         <option value="FxmlFile" />
-        <option value="module-info" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -122,11 +139,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\test\java\stu\najah\se\test\ui\features" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\test\java\stu\najah\se\test\ui" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\test\resources\features" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-core" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\main\resources\stu\najah\se\ui\scene" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-core\src\main\resources\stu\najah\se\core\dao" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\main\resources\stu\najah\se" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-core\src\main\resources\stu\najah\se\dao" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="stu.najah.se.gui.control.FXUtility" />
@@ -155,7 +172,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DiscountCalculatorTest">
+  <component name="RunManager" selected="JUnit.service in ccsm-core">
     <configuration name="EmailUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.core.service.EmailUtil" />
       <module name="ccsm-core" />
@@ -223,10 +240,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DiscountCalculatorTest" />
-        <item itemvalue="Application.SceneManager" />
-        <item itemvalue="Application.EmailUtil" />
         <item itemvalue="JUnit.service in ccsm-core" />
+        <item itemvalue="Application.SceneManager" />
+        <item itemvalue="JUnit.DiscountCalculatorTest" />
+        <item itemvalue="Application.EmailUtil" />
         <item itemvalue="JUnit.ProductServiceTest.testUpdateProductError" />
       </list>
     </recent_temporary>
@@ -341,20 +358,6 @@
       <workItem from="1681734911253" duration="8822000" />
       <workItem from="1681758281399" duration="5604000" />
       <workItem from="1681765727681" duration="671000" />
-    </task>
-    <task id="LOCAL-00079" summary="bug fix">
-      <created>1680866037081</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1680866037081</updated>
-    </task>
-    <task id="LOCAL-00080" summary="bug fixes">
-      <created>1680866051817</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1680866051817</updated>
     </task>
     <task id="LOCAL-00081" summary="controllers refactoring">
       <created>1680868012366</created>
@@ -685,7 +688,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681839140986</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="bug fix">
+      <created>1681840377248</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1681840377248</updated>
+    </task>
+    <task id="LOCAL-00129" summary="bug fix">
+      <created>1681840520953</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1681840520953</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -744,9 +761,9 @@
     <MESSAGE value="order table change" />
     <MESSAGE value="order service created" />
     <MESSAGE value="order dao new method" />
-    <MESSAGE value="bug fix" />
     <MESSAGE value="order product controller reimplemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="order product controller reimplemented" />
+    <MESSAGE value="bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

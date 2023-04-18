@@ -1,4 +1,4 @@
-package main;
+package stu.najah.se.test.ui;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
