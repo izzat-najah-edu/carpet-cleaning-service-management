@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order product service created">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/DiscountCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/72b255f7-4443-449b-a52b-599d4edebd59.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/72b255f7-4443-449b-a52b-599d4edebd59/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/72b255f7-4443-449b-a52b-599d4edebd59/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/LogoutController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Logout.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/CustomerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -357,14 +353,7 @@
       <workItem from="1681758281399" duration="5604000" />
       <workItem from="1681765727681" duration="671000" />
       <workItem from="1681811045663" duration="2681000" />
-      <workItem from="1681831197201" duration="1343000" />
-    </task>
-    <task id="LOCAL-00077" summary="orders controller implemented">
-      <created>1680826389002</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1680826389003</updated>
+      <workItem from="1681831197201" duration="2545000" />
     </task>
     <task id="LOCAL-00078" summary="bug fix">
       <created>1680865941168</created>
@@ -702,7 +691,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681743832142</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="order product service created">
+      <created>1681832553521</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1681832553521</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -738,7 +734,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="mysql setup explained" />
     <MESSAGE value="dao extensive refactoring" />
     <MESSAGE value="project split into two modules" />
     <MESSAGE value="modules connections between fixed" />
@@ -763,7 +758,8 @@
     <MESSAGE value="order table change" />
     <MESSAGE value="order service created" />
     <MESSAGE value="order dao new method" />
-    <option name="LAST_COMMIT_MESSAGE" value="order dao new method" />
+    <MESSAGE value="order product service created" />
+    <option name="LAST_COMMIT_MESSAGE" value="order product service created" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

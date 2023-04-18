@@ -41,6 +41,7 @@ public class CustomerService {
         this.errorHandler = errorListener;
     }
 
+
     /**
      * Subscribes a listener to be notified of changes or clearing of the customer.
      *
