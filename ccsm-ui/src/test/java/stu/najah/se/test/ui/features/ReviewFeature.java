@@ -1,3 +1,5 @@
+package stu.najah.se.test.ui.features;
+
 import java.util.Scanner;
 
 public class ReviewFeature {
