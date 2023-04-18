@@ -23,3 +23,10 @@ Feature: Customer CRUD Operations
     Given I select a customer from the list
     And I click delete customer button
     Then the selected customer is deleted
+
+  Scenario: Searching Customer Successfully
+    Given I enter a customer name, phone, address
+    And I click search customer button
+    Then the selected customer is found
+
+

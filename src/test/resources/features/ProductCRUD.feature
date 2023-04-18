@@ -22,3 +22,9 @@ Feature: Product CRUD Operations
     Given I select a product from the list
     And I click delete product button
     Then the selected product is deleted
+
+  Scenario: Searching Product Successfully
+    Given I enter product
+    And I click search product button
+    Then the selected product is found
+
