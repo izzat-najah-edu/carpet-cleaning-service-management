@@ -40,7 +40,7 @@ public class SceneManager extends Application
      *
      * @return reference to the singleton object
      */
-    static SceneManager getInstance() {
+    public static SceneManager getInstance() {
         return instance;
     }
 
@@ -74,6 +74,10 @@ public class SceneManager extends Application
     @Override
     public void logout() {
         setLoginScene();
+    }
+
+    public boolean isLoggedIn() {
+        return adminService.isLoggedIn();
     }
 
     /**
