@@ -1,6 +1,5 @@
 package stu.najah.se.test.ui.features;
 
-import io.cucumber.java.BeforeStep;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,7 +10,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.testfx.api.FxRobot;
 import org.testfx.framework.junit5.ApplicationTest;
-import org.testfx.util.WaitForAsyncUtils;
 import stu.najah.se.ui.SceneManager;
 
 import static org.junit.Assert.*;
@@ -26,11 +24,6 @@ public class LoginSteps extends ApplicationTest {
         AnchorPane root = loader.load();
         stage.setScene(new Scene(root));
         stage.show();
-    }
-
-    @BeforeStep
-    public void prepare() {
-        WaitForAsyncUtils.waitForFxEvents();
     }
 
     @Given("login screen is opened")

@@ -1,5 +1,6 @@
 module ccsm.ui.test {
     requires ccsm.ui;
+    requires ccsm.core;
 
     requires javafx.controls;
     requires javafx.fxml;

@@ -7,6 +7,7 @@ import javafx.application.Platform;
 import org.testfx.api.FxRobot;
 import org.testfx.matcher.base.NodeMatchers;
 import org.testfx.util.WaitForAsyncUtils;
+import stu.najah.se.ui.SceneManager;
 
 import static org.junit.Assert.assertTrue;
 
@@ -15,7 +16,7 @@ public class Utility {
     @BeforeAll
     public static void launch() {
         // start the application
-        //SceneManager.main(new String[]{});
+        SceneManager.main(new String[]{});
     }
 
     @AfterAll
