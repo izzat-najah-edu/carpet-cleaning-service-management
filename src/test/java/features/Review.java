@@ -1,35 +1,39 @@
-public class LogoutFeature {
-    private boolean isLoggedIn = false; // assume user is initially not logged in
+import java.util.Scanner;
 
-    // method to log in the user
-    public void login(String username, String password) {
-        // perform login authentication here
-        // if successful, set isLoggedIn to true
-        isLoggedIn = true;
-    }
-
-    // method to log out the user
-    public void logout() {
-        if (isLoggedIn) {
-            // perform logout cleanup here
-            isLoggedIn = false;
-            System.out.println("You have successfully logged out.");
-        } else {
-            System.out.println("You are not currently logged in.");
-        }
-    }
-
-    // main method to test the logout feature
+public class ReviewFeature {
     public static void main(String[] args) {
-        LogoutFeature logoutFeature = new LogoutFeature();
+        Scanner scanner = new Scanner(System.in);
 
-        // assume the user is already logged in
-        logoutFeature.isLoggedIn = true;
+        // Prompt the user to rate the software program out of five stars
+        System.out.print("Rate the software program out of five stars (1-5): ");
+        int rating = scanner.nextInt();
+        scanner.nextLine();
 
-        // log the user out
-        logoutFeature.logout();
+        // Prompt the user to write a review title
+        System.out.print("Write a review title: ");
+        String title = scanner.nextLine();
 
-        // try to log the user out again (should give error message)
-        logoutFeature.logout();
+        // Prompt the user to write a review body
+        System.out.print("Write a review body: ");
+        String body = scanner.nextLine();
+
+        // Prompt the user to list the pros and cons of the software program
+        System.out.print("List the pros of the software program: ");
+        String pros = scanner.nextLine();
+        System.out.print("List the cons of the software program: ");
+        String cons = scanner.nextLine();
+
+        // Prompt the user to indicate whether they would recommend the software program
+        System.out.print("Would you recommend this software program? (yes or no): ");
+        String recommend = scanner.nextLine();
+
+        // Output the review information to the console
+        System.out.println("\nReview Summary:");
+        System.out.println("Rating: " + rating + " stars");
+        System.out.println("Title: " + title);
+        System.out.println("Body: " + body);
+        System.out.println("Pros: " + pros);
+        System.out.println("Cons: " + cons);
+        System.out.println("Recommend: " + recommend);
     }
 }
