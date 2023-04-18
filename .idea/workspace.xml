@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="bug fix">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order product controller reimplemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/OrdersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/orders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/orders.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +83,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "izzat",
+    "git-widget-placeholder": "master",
     "introduce.parameter.lambda": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-19",
     "last_directory_selection": "F:/Work/Projects/Java/CarpetCleaningServiceManagement/src/main/java/stu/najah/se",
@@ -159,7 +155,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SceneManager">
+  <component name="RunManager" selected="JUnit.DiscountCalculatorTest">
     <configuration name="EmailUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.core.service.EmailUtil" />
       <module name="ccsm-core" />
@@ -186,7 +182,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DiscountCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccsm-core" />
       <extension name="coverage">
         <pattern>
@@ -195,7 +191,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.ProductServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.DiscountCalculatorTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -227,11 +223,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DiscountCalculatorTest" />
         <item itemvalue="Application.SceneManager" />
         <item itemvalue="Application.EmailUtil" />
         <item itemvalue="JUnit.service in ccsm-core" />
         <item itemvalue="JUnit.ProductServiceTest.testUpdateProductError" />
-        <item itemvalue="JUnit.ProductServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -345,13 +341,6 @@
       <workItem from="1681734911253" duration="8822000" />
       <workItem from="1681758281399" duration="5604000" />
       <workItem from="1681765727681" duration="671000" />
-    </task>
-    <task id="LOCAL-00078" summary="bug fix">
-      <created>1680865941168</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1680865941168</updated>
     </task>
     <task id="LOCAL-00079" summary="bug fix">
       <created>1680866037081</created>
@@ -689,7 +678,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681838109524</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="order product controller reimplemented">
+      <created>1681839140986</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1681839140986</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -725,7 +721,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="mysql setup explained" />
     <MESSAGE value="dao extensive refactoring" />
     <MESSAGE value="project split into two modules" />
     <MESSAGE value="modules connections between fixed" />
@@ -750,7 +745,8 @@
     <MESSAGE value="order service created" />
     <MESSAGE value="order dao new method" />
     <MESSAGE value="bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
+    <MESSAGE value="order product controller reimplemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="order product controller reimplemented" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
