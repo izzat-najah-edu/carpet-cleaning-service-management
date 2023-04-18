@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order product service created">
-      <change afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/EmailNotification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/GenerateCustomer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/features/Review.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/EmailNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/Logout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/GenerateCustomer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/Product.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -354,14 +355,7 @@
       <workItem from="1681758281399" duration="5604000" />
       <workItem from="1681765727681" duration="671000" />
       <workItem from="1681811045663" duration="2681000" />
-      <workItem from="1681831197201" duration="8065000" />
-    </task>
-    <task id="LOCAL-00082" summary="controllers refactoring">
-      <created>1680869582337</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1680869582337</updated>
+      <workItem from="1681831197201" duration="9087000" />
     </task>
     <task id="LOCAL-00083" summary="controllers refactoring">
       <created>1680869984943</created>
@@ -699,7 +693,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681838370301</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="order product service created">
+      <created>1681839617102</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1681839617102</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
