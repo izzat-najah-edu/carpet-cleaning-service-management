@@ -4,11 +4,16 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import stu.najah.se.core.dao.CustomerDAO;
-import stu.najah.se.core.dao.OrderDAO;
-import stu.najah.se.core.dao.OrderProductDAO;
-import stu.najah.se.core.dao.ProductDAO;
-import stu.najah.se.core.entity.*;
+import stu.najah.se.core.EntityListener;
+import stu.najah.se.core.ServiceManager;
+import stu.najah.se.core.entity.CustomerEntity;
+import stu.najah.se.core.entity.OrderEntity;
+import stu.najah.se.core.entity.OrderProductEntity;
+import stu.najah.se.core.entity.ProductEntity;
+import stu.najah.se.core.service.CustomerService;
+import stu.najah.se.core.service.OrderProductService;
+import stu.najah.se.core.service.OrderService;
+import stu.najah.se.core.service.ProductService;
 import stu.najah.se.ui.Controller;
 import stu.najah.se.ui.Prompter;
 
@@ -16,10 +21,18 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class OrdersController
-        implements Controller, Initializable {
+        implements Controller, Initializable, EntityListener<OrderProductEntity> {
+
+    private CustomerService customerService;
+
+    private OrderService orderService;
+
+    private ProductService productService;
+
+    private OrderProductService orderProductService;
 
     @FXML
-    private TableView<OrderViewEntity> tableOrders;
+    private TableView<OrderEntity> tableOrders;
 
     @FXML
     private TableView<OrderProductEntity> tableOrderProducts;
@@ -28,13 +41,10 @@ public class OrdersController
     private ComboBox<ProductEntity> comboBoxAvailableProducts;
 
     @FXML
-    private Label labelSelectedCustomer;
+    private ComboBox<CustomerEntity> comboBoxCustomer;
 
     @FXML
     private Label labelOrderStatus;
-
-    @FXML
-    private TextField textFieldCustomerName;
 
     @FXML
     private TextField textFieldPrice;
@@ -45,67 +55,99 @@ public class OrdersController
     @FXML
     private CheckBox checkBoxFinished;
 
-    private final OrderDAO orderDAO = new OrderDAO();
-    private final CustomerDAO customerDAO = new CustomerDAO();
-    private final OrderProductDAO orderProductDAO = new OrderProductDAO();
-    private final ProductDAO productDAO = new ProductDAO();
-
-    private OrderViewEntity selectedOrderView = null;
-    private OrderProductEntity selectedOrderProduct = null;
-    private ProductEntity selectedProduct = null;
-
-    private OrderEntity selectedOrder() {
-        return orderDAO.get(selectedOrderView.getOrderId());
-    }
-
-    private CustomerEntity selectedCustomer() {
-        var order = orderDAO.get(selectedOrderView.getOrderId());
-        return customerDAO.get(order.getCustomerId());
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        customerService = ServiceManager.getCustomerService();
+        orderService = ServiceManager.getOrderService();
+        productService = ServiceManager.getProductService();
+        orderProductService = ServiceManager.getOrderProductService();
+        orderProductService.watchOrderProduct(this);
         FXUtility.setUpTable(tableOrders);
         FXUtility.setUpTable(tableOrderProducts);
+        comboBoxCustomer.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> {
+                    customerService.selectCustomer(newValue);
+                    refreshOrdersTable();
+                    refreshAvailableProducts();
+                });
         tableOrders.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
-                    selectedOrderView = newValue;
-                    refreshSelectedOrder();
-                    refreshSelectedCustomer();
-                    refreshProductsThenFields();
-                });
-        tableOrderProducts.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> {
-                    productToTextFields(selectedOrderProduct = newValue);
+                    if (newValue == null) {
+                        orderService.clearOrder();
+                    } else {
+                        orderService.selectOrder(newValue.getId());
+                    }
+                    refreshOrderProductsTable();
                 });
         comboBoxAvailableProducts.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
-                    selectedProduct = newValue;
+                    if (newValue == null) {
+                        productService.clearProduct();
+                    } else {
+                        productService.selectProduct(newValue.getId());
+                    }
                 });
+        tableOrderProducts.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> {
+                    if (newValue == null) {
+                        orderProductService.clearOrderProduct();
+                    } else {
+                        orderProductService.selectOrderProduct(newValue.getOrderId(), newValue.getProductId());
+                    }
+                });
+    }
+
+    @Override
+    public void onEntityChanged(OrderProductEntity newEntity) {
+        textFieldSpecialTreatment.setText(newEntity.getSpecialTreatment());
+        textFieldPrice.setText(String.valueOf(newEntity.getPrice()));
+        checkBoxFinished.setSelected(newEntity.getFinished() != 0);
+    }
+
+    @Override
+    public void onEntityCleared() {
+        textFieldSpecialTreatment.clear();
+        textFieldPrice.clear();
+        checkBoxFinished.setSelected(false);
     }
 
     @Override
     public void reset() {
-        refreshOrdersThenProductsThenFields();
+        refreshComboBoxCustomers();
+        refreshOrdersTable();
+    }
+
+    private void refreshComboBoxCustomers() {
+        comboBoxCustomer.setItems(FXCollections.observableArrayList(customerService.getAllCustomers()));
+    }
+
+    private void refreshAvailableProducts() {
+        try {
+            var list = productService.getAllCustomerProducts();
+            comboBoxAvailableProducts.setItems(FXCollections.observableArrayList(list));
+        } catch (IllegalStateException e) {
+            comboBoxAvailableProducts.setItems(FXCollections.observableArrayList());
+        }
     }
 
     @FXML
-    private void refreshOrdersThenProductsThenFields() {
-        clearSearchFields();
-        tableOrders.setItems(FXCollections.observableArrayList(orderDAO.getAllViews()));
-        tableOrders.getSelectionModel().clearSelection();
+    private void refreshOrdersTable() {
+        try {
+            var list = orderService.getAllCustomerOrders();
+            tableOrders.setItems(FXCollections.observableArrayList(list));
+        } catch (IllegalStateException e) {
+            tableOrders.setItems(FXCollections.observableArrayList());
+        }
     }
 
     @FXML
-    private void refreshProductsThenFields() {
-        if (selectedOrderProduct != null) {
-            tableOrderProducts.setItems(FXCollections.observableArrayList(
-                    orderProductDAO.getAll(selectedOrderView.getOrderId())
-            ));
-        } else {
+    private void refreshOrderProductsTable() {
+        try {
+            var list = orderProductService.getAllOrderProducts();
+            tableOrderProducts.setItems(FXCollections.observableArrayList(list));
+        } catch (IllegalStateException e) {
             tableOrderProducts.setItems(FXCollections.observableArrayList());
         }
-        tableOrderProducts.getSelectionModel().clearSelection();
     }
 
     @FXML
@@ -117,70 +159,29 @@ public class OrdersController
 
     @FXML
     private void updateOrderProduct() {
-        if (selectedOrderView == null) {
-            Prompter.warning(FXUtility.NO_SELECTED_ORDER_MESSAGE);
-            return;
-        }
-        if (selectedOrderProduct == null) {
-            Prompter.warning(FXUtility.NO_SELECTED_PRODUCT_MESSAGE);
-            return;
-        }
         try {
-            textFieldsToProduct(selectedOrderProduct);
-            orderProductDAO.update(selectedOrderProduct);
-            refreshProductsThenFields();
-        } catch (NumberFormatException e) {
-            Prompter.error(FXUtility.NUMBER_FORMAT_ERROR_MESSAGE);
-        } catch (Exception e) {
+            orderProductService.updateOrderProduct(createProductFromTextFields());
+        } catch (NumberFormatException | IllegalStateException e) {
             Prompter.error(e);
         }
     }
 
     @FXML
     private void deleteOrderProduct() {
-        if (selectedOrderView == null) {
-            Prompter.warning(FXUtility.NO_SELECTED_ORDER_MESSAGE);
-            return;
-        }
-        if (selectedOrderProduct == null) {
-            Prompter.warning(FXUtility.NO_SELECTED_PRODUCT_MESSAGE);
-            return;
-        }
         try {
-            orderProductDAO.delete(selectedOrderProduct);
-            refreshProductsThenFields();
-        } catch (Exception e) {
+            orderProductService.deleteOrderProduct();
+        } catch (IllegalStateException e) {
             Prompter.error(e);
         }
     }
 
     @FXML
     private void createOrderProduct() {
-        if (selectedOrderView == null) {
-            Prompter.warning(FXUtility.NO_SELECTED_ORDER_MESSAGE);
-            return;
-        }
-        if (selectedProduct == null) {
-            Prompter.warning(FXUtility.NO_SELECTED_PRODUCT_MESSAGE);
-            return;
-        }
-        var orderProduct = new OrderProductEntity();
-        orderProduct.setOrderId(selectedOrderView.getOrderId());
-        orderProduct.setProductId(selectedProduct.getId());
-        textFieldsToProduct(orderProduct);
         try {
-            orderProductDAO.insert(orderProduct);
-            refreshProductsThenFields();
-        } catch (Exception e) {
+            orderProductService.createAndSelectOrderProduct(createProductFromTextFields());
+        } catch (NumberFormatException | IllegalStateException e) {
             Prompter.error(e);
         }
-    }
-
-    @FXML
-    private void searchOrder() {
-        tableOrders.setItems(FXCollections.observableArrayList(
-                orderDAO.getAllViews(textFieldCustomerName.getText())
-        ));
     }
 
     @FXML
@@ -188,52 +189,11 @@ public class OrdersController
         // TODO
     }
 
-    private void refreshSelectedOrder() {
-        // finished() is in the order not the view
-        if (selectedOrderView != null) {
-            var order = selectedOrder();
-            labelOrderStatus.setText(order.finished() ? "Finished" : "Waiting");
-        } else {
-            labelOrderStatus.setText(null);
-        }
-    }
-
-    private void refreshSelectedCustomer() {
-        if (selectedOrderView != null) {
-            var customer = selectedCustomer();
-            labelSelectedCustomer.setText(customer.getName());
-            comboBoxAvailableProducts.setItems(FXCollections.observableArrayList(
-                    productDAO.getAllAvailable(customer.getId())
-            ));
-        } else {
-            labelSelectedCustomer.setText(null);
-        }
-    }
-
-    private void clearSearchFields() {
-        textFieldCustomerName.clear();
-    }
-
-    private void clearTextFields() {
-        textFieldSpecialTreatment.clear();
-        textFieldPrice.clear();
-        checkBoxFinished.setSelected(false);
-    }
-
-    private void productToTextFields(OrderProductEntity orderProduct) {
-        if (orderProduct != null) {
-            textFieldSpecialTreatment.setText(orderProduct.getSpecialTreatment());
-            textFieldPrice.setText(String.valueOf(orderProduct.getPrice()));
-            checkBoxFinished.setSelected(orderProduct.getFinished() != 0);
-        } else {
-            clearTextFields();
-        }
-    }
-
-    private void textFieldsToProduct(OrderProductEntity orderProduct)
-            throws NumberFormatException {
+    private OrderProductEntity createProductFromTextFields() throws NumberFormatException {
+        var orderProduct = new OrderProductEntity();
         orderProduct.setSpecialTreatment(textFieldSpecialTreatment.getText());
         orderProduct.setPrice(Integer.parseInt(textFieldPrice.getText()));
         orderProduct.setFinished((byte) (checkBoxFinished.isSelected() ? 1 : 0));
+        return orderProduct;
     }
 }
