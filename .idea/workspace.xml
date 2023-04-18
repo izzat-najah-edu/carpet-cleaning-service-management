@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="refactoring">
-      <change afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/CustomerInvoice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/CustomerInvoiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/CustomerInvoiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/CustomerInvoiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -349,14 +346,7 @@
       <workItem from="1681765727681" duration="671000" />
       <workItem from="1681811045663" duration="2681000" />
       <workItem from="1681831197201" duration="9087000" />
-      <workItem from="1681844137096" duration="1935000" />
-    </task>
-    <task id="LOCAL-00086" summary="orders panel redesign">
-      <created>1680900192262</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1680900192262</updated>
+      <workItem from="1681844137096" duration="2966000" />
     </task>
     <task id="LOCAL-00087" summary="customer entity toString override">
       <created>1680900457056</created>
@@ -694,7 +684,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681842994052</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="refactoring">
+      <created>1681846087726</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1681846087726</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
