@@ -4,6 +4,7 @@ import stu.najah.se.core.DatabaseErrorListener;
 import stu.najah.se.core.DatabaseOperationException;
 import stu.najah.se.core.EntityListener;
 import stu.najah.se.core.dao.OrderDAO;
+import stu.najah.se.core.dao.OrderProductDAO;
 import stu.najah.se.core.entity.CustomerEntity;
 import stu.najah.se.core.entity.OrderEntity;
 
@@ -36,6 +37,8 @@ public class OrderService
 
     private final OrderDAO orderDAO;
 
+    private final OrderProductDAO orderProductDAO;
+
     private final DatabaseErrorListener errorHandler;
 
     private final CustomerService customerService;
@@ -45,11 +48,15 @@ public class OrderService
     /**
      * Constructs a new OrderService instance.
      *
-     * @param orderDAO        The data access object to interact with the database.
+     * @param orderDAO        The data access object to interact with the order in the database.
+     * @param orderProductDAO The data access object to interact with the products of the order in the database.
      * @param errorListener   The handler for database errors.
      * @param customerService The customer service instance.
      */
-    public OrderService(OrderDAO orderDAO, DatabaseErrorListener errorListener, CustomerService customerService) {
+    public OrderService(OrderDAO orderDAO,
+                        OrderProductDAO orderProductDAO,
+                        DatabaseErrorListener errorListener,
+                        CustomerService customerService) {
         this.orderDAO = orderDAO;
         this.errorHandler = errorListener;
         this.customerService = customerService;
@@ -174,6 +181,48 @@ public class OrderService
             errorHandler.onTransactionError(e.getMessage());
         } finally {
             clearOrder();
+        }
+    }
+
+    /**
+     * Calculates the price of the current order by summing up the prices of all its products.
+     *
+     * @return the price of the current order.
+     * @throws IllegalStateException if no order has been selected.
+     */
+    public int getOrderPrice() throws IllegalStateException {
+        try {
+            var order = getOrder().orElseThrow();
+            var products = orderProductDAO.getAll(order.getId());
+            int price = 0;
+            for (var product : products) {
+                price += product.getPrice();
+            }
+            return price;
+        } catch (NoSuchElementException e) {
+            throw new IllegalStateException("No order has been selected");
+        }
+    }
+
+    /**
+     * Checks whether the order is finished by checking all of its products.
+     * An order is finished if and only if all its products are finished.
+     *
+     * @return whether the current order has finished.
+     * @throws IllegalStateException if no order has been selected.
+     */
+    public boolean isOrderFinished() throws IllegalStateException {
+        try {
+            var order = getOrder().orElseThrow();
+            var products = orderProductDAO.getAll(order.getId());
+            for (var product : products) {
+                if (product.getFinished() == 0) {
+                    return false;
+                }
+            }
+            return true;
+        } catch (NoSuchElementException e) {
+            throw new IllegalStateException("No order has been selected");
         }
     }
 }

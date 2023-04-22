@@ -67,7 +67,9 @@ public class ServiceManager {
         }
         customerServiceInstance = new CustomerService(new CustomerDAO(), errorListener);
         productServiceInstance = new ProductService(new ProductDAO(), errorListener, customerServiceInstance);
-        orderServiceInstance = new OrderService(new OrderDAO(), errorListener, customerServiceInstance);
+        orderServiceInstance = new OrderService(
+                new OrderDAO(), new OrderProductDAO(), errorListener, customerServiceInstance
+        );
         orderProductServiceInstance = new OrderProductService(
                 new OrderProductDAO(), errorListener, orderServiceInstance, productServiceInstance
         );
