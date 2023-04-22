@@ -58,6 +58,7 @@ public class OrderService
                         DatabaseErrorListener errorListener,
                         CustomerService customerService) {
         this.orderDAO = orderDAO;
+        this.orderProductDAO = orderProductDAO;
         this.errorHandler = errorListener;
         this.customerService = customerService;
         customerService.watchCustomer(this);
