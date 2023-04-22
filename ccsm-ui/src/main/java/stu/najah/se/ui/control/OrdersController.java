@@ -130,6 +130,14 @@ public class OrdersController
         }
     }
 
+    private void refreshLabelOrderStatus() {
+        try {
+            labelOrderStatus.setText(orderService.isOrderFinished() ? "Finished" : "Waiting");
+        } catch (IllegalStateException e) {
+            labelOrderStatus.setText(null);
+        }
+    }
+
     @FXML
     private void refreshOrdersTable() {
         try {
@@ -147,6 +155,8 @@ public class OrdersController
             tableOrderProducts.setItems(FXCollections.observableArrayList(list));
         } catch (IllegalStateException e) {
             tableOrderProducts.setItems(FXCollections.observableArrayList());
+        } finally {
+            refreshLabelOrderStatus();
         }
     }
 

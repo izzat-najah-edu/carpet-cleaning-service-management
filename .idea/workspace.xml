@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="fix">
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="bug fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/ServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/ServiceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/OrdersController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -351,21 +348,7 @@
       <workItem from="1681811045663" duration="2681000" />
       <workItem from="1681831197201" duration="9087000" />
       <workItem from="1681925118583" duration="17000" />
-      <workItem from="1682159450783" duration="1624000" />
-    </task>
-    <task id="LOCAL-00090" summary="dao refactoring">
-      <created>1680991494927</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1680991494927</updated>
-    </task>
-    <task id="LOCAL-00091" summary="mysql setup explained">
-      <created>1681148345843</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1681148345844</updated>
+      <workItem from="1682159450783" duration="2480000" />
     </task>
     <task id="LOCAL-00092" summary="dao extensive refactoring">
       <created>1681157995546</created>
@@ -696,7 +679,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682159736020</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="added order service methods">
+      <created>1682161771793</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1682161771793</updated>
+    </task>
+    <task id="LOCAL-00140" summary="bug fix">
+      <created>1682161905627</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1682161905628</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -732,7 +729,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="admin service implementation" />
     <MESSAGE value="admin service tests implemented" />
     <MESSAGE value="transaction exception refactoring" />
     <MESSAGE value="customer service implemented" />
@@ -743,7 +739,6 @@
     <MESSAGE value="DatabaseOperationException created and implemented" />
     <MESSAGE value="customer service test bug fixes" />
     <MESSAGE value="entity listener implemented" />
-    <MESSAGE value="bug fix" />
     <MESSAGE value="reimplementation" />
     <MESSAGE value="customer service test fixes" />
     <MESSAGE value="documentation change" />
@@ -757,7 +752,9 @@
     <MESSAGE value="order products controller reimplementation" />
     <MESSAGE value="test change" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="added order service methods" />
+    <MESSAGE value="bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
