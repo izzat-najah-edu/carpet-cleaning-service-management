@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="test change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/CustomerCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/CustomerCRUDSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/NavigationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/NavigationSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/Utility.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -350,13 +345,7 @@
       <workItem from="1681765727681" duration="671000" />
       <workItem from="1681811045663" duration="2681000" />
       <workItem from="1681831197201" duration="9087000" />
-    </task>
-    <task id="LOCAL-00088" summary="orders controller implementation">
-      <created>1680906180128</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1680906180128</updated>
+      <workItem from="1681925118583" duration="17000" />
     </task>
     <task id="LOCAL-00089" summary="panels redesign">
       <created>1680906621909</created>
@@ -694,7 +683,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681846597974</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="test change">
+      <created>1681847819732</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1681847819732</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
