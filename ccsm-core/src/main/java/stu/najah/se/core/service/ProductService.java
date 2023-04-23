@@ -81,6 +81,22 @@ public class ProductService
     }
 
     /**
+     * Retrieves a list of all available products for the current customer in the customer service.
+     * A product is available if and only if it's not associated with any order.
+     *
+     * @return A list of ProductEntity objects associated with the current customer.
+     * @throws IllegalStateException if no customer is selected in the customer service.
+     */
+    public List<ProductEntity> getAllCustomerAvailableProducts() throws IllegalStateException {
+        try {
+            var customer = customerService.getCustomer().orElseThrow();
+            return productDAO.getAllAvailable(customer.getId());
+        } catch (NoSuchElementException e) {
+            throw new IllegalStateException("No customer selected in the customer service");
+        }
+    }
+
+    /**
      * Subscribes a listener to be notified of changes or clearing of the product.
      *
      * @param listener The EntityListener to subscribe for notifications.

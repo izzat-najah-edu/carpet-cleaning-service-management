@@ -119,11 +119,12 @@ public class OrdersController
 
     private void refreshComboBoxCustomers() {
         comboBoxCustomer.setItems(FXCollections.observableArrayList(customerService.getAllCustomers()));
+        refreshAvailableProducts();
     }
 
     private void refreshAvailableProducts() {
         try {
-            var list = productService.getAllCustomerProducts();
+            var list = productService.getAllCustomerAvailableProducts();
             comboBoxAvailableProducts.setItems(FXCollections.observableArrayList(list));
         } catch (IllegalStateException e) {
             comboBoxAvailableProducts.setItems(FXCollections.observableArrayList());
