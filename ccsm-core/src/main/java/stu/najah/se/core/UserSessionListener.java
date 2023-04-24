@@ -11,7 +11,6 @@ package stu.najah.se.core;
  * by calling the ServiceManager.initializeAdminService() method,
  * providing itself as the UserSessionListener instance.
  * </p>
- * Note that only one UserSessionListener can initialize the AdminService.
  */
 public interface UserSessionListener {
     /**

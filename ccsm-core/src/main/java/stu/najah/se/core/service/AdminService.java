@@ -4,6 +4,8 @@ import stu.najah.se.core.UserSessionListener;
 import stu.najah.se.core.dao.AdminDAO;
 import stu.najah.se.core.entity.AdminEntity;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -14,7 +16,7 @@ public class AdminService {
 
     private final AdminDAO adminDAO;
 
-    private final UserSessionListener sessionListener;
+    private final List<UserSessionListener> sessionListener = new ArrayList<>();
 
     /**
      * Holds the current logged-in admin.
@@ -23,14 +25,30 @@ public class AdminService {
 
     /**
      * Creates a new AdminService instance
-     * with the provided AdminDAO and Authenticator.
+     * with the provided AdminDAO.
      *
-     * @param adminDAO        the data access object for admin entities
-     * @param sessionListener the listener responsible for managing user sessions
+     * @param adminDAO the data access object for admin entities
      */
-    public AdminService(AdminDAO adminDAO, UserSessionListener sessionListener) {
+    public AdminService(AdminDAO adminDAO) {
         this.adminDAO = adminDAO;
-        this.sessionListener = sessionListener;
+    }
+
+    /**
+     * Subscribes a listener to be notified of user session changes.
+     *
+     * @param listener The UserSessionListener to subscribe for notifications.
+     */
+    public void subscribe(UserSessionListener listener) {
+        sessionListener.add(listener);
+    }
+
+    /**
+     * Unsubscribes a listener from receiving notifications about user session changes.
+     *
+     * @param listener The UserSessionListener to unsubscribe from notifications.
+     */
+    public void unsubscribe(UserSessionListener listener) {
+        sessionListener.remove(listener);
     }
 
     /**
@@ -57,7 +75,7 @@ public class AdminService {
      */
     public void logout() {
         currentAdmin = null;
-        sessionListener.logout();
+        sessionListener.forEach(UserSessionListener::logout);
     }
 
     /**
@@ -67,7 +85,7 @@ public class AdminService {
      */
     private void login(AdminEntity admin) {
         currentAdmin = admin;
-        sessionListener.login();
+        sessionListener.forEach(UserSessionListener::login);
     }
 
     /**

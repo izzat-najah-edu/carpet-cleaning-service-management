@@ -33,7 +33,8 @@ public class AdminServiceTest {
     @BeforeEach
     public void setUp() {
         sessionListener = Mockito.mock(UserSessionListener.class);
-        adminService = new AdminService(adminDAO, sessionListener);
+        adminService = new AdminService(adminDAO);
+        adminService.subscribe(sessionListener);
     }
 
     @Test

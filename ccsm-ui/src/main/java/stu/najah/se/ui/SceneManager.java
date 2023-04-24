@@ -7,7 +7,6 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import stu.najah.se.core.ServiceManager;
 import stu.najah.se.core.UserSessionListener;
-import stu.najah.se.core.service.AdminService;
 
 import java.io.IOException;
 
@@ -19,8 +18,6 @@ import java.io.IOException;
  */
 public class SceneManager extends Application
         implements UserSessionListener {
-
-    private AdminService adminService;
 
     private Stage stage;
 
@@ -51,14 +48,15 @@ public class SceneManager extends Application
      * Platform.startup(() -> new SceneManager().start(new Stage()))
      */
     public static void main(String[] args) {
+        ServiceManager.initializeAdminService();
+        ServiceManager.initializeEntityServices(Prompter.getInstance());
         Application.launch(args);
     }
 
     @Override
     public void start(Stage primaryStage) throws IOException {
         SceneManager.instance = this;
-        adminService = ServiceManager.initializeAdminService(this);
-        ServiceManager.initializeEntityServices(Prompter.getInstance());
+        ServiceManager.getAdminService().subscribe(this);
         instance.stage = primaryStage;
         instance.buildStage();
         instance.buildLoginScene();
@@ -77,7 +75,7 @@ public class SceneManager extends Application
     }
 
     public boolean isLoggedIn() {
-        return adminService.isLoggedIn();
+        return ServiceManager.getAdminService().isLoggedIn();
     }
 
     /**
