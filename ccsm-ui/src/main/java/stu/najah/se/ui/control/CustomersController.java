@@ -31,6 +31,9 @@ public class CustomersController
     @FXML
     private TextField textFieldPhone;
 
+    @FXML
+    private TextField textFieldEmail;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         customerService = ServiceManager.getCustomerService();
@@ -50,6 +53,7 @@ public class CustomersController
         textFieldName.setText(newEntity.getName());
         textFieldPhone.setText(newEntity.getPhone());
         textFieldAddress.setText(newEntity.getAddress());
+        textFieldEmail.setText(newEntity.getEmail());
     }
 
     @Override
@@ -57,6 +61,7 @@ public class CustomersController
         textFieldName.clear();
         textFieldPhone.clear();
         textFieldAddress.clear();
+        textFieldEmail.clear();
     }
 
     @FXML
@@ -95,6 +100,7 @@ public class CustomersController
         customer.setName(textFieldName.getText());
         customer.setPhone(textFieldPhone.getText());
         customer.setAddress(textFieldAddress.getText());
+        customer.setEmail(textFieldEmail.getText());
         return customer;
     }
 }
