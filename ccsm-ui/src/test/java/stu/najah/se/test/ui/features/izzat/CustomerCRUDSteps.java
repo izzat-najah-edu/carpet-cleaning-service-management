@@ -4,21 +4,16 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import javafx.scene.control.TableView;
-import org.testfx.api.FxRobot;
+import org.testfx.framework.junit5.ApplicationTest;
 import stu.najah.se.core.entity.CustomerEntity;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class CustomerCRUDSteps extends FxRobot {
+public class CustomerCRUDSteps extends ApplicationTest {
 
     private final TableView<CustomerEntity> tableCustomers
             = lookup("#t1tableCustomers").queryTableView();
-
-    @And("customers panel is opened")
-    public void customersPanelIsOpened() {
-        clickOn("#tabAll");
-    }
 
     @And("customer tab is opened")
     public void addCustomerTabIsOpened() {
@@ -105,13 +100,5 @@ public class CustomerCRUDSteps extends FxRobot {
             }
         }
         assertEquals(-1, rowIndex);
-    }
-
-    @And("I click search customer button")
-    public void iClickSearchCustomerButton() {
-    }
-
-    @Then("the selected customer is found")
-    public void theSelectedCustomerIsFound() {
     }
 }

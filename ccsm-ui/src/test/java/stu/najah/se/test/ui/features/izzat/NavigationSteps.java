@@ -4,24 +4,23 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import javafx.application.Platform;
-import org.testfx.api.FxRobot;
+import org.testfx.framework.junit5.ApplicationTest;
+import stu.najah.se.core.ServiceManager;
 import stu.najah.se.ui.SceneManager;
 
 import static org.junit.Assert.assertFalse;
 
-public class NavigationSteps extends FxRobot {
-
-    static final String wrapper = "#navbarPane ";
+public class NavigationSteps extends ApplicationTest {
 
     @Given("main screen is opened")
     public void mainScreenIsOpened() {
-        // fast login
-        Platform.runLater(() -> SceneManager.getInstance().login());
+        Platform.runLater(() ->
+                ServiceManager.getAdminService().authenticate("admin", "admin"));
     }
 
     @When("I click on logout button")
     public void iClickOnLogoutButton() {
-        clickOn(wrapper + "Button.logout");
+        clickOn("#buttonLogout");
     }
 
     @Then("main screen switches to login screen")
