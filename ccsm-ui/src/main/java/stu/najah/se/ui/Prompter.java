@@ -35,7 +35,7 @@ public final class Prompter
      * @param type    only use INFORMATION, WARNING, or ERROR
      *                because they don't have multiple buttons
      */
-    private static void prompt(String message, Alert.AlertType type) {
+    private void prompt(String message, Alert.AlertType type) {
         var alert = new Alert(type);
         alert.initModality(Modality.APPLICATION_MODAL);
         alert.setContentText(message);
@@ -48,7 +48,7 @@ public final class Prompter
      * @param message to be displayed
      * @return true if OK was pressed, false otherwise
      */
-    public static boolean confirm(String message) {
+    public boolean confirm(String message) {
         var alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initModality(Modality.APPLICATION_MODAL);
         alert.setContentText(message);
@@ -61,7 +61,7 @@ public final class Prompter
      *
      * @param message to be displayed
      */
-    public static void info(String message) {
+    public void info(String message) {
         prompt(message, Alert.AlertType.INFORMATION);
     }
 
@@ -70,7 +70,7 @@ public final class Prompter
      *
      * @param message to be displayed
      */
-    public static void warning(String message) {
+    public void warning(String message) {
         prompt(message, Alert.AlertType.WARNING);
     }
 
@@ -79,7 +79,7 @@ public final class Prompter
      *
      * @param message to be displayed
      */
-    public static void error(String message) {
+    public void error(String message) {
         prompt(message, Alert.AlertType.ERROR);
     }
 
@@ -88,12 +88,12 @@ public final class Prompter
      *
      * @param e it's message will be displayed
      */
-    public static void error(Exception e) {
+    public void error(Exception e) {
         prompt(e.getMessage(), Alert.AlertType.ERROR);
     }
 
 
-    public static void loginError() {
+    public void loginError() {
         error("Login failed. Please check your username and password and try again.");
     }
 
