@@ -1,12 +1,11 @@
 package stu.najah.se.test.ui.features.izzat;
 
-import io.cucumber.java.AfterStep;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import javafx.scene.Node;
+import org.testfx.api.FxRobotException;
 import org.testfx.framework.junit5.ApplicationTest;
-import org.testfx.util.WaitForAsyncUtils;
 import stu.najah.se.ui.SceneManager;
 
 import static org.junit.Assert.assertNotNull;
@@ -15,13 +14,12 @@ import static org.junit.Assert.assertTrue;
 public class LoginSteps extends ApplicationTest {
 
     @Given("login screen is opened")
-    public void loginScreenIsOpened() throws Exception {
-        ApplicationTest.launch(SceneManager.class);
-    }
-
-    @AfterStep
-    public void waitForEffects() {
-        WaitForAsyncUtils.waitForFxEvents();
+    public void loginScreenIsOpened() {
+        try {
+            clickOn("#buttonLogout");
+        } catch (FxRobotException ignored) {
+            // already logged out
+        }
     }
 
     @When("I enter correct username and correct password")

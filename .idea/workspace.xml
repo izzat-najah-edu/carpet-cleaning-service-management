@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="renaming fix">
-      <change afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/Configuration.java" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/ServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/ServiceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/AdminServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/AdminServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/SceneManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/LoginSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,8 +238,8 @@
       <list>
         <item itemvalue="JUnit.IzzatFeaturesTest" />
         <item itemvalue="Application.SceneManager" />
-        <item itemvalue="JUnit.service in ccsm-core" />
         <item itemvalue="Cucumber Java.Feature: Login" />
+        <item itemvalue="JUnit.service in ccsm-core" />
       </list>
     </recent_temporary>
   </component>
@@ -365,21 +363,7 @@
       <workItem from="1682336275335" duration="84000" />
       <workItem from="1682336468295" duration="14000" />
       <workItem from="1682339171133" duration="951000" />
-      <workItem from="1682347478847" duration="14305000" />
-    </task>
-    <task id="LOCAL-00111" summary="entity listener implemented">
-      <created>1681479436289</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1681479436289</updated>
-    </task>
-    <task id="LOCAL-00112" summary="bug fix">
-      <created>1681482964605</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1681482964605</updated>
+      <workItem from="1682347478847" duration="16264000" />
     </task>
     <task id="LOCAL-00113" summary="bug fix">
       <created>1681516787049</created>
@@ -710,7 +694,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682369017346</updated>
     </task>
-    <option name="localTasksCounter" value="160" />
+    <task id="LOCAL-00160" summary="service initialization fix">
+      <created>1682369491735</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1682369491736</updated>
+    </task>
+    <task id="LOCAL-00161" summary="fix">
+      <created>1682369645595</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1682369645595</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -746,7 +744,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="customer service test fixes" />
     <MESSAGE value="documentation change" />
     <MESSAGE value="product service now depends on customer service" />
     <MESSAGE value="product controller reimplemented" />
@@ -764,14 +761,15 @@
     <MESSAGE value="order view removed" />
     <MESSAGE value="dependency fix" />
     <MESSAGE value="customer email fix" />
-    <MESSAGE value="fix" />
     <MESSAGE value="fast login moved to test module" />
     <MESSAGE value="testfx fix" />
     <MESSAGE value="login screen fix" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="readme fix" />
     <MESSAGE value="renaming fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="renaming fix" />
+    <MESSAGE value="service initialization fix" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
