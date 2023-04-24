@@ -42,7 +42,7 @@ public class LoginSteps extends ApplicationTest {
 
     @When("I click on the login button")
     public void iClickOnTheLoginButton() {
-        clickOn("#login");
+        clickOn("#buttonLogin");
     }
 
     @Then("login screen switches to main screen")

@@ -11,8 +11,10 @@
                    promptText="Enter Username"/>
         <PasswordField styleClass="password" fx:id="textFieldPassword" layoutX="226.0" layoutY="188.0"
                        promptText="Enter Password"/>
-        <Button styleClass="login" layoutX="255.0" layoutY="237.0" mnemonicParsing="false" onAction="#login"
+        <Button fx:id="buttonLogin" styleClass="login" layoutX="255.0" layoutY="237.0" mnemonicParsing="false"
+                onAction="#login"
                 prefHeight="25.0" prefWidth="91.0" text="Login"/>
-        <Button styleClass="exit" layoutX="534.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" text="Exit"/>
+        <Button fx:id="buttonExit" styleClass="exit" layoutX="534.0" layoutY="14.0" mnemonicParsing="false"
+                onAction="#exit" text="Exit"/>
     </children>
 </AnchorPane>
