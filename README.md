@@ -25,6 +25,7 @@ The system was divided into two modules [core & ui]. And the following was used:
 - JUnit 5 (Core Testing)
 - JavaFX (UI)
 - Cucumber (UI Testing)
+- TestFX (UI Testing)
 
 ## MySQL Setup
 
