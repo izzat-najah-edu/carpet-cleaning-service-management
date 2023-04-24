@@ -20,7 +20,7 @@ public class CustomerCRUDSteps extends FxRobot {
         clickOn("#tabAll");
     }
 
-    @And("edit customer tab is opened")
+    @And("customer tab is opened")
     public void addCustomerTabIsOpened() {
         clickOn("#tabAll");
     }
@@ -105,5 +105,13 @@ public class CustomerCRUDSteps extends FxRobot {
             }
         }
         assertEquals(-1, rowIndex);
+    }
+
+    @And("I click search customer button")
+    public void iClickSearchCustomerButton() {
+    }
+
+    @Then("the selected customer is found")
+    public void theSelectedCustomerIsFound() {
     }
 }
