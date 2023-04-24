@@ -13,4 +13,7 @@ module ccsm.ui.test {
     requires org.hamcrest;
     requires org.testfx;
     requires org.testfx.junit5;
+
+    exports stu.najah.se.test.ui.features.aya;
+    exports stu.najah.se.test.ui.features.izzat;
 }

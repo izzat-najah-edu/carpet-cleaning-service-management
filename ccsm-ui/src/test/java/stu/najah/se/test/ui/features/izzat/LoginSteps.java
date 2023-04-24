@@ -1,55 +1,48 @@
 package stu.najah.se.test.ui.features.izzat;
 
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
-import org.testfx.api.FxRobot;
+import javafx.scene.Node;
 import org.testfx.framework.junit5.ApplicationTest;
+import org.testfx.util.WaitForAsyncUtils;
 import stu.najah.se.ui.SceneManager;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 public class LoginSteps extends ApplicationTest {
 
-    private FxRobot robot;
-
-    @Override
-    public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(SceneManager.class.getResource("fxml/login.fxml"));
-        AnchorPane root = loader.load();
-        stage.setScene(new Scene(root));
-        stage.show();
+    @Given("login screen is opened")
+    public void loginScreenIsOpened() throws Exception {
+        ApplicationTest.launch(SceneManager.class);
     }
 
-    @Given("login screen is opened")
-    public void loginScreenIsOpened() {
-        robot = new FxRobot();
+    @AfterStep
+    public void waitForEffects() {
+        WaitForAsyncUtils.waitForFxEvents();
     }
 
     @When("I enter correct username and correct password")
     public void iEnterCorrectUsernameAndCorrectPassword() {
-        robot.clickOn("#textFieldUsername");
-        robot.write("admin");
-        robot.clickOn("#textFieldPassword");
-        robot.write("admin");
+        clickOn("#textFieldUsername");
+        write("admin");
+        clickOn("#textFieldPassword");
+        write("admin");
     }
 
     @When("I enter wrong username or wrong password")
     public void iEnterWrongUsernameOrWrongPassword() {
-        robot.clickOn("#textFieldUsername");
-        robot.write("wrong_username");
-        robot.clickOn("#textFieldPassword");
-        robot.write("wrong_password");
+        clickOn("#textFieldUsername");
+        write("wrong_username");
+        clickOn("#textFieldPassword");
+        write("wrong_password");
     }
 
     @When("I click on the login button")
     public void iClickOnTheLoginButton() {
-        robot.clickOn("#login");
+        clickOn("#login");
     }
 
     @Then("login screen switches to main screen")
@@ -59,8 +52,9 @@ public class LoginSteps extends ApplicationTest {
 
     @Then("error message indicating failed login is prompted")
     public void errorMessageIndicatingFailedLoginIsPrompted() {
-        Label errorLabel = robot.lookup("#errorLabel").queryAs(Label.class);
-        assertNotNull(errorLabel);
-        assertFalse(errorLabel.getText().isEmpty());
+        Node errorAlert = lookup(".alert").query();
+        assertNotNull(errorAlert);
+        assertTrue(errorAlert.isVisible());
+        clickOn("OK");
     }
 }

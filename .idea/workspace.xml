@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="fast login moved to test module">
-      <change afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/TestFXBase.java" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="login screen fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/SceneManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/AyaFeaturesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/aya/AyaFeaturesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/IzzatFeaturesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/IzzatFeaturesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/CustomerCRUDSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/LoginSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/NavigationSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/ProductCRUDSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/TestFXBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/util/Launch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/CustomerCRUD.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/temp/CustomerCRUD.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/Navigation.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/temp/Navigation.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/ProductCRUD.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/temp/ProductCRUD.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,11 +137,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\test\resources\features\aya" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\test\resources\features\izzat" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\test\resources\features\izzat\temp" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\test\resources\features\izzat\ready" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\test\resources\features\aya" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-core" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\main\resources\stu\najah\se\ui\scene" />
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-core\src\main\resources\stu\najah\se\core\dao" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="stu.najah.se.gui.control.FXUtility" />
@@ -161,13 +170,20 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestFXBase">
-    <configuration name="FastLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.FastLogin" />
+  <component name="RunManager" selected="Cucumber Java.Feature: Login">
+    <configuration name="Feature: Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/Login.feature" />
+      <option name="GLUE" value="stu.najah.se.test.ui.features.izzat" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="ccsm-ui" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <shortenClasspath name="NONE" />
+      <option name="SUGGESTED_NAME" value="Feature: Login" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.ui.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -175,42 +191,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Launch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.ui.features.util.Launch" />
-      <module name="ccsm-ui" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.ui.features.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.SceneManager" />
-      <module name="ccsm-ui" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestFXBase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.ui.features.izzat.TestFXBase" />
-      <module name="ccsm-ui" />
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <shortenClasspath name="NONE" />
       <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.ui.features.izzat.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -219,30 +203,26 @@
       <module name="ccsm-ui" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.ui.*" />
+          <option name="PATTERN" value="stu.najah.se.test.ui.features.izzat.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.ui" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.ui.IzzatFeaturesTest" />
+      <option name="PACKAGE_NAME" value="stu.najah.se.test.ui.features.izzat" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.ui.features.izzat.IzzatFeaturesTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.SceneManager" />
-      <item itemvalue="Application.FastLogin" />
-      <item itemvalue="Application.Launch" />
-      <item itemvalue="Application.TestFXBase" />
+      <item itemvalue="Cucumber Java.Feature: Login" />
       <item itemvalue="JUnit.IzzatFeaturesTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestFXBase" />
-        <item itemvalue="Application.SceneManager" />
-        <item itemvalue="Application.Launch" />
-        <item itemvalue="Application.FastLogin" />
+        <item itemvalue="Cucumber Java.Feature: Login" />
         <item itemvalue="JUnit.IzzatFeaturesTest" />
       </list>
     </recent_temporary>
@@ -367,21 +347,7 @@
       <workItem from="1682336275335" duration="84000" />
       <workItem from="1682336468295" duration="14000" />
       <workItem from="1682339171133" duration="951000" />
-      <workItem from="1682347478847" duration="5281000" />
-    </task>
-    <task id="LOCAL-00106" summary="DatabaseOperationException created and implemented">
-      <created>1681471203712</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1681471203712</updated>
-    </task>
-    <task id="LOCAL-00107" summary="customer service test bug fixes">
-      <created>1681471401461</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1681471401462</updated>
+      <workItem from="1682347478847" duration="10214000" />
     </task>
     <task id="LOCAL-00108" summary="refactoring">
       <created>1681472874252</created>
@@ -712,7 +678,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682348533795</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="testfx fix">
+      <created>1682352886328</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1682352886328</updated>
+    </task>
+    <task id="LOCAL-00156" summary="login screen fix">
+      <created>1682358434226</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1682358434226</updated>
+    </task>
+    <option name="localTasksCounter" value="157" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -748,8 +728,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="DatabaseOperationException created and implemented" />
-    <MESSAGE value="customer service test bug fixes" />
     <MESSAGE value="entity listener implemented" />
     <MESSAGE value="reimplementation" />
     <MESSAGE value="customer service test fixes" />
@@ -773,7 +751,9 @@
     <MESSAGE value="fix" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="fast login moved to test module" />
-    <option name="LAST_COMMIT_MESSAGE" value="fast login moved to test module" />
+    <MESSAGE value="testfx fix" />
+    <MESSAGE value="login screen fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="login screen fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
