@@ -1,4 +1,4 @@
-package stu.najah.se.test.ui.features;
+package stu.najah.se.test.ui.features.aya;
 
 import java.util.Scanner;
 

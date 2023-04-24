@@ -7,10 +7,10 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {"pretty", "html:target/cucumber-reports"},
-        features = {"src/test/resources/features"},
-        glue = {"features"}
+        features = {"src/test/resources/features/izzat"},
+        glue = {"features/izzat"}
 )
-public class FeaturesTest {
+public class IzzatFeaturesTest {
     /*
     This class servers as an entry point for all Cucumber tests in the 'features' directory.
     Don't place any step definitions or tests here.

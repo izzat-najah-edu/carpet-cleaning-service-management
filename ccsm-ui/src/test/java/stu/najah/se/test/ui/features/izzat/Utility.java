@@ -1,4 +1,4 @@
-package stu.najah.se.test.ui.features;
+package stu.najah.se.test.ui.features.izzat;
 
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.BeforeAll;

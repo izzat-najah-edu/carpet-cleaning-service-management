@@ -1,4 +1,4 @@
-package stu.najah.se.test.ui.features;
+package stu.najah.se.test.ui.features.aya;
 
 public class LogoutFeature {
     private boolean isLoggedIn = false; // assume user is initially not logged in

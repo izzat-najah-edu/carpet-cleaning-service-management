@@ -1,4 +1,4 @@
-package stu.najah.se.test.ui.features;
+package stu.najah.se.test.ui.features.izzat;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;

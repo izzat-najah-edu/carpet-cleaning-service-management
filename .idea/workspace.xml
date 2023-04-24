@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="dependency fix">
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +158,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SceneManager">
+  <component name="RunManager" selected="JUnit.service in ccsm-core">
     <configuration name="EmailUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.core.service.EmailUtil" />
       <module name="ccsm-core" />
@@ -190,7 +190,7 @@
       <script-mode>FILE</script-mode>
       <method v="2" />
     </configuration>
-    <configuration name="FeaturesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IzzatFeaturesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccsm-ui" />
       <extension name="coverage">
         <pattern>
@@ -199,7 +199,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="stu.najah.se.test.ui" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.ui.FeaturesTest" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.ui.IzzatFeaturesTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -215,10 +215,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SceneManager" />
         <item itemvalue="JUnit.service in ccsm-core" />
+        <item itemvalue="Application.SceneManager" />
         <item itemvalue="Database Script.INSERT.sql" />
-        <item itemvalue="JUnit.FeaturesTest" />
+        <item itemvalue="JUnit.IzzatFeaturesTest" />
         <item itemvalue="Application.EmailUtil" />
       </list>
     </recent_temporary>
@@ -342,21 +342,7 @@
       <workItem from="1682334932907" duration="1185000" />
       <workItem from="1682336275335" duration="84000" />
       <workItem from="1682336468295" duration="14000" />
-      <workItem from="1682339171133" duration="593000" />
-    </task>
-    <task id="LOCAL-00102" summary="customer service implemented">
-      <created>1681430997420</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1681430997420</updated>
-    </task>
-    <task id="LOCAL-00103" summary="customer service refactoring">
-      <created>1681431045105</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1681431045105</updated>
+      <workItem from="1682339171133" duration="951000" />
     </task>
     <task id="LOCAL-00104" summary="error fix">
       <created>1681431666247</created>
@@ -687,7 +673,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682336025148</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <task id="LOCAL-00151" summary="customer email fix">
+      <created>1682340221336</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1682340221337</updated>
+    </task>
+    <task id="LOCAL-00152" summary="fix">
+      <created>1682340250762</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1682340250762</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -723,7 +723,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="customer service tests implementation" />
     <MESSAGE value="DatabaseOperationException created" />
     <MESSAGE value="DatabaseOperationException created and implemented" />
     <MESSAGE value="customer service test bug fixes" />
@@ -745,10 +744,11 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="readme changes" />
     <MESSAGE value="customer email added" />
-    <MESSAGE value="fix" />
     <MESSAGE value="order view removed" />
     <MESSAGE value="dependency fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="dependency fix" />
+    <MESSAGE value="customer email fix" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

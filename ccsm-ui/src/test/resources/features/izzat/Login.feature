@@ -1,6 +1,6 @@
 Feature: Login
   As a user, I want to log in to the program so that I can access my account.
-  So the application have a special login panel to control authorization.
+  The application should have a special login panel to control authorization.
 
   Background: User has not logged in yet
     Given login screen is opened
