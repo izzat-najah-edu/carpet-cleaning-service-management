@@ -10,5 +10,5 @@ module ccsm.core {
     exports stu.najah.se.core;
     exports stu.najah.se.core.service;
     exports stu.najah.se.core.entity;
-    exports stu.najah.se.core.dao to ccsm.core.test, ccsm.ui;
+    exports stu.najah.se.core.dao to ccsm.core.test;
 }
