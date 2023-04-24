@@ -163,7 +163,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SceneManager">
+  <component name="RunManager" selected="JUnit.IzzatFeaturesTest">
     <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.SceneManager" />
       <module name="ccsm-ui" />
@@ -238,9 +238,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IzzatFeaturesTest" />
         <item itemvalue="Application.SceneManager" />
         <item itemvalue="JUnit.service in ccsm-core" />
-        <item itemvalue="JUnit.IzzatFeaturesTest" />
         <item itemvalue="Cucumber Java.Feature: Login" />
       </list>
     </recent_temporary>

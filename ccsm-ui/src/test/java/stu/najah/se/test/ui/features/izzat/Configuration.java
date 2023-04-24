@@ -7,7 +7,7 @@ import stu.najah.se.ui.Prompter;
 public class Configuration {
 
     @BeforeAll
-    public void initialize() {
+    public static void initializeServices() {
         ServiceManager.initializeAdminService();
         ServiceManager.initializeEntityServices(Prompter.getInstance());
     }
