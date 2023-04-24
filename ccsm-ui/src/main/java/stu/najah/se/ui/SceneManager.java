@@ -51,7 +51,6 @@ public class SceneManager extends Application
      * Platform.startup(() -> new SceneManager().start(new Stage()))
      */
     public static void main(String[] args) {
-        ServiceManager.initializeEntityServices(Prompter.getInstance());
         Application.launch(args);
     }
 
@@ -59,6 +58,7 @@ public class SceneManager extends Application
     public void start(Stage primaryStage) throws IOException {
         SceneManager.instance = this;
         adminService = ServiceManager.initializeAdminService(this);
+        ServiceManager.initializeEntityServices(Prompter.getInstance());
         instance.stage = primaryStage;
         instance.buildStage();
         instance.buildLoginScene();

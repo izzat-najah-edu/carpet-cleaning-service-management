@@ -79,6 +79,16 @@ export JAVAMAIL_USER="your_email@example.com"
 export JAVAMAIL_PASS="your_password"
 ```
 
+## VM Options Setup
+
+1. Open the "Run/Debug Configurations" dialog.
+2. Select the test configuration you're using (e.g., JUnit or Cucumber).
+3. In the "VM options" field, add the following JVM arguments:
+
+```code 
+--add-exports javafx.graphics/com.sun.javafx.application=org.testfx
+```
+
 ## Adding Features
 
 - The directory `/src/test/java/resources/features` includes the features of the project
