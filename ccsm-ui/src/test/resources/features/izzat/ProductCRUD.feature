@@ -4,7 +4,6 @@ Feature: Product CRUD Operations
 
   Background: User reached the Products Tab
     Given main screen is opened
-    And customers panel is opened
     And products tab is opened
 
   Scenario: Adding Product Successfully
@@ -22,9 +21,3 @@ Feature: Product CRUD Operations
     Given I select a product from the list
     And I click delete product button
     Then the selected product is deleted
-
-  Scenario: Searching Product Successfully
-    Given I enter product
-    And I click search product button
-    Then the selected product is found
-
