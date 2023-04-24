@@ -20,14 +20,18 @@ public class CustomerEntity {
     @Basic
     @Column(name = "address", length = 256)
     private String address;
+    @Basic
+    @Column(name = "email", length = 256)
+    private String email;
 
     public CustomerEntity() {
     }
 
-    public CustomerEntity(String name, String phone, String address) {
+    public CustomerEntity(String name, String phone, String address, String email) {
         setName(name);
         setPhone(phone);
         setAddress(address);
+        setEmail(email);
     }
 
     public int getId() {
@@ -62,10 +66,19 @@ public class CustomerEntity {
         this.address = address;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public void setAllBasic(CustomerEntity customer) {
         setName(customer.getName());
         setPhone(customer.getPhone());
         setAddress(customer.getAddress());
+        setEmail(customer.getEmail());
     }
 
     @Override
@@ -79,7 +92,8 @@ public class CustomerEntity {
         return id == that.id
                 && Objects.equals(name, that.name)
                 && Objects.equals(phone, that.phone)
-                && Objects.equals(address, that.address);
+                && Objects.equals(address, that.address)
+                && Objects.equals(email, that.email);
     }
 
     @Override
@@ -88,6 +102,7 @@ public class CustomerEntity {
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (phone != null ? phone.hashCode() : 0);
         result = 31 * result + (address != null ? address.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
         return result;
     }
 

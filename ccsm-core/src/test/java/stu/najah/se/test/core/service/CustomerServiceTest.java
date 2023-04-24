@@ -19,7 +19,7 @@ import static org.mockito.Mockito.*;
 public class CustomerServiceTest {
 
     private static final CustomerEntity CUSTOMER =
-            new CustomerEntity("username", "phone", "address");
+            new CustomerEntity("username", "phone", "address", "email");
 
     private final List<CustomerEntity> customerList = new ArrayList<>();
 
@@ -66,6 +66,7 @@ public class CustomerServiceTest {
         assertEquals(CUSTOMER.getName(), customer.getName());
         assertEquals(CUSTOMER.getPhone(), customer.getPhone());
         assertEquals(CUSTOMER.getAddress(), customer.getAddress());
+        assertEquals(CUSTOMER.getEmail(), customer.getEmail());
     }
 
     @Test
@@ -77,6 +78,7 @@ public class CustomerServiceTest {
         assertEquals(CUSTOMER.getName(), customer.getName());
         assertEquals(CUSTOMER.getPhone(), customer.getPhone());
         assertEquals(CUSTOMER.getAddress(), customer.getAddress());
+        assertEquals(CUSTOMER.getEmail(), customer.getEmail());
     }
 
     @Test
@@ -88,6 +90,7 @@ public class CustomerServiceTest {
         assertEquals(CUSTOMER.getName(), customer.getName());
         assertEquals(CUSTOMER.getPhone(), customer.getPhone());
         assertEquals(CUSTOMER.getAddress(), customer.getAddress());
+        assertEquals(CUSTOMER.getEmail(), customer.getEmail());
     }
 
     @Test
@@ -115,6 +118,7 @@ public class CustomerServiceTest {
         assertEquals(CUSTOMER.getName(), customer.getName());
         assertEquals(CUSTOMER.getPhone(), customer.getPhone());
         assertEquals(CUSTOMER.getAddress(), customer.getAddress());
+        assertEquals(CUSTOMER.getEmail(), customer.getEmail());
     }
 
     @Test
@@ -125,7 +129,7 @@ public class CustomerServiceTest {
     @Test
     public void testUpdateCustomer() {
         var updatedCustomer = new CustomerEntity(
-                CUSTOMER.getName(), "other phone", "other address"
+                CUSTOMER.getName(), "other phone", "other address", "other email"
         );
         customerList.add(CUSTOMER);
         when(customerDAO.get(CUSTOMER.getName())).thenReturn(customerList.get(0));
@@ -147,6 +151,7 @@ public class CustomerServiceTest {
         assertEquals(updatedCustomer.getName(), customer.getName());
         assertEquals(updatedCustomer.getAddress(), customer.getAddress());
         assertEquals(updatedCustomer.getPhone(), customer.getPhone());
+        assertEquals(updatedCustomer.getEmail(), customer.getEmail());
     }
 
     @Test
@@ -170,8 +175,8 @@ public class CustomerServiceTest {
 
     @Test
     public void testGetAllCustomers() {
-        var user1 = new CustomerEntity("user1", "phone", "address");
-        var user2 = new CustomerEntity("user2", "phone", "address");
+        var user1 = new CustomerEntity("user1", "phone", "address", "email");
+        var user2 = new CustomerEntity("user2", "phone", "address", "email");
         when(customerDAO.getAll()).thenReturn(List.of(user1, user2));
         var result = customerService.getAllCustomers();
         assertEquals(2, result.size());
@@ -181,8 +186,8 @@ public class CustomerServiceTest {
 
     @Test
     public void testGetAllCustomersWith() {
-        var user1 = new CustomerEntity("user1", "phone", "address");
-        var user2 = new CustomerEntity("user2", "phone", "address");
+        var user1 = new CustomerEntity("user1", "phone", "address", "email");
+        var user2 = new CustomerEntity("user2", "phone", "address", "email");
         when(customerDAO.getAllLike("user")).thenReturn(List.of(user1, user2));
         var result = customerService.getAllCustomersWith("user");
         assertEquals(2, result.size());
@@ -199,7 +204,7 @@ public class CustomerServiceTest {
 
     @Test
     public void testUpdateCustomerError() {
-        var newCustomer = new CustomerEntity("user", "phone", "address");
+        var newCustomer = new CustomerEntity("user", "phone", "address", "email");
         doThrow(new DatabaseOperationException("Error updating customer")).when(customerDAO).update(newCustomer);
         customerService.setCustomer(CUSTOMER);
         customerService.updateCustomer(newCustomer);

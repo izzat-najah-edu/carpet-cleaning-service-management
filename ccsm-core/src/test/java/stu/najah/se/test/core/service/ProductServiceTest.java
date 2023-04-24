@@ -75,7 +75,7 @@ public class ProductServiceTest {
             }
             return null;
         }).when(productDAO).get(PRODUCT.getId());
-        var customer = new CustomerEntity("name", "phone", "address");
+        var customer = new CustomerEntity("name", "phone", "address", "email");
         customer.setId(1);
         when(customerService.getCustomer()).thenReturn(Optional.of(customer));
         var optional = productService.createAndSelectProduct(PRODUCT);
@@ -94,7 +94,7 @@ public class ProductServiceTest {
         var updatedProduct = new ProductEntity("Updated Product 1");
         productList.add(PRODUCT);
         when(productDAO.get(PRODUCT.getId())).thenReturn(productList.get(0));
-        var customer = new CustomerEntity("name", "phone", "address");
+        var customer = new CustomerEntity("name", "phone", "address", "email");
         customer.setId(1);
         when(customerService.getCustomer()).thenReturn(Optional.of(customer));
         doAnswer(invocation -> {
@@ -139,7 +139,7 @@ public class ProductServiceTest {
         product1.setCustomerId(1);
         var product2 = new ProductEntity("Product 2");
         product2.setCustomerId(1);
-        var customer = new CustomerEntity("name", "phone", "address");
+        var customer = new CustomerEntity("name", "phone", "address", "email");
         customer.setId(1);
         when(customerService.getCustomer()).thenReturn(Optional.of(customer));
         when(productDAO.getAll(customerId)).thenReturn(List.of(product1, product2));
@@ -160,7 +160,7 @@ public class ProductServiceTest {
     public void testUpdateProductError() {
         var newProduct = new ProductEntity("New Product");
         newProduct.setCustomerId(1);
-        var customer = new CustomerEntity("name", "phone", "address");
+        var customer = new CustomerEntity("name", "phone", "address", "email");
         customer.setId(1);
         when(customerService.getCustomer()).thenReturn(Optional.of(customer));
         doThrow(new DatabaseOperationException("Error updating product")).when(productDAO).update(newProduct);
