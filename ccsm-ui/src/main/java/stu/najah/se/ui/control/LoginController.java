@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import stu.najah.se.core.ServiceManager;
 import stu.najah.se.ui.Controller;
+import stu.najah.se.ui.Prompter;
 
 public class LoginController
         implements Controller {
@@ -34,9 +35,13 @@ public class LoginController
     @FXML
     private void login() {
         // send login request
-        ServiceManager.getAdminService().authenticate(
-                textFieldUsername.getText(),
-                textFieldPassword.getText()
-        );
+        try {
+            ServiceManager.getAdminService().authenticate(
+                    textFieldUsername.getText(),
+                    textFieldPassword.getText()
+            );
+        } catch (IllegalArgumentException e) {
+            Prompter.getInstance().error(e);
+        }
     }
 }
