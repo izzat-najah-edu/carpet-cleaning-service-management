@@ -2,22 +2,10 @@ package stu.najah.se.core.dao;
 
 import org.hibernate.Hibernate;
 import stu.najah.se.core.entity.OrderEntity;
-import stu.najah.se.core.entity.OrderViewEntity;
 
 import java.util.List;
 
 public class OrderDAO extends FullDAO<OrderEntity> {
-
-    private final OrderViewDAO orderViewDAO = new OrderViewDAO();
-
-    static class OrderViewDAO extends DAO<OrderViewEntity> {
-        /**
-         * Constructs a new OrderViewDAO instance.
-         */
-        protected OrderViewDAO() {
-            super(OrderViewEntity.class);
-        }
-    }
 
     /**
      * Constructs a new OrderDAO instance.
@@ -49,21 +37,5 @@ public class OrderDAO extends FullDAO<OrderEntity> {
     public List<OrderEntity> getAll(int customerId) {
         return getWithCondition((builder, query, root) ->
                 builder.equal(root.get("customerId"), customerId));
-    }
-
-    /**
-     * @return all order view entities
-     */
-    public List<OrderViewEntity> getAllViews() {
-        return orderViewDAO.getWithCondition(null);
-    }
-
-    /**
-     * @param customerName which all the order view entities share
-     * @return all order view entities with the given customerName
-     */
-    public List<OrderViewEntity> getAllViews(String customerName) {
-        return orderViewDAO.getWithCondition((builder, query, root) ->
-                builder.equal(root.get("customerName"), customerName));
     }
 }

@@ -19,7 +19,6 @@
         <mapping class="stu.najah.se.core.entity.ProductEntity"/>
         <mapping class="stu.najah.se.core.entity.OrderEntity"/>
         <mapping class="stu.najah.se.core.entity.OrderProductEntity"/>
-        <mapping class="stu.najah.se.core.entity.OrderViewEntity"/>
 
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->

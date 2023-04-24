@@ -46,8 +46,3 @@ create table order_product
     foreign key (order_id) references `order` (id),
     foreign key (product_id) references product (id)
 );
-
-create view order_view as
-select o.id as order_id, c.name as customer_name
-from `order` o
-         join customer c on o.customer_id = c.id;
