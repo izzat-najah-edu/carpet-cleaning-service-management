@@ -55,13 +55,15 @@ public class OrderEntity {
             return false;
         }
         return Objects.equals(id, that.id)
-                && Objects.equals(customerId, that.customerId);
+                && Objects.equals(customerId, that.customerId)
+                && Objects.equals(createdAt, that.createdAt);
     }
 
     @Override
     public int hashCode() {
         int result = id;
         result = 31 * result + (customerId != null ? customerId.hashCode() : 0);
+        result = 31 * result + (createdAt != null ? createdAt.hashCode() : 0);
         return result;
     }
 
@@ -71,32 +73,5 @@ public class OrderEntity {
 
     public void setOrderProductsById(Collection<OrderProductEntity> orderProductsById) {
         this.orderProductsById = orderProductsById;
-    }
-
-    /**
-     * An order is finished if and only if all its products are finished
-     *
-     * @return whether the order has finished or not
-     */
-    public boolean finished() {
-        for (var entity : getOrderProductsById()) {
-            if (entity.getFinished() == 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    /**
-     * Calculates the price by summing prices of all associated OrderProduct entities
-     *
-     * @return the total price of this order entity
-     */
-    public int price() {
-        int price = 0;
-        for (var entity : getOrderProductsById()) {
-            price += entity.getPrice();
-        }
-        return price;
     }
 }
