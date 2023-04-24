@@ -15,7 +15,8 @@ create table customer
     id      int auto_increment primary key,
     name    varchar(256) unique not null,
     phone   char(10),
-    address varchar(256)
+    address varchar(256),
+    email   varchar(256) unique
 );
 
 CREATE TABLE `order`

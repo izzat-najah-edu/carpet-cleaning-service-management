@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="refactoring">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="readme changes">
+      <change beforePath="$PROJECT_DIR$/assets/diagrams/UML.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/assets/diagrams/UML.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sql/CREATE.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sql/CREATE.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +159,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SceneManager">
+  <component name="RunManager" selected="Database Script.INSERT.sql">
     <configuration name="EmailUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.core.service.EmailUtil" />
       <module name="ccsm-core" />
@@ -186,6 +186,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="INSERT.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/assets/sql/INSERT.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
     <configuration name="FeaturesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccsm-ui" />
       <extension name="coverage">
@@ -201,22 +206,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceTest.testUpdateProductError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.core.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.ProductServiceTest" />
-      <option name="METHOD_NAME" value="testUpdateProductError" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="service in ccsm-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccsm-core" />
       <option name="TEST_OBJECT" value="directory" />
@@ -227,11 +216,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Database Script.INSERT.sql" />
         <item itemvalue="Application.SceneManager" />
         <item itemvalue="JUnit.FeaturesTest" />
         <item itemvalue="Application.EmailUtil" />
         <item itemvalue="JUnit.service in ccsm-core" />
-        <item itemvalue="JUnit.ProductServiceTest.testUpdateProductError" />
       </list>
     </recent_temporary>
   </component>
@@ -350,14 +339,7 @@
       <workItem from="1681925118583" duration="17000" />
       <workItem from="1682159450783" duration="2625000" />
       <workItem from="1682285493874" duration="1677000" />
-      <workItem from="1682333535453" duration="1137000" />
-    </task>
-    <task id="LOCAL-00096" summary="refactoring">
-      <created>1681256750814</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1681256750814</updated>
+      <workItem from="1682333535453" duration="1384000" />
     </task>
     <task id="LOCAL-00097" summary="admin service tests implemented">
       <created>1681331806528</created>
@@ -695,7 +677,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682333751273</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="readme changes">
+      <created>1682334799914</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1682334799914</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -731,7 +720,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="transaction exception refactoring" />
     <MESSAGE value="customer service implemented" />
     <MESSAGE value="customer service refactoring" />
     <MESSAGE value="error fix" />
@@ -756,7 +744,8 @@
     <MESSAGE value="order status label fix" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="readme changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme changes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
