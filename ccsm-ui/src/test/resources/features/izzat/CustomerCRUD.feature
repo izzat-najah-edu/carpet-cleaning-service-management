@@ -2,7 +2,7 @@ Feature: Customer CRUD Operations
   the list of customers of the system should is continuously changing, so there should be
   the option to perform CRUD operations on the customers list.
 
-  Background: User reached the Edit Customer Tab
+  Background: User reached customer tab
     Given main screen is opened
     And customer tab is opened
 

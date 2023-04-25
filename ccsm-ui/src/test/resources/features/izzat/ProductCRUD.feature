@@ -1,8 +1,8 @@
 Feature: Product CRUD Operations
-  the products of the customers should are continuously changing, so there should be
+  the products of the customers are continuously changing, so there should be
   the option to perform CRUD operations on the products.
 
-  Background: User reached the Products Tab
+  Background: User reached products tab
     Given main screen is opened
     And products tab is opened
 

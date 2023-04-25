@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="fix" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="steps definitions fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/Navigation.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/Navigation.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/ProductCRUD.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/ProductCRUD.feature" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,49 +76,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "JPA.DatabaseSchemaImportDialog": "5a036877-6121-45d4-b20e-fc38c0c48c35",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "introduce.parameter.lambda": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-19",
-    "last_directory_selection": "F:/Work/Projects/Java/CarpetCleaningServiceManagement/src/main/java/stu/najah/se",
-    "last_opened_file_path": "F:/Work/Projects/Java/CarpetCleaningServiceManagement/assets/diagrams",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.35287356",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;5a036877-6121-45d4-b20e-fc38c0c48c35&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;introduce.parameter.lambda&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19&quot;,
+    &quot;last_directory_selection&quot;: &quot;F:/Work/Projects/Java/CarpetCleaningServiceManagement/src/main/java/stu/najah/se&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Work/Projects/Java/CarpetCleaningServiceManagement/assets/diagrams&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.35287356&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mongo",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;,
+      &quot;mysql&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
-      "MySQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
+      &quot;MySQL&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
-      "MySQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;MySQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="stu.najah.se.sql" />
@@ -123,8 +127,8 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\test\java\stu\najah\se\test\ui\features\izzat" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\test\resources\features\izzat" />
+      <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\test\java\stu\najah\se\test\ui\features\izzat" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\test\resources\features\izzat\temp" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\test\resources\features\izzat\ready" />
       <recent name="F:\Work\Projects\Java\CarpetCleaningServiceManagement\ccsm-ui\src\test\resources\features\aya" />
@@ -156,7 +160,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SceneManager">
+  <component name="RunManager" selected="JUnit.IzzatFeaturesTest">
     <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.SceneManager" />
       <module name="ccsm-ui" />
@@ -231,8 +235,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SceneManager" />
         <item itemvalue="JUnit.IzzatFeaturesTest" />
+        <item itemvalue="Application.SceneManager" />
         <item itemvalue="Cucumber Java.Feature: Login" />
         <item itemvalue="JUnit.service in ccsm-core" />
       </list>
@@ -358,35 +362,8 @@
       <workItem from="1682336275335" duration="84000" />
       <workItem from="1682336468295" duration="14000" />
       <workItem from="1682339171133" duration="951000" />
-      <workItem from="1682347478847" duration="16951000" />
-    </task>
-    <task id="LOCAL-00115" summary="refactoring">
-      <created>1681578360541</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1681578360542</updated>
-    </task>
-    <task id="LOCAL-00116" summary="customer service test fixes">
-      <created>1681579688693</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1681579688693</updated>
-    </task>
-    <task id="LOCAL-00117" summary="documentation change">
-      <created>1681590567856</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1681590567857</updated>
-    </task>
-    <task id="LOCAL-00118" summary="product service now depends on customer service">
-      <created>1681682962342</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1681682962342</updated>
+      <workItem from="1682347478847" duration="17642000" />
+      <workItem from="1682434737119" duration="315000" />
     </task>
     <task id="LOCAL-00119" summary="product controller reimplemented">
       <created>1681738704318</created>
@@ -703,7 +680,35 @@
       <option name="project" value="LOCAL" />
       <updated>1682372037300</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="fix">
+      <created>1682372078923</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1682372078923</updated>
+    </task>
+    <task id="LOCAL-00165" summary="customer crud feature fix">
+      <created>1682372319848</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1682372319848</updated>
+    </task>
+    <task id="LOCAL-00166" summary="steps definitions fix">
+      <created>1682372586832</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1682372586832</updated>
+    </task>
+    <task id="LOCAL-00167" summary="steps definitions fix">
+      <created>1682372632911</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1682372632911</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -739,8 +744,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="documentation change" />
-    <MESSAGE value="product service now depends on customer service" />
     <MESSAGE value="product controller reimplemented" />
     <MESSAGE value="order table change" />
     <MESSAGE value="order service created" />
@@ -764,7 +767,9 @@
     <MESSAGE value="renaming fix" />
     <MESSAGE value="service initialization fix" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="customer crud feature fix" />
+    <MESSAGE value="steps definitions fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="steps definitions fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
