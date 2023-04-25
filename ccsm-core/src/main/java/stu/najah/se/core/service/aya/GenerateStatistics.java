@@ -1,4 +1,4 @@
-package stu.najah.se.core.service;
+package stu.najah.se.core.service.aya;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,9 +77,3 @@ public class GenerateStatistics {
         System.out.println("Total debts: " + totalDebts);
     }
 }
-
-
-
-
-
-

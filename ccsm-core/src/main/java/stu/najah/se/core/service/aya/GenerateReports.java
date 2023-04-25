@@ -1,4 +1,4 @@
-package stu.najah.se.core.service;
+package stu.najah.se.core.service.aya;
 
 import java.util.ArrayList;
 

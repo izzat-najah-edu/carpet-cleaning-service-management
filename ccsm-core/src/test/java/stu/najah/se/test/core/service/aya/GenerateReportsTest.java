@@ -1,7 +1,7 @@
-package stu.najah.se.test.core.service;
+package stu.najah.se.test.core.service.aya;
 
 import org.junit.Test;
-import stu.najah.se.core.service.GenerateReports;
+import stu.najah.se.core.service.aya.GenerateReports;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

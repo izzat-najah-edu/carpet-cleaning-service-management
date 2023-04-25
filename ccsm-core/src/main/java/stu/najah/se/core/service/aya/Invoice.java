@@ -1,4 +1,4 @@
-package stu.najah.se.core.service;
+package stu.najah.se.core.service.aya;
 
 public class Invoice {
 

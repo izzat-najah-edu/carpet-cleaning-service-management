@@ -1,7 +1,7 @@
-package stu.najah.se.test.core.service;
+package stu.najah.se.test.core.service.aya;
 
 import org.junit.jupiter.api.Test;
-import stu.najah.se.core.service.CustomerInvoice;
+import stu.najah.se.core.service.aya.CustomerInvoice;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
