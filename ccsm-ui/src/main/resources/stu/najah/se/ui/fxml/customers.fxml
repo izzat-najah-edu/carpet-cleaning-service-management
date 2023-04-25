@@ -46,7 +46,7 @@
         <Button fx:id="buttonDeleteCustomer" layoutX="81.0" layoutY="406.0" mnemonicParsing="false"
                 onAction="#deleteCustomer" prefHeight="35.0" prefWidth="259.0" styleClass="delete"
                 text="Delete Selected Customer"/>
-        <Button fx:id="buttonClear" layoutX="123.0" layoutY="79.0" mnemonicParsing="false" onAction="#clearCustomer"
+        <Button layoutX="123.0" layoutY="79.0" mnemonicParsing="false" onAction="#clearCustomer"
                 prefHeight="25.0" prefWidth="59.0" styleClass="clear" text="Clear"/>
         <Label layoutX="53.0" layoutY="69.0" text="Edit" underline="true">
             <font>

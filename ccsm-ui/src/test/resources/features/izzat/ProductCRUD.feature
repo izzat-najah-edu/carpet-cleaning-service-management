@@ -5,6 +5,7 @@ Feature: Product CRUD Operations
   Background: User reached products tab
     Given main screen is opened
     And products tab is opened
+    And I select a customer from the customer list
 
   Scenario: Adding Product Successfully
     Given I enter product information
