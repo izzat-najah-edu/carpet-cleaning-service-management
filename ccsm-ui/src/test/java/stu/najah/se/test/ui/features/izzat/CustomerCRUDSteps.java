@@ -61,6 +61,7 @@ public class CustomerCRUDSteps extends ApplicationTest {
         for (int i = 0; i < tableCustomers.getItems().size(); i++) {
             if (Objects.equals(CUSTOMER.getName(), tableCustomers.getItems().get(i).getName())) {
                 tableCustomers.getSelectionModel().clearAndSelect(i);
+                CUSTOMER.setId(tableCustomers.getItems().get(i).getId());
                 break;
             }
         }
@@ -70,6 +71,7 @@ public class CustomerCRUDSteps extends ApplicationTest {
     public void iEnterADifferentCustomerInformation() {
         clickOn("#textFieldAddress");
         write("-new");
+        CUSTOMER.setAddress(CUSTOMER.getAddress() + "-new");
     }
 
     @And("I click update customer button")
@@ -80,9 +82,9 @@ public class CustomerCRUDSteps extends ApplicationTest {
     @Then("the selected customer is updated")
     public void theSelectedCustomerIsUpdated() {
         for (int i = 0; i < tableCustomers.getItems().size(); i++) {
-            if (Objects.equals(CUSTOMER.getName(), tableCustomers.getItems().get(i).getName())) {
+            if (Objects.equals(CUSTOMER.getId(), tableCustomers.getItems().get(i).getId())) {
                 assertEquals(
-                        CUSTOMER.getAddress() + "-new",
+                        CUSTOMER.getAddress(),
                         tableCustomers.getItems().get(i).getAddress()
                 );
                 return;
@@ -99,7 +101,7 @@ public class CustomerCRUDSteps extends ApplicationTest {
     @Then("the selected customer is deleted")
     public void theSelectedCustomerIsDeleted() {
         for (int i = 0; i < tableCustomers.getItems().size(); i++) {
-            if (Objects.equals(CUSTOMER.getName(), tableCustomers.getItems().get(i).getName())) {
+            if (Objects.equals(CUSTOMER.getId(), tableCustomers.getItems().get(i).getId())) {
                 fail();
             }
         }
