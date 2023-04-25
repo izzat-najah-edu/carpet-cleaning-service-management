@@ -7,7 +7,7 @@
 <AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.ui.control.OrdersController">
     <children>
-        <TableView fx:id="tableOrders" layoutX="24.0" layoutY="121.0" prefHeight="411.0" prefWidth="246.0">
+        <TableView fx:id="tableOrders" layoutX="24.0" layoutY="121.0" prefHeight="400.0" prefWidth="246.0">
             <columns>
                 <TableColumn prefWidth="35.0" text="Id"/>
                 <TableColumn prefWidth="71.0" text="CustomerId"/>
@@ -66,17 +66,14 @@
                    promptText="Select to Show"/>
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="98.0" layoutX="302.0" layoutY="421.0"
                    mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" width="679.0"/>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="124.0" layoutX="24.0" layoutY="550.0"
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="98.0" layoutX="24.0" layoutY="570.0"
                    mouseTransparent="true" stroke="BLACK" strokeType="INSIDE" width="246.0"/>
         <Button fx:id="buttonUpdateOrderProduct" layoutX="814.0" layoutY="435.0" mnemonicParsing="false"
-                onAction="#updateOrderProduct" prefHeight="30.0"
-                prefWidth="156.0" text="Update Product"/>
+                onAction="#updateOrderProduct" prefHeight="30.0" prefWidth="156.0" text="Update Product"/>
         <Button fx:id="buttonCreateOrderProduct" layoutX="814.0" layoutY="597.0" mnemonicParsing="false"
-                onAction="#createOrderProduct" prefHeight="30.0"
-                prefWidth="156.0" text="Add to Order"/>
+                onAction="#createOrderProduct" prefHeight="30.0" prefWidth="156.0" text="Add to Order"/>
         <Button fx:id="buttonDeleteOrderProduct" layoutX="814.0" layoutY="475.0" mnemonicParsing="false"
-                onAction="#deleteOrderProduct" prefHeight="30.0"
-                prefWidth="156.0" text="Delete Product"/>
+                onAction="#deleteOrderProduct" prefHeight="30.0" prefWidth="156.0" text="Delete Product"/>
         <Label layoutX="319.0" layoutY="604.0" text="Available Products:"/>
         <ComboBox fx:id="comboBoxAvailableProducts" layoutX="442.0" layoutY="600.0" prefHeight="25.0"
                   prefWidth="338.0"/>
@@ -89,5 +86,9 @@
         </Label>
         <ComboBox fx:id="comboBoxCustomer" layoutX="24.0" layoutY="82.0" prefHeight="25.0" prefWidth="246.0"
                   promptText="Select Customer"/>
+        <Button fx:id="buttonCreateOrder" layoutX="38.0" layoutY="535.0" mnemonicParsing="false" onAction="#createOrder"
+                prefHeight="25.0" prefWidth="101.0" text="Create Order"/>
+        <Button fx:id="buttonDeleteOrder" layoutX="156.0" layoutY="535.0" mnemonicParsing="false"
+                onAction="#deleteOrder" prefHeight="25.0" prefWidth="101.0" text="Delete Order"/>
     </children>
 </AnchorPane>

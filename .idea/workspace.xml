@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="junit module fix">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/OrderCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/OrderCRUDSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/OrderCRUD.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/OrderCRUD.feature" afterDir="false" />
-    </list>
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="new order create &amp; delete scenario" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -383,13 +378,6 @@
       <workItem from="1682443794983" duration="3203000" />
       <workItem from="1682452256625" duration="322000" />
     </task>
-    <task id="LOCAL-00132" summary="order product service created">
-      <created>1681841460200</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1681841460200</updated>
-    </task>
     <task id="LOCAL-00133" summary="order product service created">
       <created>1681841526440</created>
       <option name="number" value="00133" />
@@ -726,7 +714,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682454780861</updated>
     </task>
-    <option name="localTasksCounter" value="181" />
+    <task id="LOCAL-00181" summary="new order create &amp; delete scenario">
+      <created>1682456604168</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1682456604168</updated>
+    </task>
+    <option name="localTasksCounter" value="182" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -762,7 +757,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="order view removed" />
     <MESSAGE value="dependency fix" />
     <MESSAGE value="customer email fix" />
     <MESSAGE value="fast login moved to test module" />
@@ -787,7 +781,8 @@
     <MESSAGE value="order product entity bug fix" />
     <MESSAGE value="order product table bug fix" />
     <MESSAGE value="junit module fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="junit module fix" />
+    <MESSAGE value="new order create &amp; delete scenario" />
+    <option name="LAST_COMMIT_MESSAGE" value="new order create &amp; delete scenario" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
