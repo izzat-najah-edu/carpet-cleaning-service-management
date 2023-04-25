@@ -1,8 +1,6 @@
 package stu.najah.se.core.entity;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.io.Serializable;
@@ -11,11 +9,9 @@ import java.util.Objects;
 public class OrderProductEntityPK implements Serializable {
     @Column(name = "order_id", nullable = false)
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int orderId;
     @Column(name = "product_id", nullable = false)
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int productId;
 
     public OrderProductEntityPK() {
