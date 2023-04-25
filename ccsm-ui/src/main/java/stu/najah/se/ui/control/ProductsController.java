@@ -34,7 +34,7 @@ public class ProductsController
     private TextField textFieldDescription;
 
     @FXML
-    private TextField textFieldName;
+    private TextField textFieldCustomerName;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -75,7 +75,7 @@ public class ProductsController
 
     @FXML
     private void refreshList() {
-        textFieldName.clear();
+        textFieldCustomerName.clear();
         listCustomers.setItems(FXCollections.observableArrayList(customerService.getAllCustomers()));
         listCustomers.getSelectionModel().clearSelection();
     }
@@ -83,7 +83,7 @@ public class ProductsController
     @FXML
     private void searchCustomer() {
         listCustomers.setItems(FXCollections.observableArrayList(
-                customerService.getAllCustomersWith(textFieldName.getText())
+                customerService.getAllCustomersWith(textFieldCustomerName.getText())
         ));
     }
 

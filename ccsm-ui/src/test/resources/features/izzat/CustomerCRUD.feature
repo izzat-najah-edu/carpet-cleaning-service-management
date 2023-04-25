@@ -7,7 +7,7 @@ Feature: Customer CRUD Operations
     And customer tab is opened
 
   Scenario: Adding Customer Successfully
-    Given I enter a customer name, phone, address
+    Given I enter customer information
     And the name is not empty
     And I click add customer button
     Then a new customer is added to the list

@@ -13,8 +13,8 @@
                 <Font size="20.0"/>
             </font>
         </Label>
-        <TextField fx:id="textFieldName" layoutX="31.0" layoutY="85.0" onKeyTyped="#searchCustomer" prefHeight="25.0"
-                   prefWidth="301.0" promptText="Search By Name" styleClass="search"/>
+        <TextField fx:id="textFieldCustomerName" layoutX="31.0" layoutY="85.0" onKeyTyped="#searchCustomer"
+                   prefHeight="25.0" prefWidth="301.0" promptText="Search By Name" styleClass="search"/>
         <TableView fx:id="tableProducts" layoutX="362.0" layoutY="98.0" prefHeight="197.0" prefWidth="599.0">
             <columns>
                 <TableColumn prefWidth="62.0" text="Id"/>
