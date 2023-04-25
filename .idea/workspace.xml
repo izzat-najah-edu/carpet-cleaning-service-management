@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order product crud test">
-      <change afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/aya/CustomerInvoiceFeature.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/aya/Discount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/aya/CustomerInvoice.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/aya/Discount.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/aya/Review.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/aya/Review.feature" afterDir="false" />
-    </list>
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order product crud test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -393,14 +386,7 @@
       <workItem from="1682441378099" duration="38000" />
       <workItem from="1682443794983" duration="3203000" />
       <workItem from="1682452256625" duration="322000" />
-      <workItem from="1682459877712" duration="3506000" />
-    </task>
-    <task id="LOCAL-00131" summary="order product service created">
-      <created>1681839617102</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1681839617102</updated>
+      <workItem from="1682459877712" duration="3882000" />
     </task>
     <task id="LOCAL-00132" summary="order product service created">
       <created>1681841460200</created>
@@ -738,7 +724,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682461187262</updated>
     </task>
-    <option name="localTasksCounter" value="180" />
+    <task id="LOCAL-00180" summary="order product crud test">
+      <created>1682463700623</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1682463700623</updated>
+    </task>
+    <option name="localTasksCounter" value="181" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
