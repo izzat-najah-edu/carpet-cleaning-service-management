@@ -34,6 +34,16 @@ public class OrderProductEntity {
             insertable = false, updatable = false)
     private ProductEntity productByProductId;
 
+    public OrderProductEntity() {
+    }
+
+    public OrderProductEntity(int productId, String specialTreatment, Byte finished, Integer price) {
+        setProductId(productId);
+        setSpecialTreatment(specialTreatment);
+        setFinished(finished);
+        setPrice(price);
+    }
+
     public int getOrderId() {
         return orderId;
     }
