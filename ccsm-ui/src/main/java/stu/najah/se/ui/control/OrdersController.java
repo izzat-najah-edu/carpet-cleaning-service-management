@@ -204,6 +204,28 @@ public class OrdersController
     }
 
     @FXML
+    private void createOrder() {
+        try {
+            orderService.createAndSelectOrder();
+        } catch (IllegalStateException e) {
+            Prompter.getInstance().error(e);
+        } finally {
+            refreshOrdersTable();
+        }
+    }
+
+    @FXML
+    private void deleteOrder() {
+        try {
+            orderService.deleteOrder();
+        } catch (IllegalStateException e) {
+            Prompter.getInstance().error(e);
+        } finally {
+            refreshOrdersTable();
+        }
+    }
+
+    @FXML
     private void generateInvoice() {
         // TODO
     }

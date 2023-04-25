@@ -156,7 +156,20 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IzzatFeaturesTest">
+  <component name="RunManager" selected="Application.SceneManager">
+    <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.SceneManager" />
+      <module name="ccsm-ui" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stu.najah.se.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
       <shortenClasspath name="NONE" />
       <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
@@ -195,21 +208,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GenerateStatisticsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.core.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.GenerateStatisticsTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="IzzatFeaturesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccsm-ui" />
       <extension name="coverage">
@@ -236,19 +234,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.SceneManager" />
       <item itemvalue="JUnit.CustomerInvoiceTest" />
       <item itemvalue="JUnit.DiscountCalculatorTest" />
-      <item itemvalue="JUnit.GenerateStatisticsTest" />
       <item itemvalue="JUnit.service in ccsm-core" />
       <item itemvalue="JUnit.IzzatFeaturesTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SceneManager" />
         <item itemvalue="JUnit.IzzatFeaturesTest" />
         <item itemvalue="JUnit.service in ccsm-core" />
         <item itemvalue="JUnit.CustomerInvoiceTest" />
         <item itemvalue="JUnit.DiscountCalculatorTest" />
-        <item itemvalue="JUnit.GenerateStatisticsTest" />
       </list>
     </recent_temporary>
   </component>
