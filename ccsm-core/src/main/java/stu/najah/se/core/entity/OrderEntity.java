@@ -46,6 +46,11 @@ public class OrderEntity {
         this.createdAt = createdAt;
     }
 
+    @PrePersist
+    protected void onCreate() {
+        createdAt = new Timestamp(System.currentTimeMillis());
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {

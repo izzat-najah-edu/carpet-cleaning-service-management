@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="new order create &amp; delete scenario" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="create &amp; delete order action methods">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/entity/OrderEntity.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -376,20 +379,6 @@
       <workItem from="1682443794983" duration="3203000" />
       <workItem from="1682452256625" duration="322000" />
     </task>
-    <task id="LOCAL-00133" summary="order product service created">
-      <created>1681841526440</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1681841526440</updated>
-    </task>
-    <task id="LOCAL-00134" summary="refactoring">
-      <created>1681842994052</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1681842994052</updated>
-    </task>
     <task id="LOCAL-00135" summary="order products controller reimplementation">
       <created>1681843514162</created>
       <option name="number" value="00135" />
@@ -719,7 +708,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682456604168</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="create &amp; delete order buttons added">
+      <created>1682456733244</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1682456733244</updated>
+    </task>
+    <task id="LOCAL-00183" summary="create &amp; delete order action methods">
+      <created>1682456887916</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1682456887916</updated>
+    </task>
+    <option name="localTasksCounter" value="184" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -755,8 +758,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="dependency fix" />
-    <MESSAGE value="customer email fix" />
     <MESSAGE value="fast login moved to test module" />
     <MESSAGE value="testfx fix" />
     <MESSAGE value="login screen fix" />
@@ -780,7 +781,9 @@
     <MESSAGE value="order product table bug fix" />
     <MESSAGE value="junit module fix" />
     <MESSAGE value="new order create &amp; delete scenario" />
-    <option name="LAST_COMMIT_MESSAGE" value="new order create &amp; delete scenario" />
+    <MESSAGE value="create &amp; delete order buttons added" />
+    <MESSAGE value="create &amp; delete order action methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="create &amp; delete order action methods" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
