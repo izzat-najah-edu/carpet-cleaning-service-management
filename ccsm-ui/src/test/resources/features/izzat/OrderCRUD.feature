@@ -8,6 +8,15 @@ Feature: Order CRUD Operations
     And I select a customer from the customer box
     And I select an order from the order list
 
+  Scenario: Adding Order Successfully
+    Given I click add order button
+    Then a new order is added to the order list
+
+  Scenario: Deleting Order Successfully
+    Given I select the new order from the order list
+    And I click delete order button
+    Then the selected order is deleted
+
   Scenario: Adding Product to an Order Successfully
     Given I enter order product information
     And I select a product from the product box

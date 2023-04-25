@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order product crud test" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="junit module fix">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/OrderCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/OrderCRUDSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/OrderCRUD.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/OrderCRUD.feature" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,87 +161,56 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SceneManager">
-    <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.SceneManager" />
-      <module name="ccsm-ui" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Feature: CustomerCRUD" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/CustomerCRUD.feature" />
-      <option name="GLUE" value="stu.najah.se.test.ui.features.izzat" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="ccsm-ui" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <shortenClasspath name="NONE" />
-      <option name="SUGGESTED_NAME" value="Feature: CustomerCRUD" />
-      <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Feature: OrderCRUD" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/OrderCRUD.feature" />
-      <option name="GLUE" value="stu.najah.se.test.ui.features.izzat" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="ccsm-ui" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <shortenClasspath name="NONE" />
-      <option name="SUGGESTED_NAME" value="Feature: OrderCRUD" />
-      <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Feature: ProductCRUD" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/ProductCRUD.feature" />
-      <option name="GLUE" value="stu.najah.se.test.ui.features.izzat" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="ccsm-ui" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <shortenClasspath name="NONE" />
-      <option name="SUGGESTED_NAME" value="Feature: ProductCRUD" />
-      <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.IzzatFeaturesTest">
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
       <shortenClasspath name="NONE" />
       <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerInvoiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccsm-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stu.najah.se.test.core.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.CustomerInvoiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscountCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccsm-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stu.najah.se.test.core.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.DiscountCalculatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GenerateStatisticsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccsm-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stu.najah.se.test.core.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.GenerateStatisticsTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -253,25 +227,33 @@
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.ui.features.izzat.IzzatFeaturesTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
+      <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="service in ccsm-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccsm-core" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.SceneManager" />
-      <item itemvalue="Cucumber Java.Feature: OrderCRUD" />
-      <item itemvalue="Cucumber Java.Feature: ProductCRUD" />
-      <item itemvalue="Cucumber Java.Feature: CustomerCRUD" />
+      <item itemvalue="JUnit.CustomerInvoiceTest" />
+      <item itemvalue="JUnit.DiscountCalculatorTest" />
+      <item itemvalue="JUnit.GenerateStatisticsTest" />
+      <item itemvalue="JUnit.service in ccsm-core" />
       <item itemvalue="JUnit.IzzatFeaturesTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SceneManager" />
         <item itemvalue="JUnit.IzzatFeaturesTest" />
-        <item itemvalue="Cucumber Java.Feature: OrderCRUD" />
-        <item itemvalue="Cucumber Java.Feature: ProductCRUD" />
-        <item itemvalue="Cucumber Java.Feature: CustomerCRUD" />
+        <item itemvalue="JUnit.service in ccsm-core" />
+        <item itemvalue="JUnit.CustomerInvoiceTest" />
+        <item itemvalue="JUnit.DiscountCalculatorTest" />
+        <item itemvalue="JUnit.GenerateStatisticsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -400,20 +382,6 @@
       <workItem from="1682441378099" duration="38000" />
       <workItem from="1682443794983" duration="3203000" />
       <workItem from="1682452256625" duration="322000" />
-    </task>
-    <task id="LOCAL-00130" summary="order product service created">
-      <created>1681838370301</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1681838370301</updated>
-    </task>
-    <task id="LOCAL-00131" summary="order product service created">
-      <created>1681839617102</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1681839617102</updated>
     </task>
     <task id="LOCAL-00132" summary="order product service created">
       <created>1681841460200</created>
@@ -744,7 +712,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682452430157</updated>
     </task>
-    <option name="localTasksCounter" value="179" />
+    <task id="LOCAL-00179" summary="order product table bug fix">
+      <created>1682454729107</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1682454729107</updated>
+    </task>
+    <task id="LOCAL-00180" summary="junit module fix">
+      <created>1682454780861</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1682454780861</updated>
+    </task>
+    <option name="localTasksCounter" value="181" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -780,8 +762,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="readme changes" />
-    <MESSAGE value="customer email added" />
     <MESSAGE value="order view removed" />
     <MESSAGE value="dependency fix" />
     <MESSAGE value="customer email fix" />
@@ -805,7 +785,9 @@
     <MESSAGE value="order product crud test" />
     <MESSAGE value="javafx thread fix" />
     <MESSAGE value="order product entity bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="order product entity bug fix" />
+    <MESSAGE value="order product table bug fix" />
+    <MESSAGE value="junit module fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="junit module fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

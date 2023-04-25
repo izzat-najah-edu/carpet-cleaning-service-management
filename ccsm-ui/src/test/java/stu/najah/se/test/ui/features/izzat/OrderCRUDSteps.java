@@ -12,6 +12,7 @@ import stu.najah.se.core.entity.OrderEntity;
 import stu.najah.se.core.entity.OrderProductEntity;
 import stu.najah.se.core.entity.ProductEntity;
 
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 import static org.junit.Assert.assertEquals;
@@ -22,6 +23,8 @@ public class OrderCRUDSteps extends ApplicationTest {
     private static final OrderProductEntity ORDER_PRODUCT = new OrderProductEntity(
             "cleaning", (byte) 0, 50
     );
+
+    private LocalDateTime now;
 
     private final TableView<OrderProductEntity> tableOrderProducts
             = lookup("#tableOrderProducts").queryTableView();
@@ -50,6 +53,49 @@ public class OrderCRUDSteps extends ApplicationTest {
     public void iSelectAnOrderFromTheOrderList() {
         Platform.runLater(() ->
                 tableOrders.getSelectionModel().clearAndSelect(0));
+    }
+
+    @Given("I click add order button")
+    public void iClickAddOrderButton() {
+        clickOn("#buttonCreateOrder");
+    }
+
+    @Then("a new order is added to the order list")
+    public void aNewOrderIsAddedToTheOrderList() {
+        now = LocalDateTime.now().withSecond(0).withNano(0);
+        var matchers = tableOrders.getItems().stream().filter(orderEntity -> {
+            // created within the last minute
+            var orderCreatedAt = orderEntity.getCreatedAt().toLocalDateTime().withSecond(0).withNano(0);
+            return orderCreatedAt.equals(now);
+        });
+        assertEquals(1, matchers.count());
+    }
+
+    @Given("I select the new order from the order list")
+    public void iSelectTheNewOrderFromTheOrderList() {
+        for (int i = 0; i < tableOrders.getItems().size(); i++) {
+            var orderCreatedAt = tableOrders.getItems().get(i)
+                    .getCreatedAt().toLocalDateTime().withSecond(0).withNano(0);
+            if (Objects.equals(now, orderCreatedAt)) {
+                // select it
+                tableOrders.getSelectionModel().clearAndSelect(i);
+                break;
+            }
+        }
+    }
+
+    @And("I click delete order button")
+    public void iClickDeleteOrderButton() {
+        clickOn("#buttonDeleteOrder");
+    }
+
+    @Then("the selected order is deleted")
+    public void theSelectedOrderIsDeleted() {
+        var matchers = tableOrders.getItems().stream().filter(orderEntity -> {
+            var orderCreatedAt = orderEntity.getCreatedAt().toLocalDateTime().withSecond(0).withNano(0);
+            return orderCreatedAt.equals(now);
+        });
+        assertEquals(0, matchers.count());
     }
 
     @Given("I enter order product information")
