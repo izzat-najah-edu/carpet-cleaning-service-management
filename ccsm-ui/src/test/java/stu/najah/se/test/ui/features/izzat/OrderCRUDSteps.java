@@ -77,7 +77,9 @@ public class OrderCRUDSteps extends ApplicationTest {
                     .getCreatedAt().toLocalDateTime().withSecond(0).withNano(0);
             if (Objects.equals(now, orderCreatedAt)) {
                 // select it
-                tableOrders.getSelectionModel().clearAndSelect(i);
+                int finalI = i;
+                Platform.runLater(() ->
+                        tableOrders.getSelectionModel().clearAndSelect(finalI));
                 break;
             }
         }

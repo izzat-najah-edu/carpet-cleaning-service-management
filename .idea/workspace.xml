@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="module dependency fix">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/OrderCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/OrderCRUDSteps.java" afterDir="false" />
-    </list>
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order feature split into two" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +156,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: OrderCRUD">
+  <component name="RunManager" selected="JUnit.IzzatFeaturesTest">
     <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.SceneManager" />
       <module name="ccsm-ui" />
@@ -251,9 +248,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: OrderCRUD" />
-        <item itemvalue="Application.SceneManager" />
         <item itemvalue="JUnit.IzzatFeaturesTest" />
+        <item itemvalue="Application.SceneManager" />
+        <item itemvalue="Cucumber Java.Feature: OrderCRUD" />
         <item itemvalue="JUnit.service in ccsm-core" />
         <item itemvalue="JUnit.CustomerInvoiceTest" />
       </list>
@@ -384,20 +381,6 @@
       <workItem from="1682441378099" duration="38000" />
       <workItem from="1682443794983" duration="3203000" />
       <workItem from="1682452256625" duration="322000" />
-    </task>
-    <task id="LOCAL-00137" summary="test change">
-      <created>1681847819732</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1681847819732</updated>
-    </task>
-    <task id="LOCAL-00138" summary="fix">
-      <created>1682159736020</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1682159736020</updated>
     </task>
     <task id="LOCAL-00139" summary="added order service methods">
       <created>1682161771793</created>
@@ -728,7 +711,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682457598601</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="test fix">
+      <created>1682457973304</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1682457973304</updated>
+    </task>
+    <task id="LOCAL-00187" summary="order feature split into two">
+      <created>1682458190995</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1682458190995</updated>
+    </task>
+    <option name="localTasksCounter" value="188" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -764,8 +761,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="login screen fix" />
-    <MESSAGE value="refactoring" />
     <MESSAGE value="readme fix" />
     <MESSAGE value="renaming fix" />
     <MESSAGE value="service initialization fix" />
@@ -789,7 +784,9 @@
     <MESSAGE value="create &amp; delete order action methods" />
     <MESSAGE value="order entity bug fix" />
     <MESSAGE value="module dependency fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="module dependency fix" />
+    <MESSAGE value="test fix" />
+    <MESSAGE value="order feature split into two" />
+    <option name="LAST_COMMIT_MESSAGE" value="order feature split into two" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
