@@ -3,6 +3,7 @@ package stu.najah.se.test.ui.features.izzat;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import javafx.application.Platform;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableView;
 import org.testfx.framework.junit5.ApplicationTest;
@@ -33,7 +34,8 @@ public class ProductCRUDSteps extends ApplicationTest {
 
     @And("I select a customer from the customer list")
     public void iSelectACustomerFromTheCustomerList() {
-        listCustomers.getSelectionModel().clearAndSelect(0);
+        Platform.runLater(() ->
+                listCustomers.getSelectionModel().clearAndSelect(0));
     }
 
     @Given("I enter product information")

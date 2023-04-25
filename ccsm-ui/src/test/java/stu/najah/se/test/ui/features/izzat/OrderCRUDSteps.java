@@ -3,6 +3,7 @@ package stu.najah.se.test.ui.features.izzat;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import javafx.application.Platform;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableView;
 import org.testfx.framework.junit5.ApplicationTest;
@@ -41,12 +42,14 @@ public class OrderCRUDSteps extends ApplicationTest {
 
     @And("I select a customer from the customer box")
     public void iSelectACustomerFromTheCustomerBox() {
-        comboBoxCustomer.getSelectionModel().clearAndSelect(0);
+        Platform.runLater(() ->
+                comboBoxCustomer.getSelectionModel().clearAndSelect(0));
     }
 
     @And("I select an order from the order list")
     public void iSelectAnOrderFromTheOrderList() {
-        tableOrders.getSelectionModel().clearAndSelect(0);
+        Platform.runLater(() ->
+                tableOrders.getSelectionModel().clearAndSelect(0));
     }
 
     @Given("I enter order product information")
@@ -62,7 +65,8 @@ public class OrderCRUDSteps extends ApplicationTest {
 
     @And("I select a product from the product box")
     public void iSelectAProductFromTheProductBox() {
-        comboBoxProduct.getSelectionModel().clearAndSelect(0);
+        Platform.runLater(() ->
+                comboBoxProduct.getSelectionModel().clearAndSelect(0));
     }
 
     @And("I click add order product button")
