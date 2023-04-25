@@ -1,36 +1,82 @@
 package stu.najah.se.test.ui.features.aya;
 
-public class LogoutFeature {
-    private boolean isLoggedIn = false; // assume user is initially not logged in
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import javafx.scene.Node;
+import org.testfx.framework.junit5.ApplicationTest;
+import stu.najah.se.ui.SceneManager;
 
+import static org.junit.Assert.*;
 
-    public void login(String username, String password) {
-
-        isLoggedIn = true;
+public class LogoutFeature extends ApplicationTest {
+    @Given("that the user is logged in")
+    public void thatTheUserIsLoggedIn() {
+        // Assuming user is already logged in
+        assertFalse(SceneManager.getInstance().isLoggedIn());
+        clickOn("#buttonLogin");
+        iEnterCorrectUsernameAndCorrectPassword();
+        iClickOnTheLoginButton();
+        assertTrue(SceneManager.getInstance().isLoggedIn());
     }
 
-    // method to log out the user
-    public void logout() {
-        if (isLoggedIn) {
-            // perform logout cleanup here
-            isLoggedIn = false;
-            System.out.println("You have successfully logged out.");
-        } else {
-            System.out.println("You are not currently logged in.");
+    private void iClickOnTheLoginButton() {
+    }
+
+    private void iEnterCorrectUsernameAndCorrectPassword() {
+    }
+
+    @Given("that the user is not logged in")
+    public void thatTheUserIsNotLoggedIn() {
+        // Assuming user is already logged out
+        assertFalse(SceneManager.getInstance().isLoggedIn());
+    }
+
+    @Given("that the user is logged in but the session has timed out")
+    public void thatTheUserIsLoggedInButTheSessionHasTimedOut() {
+        // Assuming user is already logged in
+        assertFalse(SceneManager.getInstance().isLoggedIn());
+        clickOn("#buttonLogin");
+        iEnterCorrectUsernameAndCorrectPassword();
+        iClickOnTheLoginButton();
+        assertTrue(SceneManager.getInstance().isLoggedIn());
+
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException ignored) {
         }
     }
 
-    // main method to test the logout feature
-    public static void main(String[] args) {
-        LogoutFeature logoutFeature = new LogoutFeature();
-
-
-        logoutFeature.isLoggedIn = true;
-
-
-        logoutFeature.logout();
-
-
-        logoutFeature.logout();
+    @When("the user clicks on the logout button")
+    public void theUserClicksOnTheLogoutButton() {
+        clickOn("#buttonLogout");
     }
+
+    @Then("the user session is terminated")
+    public void theUserSessionIsTerminated() {
+        assertFalse(SceneManager.getInstance().isLoggedIn());
+    }
+
+    @Then("the user is redirected to the login screen")
+    public void theUserIsRedirectedToTheLoginScreen() {
+        assertNull(lookup("#buttonLogout").query());
+        assertNotNull(lookup("#buttonLogin").query());
+    }
+
+    @Then("an error message indicating the user is not logged in is prompted")
+    public void anErrorMessageIndicatingTheUserIsNotLoggedInIsPrompted() {
+        Node errorAlert = lookup(".alert").query();
+        assertNotNull(errorAlert);
+        assertTrue(errorAlert.isVisible());
+        clickOn("OK");
+    }
+
+    @Then("an error message indicating the session has timed out is prompted")
+    public void anErrorMessageIndicatingTheSessionHasTimedOutIsPrompted() {
+        Node errorAlert = lookup(".alert").query();
+        assertNotNull(errorAlert);
+        assertTrue(errorAlert.isVisible());
+        clickOn("OK");
+    }
+
 }
