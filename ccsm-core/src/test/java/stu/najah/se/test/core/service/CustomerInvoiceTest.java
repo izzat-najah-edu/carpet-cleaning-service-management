@@ -12,7 +12,7 @@ public class CustomerInvoiceTest {
 
     @Test
     public void testPrintInvoice() {
-        String input = "Sara\n123 Main St\n456 Second St\nshirt\ndress\npants\ndone\n50.00";
+        String input = "Aya\nNablus\nAsira Street\nCarpet\nRug\nWindow\ndone\n50.00";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
@@ -23,15 +23,15 @@ public class CustomerInvoiceTest {
         String expectedOutput = "=================================\n" +
                 "CUSTOMER INFORMATION\n" +
                 "=================================\n" +
-                "Customer Name: Sara\n" +
-                "Customer Address: 123 Main St\n" +
-                "Delivery Address: 456 Second St\n" +
+                "Customer Name: Aya\n" +
+                "Customer Address: Nablus\n" +
+                "Delivery Address: Asira Street\n" +
                 "=================================\n" +
                 "ITEMS TO CLEAN\n" +
                 "=================================\n" +
-                "- shirt\n" +
-                "- dress\n" +
-                "- pants\n" +
+                "- Carpet\n" +
+                "- Rug\n" +
+                "- Window\n" +
                 "=================================\n" +
                 "TOTAL PRICE\n" +
                 "=================================\n" +
