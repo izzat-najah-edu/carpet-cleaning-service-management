@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order product crud test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order product entity bug fix">
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/OrdersController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +58,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
@@ -268,10 +269,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SceneManager" />
         <item itemvalue="JUnit.IzzatFeaturesTest" />
         <item itemvalue="Cucumber Java.Feature: OrderCRUD" />
         <item itemvalue="Cucumber Java.Feature: ProductCRUD" />
-        <item itemvalue="Application.SceneManager" />
         <item itemvalue="Cucumber Java.Feature: CustomerCRUD" />
       </list>
     </recent_temporary>
@@ -399,8 +400,22 @@
       <workItem from="1682347478847" duration="17642000" />
       <workItem from="1682434737119" duration="6619000" />
       <workItem from="1682441378099" duration="38000" />
-      <workItem from="1682443794983" duration="2151000" />
-      <workItem from="1682451950744" duration="1143000" />
+      <workItem from="1682443794983" duration="3203000" />
+      <workItem from="1682452256625" duration="322000" />
+    </task>
+    <task id="LOCAL-00130" summary="order product service created">
+      <created>1681838370301</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1681838370301</updated>
+    </task>
+    <task id="LOCAL-00131" summary="order product service created">
+      <created>1681839617102</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1681839617102</updated>
     </task>
     <task id="LOCAL-00132" summary="order product service created">
       <created>1681841460200</created>
@@ -717,35 +732,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682445907405</updated>
     </task>
-    <task id="LOCAL-00177" summary="order product crud test">
-      <created>1682452027436</created>
+    <task id="LOCAL-00177" summary="javafx thread fix">
+      <created>1682446163385</created>
       <option name="number" value="00177" />
       <option name="presentableId" value="LOCAL-00177" />
       <option name="project" value="LOCAL" />
-      <updated>1682452027436</updated>
+      <updated>1682446163385</updated>
     </task>
-    <task id="LOCAL-00178" summary="order product crud test">
-      <created>1682452248267</created>
+    <task id="LOCAL-00178" summary="order product entity bug fix">
+      <created>1682452430157</created>
       <option name="number" value="00178" />
       <option name="presentableId" value="LOCAL-00178" />
       <option name="project" value="LOCAL" />
-      <updated>1682452248267</updated>
+      <updated>1682452430157</updated>
     </task>
-    <task id="LOCAL-00179" summary="order product crud test">
-      <created>1682452412043</created>
-      <option name="number" value="00179" />
-      <option name="presentableId" value="LOCAL-00179" />
-      <option name="project" value="LOCAL" />
-      <updated>1682452412043</updated>
-    </task>
-    <task id="LOCAL-00180" summary="order product crud test">
-      <created>1682452874646</created>
-      <option name="number" value="00180" />
-      <option name="presentableId" value="LOCAL-00180" />
-      <option name="project" value="LOCAL" />
-      <updated>1682452874646</updated>
-    </task>
-    <option name="localTasksCounter" value="181" />
+    <option name="localTasksCounter" value="179" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -781,8 +782,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="order status label fix" />
-    <MESSAGE value="bug fix" />
     <MESSAGE value="readme changes" />
     <MESSAGE value="customer email added" />
     <MESSAGE value="order view removed" />
@@ -806,7 +805,9 @@
     <MESSAGE value="grammar fix" />
     <MESSAGE value="new order product constructor" />
     <MESSAGE value="order product crud test" />
-    <option name="LAST_COMMIT_MESSAGE" value="order product crud test" />
+    <MESSAGE value="javafx thread fix" />
+    <MESSAGE value="order product entity bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="order product entity bug fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
