@@ -13,6 +13,7 @@ import stu.najah.se.core.entity.ProductEntity;
 import stu.najah.se.core.service.CustomerService;
 import stu.najah.se.core.service.ProductService;
 import stu.najah.se.ui.Controller;
+import stu.najah.se.ui.Prompter;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -106,23 +107,38 @@ public class ProductsController
 
     @FXML
     private void createProduct() {
-        productService.createAndSelectProduct(new ProductEntity(
-                textFieldDescription.getText()
-        ));
-        refreshTable();
+        try {
+            productService.createAndSelectProduct(new ProductEntity(
+                    textFieldDescription.getText()
+            ));
+        } catch (IllegalStateException e) {
+            Prompter.getInstance().error(e);
+        } finally {
+            refreshTable();
+        }
     }
 
     @FXML
     private void updateProduct() {
-        productService.updateProduct(new ProductEntity(
-                textFieldDescription.getText()
-        ));
-        refreshTable();
+        try {
+            productService.updateProduct(new ProductEntity(
+                    textFieldDescription.getText()
+            ));
+        } catch (IllegalStateException e) {
+            Prompter.getInstance().error(e);
+        } finally {
+            refreshTable();
+        }
     }
 
     @FXML
     private void deleteProduct() {
-        productService.deleteProduct();
-        refreshTable();
+        try {
+            productService.deleteProduct();
+        } catch (IllegalStateException e) {
+            Prompter.getInstance().error(e);
+        } finally {
+            refreshTable();
+        }
     }
 }

@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="scenario change">
-      <change afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/CommonSteps.java" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="customer crud test fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/ProductsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/customers.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/products.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/products.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/CustomerCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/CustomerCRUDSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/NavigationSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/CustomerCRUD.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/CustomerCRUD.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/ProductCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/ProductCRUDSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/ProductCRUD.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/ProductCRUD.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,13 +164,34 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IzzatFeaturesTest">
+  <component name="RunManager" selected="Cucumber Java.Feature: CustomerCRUD">
     <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.SceneManager" />
       <module name="ccsm-ui" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="stu.najah.se.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: CustomerCRUD" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/CustomerCRUD.feature" />
+      <option name="GLUE" value="stu.najah.se.test.ui.features.izzat" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="ccsm-ui" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <shortenClasspath name="NONE" />
+      <option name="SUGGESTED_NAME" value="Feature: CustomerCRUD" />
+      <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -233,12 +254,14 @@
     </configuration>
     <list>
       <item itemvalue="Application.SceneManager" />
+      <item itemvalue="Cucumber Java.Feature: CustomerCRUD" />
       <item itemvalue="Cucumber Java.Feature: Login" />
       <item itemvalue="JUnit.service in ccsm-core" />
       <item itemvalue="JUnit.IzzatFeaturesTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: CustomerCRUD" />
         <item itemvalue="JUnit.IzzatFeaturesTest" />
         <item itemvalue="Application.SceneManager" />
         <item itemvalue="Cucumber Java.Feature: Login" />
@@ -367,14 +390,7 @@
       <workItem from="1682336468295" duration="14000" />
       <workItem from="1682339171133" duration="951000" />
       <workItem from="1682347478847" duration="17642000" />
-      <workItem from="1682434737119" duration="4061000" />
-    </task>
-    <task id="LOCAL-00120" summary="order table change">
-      <created>1681741463900</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1681741463900</updated>
+      <workItem from="1682434737119" duration="6178000" />
     </task>
     <task id="LOCAL-00121" summary="order table change">
       <created>1681741488954</created>
@@ -712,7 +728,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682435601618</updated>
     </task>
-    <option name="localTasksCounter" value="169" />
+    <task id="LOCAL-00169" summary="customer crud test fix">
+      <created>1682439057707</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1682439057707</updated>
+    </task>
+    <option name="localTasksCounter" value="170" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -748,7 +771,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="order table change" />
     <MESSAGE value="order service created" />
     <MESSAGE value="order dao new method" />
     <MESSAGE value="order product service created" />
@@ -773,7 +795,8 @@
     <MESSAGE value="customer crud feature fix" />
     <MESSAGE value="steps definitions fix" />
     <MESSAGE value="scenario change" />
-    <option name="LAST_COMMIT_MESSAGE" value="scenario change" />
+    <MESSAGE value="customer crud test fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="customer crud test fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
