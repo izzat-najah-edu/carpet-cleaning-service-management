@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="customer crud test fix">
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="new order product constructor">
+      <change afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/OrderCRUDSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/control/ProductsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/customers.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/products.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/products.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/CustomerCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/CustomerCRUDSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/ProductCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/ProductCRUDSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/ProductCRUD.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/ProductCRUD.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/orders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/orders.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/OrderCRUD.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/OrderCRUD.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +93,7 @@
     &quot;introduce.parameter.lambda&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19&quot;,
     &quot;last_directory_selection&quot;: &quot;F:/Work/Projects/Java/CarpetCleaningServiceManagement/src/main/java/stu/najah/se&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Work/Projects/Java/CarpetCleaningServiceManagement/assets/diagrams&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Work/Projects/Java/CarpetCleaningServiceManagement/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -164,7 +161,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: CustomerCRUD">
+  <component name="RunManager" selected="Cucumber Java.Feature: OrderCRUD">
     <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.SceneManager" />
       <module name="ccsm-ui" />
@@ -219,6 +216,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Feature: OrderCRUD" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/OrderCRUD.feature" />
+      <option name="GLUE" value="stu.najah.se.test.ui.features.izzat" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="ccsm-ui" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <shortenClasspath name="NONE" />
+      <option name="SUGGESTED_NAME" value="Feature: OrderCRUD" />
+      <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
       <shortenClasspath name="NONE" />
       <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
@@ -244,28 +262,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="service in ccsm-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-core" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.SceneManager" />
+      <item itemvalue="Cucumber Java.Feature: OrderCRUD" />
       <item itemvalue="Cucumber Java.Feature: CustomerCRUD" />
       <item itemvalue="Cucumber Java.Feature: Login" />
-      <item itemvalue="JUnit.service in ccsm-core" />
       <item itemvalue="JUnit.IzzatFeaturesTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: CustomerCRUD" />
-        <item itemvalue="JUnit.IzzatFeaturesTest" />
+        <item itemvalue="Cucumber Java.Feature: OrderCRUD" />
         <item itemvalue="Application.SceneManager" />
+        <item itemvalue="JUnit.IzzatFeaturesTest" />
+        <item itemvalue="Cucumber Java.Feature: CustomerCRUD" />
         <item itemvalue="Cucumber Java.Feature: Login" />
-        <item itemvalue="JUnit.service in ccsm-core" />
       </list>
     </recent_temporary>
   </component>
@@ -390,49 +400,9 @@
       <workItem from="1682336468295" duration="14000" />
       <workItem from="1682339171133" duration="951000" />
       <workItem from="1682347478847" duration="17642000" />
-      <workItem from="1682434737119" duration="6178000" />
-    </task>
-    <task id="LOCAL-00121" summary="order table change">
-      <created>1681741488954</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1681741488954</updated>
-    </task>
-    <task id="LOCAL-00122" summary="order table change">
-      <created>1681741517205</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1681741517205</updated>
-    </task>
-    <task id="LOCAL-00123" summary="order service created">
-      <created>1681741528233</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1681741528233</updated>
-    </task>
-    <task id="LOCAL-00124" summary="order dao new method">
-      <created>1681743826590</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1681743826590</updated>
-    </task>
-    <task id="LOCAL-00125" summary="order dao new method">
-      <created>1681743832142</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1681743832142</updated>
-    </task>
-    <task id="LOCAL-00126" summary="order product service created">
-      <created>1681832553521</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1681832553521</updated>
+      <workItem from="1682434737119" duration="6619000" />
+      <workItem from="1682441378099" duration="38000" />
+      <workItem from="1682443794983" duration="1824000" />
     </task>
     <task id="LOCAL-00127" summary="order product service created">
       <created>1681834046703</created>
@@ -735,7 +705,49 @@
       <option name="project" value="LOCAL" />
       <updated>1682439057707</updated>
     </task>
-    <option name="localTasksCounter" value="170" />
+    <task id="LOCAL-00170" summary="test refactoring">
+      <created>1682440974564</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1682440974564</updated>
+    </task>
+    <task id="LOCAL-00171" summary="product crud test fix">
+      <created>1682440995818</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1682440995818</updated>
+    </task>
+    <task id="LOCAL-00172" summary="code fix">
+      <created>1682441003430</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1682441003430</updated>
+    </task>
+    <task id="LOCAL-00173" summary="grammar fix">
+      <created>1682441173993</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1682441173993</updated>
+    </task>
+    <task id="LOCAL-00174" summary="new order product constructor">
+      <created>1682444413032</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1682444413032</updated>
+    </task>
+    <task id="LOCAL-00175" summary="new order product constructor">
+      <created>1682444467372</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1682444467372</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -771,11 +783,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="order service created" />
-    <MESSAGE value="order dao new method" />
-    <MESSAGE value="order product service created" />
-    <MESSAGE value="order products controller reimplementation" />
-    <MESSAGE value="test change" />
     <MESSAGE value="added order service methods" />
     <MESSAGE value="order status label fix" />
     <MESSAGE value="bug fix" />
@@ -796,7 +803,12 @@
     <MESSAGE value="steps definitions fix" />
     <MESSAGE value="scenario change" />
     <MESSAGE value="customer crud test fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="customer crud test fix" />
+    <MESSAGE value="test refactoring" />
+    <MESSAGE value="product crud test fix" />
+    <MESSAGE value="code fix" />
+    <MESSAGE value="grammar fix" />
+    <MESSAGE value="new order product constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="new order product constructor" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

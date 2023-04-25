@@ -10,6 +10,7 @@ Feature: Order CRUD Operations
 
   Scenario: Adding Product to an Order Successfully
     Given I enter order product information
+    And I select a product from the product box
     And I click add order product button
     Then a new product is added to the order product list
 
