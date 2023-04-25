@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order entity bug fix">
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="module dependency fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/OrderCRUDSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/OrderCRUDSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,8 +252,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.Feature: OrderCRUD" />
-        <item itemvalue="JUnit.IzzatFeaturesTest" />
         <item itemvalue="Application.SceneManager" />
+        <item itemvalue="JUnit.IzzatFeaturesTest" />
         <item itemvalue="JUnit.service in ccsm-core" />
         <item itemvalue="JUnit.CustomerInvoiceTest" />
       </list>
@@ -384,13 +384,6 @@
       <workItem from="1682441378099" duration="38000" />
       <workItem from="1682443794983" duration="3203000" />
       <workItem from="1682452256625" duration="322000" />
-    </task>
-    <task id="LOCAL-00136" summary="test change">
-      <created>1681846597974</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1681846597974</updated>
     </task>
     <task id="LOCAL-00137" summary="test change">
       <created>1681847819732</created>
@@ -728,7 +721,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682457392511</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="module dependency fix">
+      <created>1682457598601</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1682457598601</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -764,7 +764,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="testfx fix" />
     <MESSAGE value="login screen fix" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="readme fix" />
@@ -789,7 +788,8 @@
     <MESSAGE value="create &amp; delete order buttons added" />
     <MESSAGE value="create &amp; delete order action methods" />
     <MESSAGE value="order entity bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="order entity bug fix" />
+    <MESSAGE value="module dependency fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="module dependency fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

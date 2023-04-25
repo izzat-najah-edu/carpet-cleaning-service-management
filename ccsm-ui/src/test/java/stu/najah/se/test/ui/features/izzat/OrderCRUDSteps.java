@@ -24,8 +24,6 @@ public class OrderCRUDSteps extends ApplicationTest {
             "cleaning", (byte) 0, 50
     );
 
-    private LocalDateTime now;
-
     private final TableView<OrderProductEntity> tableOrderProducts
             = lookup("#tableOrderProducts").queryTableView();
 
@@ -62,7 +60,7 @@ public class OrderCRUDSteps extends ApplicationTest {
 
     @Then("a new order is added to the order list")
     public void aNewOrderIsAddedToTheOrderList() {
-        now = LocalDateTime.now().withSecond(0).withNano(0);
+        var now = LocalDateTime.now().withSecond(0).withNano(0);
         var matchers = tableOrders.getItems().stream().filter(orderEntity -> {
             // created within the last minute
             var orderCreatedAt = orderEntity.getCreatedAt().toLocalDateTime().withSecond(0).withNano(0);
@@ -73,6 +71,7 @@ public class OrderCRUDSteps extends ApplicationTest {
 
     @Given("I select the new order from the order list")
     public void iSelectTheNewOrderFromTheOrderList() {
+        var now = LocalDateTime.now().withSecond(0).withNano(0);
         for (int i = 0; i < tableOrders.getItems().size(); i++) {
             var orderCreatedAt = tableOrders.getItems().get(i)
                     .getCreatedAt().toLocalDateTime().withSecond(0).withNano(0);
@@ -91,6 +90,7 @@ public class OrderCRUDSteps extends ApplicationTest {
 
     @Then("the selected order is deleted")
     public void theSelectedOrderIsDeleted() {
+        var now = LocalDateTime.now().withSecond(0).withNano(0);
         var matchers = tableOrders.getItems().stream().filter(orderEntity -> {
             var orderCreatedAt = orderEntity.getCreatedAt().toLocalDateTime().withSecond(0).withNano(0);
             return orderCreatedAt.equals(now);
