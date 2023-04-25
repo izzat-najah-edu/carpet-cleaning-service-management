@@ -37,8 +37,7 @@ public class OrderProductEntity {
     public OrderProductEntity() {
     }
 
-    public OrderProductEntity(int productId, String specialTreatment, Byte finished, Integer price) {
-        setProductId(productId);
+    public OrderProductEntity(String specialTreatment, Byte finished, Integer price) {
         setSpecialTreatment(specialTreatment);
         setFinished(finished);
         setPrice(price);
