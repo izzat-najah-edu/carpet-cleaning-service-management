@@ -78,7 +78,7 @@ public class GenerateStatistics {
     }
 }
 
-class Invoice {
+public class Invoice {
 
     private int deliveredItems;
     private double total;
