@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order product crud test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/DiscountCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/DiscountCalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/GenerateStatisticsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/GenerateStatisticsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +158,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DiscountCalculatorTest">
+  <component name="RunManager" selected="JUnit.service in ccsm-core">
     <configuration name="DiscountCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.core.service.aya.DiscountCalculator" />
       <module name="ccsm-core" />
@@ -245,9 +245,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.service in ccsm-core" />
         <item itemvalue="JUnit.DiscountCalculatorTest" />
         <item itemvalue="Application.DiscountCalculator" />
-        <item itemvalue="JUnit.service in ccsm-core" />
         <item itemvalue="JUnit.GenerateReportsTest" />
         <item itemvalue="JUnit.IzzatFeaturesTest" />
       </list>
@@ -379,6 +379,7 @@
       <workItem from="1682443794983" duration="3203000" />
       <workItem from="1682452256625" duration="322000" />
       <workItem from="1682459877712" duration="12597000" />
+      <workItem from="1682498696852" duration="319000" />
     </task>
     <task id="LOCAL-00134" summary="refactoring">
       <created>1681842994052</created>
