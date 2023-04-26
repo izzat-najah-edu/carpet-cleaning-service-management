@@ -43,7 +43,7 @@ public class CustomerInvoiceTest {
     private void assertarrarrayEquals(String expectedOutput, String output) {
     }
 
-    private static TestHelper.SystemOut systemOut() {
+    static TestHelper.SystemOut systemOut() {
         return new TestHelper.SystemOut();
     }
 

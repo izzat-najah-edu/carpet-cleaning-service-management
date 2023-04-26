@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order product crud test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/GenerateStatisticsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/GenerateStatisticsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/CustomerInvoiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/CustomerInvoiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/DiscountCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/DiscountCalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,13 +159,26 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.service in ccsm-core">
-    <configuration name="DiscountCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.core.service.aya.DiscountCalculator" />
-      <module name="ccsm-core" />
+  <component name="RunManager" selected="JUnit.DiscountCalculatorTest">
+    <configuration name="CustomerInvoiceFeature" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.ui.features.aya.CustomerInvoiceFeature" />
+      <module name="ccsm-ui" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.core.service.aya.*" />
+          <option name="PATTERN" value="stu.najah.se.test.ui.features.aya.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Discount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.ui.features.aya.Discount" />
+      <module name="ccsm-ui" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stu.najah.se.test.ui.features.aya.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -176,6 +190,21 @@
       <shortenClasspath name="NONE" />
       <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerInvoiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccsm-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stu.najah.se.test.core.service.aya.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service.aya" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.aya.CustomerInvoiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -206,50 +235,24 @@
       <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service.aya" />
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.aya.GenerateReportsTest" />
       <option name="TEST_OBJECT" value="class" />
-      <dir value="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IzzatFeaturesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-ui" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.ui.features.izzat.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.ui.features.izzat" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.ui.features.izzat.IzzatFeaturesTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="service in ccsm-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-core" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DiscountCalculator" />
+      <item itemvalue="Application.CustomerInvoiceFeature" />
+      <item itemvalue="Application.Discount" />
+      <item itemvalue="JUnit.CustomerInvoiceTest" />
       <item itemvalue="JUnit.DiscountCalculatorTest" />
       <item itemvalue="JUnit.GenerateReportsTest" />
-      <item itemvalue="JUnit.service in ccsm-core" />
-      <item itemvalue="JUnit.IzzatFeaturesTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.service in ccsm-core" />
         <item itemvalue="JUnit.DiscountCalculatorTest" />
-        <item itemvalue="Application.DiscountCalculator" />
         <item itemvalue="JUnit.GenerateReportsTest" />
-        <item itemvalue="JUnit.IzzatFeaturesTest" />
+        <item itemvalue="JUnit.CustomerInvoiceTest" />
+        <item itemvalue="Application.CustomerInvoiceFeature" />
+        <item itemvalue="Application.Discount" />
       </list>
     </recent_temporary>
   </component>
@@ -380,6 +383,7 @@
       <workItem from="1682452256625" duration="322000" />
       <workItem from="1682459877712" duration="12597000" />
       <workItem from="1682498696852" duration="319000" />
+      <workItem from="1682499174254" duration="6250000" />
     </task>
     <task id="LOCAL-00134" summary="refactoring">
       <created>1681842994052</created>

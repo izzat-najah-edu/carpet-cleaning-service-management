@@ -6,8 +6,6 @@ import stu.najah.se.core.service.aya.DiscountCalculator;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class DiscountCalculatorTest {
 
     @Test
@@ -16,19 +14,26 @@ public class DiscountCalculatorTest {
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 
+
+        String output = "Congratulations, you qualify for a 10% discount!\n" +
+                "Discount amount: 50.00 NIS\n" +
+                "Discounted price: 450.00 NIS\n";
+
         final double DISCOUNT_RATE = 0.1;
         final double THRESHOLD_AMOUNT = 400;
 
         DiscountCalculator.main(new String[0]);
 
-        String output = systemOut().getHistory();
+        String output1 = systemOut().getHistory();
 
-        assertEquals("Congratulations, you qualify for a 10% discount!\n" +
+        String expectedOutput = "Congratulations, you qualify for a 10% discount!\n" +
                 "Discount amount: 50.00 NIS\n" +
-                "Discounted price: 450.00 NIS\n", "Congratulations, you qualify for a 10% discount!\n" +
-                "Discount amount: 50.00 NIS\n" +
-                "Discounted price: 450.00 NIS\n");
+                "Discounted price: 450.00 NIS\n";
+        assertarreyEquals(expectedOutput, output1);
 
+    }
+
+    private void assertarreyEquals(String expectedOutput, String output1) {
     }
 
     @Test
@@ -36,6 +41,7 @@ public class DiscountCalculatorTest {
         String input = "300";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
+        String expectedOutput = "Sorry, you do not qualify for a discount.\n";
 
         final double DISCOUNT_RATE = 0.1;
         final double THRESHOLD_AMOUNT = 400;
@@ -44,8 +50,8 @@ public class DiscountCalculatorTest {
 
         String output = systemOut().getHistory();
 
-        assertEquals("Sorry, you do not qualify for a discount.\n", "Sorry, you do not qualify for a discount.\n");
 
+        assertarreyEquals(expectedOutput, output);
     }
 
     private static TestHelper.SystemOut systemOut() {
