@@ -2,17 +2,18 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<BorderPane fx:id="mainPane" prefHeight="780.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.ui.control.MainController">
+<BorderPane fx:id="mainPane" prefHeight="780.0" prefWidth="1000.0" stylesheets="@../style/main.css"
+            xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="stu.najah.se.ui.control.MainController">
     <top>
         <AnchorPane fx:id="navbarPane" prefHeight="50.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
             <children>
-                <Button fx:id="buttonExit" layoutX="951.0" layoutY="13.0" mnemonicParsing="false" onAction="#exit"
-                        prefHeight="25.0" prefWidth="35.0" styleClass="exit" text="Exit"/>
-                <Button fx:id="buttonLogout" layoutX="886.0" layoutY="13.0" mnemonicParsing="false" onAction="#logout"
-                        prefHeight="25.0" prefWidth="55.0" styleClass="logout" text="Logout"/>
-                <Button fx:id="buttonReset" layoutX="833.0" layoutY="13.0" mnemonicParsing="false" onAction="#reset"
-                        styleClass="reset" text="Reset"/>
+                <Button fx:id="buttonExit" layoutX="919.0" layoutY="8.0" mnemonicParsing="false" onAction="#exit"
+                        prefHeight="35.0" prefWidth="72.0" styleClass="exit" text="Exit"/>
+                <Button fx:id="buttonLogout" layoutX="829.0" layoutY="8.0" mnemonicParsing="false" onAction="#logout"
+                        prefHeight="34.0" prefWidth="83.0" styleClass="logout" text="Logout"/>
+                <Button fx:id="buttonReset" layoutX="742.0" layoutY="8.0" mnemonicParsing="false" onAction="#reset"
+                        prefHeight="34.0" prefWidth="79.0" styleClass="reset" text="Reset"/>
             </children>
         </AnchorPane>
     </top>

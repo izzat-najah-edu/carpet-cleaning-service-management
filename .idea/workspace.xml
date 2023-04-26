@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order product crud test">
-      <change afterPath="$PROJECT_DIR$/assets/sql/VIEWS.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="different views added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/SceneManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/customers.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/orders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/orders.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/products.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/products.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/style/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -378,14 +383,8 @@
       <workItem from="1682498696852" duration="319000" />
       <workItem from="1682499174254" duration="6250000" />
       <workItem from="1682506134413" duration="332000" />
-      <workItem from="1682508842656" duration="2903000" />
-    </task>
-    <task id="LOCAL-00134" summary="refactoring">
-      <created>1681842994052</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1681842994052</updated>
+      <workItem from="1682508842656" duration="3351000" />
+      <workItem from="1682516228044" duration="2606000" />
     </task>
     <task id="LOCAL-00135" summary="order products controller reimplementation">
       <created>1681843514162</created>
@@ -723,7 +722,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682497366698</updated>
     </task>
-    <option name="localTasksCounter" value="183" />
+    <task id="LOCAL-00183" summary="different views added">
+      <created>1682512615874</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1682512615874</updated>
+    </task>
+    <option name="localTasksCounter" value="184" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -759,7 +765,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="readme changes" />
     <MESSAGE value="customer email added" />
     <MESSAGE value="order view removed" />
     <MESSAGE value="dependency fix" />
@@ -784,7 +789,8 @@
     <MESSAGE value="javafx thread fix" />
     <MESSAGE value="order product entity bug fix" />
     <MESSAGE value="order product crud test" />
-    <option name="LAST_COMMIT_MESSAGE" value="order product crud test" />
+    <MESSAGE value="different views added" />
+    <option name="LAST_COMMIT_MESSAGE" value="different views added" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

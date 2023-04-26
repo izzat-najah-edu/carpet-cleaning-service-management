@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.*?>
-<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19"
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/19"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.ui.control.OrdersController">
     <children>
         <TableView fx:id="tableOrders" layoutX="24.0" layoutY="121.0" prefHeight="400.0" prefWidth="246.0">
@@ -54,10 +54,10 @@
                 <Font size="31.0"/>
             </font>
         </Label>
-        <Button layoutX="139.0" layoutY="39.0" mnemonicParsing="false" onAction="#refreshOrdersTable" text="Refresh"/>
-        <Button layoutX="546.0" layoutY="39.0" mnemonicParsing="false" onAction="#refreshOrderProductsTable"
+        <Button layoutX="89.0" layoutY="35.0" mnemonicParsing="false" onAction="#refreshOrdersTable" text="Refresh"/>
+        <Button layoutX="423.0" layoutY="35.0" mnemonicParsing="false" onAction="#refreshOrderProductsTable"
                 text="Refresh"/>
-        <Button layoutX="398.0" layoutY="381.0" mnemonicParsing="false" onAction="#clearSelectedOrderProduct"
+        <Button layoutX="370.0" layoutY="376.0" mnemonicParsing="false" onAction="#clearSelectedOrderProduct"
                 text="Clear"/>
         <CheckBox fx:id="checkBoxFinished" layoutX="660.0" layoutY="477.0" mnemonicParsing="false" prefHeight="25.0"
                   prefWidth="85.0" text="Finished"/>
@@ -86,9 +86,9 @@
         </Label>
         <ComboBox fx:id="comboBoxCustomer" layoutX="24.0" layoutY="82.0" prefHeight="25.0" prefWidth="246.0"
                   promptText="Select Customer"/>
-        <Button fx:id="buttonCreateOrder" layoutX="38.0" layoutY="535.0" mnemonicParsing="false" onAction="#createOrder"
-                prefHeight="25.0" prefWidth="101.0" text="Create Order"/>
-        <Button fx:id="buttonDeleteOrder" layoutX="156.0" layoutY="535.0" mnemonicParsing="false"
-                onAction="#deleteOrder" prefHeight="25.0" prefWidth="101.0" text="Delete Order"/>
+        <Button fx:id="buttonCreateOrder" layoutX="24.0" layoutY="530.0" mnemonicParsing="false" onAction="#createOrder"
+                prefHeight="34.0" prefWidth="117.0" text="Create Order"/>
+        <Button fx:id="buttonDeleteOrder" layoutX="148.0" layoutY="530.0" mnemonicParsing="false"
+                onAction="#deleteOrder" prefHeight="30.0" prefWidth="117.0" text="Delete Order"/>
     </children>
 </AnchorPane>
