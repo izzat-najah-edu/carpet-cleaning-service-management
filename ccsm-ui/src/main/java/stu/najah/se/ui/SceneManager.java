@@ -109,13 +109,13 @@ public class SceneManager extends Application
     }
 
     private void buildLoginScene() throws IOException {
-        var loader = new FXMLLoader(getClass().getResource("fxml/login.fxml"));
+        var loader = new FXMLLoader(getClass().getResource("login.fxml"));
         loginScene = new Scene(loader.load());
         loginController = loader.getController();
     }
 
     private void buildMainScene() throws IOException {
-        var loader = new FXMLLoader(getClass().getResource("fxml/main.fxml"));
+        var loader = new FXMLLoader(getClass().getResource("main.fxml"));
         mainScene = new Scene(loader.load());
         mainController = loader.getController();
     }

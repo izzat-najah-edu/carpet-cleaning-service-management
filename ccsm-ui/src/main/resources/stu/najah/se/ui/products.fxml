@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-<AnchorPane prefHeight="660.0" prefWidth="971.0" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/19"
+<AnchorPane prefHeight="660.0" prefWidth="971.0" stylesheets="@styles/main.css" xmlns="http://javafx.com/javafx/19"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu.najah.se.ui.control.ProductsController">
     <children>
         <ListView fx:id="listCustomers" layoutX="31.0" layoutY="129.0" prefHeight="514.0" prefWidth="301.0"/>
