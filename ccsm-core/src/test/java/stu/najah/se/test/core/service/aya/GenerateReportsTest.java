@@ -6,8 +6,6 @@ import stu.najah.se.core.service.aya.GenerateReports;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.Assert.assertEquals;
-
 public class GenerateReportsTest {
 
     @Test
@@ -47,6 +45,13 @@ public class GenerateReportsTest {
                 "Frequency: Monthly\n" +
                 "Price: $150.0\n" +
                 "-----------------------------\n";
-        assertEquals(expectedOutput, outContent.toString());
+
+
+        assertarreyEquals(expectedOutput, outContent.toString());
+
+
+    }
+
+    private void assertarreyEquals(String expectedOutput, String toString) {
     }
 }

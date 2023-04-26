@@ -36,7 +36,7 @@ public class GenerateReports {
 
     // Generate job report
     private static void generateJobReport() {
-        System.out.println("JOB REPORT");
+       System.out.println("JOB REPORT");
         System.out.println("=============================");
         for (Job job : jobs) {
             System.out.println("Type: " + job.getType());

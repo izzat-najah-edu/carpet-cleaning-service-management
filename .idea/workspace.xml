@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order product crud test" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order product crud test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/aya/GenerateReports.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/aya/GenerateReports.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/CustomerInvoiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/CustomerInvoiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/DiscountCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/DiscountCalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/GenerateReportsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/GenerateReportsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/GenerateStatisticsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/GenerateStatisticsTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -190,31 +197,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: ProductCRUD" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/ProductCRUD.feature" />
-      <option name="GLUE" value="stu.najah.se.test.ui.features.izzat" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="ccsm-ui" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <shortenClasspath name="NONE" />
-      <option name="SUGGESTED_NAME" value="Feature: ProductCRUD" />
-      <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
       <shortenClasspath name="NONE" />
       <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GenerateReportsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccsm-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stu.najah.se.test.core.service.aya.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service.aya" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.aya.GenerateReportsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <dir value="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -247,17 +249,17 @@
     <list>
       <item itemvalue="Application.SceneManager" />
       <item itemvalue="Cucumber Java.Feature: OrderCRUD" />
-      <item itemvalue="Cucumber Java.Feature: ProductCRUD" />
+      <item itemvalue="JUnit.GenerateReportsTest" />
       <item itemvalue="JUnit.service in ccsm-core" />
       <item itemvalue="JUnit.IzzatFeaturesTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.service in ccsm-core" />
+        <item itemvalue="JUnit.GenerateReportsTest" />
         <item itemvalue="JUnit.IzzatFeaturesTest" />
         <item itemvalue="Application.SceneManager" />
         <item itemvalue="Cucumber Java.Feature: OrderCRUD" />
-        <item itemvalue="Cucumber Java.Feature: ProductCRUD" />
       </list>
     </recent_temporary>
   </component>
@@ -386,14 +388,7 @@
       <workItem from="1682441378099" duration="38000" />
       <workItem from="1682443794983" duration="3203000" />
       <workItem from="1682452256625" duration="322000" />
-      <workItem from="1682459877712" duration="3882000" />
-    </task>
-    <task id="LOCAL-00132" summary="order product service created">
-      <created>1681841460200</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1681841460200</updated>
+      <workItem from="1682459877712" duration="11511000" />
     </task>
     <task id="LOCAL-00133" summary="order product service created">
       <created>1681841526440</created>
@@ -731,7 +726,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682463700623</updated>
     </task>
-    <option name="localTasksCounter" value="181" />
+    <task id="LOCAL-00181" summary="order product crud test">
+      <created>1682463809020</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1682463809021</updated>
+    </task>
+    <option name="localTasksCounter" value="182" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

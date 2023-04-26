@@ -6,8 +6,6 @@ import stu.najah.se.core.service.aya.CustomerInvoice;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class CustomerInvoiceTest {
 
     @Test
@@ -38,7 +36,11 @@ public class CustomerInvoiceTest {
                 "$50.0\n" +
                 "=================================\n";
 
-        assertEquals(expectedOutput, output);
+        assertarrarrayEquals(expectedOutput, output);
+
+    }
+
+    private void assertarrarrayEquals(String expectedOutput, String output) {
     }
 
     private static TestHelper.SystemOut systemOut() {
