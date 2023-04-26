@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="order product crud test">
+      <change afterPath="$PROJECT_DIR$/assets/sql/VIEWS.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/GenerateStatisticsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/GenerateStatisticsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +159,41 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GenerateStatisticsTest">
+  <component name="RunManager" selected="Application.SceneManager">
+    <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.SceneManager" />
+      <module name="ccsm-ui" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stu.najah.se.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: CustomerInvoice" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/aya/CustomerInvoice.feature" />
+      <option name="GLUE" value="stu.najah.se.test.ui.features.izzat" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="ccsm-ui" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <shortenClasspath name="NONE" />
+      <option name="SUGGESTED_NAME" value="Feature: CustomerInvoice" />
+      <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
       <shortenClasspath name="NONE" />
       <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
@@ -167,94 +202,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerInvoiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-core" />
+    <configuration name="VIEWS.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/assets/sql/VIEWS.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+    <configuration name="IzzatFeaturesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccsm-ui" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.core.service.aya.*" />
+          <option name="PATTERN" value="stu.najah.se.test.ui.features.izzat.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service.aya" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.aya.CustomerInvoiceTest" />
+      <option name="PACKAGE_NAME" value="stu.najah.se.test.ui.features.izzat" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.ui.features.izzat.IzzatFeaturesTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiscountCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="aya in ccsm-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccsm-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.core.service.aya.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service.aya" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.aya.DiscountCalculatorTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GenerateReportsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.core.service.aya.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service.aya" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.aya.GenerateReportsTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GenerateStatisticsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.core.service.aya.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service.aya" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.aya.GenerateStatisticsTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="stu.najah.se.test.core.service in ccsm-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.core.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.GenerateStatisticsTest" />
-      <item itemvalue="JUnit.stu.najah.se.test.core.service in ccsm-core" />
-      <item itemvalue="JUnit.CustomerInvoiceTest" />
-      <item itemvalue="JUnit.DiscountCalculatorTest" />
-      <item itemvalue="JUnit.GenerateReportsTest" />
+      <item itemvalue="Application.SceneManager" />
+      <item itemvalue="Cucumber Java.Feature: CustomerInvoice" />
+      <item itemvalue="Database Script.VIEWS.sql" />
+      <item itemvalue="JUnit.IzzatFeaturesTest" />
+      <item itemvalue="JUnit.aya in ccsm-core" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GenerateStatisticsTest" />
-        <item itemvalue="JUnit.stu.najah.se.test.core.service in ccsm-core" />
-        <item itemvalue="JUnit.GenerateReportsTest" />
-        <item itemvalue="JUnit.DiscountCalculatorTest" />
-        <item itemvalue="JUnit.CustomerInvoiceTest" />
+        <item itemvalue="Application.SceneManager" />
+        <item itemvalue="Database Script.VIEWS.sql" />
+        <item itemvalue="JUnit.IzzatFeaturesTest" />
+        <item itemvalue="Cucumber Java.Feature: CustomerInvoice" />
+        <item itemvalue="JUnit.aya in ccsm-core" />
       </list>
     </recent_temporary>
   </component>
@@ -387,6 +378,7 @@
       <workItem from="1682498696852" duration="319000" />
       <workItem from="1682499174254" duration="6250000" />
       <workItem from="1682506134413" duration="332000" />
+      <workItem from="1682508842656" duration="2903000" />
     </task>
     <task id="LOCAL-00134" summary="refactoring">
       <created>1681842994052</created>
