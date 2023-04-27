@@ -1,17 +1,14 @@
 /* General styles */
-* {
+
+body {
     -fx-font-family: "Segoe UI", "Arial", sans-serif;
 }
 
-AnchorPane, BorderPane {
-    -fx-background-color: #f4f4f4;
-}
-
-Label, TextField, ComboBox, PasswordField {
+.label, .text-field, .combo-box, .password-field {
     -fx-font-size: 14px;
 }
 
-Button {
+.button {
     -fx-background-color: #4a8af4;
     -fx-text-fill: #ffffff;
     -fx-font-size: 14px;
@@ -20,15 +17,16 @@ Button {
     -fx-padding: 8px 16px;
 }
 
-Button:hover {
+.button:hover {
     -fx-background-color: #3a6bc7;
 }
 
-Button:pressed {
+.button:pressed {
     -fx-background-color: #2c509b;
 }
 
 /* Tables */
+
 .table-view {
     -fx-background-color: #f4f4f4;
     -fx-table-cell-border-color: transparent;
@@ -60,17 +58,20 @@ Button:pressed {
 
 
 /* CheckBox */
-CheckBox {
+
+.check-box {
     -fx-font-size: 14px;
 }
 
 /* Rectangle */
-Rectangle {
+
+.rectangle {
     -fx-stroke-width: 1px;
     -fx-stroke: #d1d1d1;
 }
 
 /* Fonts */
+
 .font-size-20 {
     -fx-font-size: 20px;
 }
@@ -84,14 +85,13 @@ Rectangle {
 }
 
 /* TabPane */
-TabPane {
+
+.tab-pane {
     -fx-background-color: #f4f4f4;
-    -fx-padding: 16px;
 }
 
 .tab-pane > .tab-header-area {
     -fx-background-color: #4a8af4;
-    -fx-padding: 4px 0;
 }
 
 .tab-pane > .tab-header-area > .headers-region > .tab {
@@ -118,6 +118,7 @@ TabPane {
 }
 
 /* Navbar */
+
 #navbarPane {
     -fx-background-color: #4a8af4;
 }
@@ -138,19 +139,12 @@ TabPane {
 }
 
 /* Login Panel */
+
 #loginPane {
     -fx-background-color: #f4f4f4;
 }
 
-.username {
-    -fx-background-color: #ffffff;
-    -fx-border-color: #d1d1d1;
-    -fx-border-radius: 4px;
-    -fx-background-radius: 4px;
-    -fx-padding: 8px;
-}
-
-.password {
+.username, .password {
     -fx-background-color: #ffffff;
     -fx-border-color: #d1d1d1;
     -fx-border-radius: 4px;

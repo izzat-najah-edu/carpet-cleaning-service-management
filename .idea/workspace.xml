@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="maintainability fixes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sql/CREATE.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sql/CREATE.sql" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="bug fix">
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -380,14 +379,7 @@
       <workItem from="1682508842656" duration="3351000" />
       <workItem from="1682516228044" duration="2606000" />
       <workItem from="1682629706987" duration="369000" />
-      <workItem from="1682630340657" duration="3195000" />
-    </task>
-    <task id="LOCAL-00141" summary="order status label fix">
-      <created>1682162285390</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
-      <option name="project" value="LOCAL" />
-      <updated>1682162285390</updated>
+      <workItem from="1682630340657" duration="3846000" />
     </task>
     <task id="LOCAL-00142" summary="bug fix">
       <created>1682286655097</created>
@@ -725,7 +717,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682633145118</updated>
     </task>
-    <option name="localTasksCounter" value="190" />
+    <task id="LOCAL-00190" summary="bug fix">
+      <created>1682633692981</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1682633692981</updated>
+    </task>
+    <option name="localTasksCounter" value="191" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -784,9 +783,9 @@
     <MESSAGE value="order product crud test" />
     <MESSAGE value="different views added" />
     <MESSAGE value="sonarcloud integration" />
-    <MESSAGE value="bug fix" />
     <MESSAGE value="maintainability fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="maintainability fixes" />
+    <MESSAGE value="bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
