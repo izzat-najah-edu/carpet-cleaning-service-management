@@ -14,7 +14,7 @@ create table customer
 (
     id      int auto_increment primary key,
     name    varchar(256) unique not null,
-    phone   char(10),
+    phone   varchar(10),
     address varchar(256),
     email   varchar(256) unique
 );
@@ -40,7 +40,7 @@ create table order_product
     order_id          int,
     product_id        int,
     special_treatment varchar(256),
-    finished          boolean default (false),
+    finished          tinyint default (false),
     price             int check ( price >= 0 ),
     primary key (order_id, product_id),
     foreign key (order_id) references `order` (id),
