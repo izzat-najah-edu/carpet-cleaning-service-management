@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="bug fix">
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/styles/main.css" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="css selectors refactored">
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/CustomerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/CustomerServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/ProductServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,34 +158,13 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SceneManager">
+  <component name="RunManager" selected="JUnit.AdminServiceTest">
     <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.SceneManager" />
       <module name="ccsm-ui" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="stu.najah.se.ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Feature: CustomerInvoice" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/aya/CustomerInvoice.feature" />
-      <option name="GLUE" value="stu.najah.se.test.ui.features.izzat" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="ccsm-ui" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <shortenClasspath name="NONE" />
-      <option name="SUGGESTED_NAME" value="Feature: CustomerInvoice" />
-      <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -205,6 +185,21 @@
       <script-mode>FILE</script-mode>
       <method v="2" />
     </configuration>
+    <configuration name="AdminServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccsm-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stu.najah.se.test.core.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service" />
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.AdminServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="IzzatFeaturesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccsm-ui" />
       <extension name="coverage">
@@ -222,28 +217,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="aya in ccsm-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="stu.najah.se.test.core.service in ccsm-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccsm-core" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stu.najah.se.test.core.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.SceneManager" />
-      <item itemvalue="Cucumber Java.Feature: CustomerInvoice" />
       <item itemvalue="Database Script.VIEWS.sql" />
+      <item itemvalue="JUnit.AdminServiceTest" />
+      <item itemvalue="JUnit.stu.najah.se.test.core.service in ccsm-core" />
       <item itemvalue="JUnit.IzzatFeaturesTest" />
-      <item itemvalue="JUnit.aya in ccsm-core" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AdminServiceTest" />
+        <item itemvalue="JUnit.stu.najah.se.test.core.service in ccsm-core" />
         <item itemvalue="Application.SceneManager" />
         <item itemvalue="Database Script.VIEWS.sql" />
         <item itemvalue="JUnit.IzzatFeaturesTest" />
-        <item itemvalue="Cucumber Java.Feature: CustomerInvoice" />
-        <item itemvalue="JUnit.aya in ccsm-core" />
       </list>
     </recent_temporary>
   </component>
@@ -379,14 +380,7 @@
       <workItem from="1682508842656" duration="3351000" />
       <workItem from="1682516228044" duration="2606000" />
       <workItem from="1682629706987" duration="369000" />
-      <workItem from="1682630340657" duration="3846000" />
-    </task>
-    <task id="LOCAL-00142" summary="bug fix">
-      <created>1682286655097</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1682286655098</updated>
+      <workItem from="1682630340657" duration="4532000" />
     </task>
     <task id="LOCAL-00143" summary="refactoring">
       <created>1682333615145</created>
@@ -724,7 +718,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682633692981</updated>
     </task>
-    <option name="localTasksCounter" value="191" />
+    <task id="LOCAL-00191" summary="css selectors refactored">
+      <created>1682634411564</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1682634411564</updated>
+    </task>
+    <option name="localTasksCounter" value="192" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -760,7 +761,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="customer email fix" />
     <MESSAGE value="fast login moved to test module" />
     <MESSAGE value="testfx fix" />
     <MESSAGE value="login screen fix" />
@@ -785,7 +785,8 @@
     <MESSAGE value="sonarcloud integration" />
     <MESSAGE value="maintainability fixes" />
     <MESSAGE value="bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
+    <MESSAGE value="css selectors refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="css selectors refactored" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

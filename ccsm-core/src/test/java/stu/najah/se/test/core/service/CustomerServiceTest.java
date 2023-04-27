@@ -16,7 +16,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-public class CustomerServiceTest {
+class CustomerServiceTest {
 
     private static final CustomerEntity CUSTOMER =
             new CustomerEntity("username", "phone", "address", "email");

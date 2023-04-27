@@ -19,7 +19,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-public class ProductServiceTest {
+class ProductServiceTest {
 
     private static final ProductEntity PRODUCT = createProduct();
 

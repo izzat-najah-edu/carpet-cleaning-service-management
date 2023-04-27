@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 import static org.mockito.internal.verification.VerificationModeFactory.times;
 
-public class AdminServiceTest {
+class AdminServiceTest {
 
     private static AdminDAO adminDAO;
 
