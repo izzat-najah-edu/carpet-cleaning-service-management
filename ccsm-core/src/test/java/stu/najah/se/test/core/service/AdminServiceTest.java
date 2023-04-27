@@ -38,7 +38,7 @@ public class AdminServiceTest {
     }
 
     @Test
-    public void testLoginInvalidUsername() {
+    void testLoginInvalidUsername() {
         assertThrows(IllegalArgumentException.class, () ->
                 adminService.authenticate("invalid", "password"));
         verify(sessionListener, never()).login();
@@ -47,7 +47,7 @@ public class AdminServiceTest {
     }
 
     @Test
-    public void testLoginInvalidPassword() {
+    void testLoginInvalidPassword() {
         assertThrows(IllegalArgumentException.class, () ->
                 adminService.authenticate("username", "invalid"));
         verify(sessionListener, never()).login();
@@ -56,7 +56,7 @@ public class AdminServiceTest {
     }
 
     @Test
-    public void testLoginValid() {
+    void testLoginValid() {
         adminService.authenticate("username", "password");
         verify(sessionListener, times(1)).login();
         verify(sessionListener, never()).logout();
@@ -68,7 +68,7 @@ public class AdminServiceTest {
     }
 
     @Test
-    public void testLogout() {
+    void testLogout() {
         adminService.logout();
         verify(sessionListener, never()).login();
         verify(sessionListener, times(1)).logout();

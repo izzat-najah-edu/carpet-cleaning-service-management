@@ -48,7 +48,7 @@ public class ProductServiceTest {
     }
 
     @Test
-    public void testSelectProduct() {
+    void testSelectProduct() {
         when(productDAO.get(PRODUCT.getId())).thenReturn(PRODUCT);
         var optional = productService.selectProduct(PRODUCT.getId());
         assertTrue(optional.isPresent());
@@ -57,14 +57,14 @@ public class ProductServiceTest {
     }
 
     @Test
-    public void testClearProduct() {
+    void testClearProduct() {
         productService.setProduct(PRODUCT);
         productService.clearProduct();
         assertTrue(productService.getProduct().isEmpty());
     }
 
     @Test
-    public void testCreateAndSelectProduct() {
+    void testCreateAndSelectProduct() {
         doAnswer(invocation -> {
             productList.add(PRODUCT);
             return null;
@@ -85,12 +85,12 @@ public class ProductServiceTest {
     }
 
     @Test
-    public void testUpdateProductNoProductSelected() {
+    void testUpdateProductNoProductSelected() {
         assertThrows(IllegalStateException.class, () -> productService.updateProduct(PRODUCT));
     }
 
     @Test
-    public void testUpdateProduct() {
+    void testUpdateProduct() {
         var updatedProduct = new ProductEntity("Updated Product 1");
         productList.add(PRODUCT);
         when(productDAO.get(PRODUCT.getId())).thenReturn(productList.get(0));
@@ -114,12 +114,12 @@ public class ProductServiceTest {
     }
 
     @Test
-    public void testDeleteProductNoProductSelected() {
+    void testDeleteProductNoProductSelected() {
         assertThrows(IllegalStateException.class, () -> productService.deleteProduct());
     }
 
     @Test
-    public void testDeleteProduct() {
+    void testDeleteProduct() {
         productList.add(PRODUCT);
         doAnswer(invocation -> {
             productList.remove(PRODUCT);
@@ -133,7 +133,7 @@ public class ProductServiceTest {
     }
 
     @Test
-    public void testGetProductsByCustomer() {
+    void testGetProductsByCustomer() {
         int customerId = 1;
         var product1 = new ProductEntity("Product 1");
         product1.setCustomerId(1);
@@ -150,14 +150,14 @@ public class ProductServiceTest {
     }
 
     @Test
-    public void testCreateAndSelectProductError() {
+    void testCreateAndSelectProductError() {
         when(customerService.getCustomer()).thenReturn(Optional.empty());
         assertThrows(IllegalStateException.class, () -> productService.createAndSelectProduct(PRODUCT));
         assertTrue(productService.getProduct().isEmpty());
     }
 
     @Test
-    public void testUpdateProductError() {
+    void testUpdateProductError() {
         var newProduct = new ProductEntity("New Product");
         newProduct.setCustomerId(1);
         var customer = new CustomerEntity("name", "phone", "address", "email");
@@ -170,7 +170,7 @@ public class ProductServiceTest {
     }
 
     @Test
-    public void testSubscribeAndUnsubscribe() {
+    void testSubscribeAndUnsubscribe() {
         EntityListener<ProductEntity> listener = Mockito.mock(EntityListener.class);
         productService.watchProduct(listener);
         productService.setProduct(PRODUCT);

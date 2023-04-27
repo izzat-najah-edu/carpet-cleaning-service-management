@@ -37,28 +37,28 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void testSelectCustomerByNameNotFound() {
+    void testSelectCustomerByNameNotFound() {
         when(customerDAO.get(CUSTOMER.getName())).thenReturn(null);
         var optional = customerService.selectCustomer(CUSTOMER.getName());
         assertTrue(optional.isEmpty());
     }
 
     @Test
-    public void testSelectCustomerByIdNotFound() {
+    void testSelectCustomerByIdNotFound() {
         when(customerDAO.get(0)).thenReturn(null);
         var optional = customerService.selectCustomer(0);
         assertTrue(optional.isEmpty());
     }
 
     @Test
-    public void testSelectCustomerByEntityNotFound() {
+    void testSelectCustomerByEntityNotFound() {
         when(customerDAO.get(CUSTOMER.getName())).thenReturn(null);
         var optional = customerService.selectCustomer(CUSTOMER);
         assertTrue(optional.isEmpty());
     }
 
     @Test
-    public void testSelectCustomerByNameFound() {
+    void testSelectCustomerByNameFound() {
         when(customerDAO.get(CUSTOMER.getName())).thenReturn(CUSTOMER);
         var optional = customerService.selectCustomer(CUSTOMER.getName());
         assertTrue(optional.isPresent());
@@ -70,7 +70,7 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void testSelectCustomerByIdFound() {
+    void testSelectCustomerByIdFound() {
         when(customerDAO.get(0)).thenReturn(CUSTOMER);
         var optional = customerService.selectCustomer(0);
         assertTrue(optional.isPresent());
@@ -82,7 +82,7 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void testSelectCustomerByEntityFound() {
+    void testSelectCustomerByEntityFound() {
         when(customerDAO.get(CUSTOMER.getName())).thenReturn(CUSTOMER);
         var optional = customerService.selectCustomer(CUSTOMER);
         assertTrue(optional.isPresent());
@@ -94,14 +94,14 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void testClearCustomer() {
+    void testClearCustomer() {
         customerService.setCustomer(CUSTOMER);
         customerService.clearCustomer();
         assertTrue(customerService.getCustomer().isEmpty());
     }
 
     @Test
-    public void testCreateAndSelectCustomer() {
+    void testCreateAndSelectCustomer() {
         doAnswer(invocation -> {
             customerList.add(CUSTOMER);
             return null;
@@ -122,12 +122,12 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void testUpdateCustomerNoCustomerSelected() {
+    void testUpdateCustomerNoCustomerSelected() {
         assertThrows(IllegalStateException.class, () -> customerService.updateCustomer(CUSTOMER));
     }
 
     @Test
-    public void testUpdateCustomer() {
+    void testUpdateCustomer() {
         var updatedCustomer = new CustomerEntity(
                 CUSTOMER.getName(), "other phone", "other address", "other email"
         );
@@ -155,12 +155,12 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void testDeleteCustomerNoCustomerSelected() {
+    void testDeleteCustomerNoCustomerSelected() {
         assertThrows(IllegalStateException.class, () -> customerService.deleteCustomer());
     }
 
     @Test
-    public void testDeleteCustomer() {
+    void testDeleteCustomer() {
         customerList.add(CUSTOMER);
         doAnswer(invocation -> {
             customerList.remove(CUSTOMER);
@@ -174,7 +174,7 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void testGetAllCustomers() {
+    void testGetAllCustomers() {
         var user1 = new CustomerEntity("user1", "phone", "address", "email");
         var user2 = new CustomerEntity("user2", "phone", "address", "email");
         when(customerDAO.getAll()).thenReturn(List.of(user1, user2));
@@ -185,7 +185,7 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void testGetAllCustomersWith() {
+    void testGetAllCustomersWith() {
         var user1 = new CustomerEntity("user1", "phone", "address", "email");
         var user2 = new CustomerEntity("user2", "phone", "address", "email");
         when(customerDAO.getAllLike("user")).thenReturn(List.of(user1, user2));
@@ -196,14 +196,14 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void testCreateAndSelectCustomerError() {
+    void testCreateAndSelectCustomerError() {
         doThrow(new DatabaseOperationException("Error creating customer")).when(customerDAO).insert(CUSTOMER);
         assertTrue(customerService.createAndSelectCustomer(CUSTOMER).isEmpty());
         verify(errorListener, times(1)).onTransactionError("Error creating customer");
     }
 
     @Test
-    public void testUpdateCustomerError() {
+    void testUpdateCustomerError() {
         var newCustomer = new CustomerEntity("user", "phone", "address", "email");
         doThrow(new DatabaseOperationException("Error updating customer")).when(customerDAO).update(newCustomer);
         customerService.setCustomer(CUSTOMER);
@@ -212,7 +212,7 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void testSubscribeAndUnsubscribe() {
+    void testSubscribeAndUnsubscribe() {
         EntityListener<CustomerEntity> listener = Mockito.mock(EntityListener.class);
         customerService.watchCustomer(listener);
         customerService.setCustomer(CUSTOMER);
