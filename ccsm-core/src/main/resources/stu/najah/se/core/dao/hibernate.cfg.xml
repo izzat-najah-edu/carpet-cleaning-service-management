@@ -10,15 +10,12 @@
         <property name="connection.url">jdbc:mysql://localhost:3306/carpet_cleaning_service_management</property>
         <property name="connection.username">ccsm</property>
         <property name="connection.password">ccsm1234</property>
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.hbm2ddl.auto">validate</property>
 
         <mapping class="stu.najah.se.core.entity.AdminEntity"/>
         <mapping class="stu.najah.se.core.entity.CustomerEntity"/>
         <mapping class="stu.najah.se.core.entity.ProductEntity"/>
         <mapping class="stu.najah.se.core.entity.OrderEntity"/>
         <mapping class="stu.najah.se.core.entity.OrderProductEntity"/>
-
-        <!-- DB schema will be updated if needed -->
-        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
     </session-factory>
 </hibernate-configuration>
