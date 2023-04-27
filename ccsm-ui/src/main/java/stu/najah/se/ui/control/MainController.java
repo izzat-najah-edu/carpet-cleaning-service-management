@@ -50,9 +50,13 @@ public class MainController
     private AnchorPane paneOrders;
 
     /**
-     * Temporary values for positioning
+     * Temporary x value for positioning
      */
-    private double x, y;
+    private double x;
+    /**
+     * Temporary y value for positioning
+     */
+    private double y;
 
     private void initializeMouseEvents() {
         navbarPane.setOnMousePressed(event -> {

@@ -9,6 +9,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
  */
 final class FXUtility {
 
+    private FXUtility() {
+    }
+
     /**
      * Creates a cell value factory for the table column.
      * The title of the column must be exactly like the name of the property.

@@ -35,6 +35,11 @@ import java.util.Optional;
 public class OrderService
         implements EntityListener<CustomerEntity> {
 
+    private static final String NO_ORDER_MESSAGE =
+            "No order has been selected";
+    private static final String NO_CUSTOMER_MESSAGE =
+            "No customer selected in the customer service";
+
     private final OrderDAO orderDAO;
 
     private final OrderProductDAO orderProductDAO;
@@ -85,7 +90,7 @@ public class OrderService
             var customer = customerService.getCustomer().orElseThrow();
             return orderDAO.getAll(customer.getId());
         } catch (NoSuchElementException e) {
-            throw new IllegalStateException("No customer selected in the customer service");
+            throw new IllegalStateException(NO_CUSTOMER_MESSAGE);
         }
     }
 
@@ -158,7 +163,7 @@ public class OrderService
             orderDAO.insert(order);
             return selectOrder(order.getId());
         } catch (NoSuchElementException e) {
-            throw new IllegalStateException("No customer selected!");
+            throw new IllegalStateException(NO_CUSTOMER_MESSAGE);
         } catch (DatabaseOperationException e) {
             errorHandler.onTransactionError(e.getMessage());
             clearOrder();
@@ -177,7 +182,7 @@ public class OrderService
             var entity = getOrder().orElseThrow();
             orderDAO.delete(entity);
         } catch (NoSuchElementException e) {
-            throw new IllegalStateException("No order has been selected");
+            throw new IllegalStateException(NO_ORDER_MESSAGE);
         } catch (DatabaseOperationException e) {
             errorHandler.onTransactionError(e.getMessage());
         } finally {
@@ -201,7 +206,7 @@ public class OrderService
             }
             return price;
         } catch (NoSuchElementException e) {
-            throw new IllegalStateException("No order has been selected");
+            throw new IllegalStateException(NO_ORDER_MESSAGE);
         }
     }
 
@@ -223,7 +228,7 @@ public class OrderService
             }
             return true;
         } catch (NoSuchElementException e) {
-            throw new IllegalStateException("No order has been selected");
+            throw new IllegalStateException(NO_ORDER_MESSAGE);
         }
     }
 }

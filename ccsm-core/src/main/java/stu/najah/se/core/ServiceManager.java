@@ -32,7 +32,8 @@ public class ServiceManager {
     public static AdminService initializeAdminService()
             throws IllegalStateException {
         if (adminServiceInstance == null) {
-            return adminServiceInstance = new AdminService(new AdminDAO());
+            adminServiceInstance = new AdminService(new AdminDAO());
+            return adminServiceInstance;
         } else {
             throw new IllegalStateException("AdminService has already been initialized!");
         }
