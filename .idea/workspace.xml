@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="different views added">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/customers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/customers.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/orders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/orders.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/products.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/fxml/products.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/resources/stu/najah/se/ui/style/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -385,6 +379,7 @@
       <workItem from="1682506134413" duration="332000" />
       <workItem from="1682508842656" duration="3351000" />
       <workItem from="1682516228044" duration="2606000" />
+      <workItem from="1682629706987" duration="369000" />
     </task>
     <task id="LOCAL-00135" summary="order products controller reimplementation">
       <created>1681843514162</created>
