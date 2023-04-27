@@ -32,8 +32,12 @@ public class SceneManager extends Application
      */
     private static SceneManager instance;
 
+    private static void initializeInstance(SceneManager instance) {
+        SceneManager.instance = instance;
+    }
+
     /**
-     * Must be called after createInstance() has been called
+     * Must be called after initializeInstance() has been called
      *
      * @return reference to the singleton object
      */
@@ -55,7 +59,7 @@ public class SceneManager extends Application
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        SceneManager.instance = this;
+        initializeInstance(this);
         ServiceManager.getAdminService().subscribe(this);
         instance.stage = primaryStage;
         instance.buildStage();
