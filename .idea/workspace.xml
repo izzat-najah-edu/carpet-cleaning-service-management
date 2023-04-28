@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="jdk changed to version 17">
-      <change afterPath="$PROJECT_DIR$/ccsm-aggregate-report/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ccsm-aggregate-report/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="dependency fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +65,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2LEX7IjaP3I0Ce1rPwNHL1LN2xy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -103,7 +102,7 @@
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.35287356",
-    "settings.editor.selected.configurable": "configurable.group.build",
+    "settings.editor.selected.configurable": "project.propCompiler",
     "show.migrate.to.gradle.popup": "false",
     "vue.rearranger.settings.migration": "true"
   },
@@ -161,6 +160,11 @@
       <recent name="" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn sonar:sonar -Pcoverage" />
+    </option>
+  </component>
   <component name="RunManager" selected="Application.SceneManager">
     <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.SceneManager" />
@@ -182,11 +186,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="VIEWS.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/assets/sql/VIEWS.sql" />
-      <script-mode>FILE</script-mode>
-      <method v="2" />
     </configuration>
     <configuration name="AdminServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccsm-core" />
@@ -220,6 +219,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="service in ccsm-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccsm-core" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="stu.najah.se.test.core.service in ccsm-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccsm-core" />
       <extension name="coverage">
@@ -236,7 +243,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.SceneManager" />
-      <item itemvalue="Database Script.VIEWS.sql" />
+      <item itemvalue="JUnit.service in ccsm-core" />
       <item itemvalue="JUnit.AdminServiceTest" />
       <item itemvalue="JUnit.stu.najah.se.test.core.service in ccsm-core" />
       <item itemvalue="JUnit.IzzatFeaturesTest" />
@@ -244,10 +251,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.SceneManager" />
+        <item itemvalue="JUnit.service in ccsm-core" />
         <item itemvalue="JUnit.IzzatFeaturesTest" />
         <item itemvalue="JUnit.AdminServiceTest" />
         <item itemvalue="JUnit.stu.najah.se.test.core.service in ccsm-core" />
-        <item itemvalue="Database Script.VIEWS.sql" />
       </list>
     </recent_temporary>
   </component>
@@ -386,28 +393,7 @@
       <workItem from="1682630340657" duration="4748000" />
       <workItem from="1682635851030" duration="156000" />
       <workItem from="1682683443007" duration="561000" />
-      <workItem from="1682684107035" duration="1558000" />
-    </task>
-    <task id="LOCAL-00145" summary="readme changes">
-      <created>1682334799914</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1682334799914</updated>
-    </task>
-    <task id="LOCAL-00146" summary="customer email added">
-      <created>1682335232545</created>
-      <option name="number" value="00146" />
-      <option name="presentableId" value="LOCAL-00146" />
-      <option name="project" value="LOCAL" />
-      <updated>1682335232545</updated>
-    </task>
-    <task id="LOCAL-00147" summary="customer email added">
-      <created>1682335689723</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1682335689723</updated>
+      <workItem from="1682684107035" duration="2941000" />
     </task>
     <task id="LOCAL-00148" summary="fix">
       <created>1682335772419</created>
@@ -731,7 +717,28 @@
       <option name="project" value="LOCAL" />
       <updated>1682684301520</updated>
     </task>
-    <option name="localTasksCounter" value="194" />
+    <task id="LOCAL-00194" summary="Jacoco tool integration">
+      <created>1682686997029</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1682686997029</updated>
+    </task>
+    <task id="LOCAL-00195" summary="dependency fix">
+      <created>1682687843018</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1682687843018</updated>
+    </task>
+    <task id="LOCAL-00196" summary="dependency fix">
+      <created>1682688019680</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1682688019681</updated>
+    </task>
+    <option name="localTasksCounter" value="197" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -767,8 +774,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="login screen fix" />
-    <MESSAGE value="refactoring" />
     <MESSAGE value="readme fix" />
     <MESSAGE value="renaming fix" />
     <MESSAGE value="service initialization fix" />
@@ -792,7 +797,9 @@
     <MESSAGE value="css selectors refactored" />
     <MESSAGE value="public modifiers removed" />
     <MESSAGE value="jdk changed to version 17" />
-    <option name="LAST_COMMIT_MESSAGE" value="jdk changed to version 17" />
+    <MESSAGE value="Jacoco tool integration" />
+    <MESSAGE value="dependency fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="dependency fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

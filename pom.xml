@@ -19,6 +19,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sonar.organization>izzat-najah-edu</sonar.organization>
+        <sonar.projectKey>izzat-najah-edu_carpet-cleaning-service-management</sonar.projectKey>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.coverage.jacoco.xmlReportPaths>
             ${project.basedir}/ccsm-aggregate-report/target/site/jacoco-aggregate/jacoco.xml
