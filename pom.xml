@@ -48,7 +48,7 @@
     </build>
     <profiles>
         <profile>
-            <id>code-coverage</id>
+            <id>coverage</id>
             <build>
                 <plugins>
                     <plugin>
