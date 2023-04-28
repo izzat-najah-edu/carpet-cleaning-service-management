@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="public modifiers removed">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="jdk changed to version 17">
+      <change afterPath="$PROJECT_DIR$/ccsm-aggregate-report/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ccsm-aggregate-report/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +91,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "introduce.parameter.lambda": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-19",
+    "jdk.selected.JAVA_MODULE": "jbr-17",
     "last_directory_selection": "F:/Work/Projects/Java/CarpetCleaningServiceManagement/src/main/java/stu/najah/se",
     "last_opened_file_path": "C:/Tools/java",
     "list.type.of.created.stylesheet": "CSS",
@@ -383,14 +386,7 @@
       <workItem from="1682630340657" duration="4748000" />
       <workItem from="1682635851030" duration="156000" />
       <workItem from="1682683443007" duration="561000" />
-      <workItem from="1682684107035" duration="67000" />
-    </task>
-    <task id="LOCAL-00144" summary="refactoring">
-      <created>1682333751273</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1682333751273</updated>
+      <workItem from="1682684107035" duration="1558000" />
     </task>
     <task id="LOCAL-00145" summary="readme changes">
       <created>1682334799914</created>
@@ -728,7 +724,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682635016417</updated>
     </task>
-    <option name="localTasksCounter" value="193" />
+    <task id="LOCAL-00193" summary="jdk changed to version 17">
+      <created>1682684301520</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1682684301520</updated>
+    </task>
+    <option name="localTasksCounter" value="194" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -764,7 +767,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="testfx fix" />
     <MESSAGE value="login screen fix" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="readme fix" />
@@ -789,7 +791,8 @@
     <MESSAGE value="bug fix" />
     <MESSAGE value="css selectors refactored" />
     <MESSAGE value="public modifiers removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="public modifiers removed" />
+    <MESSAGE value="jdk changed to version 17" />
+    <option name="LAST_COMMIT_MESSAGE" value="jdk changed to version 17" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
