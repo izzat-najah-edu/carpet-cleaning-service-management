@@ -34,6 +34,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y xvfb
+          sudo apt-get install -y at-spi2-core
           sudo Xvfb :99 -ac -screen 0 1024x768x24 &
           echo "DISPLAY=:99.0" >> $GITHUB_ENV
       - name: Build and analyze
