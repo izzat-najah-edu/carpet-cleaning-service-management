@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="dependency fix">
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="sonar project key fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -393,14 +393,7 @@
       <workItem from="1682630340657" duration="4748000" />
       <workItem from="1682635851030" duration="156000" />
       <workItem from="1682683443007" duration="561000" />
-      <workItem from="1682684107035" duration="2941000" />
-    </task>
-    <task id="LOCAL-00148" summary="fix">
-      <created>1682335772419</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1682335772419</updated>
+      <workItem from="1682684107035" duration="3629000" />
     </task>
     <task id="LOCAL-00149" summary="order view removed">
       <created>1682335920605</created>
@@ -738,7 +731,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682688019681</updated>
     </task>
-    <option name="localTasksCounter" value="197" />
+    <task id="LOCAL-00197" summary="sonar project key fix">
+      <created>1682688444190</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1682688444190</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -774,7 +774,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="readme fix" />
     <MESSAGE value="renaming fix" />
     <MESSAGE value="service initialization fix" />
     <MESSAGE value="fix" />
@@ -799,7 +798,8 @@
     <MESSAGE value="jdk changed to version 17" />
     <MESSAGE value="Jacoco tool integration" />
     <MESSAGE value="dependency fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="dependency fix" />
+    <MESSAGE value="sonar project key fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="sonar project key fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
