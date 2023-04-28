@@ -1,57 +1,57 @@
-#name: SonarCloud
-#on:
-#  push:
-#    branches:
-#      - master
-#  pull_request:
-#    types: [ opened, synchronize, reopened ]
-#jobs:
-#  build:
-#    name: Build and analyze
-#    runs-on: ubuntu-latest
-#
-#    services:
-#      mysql:
-#        image: mysql:8.0
-#        env:
-#          MYSQL_ROOT_PASSWORD: ccsm1234
-#          MYSQL_DATABASE: carpet_cleaning_service_management
-#          MYSQL_USER: ccsm
-#          MYSQL_PASSWORD: ccsm1234
-#        ports:
-#          - 3306:3306
-#        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-#
-#    steps:
-#      - uses: actions/checkout@v3
-#        with:
-#          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-#      - name: Set up JDK 17
-#        uses: actions/setup-java@v3
-#        with:
-#          java-version: 17
-#          distribution: 'zulu' # Alternative distribution options are available.
-#      - name: Cache SonarCloud packages
-#        uses: actions/cache@v3
-#        with:
-#          path: ~/.sonar/cache
-#          key: ${{ runner.os }}-sonar
-#          restore-keys: ${{ runner.os }}-sonar
-#      - name: Cache Maven packages
-#        uses: actions/cache@v3
-#        with:
-#          path: ~/.m2
-#          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-#          restore-keys: ${{ runner.os }}-m2
-#      - name: Set up Xvfb
-#        run: |
-#          sudo apt-get update
-#          sudo apt-get install -y xvfb
-#          sudo apt-get install -y at-spi2-core
-#          sudo Xvfb :99 -ac -screen 0 1024x768x24 &
-#          echo "DISPLAY=:99.0" >> $GITHUB_ENV
-#      - name: Build and analyze
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-#          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-#        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Pcoverage -Dsonar.projectKey=izzat-najah-edu_carpet-cleaning-service-management
+name: SonarCloud
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+jobs:
+  build:
+    name: Build and analyze
+    runs-on: ubuntu-latest
+
+    #services:
+    #  mysql:
+    #    image: mysql:8.0
+    #    env:
+    #      MYSQL_ROOT_PASSWORD: ccsm1234
+    #      MYSQL_DATABASE: carpet_cleaning_service_management
+    #      MYSQL_USER: ccsm
+    #      MYSQL_PASSWORD: ccsm1234
+    #    ports:
+    #      - 3306:3306
+    #    options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+    #
+    #steps:
+    #  - uses: actions/checkout@v3
+    #    with:
+    #      fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+    #  - name: Set up JDK 17
+    #    uses: actions/setup-java@v3
+    #    with:
+    #      java-version: 17
+    #      distribution: 'zulu' # Alternative distribution options are available.
+    #  - name: Cache SonarCloud packages
+    #    uses: actions/cache@v3
+    #    with:
+    #      path: ~/.sonar/cache
+    #      key: ${{ runner.os }}-sonar
+    #      restore-keys: ${{ runner.os }}-sonar
+    #  - name: Cache Maven packages
+    #    uses: actions/cache@v3
+    #    with:
+    #      path: ~/.m2
+    #      key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+    #      restore-keys: ${{ runner.os }}-m2
+    #  - name: Set up Xvfb
+    #    run: |
+    #      sudo apt-get update
+    #      sudo apt-get install -y xvfb
+    #      sudo apt-get install -y at-spi2-core
+    #      sudo Xvfb :99 -ac -screen 0 1024x768x24 &
+    #      echo "DISPLAY=:99.0" >> $GITHUB_ENV
+    #  - name: Build and analyze
+    #    env:
+    #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+    #      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    #    run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Pcoverage -Dsonar.projectKey=izzat-najah-edu_carpet-cleaning-service-management
