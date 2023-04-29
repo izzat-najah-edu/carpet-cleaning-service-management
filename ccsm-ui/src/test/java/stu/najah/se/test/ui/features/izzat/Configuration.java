@@ -14,7 +14,7 @@ public class Configuration {
     @BeforeAll
     public static void launch() throws Exception {
         ServiceManager.initializeAdminService();
-        ServiceManager.initializeEntityServices(Prompter.getInstance());
+        ServiceManager.initializeEntityServices(Prompter.getInstance(), Prompter.getInstance());
         ApplicationTest.launch(SceneManager.class);
     }
 

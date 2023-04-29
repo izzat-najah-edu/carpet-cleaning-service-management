@@ -6,7 +6,6 @@ import io.cucumber.java.en.Then;
 import javafx.application.Platform;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableView;
-import org.testfx.framework.junit5.ApplicationTest;
 import stu.najah.se.core.entity.CustomerEntity;
 import stu.najah.se.core.entity.ProductEntity;
 
@@ -15,7 +14,7 @@ import java.util.Objects;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
-public class ProductCRUDSteps extends ApplicationTest {
+public class ProductCRUDSteps extends ApplicationTestBase {
 
     private static final ProductEntity PRODUCT = new ProductEntity(
             "some description"

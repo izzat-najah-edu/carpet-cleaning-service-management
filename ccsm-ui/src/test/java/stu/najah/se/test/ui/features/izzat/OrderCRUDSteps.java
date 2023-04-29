@@ -8,7 +8,6 @@ import javafx.scene.Node;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableView;
-import org.testfx.framework.junit5.ApplicationTest;
 import stu.najah.se.core.entity.CustomerEntity;
 import stu.najah.se.core.entity.OrderEntity;
 import stu.najah.se.core.entity.OrderProductEntity;
@@ -17,10 +16,11 @@ import stu.najah.se.core.entity.ProductEntity;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 import static org.testfx.api.FxAssert.verifyThat;
 
-public class OrderCRUDSteps extends ApplicationTest {
+public class OrderCRUDSteps extends ApplicationTestBase {
 
     private static final OrderProductEntity ORDER_PRODUCT = new OrderProductEntity(
             "cleaning", (byte) 0, 50
@@ -231,10 +231,7 @@ public class OrderCRUDSteps extends ApplicationTest {
 
     @And("I confirm sending email")
     public void iConfirmSendingEmail() {
-        Node confirmAlert = lookup(".alert").query();
-        assertNotNull(confirmAlert);
-        assertTrue(confirmAlert.isVisible());
-        clickOn("CONFIRM");
+        confirmAlert();
     }
 
     @Then("an email is sent to the customer")
@@ -243,9 +240,6 @@ public class OrderCRUDSteps extends ApplicationTest {
 
     @And("a success message is shown")
     public void aSuccessMessageIsShown() {
-        Node alert = lookup(".alert").query();
-        assertNotNull(alert);
-        assertTrue(alert.isVisible());
-        clickOn("OK");
+        confirmAlert();
     }
 }

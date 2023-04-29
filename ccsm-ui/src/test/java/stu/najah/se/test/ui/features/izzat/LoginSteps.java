@@ -3,15 +3,12 @@ package stu.najah.se.test.ui.features.izzat;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import javafx.scene.Node;
 import org.testfx.api.FxRobotException;
-import org.testfx.framework.junit5.ApplicationTest;
 import stu.najah.se.ui.SceneManager;
 
-import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-public class LoginSteps extends ApplicationTest {
+public class LoginSteps extends ApplicationTestBase {
 
     @Given("login screen is opened")
     public void loginScreenIsOpened() {
@@ -50,9 +47,6 @@ public class LoginSteps extends ApplicationTest {
 
     @Then("error message indicating failed login is prompted")
     public void errorMessageIndicatingFailedLoginIsPrompted() {
-        Node errorAlert = lookup(".alert").query();
-        assertNotNull(errorAlert);
-        assertTrue(errorAlert.isVisible());
-        clickOn("OK");
+        confirmAlert();
     }
 }

@@ -4,14 +4,13 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import javafx.scene.control.TableView;
-import org.testfx.framework.junit5.ApplicationTest;
 import stu.najah.se.core.entity.CustomerEntity;
 
 import java.util.Objects;
 
 import static org.junit.Assert.*;
 
-public class CustomerCRUDSteps extends ApplicationTest {
+public class CustomerCRUDSteps extends ApplicationTestBase {
 
     private static final CustomerEntity CUSTOMER = new CustomerEntity(
             "some name", "0123456789", "some address", "some@email.com"
