@@ -9,6 +9,7 @@ import stu.najah.se.core.dao.OrderProductDAO;
 import stu.najah.se.core.entity.CustomerEntity;
 import stu.najah.se.core.entity.OrderEntity;
 
+import java.time.LocalTime;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -233,7 +234,41 @@ public class OrderService
         }
     }
 
+    /**
+     * Sends an email notification to the customer when their order is ready.
+     *
+     * @throws IllegalStateException if the order is not finished or no customer is selected.
+     * @throws EmailException        if there is an error while sending the email.
+     */
     public void notifyCustomer() throws IllegalStateException, EmailException {
+        if (!isOrderFinished()) {
+            throw new IllegalStateException("Order must be finished");
+        }
+        try {
+            var customer = customerService.getCustomer().orElseThrow();
+            var order = getOrder().orElseThrow();
+            EmailUtil.sendEmail(
+                    customer.getEmail(),
+                    "Your Order is Ready!",
+                    generateOrderEmail(customer, order)
+            );
+        } catch (NoSuchElementException e) {
+            throw new IllegalStateException(NO_CUSTOMER_MESSAGE);
+        }
+    }
 
+    /**
+     * Generates the email content for the customer order email notification.
+     *
+     * @param customer The customer entity containing the customer's name and email.
+     * @param order    The order entity containing the order's creation timestamp.
+     * @return The generated email content as a string.
+     */
+    private static String generateOrderEmail(CustomerEntity customer, OrderEntity order) {
+        return "Dear " + customer.getName() + ",\n\n" +
+                "Your order has been processed successfully." +
+                "\nYour order was placed at: " + order.getCreatedAt() +
+                "\nAnd has finished at: " + LocalTime.now() +
+                "\n\nThank you for shopping with us!";
     }
 }
