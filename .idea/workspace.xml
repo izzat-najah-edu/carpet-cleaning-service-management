@@ -166,13 +166,34 @@
       <command value="mvn sonar:sonar -Pcoverage" />
     </option>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: Logout">
+  <component name="RunManager" selected="Cucumber Java.Feature: Email">
     <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.SceneManager" />
       <module name="ccsm-ui" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="stu.najah.se.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: Email" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/Email.feature" />
+      <option name="GLUE" value="stu.najah.se.test.ui.features.izzat stu.najah.se.test.ui.features.aya" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="ccsm-ui" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <shortenClasspath name="NONE" />
+      <option name="SUGGESTED_NAME" value="Feature: Email" />
+      <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -251,28 +272,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="service in ccsm-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-core" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.SceneManager" />
+      <item itemvalue="Cucumber Java.Feature: Email" />
       <item itemvalue="Cucumber Java.Feature: Login" />
       <item itemvalue="Cucumber Java.Feature: Logout" />
       <item itemvalue="Cucumber Java.Feature: OrderCRUD" />
-      <item itemvalue="JUnit.service in ccsm-core" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: Email" />
         <item itemvalue="Cucumber Java.Feature: Logout" />
         <item itemvalue="Cucumber Java.Feature: OrderCRUD" />
         <item itemvalue="Cucumber Java.Feature: Login" />
         <item itemvalue="Application.SceneManager" />
-        <item itemvalue="JUnit.service in ccsm-core" />
       </list>
     </recent_temporary>
   </component>
