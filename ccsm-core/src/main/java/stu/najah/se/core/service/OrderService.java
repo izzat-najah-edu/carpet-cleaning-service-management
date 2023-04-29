@@ -251,12 +251,15 @@ public class OrderService
             var customer = customerService.getCustomer().orElseThrow();
             var order = getOrder().orElseThrow();
             if (!confirmationListener.onEmailConfirmation(
-                    EmailConfirmationListener.DEFAULT_MESSAGE
+                    EmailConfirmationListener.DEFAULT_CONFIRMATION_MESSAGE
             )) return;
             EmailUtil.sendEmail(
                     customer.getEmail(),
                     "Your Order is Ready!",
                     generateOrderEmail(customer, order)
+            );
+            confirmationListener.onEmailSent(
+                    EmailConfirmationListener.DEFAULT_SUCCESS_MESSAGE
             );
         } catch (NoSuchElementException e) {
             throw new IllegalStateException(NO_CUSTOMER_MESSAGE);

@@ -34,6 +34,11 @@ public final class Prompter
         return confirm(message);
     }
 
+    @Override
+    public void onEmailSent(String message) {
+        info(message);
+    }
+
     /**
      * Displays a message alert, with no interaction options
      *
