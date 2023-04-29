@@ -187,4 +187,36 @@ public class OrderCRUDSteps extends ApplicationTest {
             }
         }
     }
+
+    @And("some order products are not finished")
+    public void someOrderProductsAreNotFinished() {
+    }
+
+    @Then("email button is disabled")
+    public void emailButtonIsDisabled() {
+    }
+
+    @And("all order products are finished")
+    public void allOrderProductsAreFinished() {
+    }
+
+    @Then("email button is enabled")
+    public void emailButtonIsEnabled() {
+    }
+
+    @And("I click email button")
+    public void iClickEmailButton() {
+    }
+
+    @And("I confirm sending email")
+    public void iConfirmSendingEmail() {
+    }
+
+    @Then("an email is sent to the customer")
+    public void anEmailIsSentToTheCustomer() {
+    }
+
+    @And("a success message is shown")
+    public void aSuccessMessageIsShown() {
+    }
 }
