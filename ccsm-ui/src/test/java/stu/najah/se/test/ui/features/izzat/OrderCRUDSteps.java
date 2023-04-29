@@ -4,6 +4,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import javafx.application.Platform;
+import javafx.scene.Node;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableView;
 import org.testfx.framework.junit5.ApplicationTest;
@@ -15,8 +17,8 @@ import stu.najah.se.core.entity.ProductEntity;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
+import static org.testfx.api.FxAssert.verifyThat;
 
 public class OrderCRUDSteps extends ApplicationTest {
 
@@ -35,6 +37,9 @@ public class OrderCRUDSteps extends ApplicationTest {
 
     private final ComboBox<ProductEntity> comboBoxProduct
             = lookup("#comboBoxAvailableProducts").queryComboBox();
+
+    private final CheckBox finishedCheckBox
+            = lookup("#checkBoxFinished").query();
 
     @And("orders tab is opened")
     public void ordersTabIsOpened() {
@@ -190,26 +195,46 @@ public class OrderCRUDSteps extends ApplicationTest {
 
     @And("some order products are not finished")
     public void someOrderProductsAreNotFinished() {
+        // just make sure first order product is not selected
+        tableOrderProducts.getSelectionModel().clearAndSelect(0);
+        if (finishedCheckBox.isSelected()) {
+            clickOn(finishedCheckBox);
+            clickOn("#buttonUpdateOrderProduct");
+        }
     }
 
     @Then("email button is disabled")
     public void emailButtonIsDisabled() {
+        verifyThat("#buttonNotifyCustomer", Node::isDisabled);
     }
 
     @And("all order products are finished")
     public void allOrderProductsAreFinished() {
+        for (int i = 0; i < tableOrderProducts.getItems().size(); i++) {
+            tableOrderProducts.getSelectionModel().select(i);
+            if (!finishedCheckBox.isSelected()) {
+                clickOn(finishedCheckBox);
+                clickOn("#buttonUpdateOrderProduct");
+            }
+        }
     }
 
     @Then("email button is enabled")
     public void emailButtonIsEnabled() {
+        verifyThat("#buttonNotifyCustomer", node -> !node.isDisabled());
     }
 
     @And("I click email button")
     public void iClickEmailButton() {
+        clickOn("#buttonNotifyCustomer");
     }
 
     @And("I confirm sending email")
     public void iConfirmSendingEmail() {
+        Node confirmAlert = lookup(".alert").query();
+        assertNotNull(confirmAlert);
+        assertTrue(confirmAlert.isVisible());
+        clickOn("CONFIRM");
     }
 
     @Then("an email is sent to the customer")
@@ -218,5 +243,9 @@ public class OrderCRUDSteps extends ApplicationTest {
 
     @And("a success message is shown")
     public void aSuccessMessageIsShown() {
+        Node alert = lookup(".alert").query();
+        assertNotNull(alert);
+        assertTrue(alert.isVisible());
+        clickOn("OK");
     }
 }
