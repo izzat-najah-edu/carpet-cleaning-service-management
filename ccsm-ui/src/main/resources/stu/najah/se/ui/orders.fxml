@@ -44,8 +44,8 @@
                 <Font size="20.0"/>
             </font>
         </Label>
-        <Button layoutX="65.0" layoutY="618.0" mnemonicParsing="false" onAction="#generateInvoice" prefHeight="30.0"
-                prefWidth="164.0" text="Generate Invoice"/>
+        <Button fx:id="buttonNotifyCustomer" layoutX="65.0" layoutY="618.0" mnemonicParsing="false"
+                onAction="#notifyCustomer" prefHeight="30.0" prefWidth="164.0" text="Notify Customer"/>
         <Label layoutX="320.0" layoutY="435.0" prefHeight="30.0" prefWidth="99.0" text="Special Treatment:"/>
         <TextField fx:id="textFieldSpecialTreatment" layoutX="425.0" layoutY="435.0" prefHeight="30.0" prefWidth="355.0"
                    promptText="Select to Show"/>

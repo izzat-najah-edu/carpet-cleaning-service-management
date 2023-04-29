@@ -47,6 +47,9 @@ public class OrdersController
     private Label labelOrderStatus;
 
     @FXML
+    private Button buttonNotifyCustomer;
+
+    @FXML
     private TextField textFieldPrice;
 
     @FXML
@@ -115,6 +118,7 @@ public class OrdersController
     public void reset() {
         refreshComboBoxCustomers();
         refreshOrdersTable();
+        refreshOrderStatus();
     }
 
     private void refreshComboBoxCustomers() {
@@ -131,11 +135,18 @@ public class OrdersController
         }
     }
 
-    private void refreshLabelOrderStatus() {
+    private void refreshOrderStatus() {
         try {
-            labelOrderStatus.setText(orderService.isOrderFinished() ? "Finished" : "Waiting");
+            if (orderService.isOrderFinished()) {
+                labelOrderStatus.setText("Finished");
+                buttonNotifyCustomer.setDisable(false);
+            } else {
+                labelOrderStatus.setText("Waiting");
+                buttonNotifyCustomer.setDisable(true);
+            }
         } catch (IllegalStateException e) {
             labelOrderStatus.setText(null);
+            buttonNotifyCustomer.setDisable(true);
         }
     }
 
@@ -157,7 +168,7 @@ public class OrdersController
         } catch (IllegalStateException e) {
             tableOrderProducts.setItems(FXCollections.observableArrayList());
         } finally {
-            refreshLabelOrderStatus();
+            refreshOrderStatus();
         }
     }
 
@@ -226,8 +237,12 @@ public class OrdersController
     }
 
     @FXML
-    private void generateInvoice() {
-        // TODO
+    private void notifyCustomer() {
+        try {
+            orderService.notifyCustomer();
+        } catch (IllegalStateException e) {
+            Prompter.getInstance().error(e);
+        }
     }
 
     private OrderProductEntity createProductFromTextFields() throws NumberFormatException {

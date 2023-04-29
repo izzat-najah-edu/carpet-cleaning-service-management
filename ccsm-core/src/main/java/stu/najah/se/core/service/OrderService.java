@@ -2,6 +2,7 @@ package stu.najah.se.core.service;
 
 import stu.najah.se.core.DatabaseErrorListener;
 import stu.najah.se.core.DatabaseOperationException;
+import stu.najah.se.core.EmailException;
 import stu.najah.se.core.EntityListener;
 import stu.najah.se.core.dao.OrderDAO;
 import stu.najah.se.core.dao.OrderProductDAO;
@@ -230,5 +231,9 @@ public class OrderService
         } catch (NoSuchElementException e) {
             throw new IllegalStateException(NO_ORDER_MESSAGE);
         }
+    }
+
+    public void notifyCustomer() throws IllegalStateException, EmailException {
+
     }
 }
