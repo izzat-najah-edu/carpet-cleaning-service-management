@@ -9,7 +9,7 @@ import stu.najah.se.core.EmailException;
 import java.io.IOException;
 import java.util.Properties;
 
-final class EmailUtil {
+public final class EmailUtil {
 
     private EmailUtil() {
     }

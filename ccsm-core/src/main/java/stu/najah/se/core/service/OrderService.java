@@ -39,6 +39,9 @@ public class OrderService
     private static final String NO_CUSTOMER_MESSAGE =
             "No customer selected in the customer service";
 
+    public static final String ORDER_IS_READY_MESSAGE
+            = "Your Order is Ready!";
+
     private final OrderDAO orderDAO;
 
     private final OrderProductDAO orderProductDAO;
@@ -255,7 +258,7 @@ public class OrderService
             )) return;
             EmailUtil.sendEmail(
                     customer.getEmail(),
-                    "Your Order is Ready!",
+                    ORDER_IS_READY_MESSAGE,
                     generateOrderEmail(customer, order)
             );
             confirmationListener.onEmailSent(

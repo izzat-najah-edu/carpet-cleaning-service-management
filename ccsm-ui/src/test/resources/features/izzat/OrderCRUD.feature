@@ -34,3 +34,4 @@ Feature: Order CRUD Operations
     And I click email button
     And I confirm sending email
     Then an email is sent to the customer
+    And a success message is displayed

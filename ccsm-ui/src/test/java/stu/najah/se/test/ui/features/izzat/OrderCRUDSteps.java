@@ -11,6 +11,8 @@ import stu.najah.se.core.entity.CustomerEntity;
 import stu.najah.se.core.entity.OrderEntity;
 import stu.najah.se.core.entity.OrderProductEntity;
 import stu.najah.se.core.entity.ProductEntity;
+import stu.najah.se.core.service.EmailUtil;
+import stu.najah.se.core.service.OrderService;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -230,6 +232,12 @@ public class OrderCRUDSteps extends ApplicationTestBase {
 
     @Then("an email is sent to the customer")
     public void anEmailIsSentToTheCustomer() {
+        var email = EmailUtil.readLastSentMessage();
+        assertEquals(OrderService.ORDER_IS_READY_MESSAGE, email.getSubject());
+    }
+
+    @And("a success message is displayed")
+    public void aSuccessMessageIsDisplayed() {
         clickOkToAlert();
     }
 }
