@@ -57,10 +57,13 @@ public class ServiceManager {
      * Initializes the CustomerService and the ProductService with the provided DatabaseErrorListener.
      * This method ensures that a single service instances are shared between all users.
      *
-     * @param errorListener the listener responsible for handling database errors
+     * @param errorListener        the listener responsible for handling database errors
+     * @param confirmationListener the listener responsible for handling email confirmations
      * @throws IllegalStateException if the services are already initialized
      */
-    public static void initializeEntityServices(DatabaseErrorListener errorListener)
+    public static void initializeEntityServices(
+            DatabaseErrorListener errorListener,
+            EmailConfirmationListener confirmationListener)
             throws IllegalStateException, SecurityException {
         if (customerServiceInstance != null) {
             throw new IllegalStateException("Services have already been initialized!");
@@ -68,7 +71,7 @@ public class ServiceManager {
         customerServiceInstance = new CustomerService(new CustomerDAO(), errorListener);
         productServiceInstance = new ProductService(new ProductDAO(), errorListener, customerServiceInstance);
         orderServiceInstance = new OrderService(
-                new OrderDAO(), new OrderProductDAO(), errorListener, customerServiceInstance
+                new OrderDAO(), new OrderProductDAO(), errorListener, confirmationListener, customerServiceInstance
         );
         orderProductServiceInstance = new OrderProductService(
                 new OrderProductDAO(), errorListener, orderServiceInstance, productServiceInstance

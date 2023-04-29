@@ -4,12 +4,13 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Modality;
 import stu.najah.se.core.DatabaseErrorListener;
+import stu.najah.se.core.EmailConfirmationListener;
 
 /**
  * Utility class for (graphically) prompting alerts, inputs texts, dialogs, etc...
  */
 public final class Prompter
-        implements DatabaseErrorListener {
+        implements DatabaseErrorListener, EmailConfirmationListener {
 
     private static Prompter instance;
 
@@ -26,6 +27,11 @@ public final class Prompter
     @Override
     public void onTransactionError(String message) {
         error(message);
+    }
+
+    @Override
+    public boolean onEmailConfirmation(String message) {
+        return confirm(message);
     }
 
     /**

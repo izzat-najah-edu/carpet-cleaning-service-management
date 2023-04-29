@@ -1,9 +1,6 @@
 package stu.najah.se.core.service;
 
-import stu.najah.se.core.DatabaseErrorListener;
-import stu.najah.se.core.DatabaseOperationException;
-import stu.najah.se.core.EmailException;
-import stu.najah.se.core.EntityListener;
+import stu.najah.se.core.*;
 import stu.najah.se.core.dao.OrderDAO;
 import stu.najah.se.core.dao.OrderProductDAO;
 import stu.najah.se.core.entity.CustomerEntity;
@@ -48,6 +45,8 @@ public class OrderService
 
     private final DatabaseErrorListener errorHandler;
 
+    private final EmailConfirmationListener confirmationListener;
+
     private final CustomerService customerService;
 
     private final ObservedEntity<OrderEntity> observedOrder = new ObservedEntity<>();
@@ -55,18 +54,21 @@ public class OrderService
     /**
      * Constructs a new OrderService instance.
      *
-     * @param orderDAO        The data access object to interact with the order in the database.
-     * @param orderProductDAO The data access object to interact with the products of the order in the database.
-     * @param errorListener   The handler for database errors.
-     * @param customerService The customer service instance.
+     * @param orderDAO             The data access object to interact with the order in the database.
+     * @param orderProductDAO      The data access object to interact with the products of the order in the database.
+     * @param errorListener        The handler for database errors.
+     * @param confirmationListener The handler for email confirmations.
+     * @param customerService      The customer service instance.
      */
     public OrderService(OrderDAO orderDAO,
                         OrderProductDAO orderProductDAO,
                         DatabaseErrorListener errorListener,
+                        EmailConfirmationListener confirmationListener,
                         CustomerService customerService) {
         this.orderDAO = orderDAO;
         this.orderProductDAO = orderProductDAO;
         this.errorHandler = errorListener;
+        this.confirmationListener = confirmationListener;
         this.customerService = customerService;
         customerService.watchCustomer(this);
     }
