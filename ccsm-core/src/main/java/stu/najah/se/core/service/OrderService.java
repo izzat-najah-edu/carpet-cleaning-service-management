@@ -237,9 +237,10 @@ public class OrderService
     }
 
     /**
-     * Sends an email notification to the customer when their order is ready.
+     * Gets a confirmation from the EmailConfirmationListener before
+     * Sending an email notification to the customer that their finished order.
      *
-     * @throws IllegalStateException if the order is not finished or no customer is selected.
+     * @throws IllegalStateException if no order is selected or no customer is selected or the order is not finished.
      * @throws EmailException        if there is an error while sending the email.
      */
     public void notifyCustomer() throws IllegalStateException, EmailException {
@@ -249,6 +250,9 @@ public class OrderService
         try {
             var customer = customerService.getCustomer().orElseThrow();
             var order = getOrder().orElseThrow();
+            if (!confirmationListener.onEmailConfirmation(
+                    EmailConfirmationListener.DEFAULT_MESSAGE
+            )) return;
             EmailUtil.sendEmail(
                     customer.getEmail(),
                     "Your Order is Ready!",
