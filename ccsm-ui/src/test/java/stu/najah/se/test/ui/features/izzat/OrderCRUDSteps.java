@@ -3,7 +3,6 @@ package stu.najah.se.test.ui.features.izzat;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import javafx.application.Platform;
 import javafx.scene.Node;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
@@ -48,14 +47,12 @@ public class OrderCRUDSteps extends ApplicationTestBase {
 
     @And("I select a customer from the customer box")
     public void iSelectACustomerFromTheCustomerBox() {
-        Platform.runLater(() ->
-                comboBoxCustomer.getSelectionModel().clearAndSelect(0));
+        selectRow(0, comboBoxCustomer);
     }
 
     @And("I select an order from the order list")
     public void iSelectAnOrderFromTheOrderList() {
-        Platform.runLater(() ->
-                tableOrders.getSelectionModel().clearAndSelect(0));
+        selectRow(0, tableOrders);
     }
 
     @Given("I click add order button")
@@ -82,9 +79,7 @@ public class OrderCRUDSteps extends ApplicationTestBase {
                     .getCreatedAt().toLocalDateTime().withSecond(0).withNano(0);
             if (Objects.equals(now, orderCreatedAt)) {
                 // select it
-                int finalI = i;
-                Platform.runLater(() ->
-                        tableOrders.getSelectionModel().clearAndSelect(finalI));
+                selectRow(i, tableOrders);
                 break;
             }
         }
@@ -118,8 +113,7 @@ public class OrderCRUDSteps extends ApplicationTestBase {
 
     @And("I select a product from the product box")
     public void iSelectAProductFromTheProductBox() {
-        Platform.runLater(() ->
-                comboBoxProduct.getSelectionModel().clearAndSelect(0));
+        selectRow(0, comboBoxProduct);
     }
 
     @And("I click add order product button")
@@ -139,7 +133,7 @@ public class OrderCRUDSteps extends ApplicationTestBase {
         for (int i = 0; i < tableOrderProducts.getItems().size(); i++) {
             var orderProduct = tableOrderProducts.getItems().get(i);
             if (Objects.equals(ORDER_PRODUCT.getSpecialTreatment(), orderProduct.getSpecialTreatment())) {
-                tableOrderProducts.getSelectionModel().clearAndSelect(i);
+                selectRow(i, tableOrderProducts);
                 ORDER_PRODUCT.setOrderId(orderProduct.getOrderId());
                 ORDER_PRODUCT.setProductId(orderProduct.getProductId());
                 break;
@@ -196,7 +190,7 @@ public class OrderCRUDSteps extends ApplicationTestBase {
     @And("some order products are not finished")
     public void someOrderProductsAreNotFinished() {
         // just make sure first order product is not selected
-        tableOrderProducts.getSelectionModel().clearAndSelect(0);
+        selectRow(0, tableOrderProducts);
         if (finishedCheckBox.isSelected()) {
             clickOn(finishedCheckBox);
             clickOn("#buttonUpdateOrderProduct");
@@ -211,7 +205,7 @@ public class OrderCRUDSteps extends ApplicationTestBase {
     @And("all order products are finished")
     public void allOrderProductsAreFinished() {
         for (int i = 0; i < tableOrderProducts.getItems().size(); i++) {
-            tableOrderProducts.getSelectionModel().select(i);
+            selectRow(i, tableOrderProducts);
             if (!finishedCheckBox.isSelected()) {
                 clickOn(finishedCheckBox);
                 clickOn("#buttonUpdateOrderProduct");
@@ -231,16 +225,11 @@ public class OrderCRUDSteps extends ApplicationTestBase {
 
     @And("I confirm sending email")
     public void iConfirmSendingEmail() {
-        confirmAlert();
+        clickOkToAlert();
     }
 
     @Then("an email is sent to the customer")
     public void anEmailIsSentToTheCustomer() {
-    }
-
-
-    @And("a success message is shown")
-    public void aSuccessMessageIsShown() {
-        confirmAlert();
+        clickOkToAlert();
     }
 }

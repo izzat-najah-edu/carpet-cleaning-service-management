@@ -59,7 +59,7 @@ public class ProductCRUDSteps extends ApplicationTestBase {
     public void iSelectAProductFromTheList() {
         for (int i = 0; i < tableProducts.getItems().size(); i++) {
             if (Objects.equals(PRODUCT.getDescription(), tableProducts.getItems().get(i).getDescription())) {
-                tableProducts.getSelectionModel().clearAndSelect(i);
+                selectRow(i, tableProducts);
                 PRODUCT.setId(tableProducts.getItems().get(i).getId());
                 break;
             }

@@ -30,8 +30,7 @@ Feature: Order CRUD Operations
 
   Scenario: Notify the customer
     Given I select an order from the order list
-    And all order products are finished
+    And email button is enabled
     And I click email button
     And I confirm sending email
     Then an email is sent to the customer
-    And a success message is shown

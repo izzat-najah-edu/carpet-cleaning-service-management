@@ -59,7 +59,7 @@ public class CustomerCRUDSteps extends ApplicationTestBase {
     public void iSelectACustomerFromTheList() {
         for (int i = 0; i < tableCustomers.getItems().size(); i++) {
             if (Objects.equals(CUSTOMER.getName(), tableCustomers.getItems().get(i).getName())) {
-                tableCustomers.getSelectionModel().clearAndSelect(i);
+                selectRow(i, tableCustomers);
                 CUSTOMER.setId(tableCustomers.getItems().get(i).getId());
                 break;
             }

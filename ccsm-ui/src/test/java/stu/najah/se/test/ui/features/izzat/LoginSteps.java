@@ -47,6 +47,6 @@ public class LoginSteps extends ApplicationTestBase {
 
     @Then("error message indicating failed login is prompted")
     public void errorMessageIndicatingFailedLoginIsPrompted() {
-        confirmAlert();
+        clickOkToAlert();
     }
 }
