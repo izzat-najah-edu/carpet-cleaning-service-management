@@ -1,32 +1,21 @@
-Feature: Discount Feature
-  As a user, I want to be able to apply a discount code to my purchase so that I can get a reduced price.
+Feature: Discount eligibility check
 
-  Scenario: Successful Discount Application
-    Given that the user has added items to their cart
-    And the user has a valid discount code
-    When the user enters the discount code and clicks apply
-    Then the discount is applied to the purchase total
-    And the user sees the discounted price in their cart
-    And the user can proceed with the purchase
+  Scenario: Eligible for discount
+    Given a total amount of 500 NIS
+    When the customer checks for discount eligibility
+    Then the system should display the discount message
 
-  Scenario: Invalid Discount Code
-    Given that the user has added items to their cart
-    And the user has entered an invalid discount code
-    When the user clicks apply
-    Then an error message indicating the code is invalid is displayed
-    And the discount is not applied to the purchase total
+  Scenario: Not eligible for discount
+    Given a total amount of 200 NIS
+    When the customer checks for discount eligibility
+    Then the system should display the no-discount message
 
-  Scenario: Expired Discount Code
-    Given that the user has added items to their cart
-    And the user has entered a discount code that has expired
-    When the user clicks apply
-    Then an error message indicating the code has expired is displayed
-    And the discount is not applied to the purchase total
+  Scenario: Borderline eligibility for discount
+    Given a total amount of 400 NIS
+    When the customer checks for discount eligibility
+    Then the system should display the no-discount message
 
-  Scenario: Discount Code Not Applicable
-    Given that the user has added items to their cart
-    And the user has entered a valid discount code
-    But the code is not applicable to the items in the cart
-    When the user clicks apply
-    Then an error message indicating the code cannot be applied is displayed
-    And the discount is not applied to the purchase total.
+  Scenario: Eligible for discount with decimal amount
+    Given a total amount of 820.5 NIS
+    When the customer checks for discount eligibility
+    Then the system should display the discount message

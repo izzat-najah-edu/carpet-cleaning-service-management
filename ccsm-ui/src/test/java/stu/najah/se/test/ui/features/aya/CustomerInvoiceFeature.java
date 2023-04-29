@@ -1,71 +1,99 @@
 package stu.najah.se.test.ui.features.aya;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 
 public class CustomerInvoiceFeature {
 
-    private String customerName;
-    private String customerAddress;
-    private String deliveryAddress;
-    private double totalPrice;
-    private ArrayList<String> itemsToClean;
 
-    public CustomerInvoiceFeature(String customerName, String customerAddress, String deliveryAddress, ArrayList<String> itemsToClean, double totalPrice) {
-        this.customerName = customerName;
-        this.customerAddress = customerAddress;
-        this.deliveryAddress = deliveryAddress;
-        this.itemsToClean = itemsToClean;
-        this.totalPrice = totalPrice;
+    @Given("main screen is opened")
+    public void mainScreenIsOpened() {
+        // code to open the main screen
+    }
+
+    @Given("customer invoice tab is selected")
+    public void customerInvoiceTabIsSelected() {
+        // code to select the customer invoice tab
+    }
+
+    @Given("I select a customer from the customer box")
+    public void selectACustomerFromCustomerBox() {
+        // code to select a customer from the customer box
     }
 
 
-    public void printInvoice() {
-        System.out.println("=================================");
-        System.out.println("CUSTOMER INFORMATION");
-        System.out.println("=================================");
-        System.out.println("Customer Name: " + customerName);
-        System.out.println("Customer Address: " + customerAddress);
-        System.out.println("Delivery Address: " + deliveryAddress);
-        System.out.println("=================================");
-        System.out.println("ITEMS TO CLEAN");
-        System.out.println("=================================");
-        for (String item : itemsToClean) {
-            System.out.println("- " + item);
-        }
-        System.out.println("=================================");
-        System.out.println("TOTAL PRICE");
-        System.out.println("=================================");
-        System.out.println("$" + totalPrice);
-        System.out.println("=================================");
+    @Given("I click on the \"Create New Invoice\" button")
+    public void clickOnCreateNewInvoiceButton() {
+        // code to click on the "Create New Invoice" button
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    @And("I enter the necessary details for the new invoice")
+    public void enterNewInvoiceDetails() {
+        // code to enter new invoice details
+    }
 
-        System.out.println("Enter customer name:");
-        String customerName = sc.nextLine();
+    @Then("a new invoice is created and added to the invoice list")
+    public void verifyNewInvoiceCreated() {
+        // code to verify that a new invoice is created and added to the invoice list
+    }
 
-        System.out.println("Enter customer address:");
-        String customerAddress = sc.nextLine();
 
-        System.out.println("Enter delivery address:");
-        String deliveryAddress = sc.nextLine();
+    @Given("I select an invoice from the invoice list")
+    public void selectAnInvoiceFromInvoiceList() {
+        // code to select an invoice from the invoice list
+    }
 
-        ArrayList<String> itemsToClean = new ArrayList<String>();
-        while (true) {
-            System.out.println("Enter item to clean (or type 'done' to finish):");
-            String item = sc.nextLine();
-            if (item.equals("done")) {
-                break;
-            }
-            itemsToClean.add(item);
-        }
+    @Given("I click on the \"Delete Invoice\" button")
+    public void clickOnDeleteInvoiceButton() {
+        // code to click on the "Delete Invoice" button
+    }
 
-        System.out.println("Enter total price:");
-        double totalPrice = sc.nextDouble();
+    @Then("the selected invoice is deleted from the invoice list")
+    public void verifySelectedInvoiceDeleted() {
+        // code to verify that the selected invoice is deleted from the invoice list
+    }
 
-        CustomerInvoiceFeature invoice = new CustomerInvoiceFeature(customerName, customerAddress, deliveryAddress, itemsToClean, totalPrice);
-        invoice.printInvoice();
+
+    @Given("I click on the \"Edit Invoice\" button")
+    public void clickOnEditInvoiceButton() {
+        // code to click on the "Edit Invoice" button
+    }
+
+    @And("I make changes to the invoice details")
+    public void makeChangesToInvoiceDetails() {
+        // code to make changes to the invoice details
+    }
+
+    @Then("the invoice details are updated in the invoice list")
+    public void verifyInvoiceDetailsUpdated() {
+        // code to verify that the invoice details are updated in the invoice list
+    }
+
+
+    @Given("I click on the \"View Invoice\" button")
+    public void clickOnViewInvoiceButton() {
+        // code to click on the "View Invoice" button
+    }
+
+    @Then("the details of the selected invoice are displayed on the screen")
+    public void verifySelectedInvoiceDetailsDisplayed() {
+        // code to verify that the details of the selected invoice are displayed on the screen
+    }
+
+
+    @Given("I click on the \"Send Invoice\" button")
+    public void clickOnSendInvoiceButton() {
+        // code to click on the "Send Invoice" button
+    }
+
+    @And("I enter the customer email address")
+    public void enterCustomerEmailAddress() {
+        // code to enter the customer email address
+    }
+
+    @Then("the invoice is sent to the customer's email address")
+    public void verifyInvoiceSentToCustomer() {
+        // code to verify that the invoice is sent to the customer's email
     }
 }

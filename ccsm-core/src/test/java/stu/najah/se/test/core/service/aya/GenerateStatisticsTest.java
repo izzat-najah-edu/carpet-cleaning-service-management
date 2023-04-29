@@ -15,8 +15,8 @@ public class GenerateStatisticsTest {
         generate.addInvoice(new Invoice(6, 80.0, 50.0, true));
         generate.addInvoice(new Invoice(8, 120.0, 60.0, false));
         generate.addInvoice(new Invoice(4, 60.0, 30.0, false));
-        //assertEquals(28, generate.getTotalDeliveredItems());
-        assertEquals(330.0, 330.0, 0.001);
+        assertEquals(28, generate.getTotalDeliveredItems());
+
     }
 
     @Test
@@ -26,8 +26,8 @@ public class GenerateStatisticsTest {
         generate.addInvoice(new Invoice(6, 80.0, 50.0, true));
         generate.addInvoice(new Invoice(8, 120.0, 60.0, false));
         generate.addInvoice(new Invoice(4, 60.0, 30.0, false));
-        //assertEquals(150.0, generate.getTotalCash(), 0.001);
-        assertEquals(150.0, 150.0, 0.001);
+        assertEquals(150.0, generate.getTotalCash(), 0.001);
+
 
     }
 
@@ -38,8 +38,8 @@ public class GenerateStatisticsTest {
         generate.addInvoice(new Invoice(6, 80.0, 50.0, true));
         generate.addInvoice(new Invoice(8, 120.0, 60.0, false));
         generate.addInvoice(new Invoice(4, 60.0, 30.0, false));
-        //assertEquals(330.0, generate.getTotalPaid(), 0.001);
-        assertEquals(330.0, 330.0, 0.001);
+        assertEquals(280.0, generate.getTotalPaid(), 0.001);
+
 
     }
 
@@ -50,8 +50,8 @@ public class GenerateStatisticsTest {
         generate.addInvoice(new Invoice(6, 80.0, 50.0, true));
         generate.addInvoice(new Invoice(8, 120.0, 60.0, false));
         generate.addInvoice(new Invoice(4, 60.0, 30.0, false));
-        //assertEquals(150.0, generate.getTotalDebts(), 0.001);
-        assertEquals(150.0, 150.0, 0.001);
+        assertEquals(180.0, generate.getTotalDebts(), 0.001);
+
 
     }
 
