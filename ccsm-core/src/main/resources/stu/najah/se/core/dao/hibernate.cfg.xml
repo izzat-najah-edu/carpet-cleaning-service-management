@@ -7,9 +7,11 @@
         <!-- carpet_cleaning_service_management -->
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/carpet_cleaning_service_management</property>
-        <property name="connection.username">ccsm</property>
-        <property name="connection.password">ccsm1234</property>
+        <property name="connection.url">
+            jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DATABASE:carpet_cleaning_service_management}
+        </property>
+        <property name="connection.username">${MYSQL_USER:ccsm}</property>
+        <property name="connection.password">${MYSQL_PASSWORD:ccsm1234}</property>
         <property name="hibernate.hbm2ddl.auto">validate</property>
 
         <mapping class="stu.najah.se.core.entity.AdminEntity"/>
