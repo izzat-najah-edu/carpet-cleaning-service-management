@@ -20,7 +20,7 @@ jobs:
           MYSQL_ROOT_PASSWORD: 1234
         ports:
           - 3306:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3 --entrypoint mysqld --bind-address=0.0.0.0
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
     steps:
       - uses: actions/checkout@v3
@@ -54,7 +54,7 @@ jobs:
         run: |
           echo "Importing SQL script..."
           sudo apt-get install -y mysql-client
-          mysql --host 127.0.0.1 --port 3306 -u ccsm -p$MYSQL_PASSWORD $MYSQL_DATABASE < assets/sql/TEST.sql
+          mysql --host 172.18.0.1 --port 3306 -u ccsm -p$MYSQL_PASSWORD $MYSQL_DATABASE < assets/sql/TEST.sql
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
