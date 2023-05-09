@@ -54,7 +54,7 @@ jobs:
         run: |
           echo "Importing SQL script..."
           sudo apt-get install -y mysql-client
-          mysql --host localhost --port 3306 -u ccsm -p$MYSQL_PASSWORD $MYSQL_DATABASE < assets/sql/TEST.sql
+          mysql --host 127.0.0.1 --port 3306 -u ccsm -p$MYSQL_PASSWORD $MYSQL_DATABASE < assets/sql/TEST.sql
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
