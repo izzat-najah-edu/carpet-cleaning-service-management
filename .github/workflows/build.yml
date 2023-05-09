@@ -20,8 +20,7 @@ jobs:
           MYSQL_ROOT_PASSWORD: 1234
         ports:
           - 3306:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-        command: mysqld --bind-address=0.0.0.0
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3 --entrypoint mysqld --bind-address=0.0.0.0
 
     steps:
       - uses: actions/checkout@v3
