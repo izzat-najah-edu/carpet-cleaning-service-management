@@ -50,11 +50,14 @@ jobs:
           sudo apt-get install -y at-spi2-core
           sudo Xvfb :99 -ac -screen 0 1024x768x24 &
           echo "DISPLAY=:99.0" >> $GITHUB_ENV
+      - name: Get MySQL container IP
+        run: |
+          echo "DB_HOST=$(docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ${{ job.services.mysql.containerID }})" >> $GITHUB_ENV
       - name: Import SQL script
         run: |
           echo "Importing SQL script..."
           sudo apt-get install -y mysql-client
-          mysql --host 127.0.0.1 --port 3306 -u ccsm -p$MYSQL_PASSWORD $MYSQL_DATABASE < assets/sql/TEST.sql
+          mysql --host $DB_HOST --port 3306 -u ccsm -p$MYSQL_PASSWORD $MYSQL_DATABASE < assets/sql/TEST.sql
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
