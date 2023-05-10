@@ -18,6 +18,8 @@
         <testfx.robot>glass</testfx.robot>
         <testfx.headless>true</testfx.headless>
         <testfx.verbose>true</testfx.verbose>
+        <prism.order>sw</prism.order>
+        <prism.text>t2k</prism.text>
         <java.awt.headless>true</java.awt.headless>
     </properties>
     <dependencies>
