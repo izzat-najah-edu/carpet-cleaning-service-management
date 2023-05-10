@@ -18,6 +18,7 @@
         <testfx.robot>glass</testfx.robot>
         <testfx.headless>true</testfx.headless>
         <testfx.verbose>true</testfx.verbose>
+        <java.awt.headless>true</java.awt.headless>
     </properties>
     <dependencies>
         <dependency>
