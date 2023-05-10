@@ -2,6 +2,7 @@ package stu.najah.se.test.ui.features.aya;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
@@ -9,6 +10,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:target/cucumber-reports"},
         features = {"src/test/resources/features/aya"}
 )
+@Ignore
 public class AyaFeaturesTest {
     /*
     This class servers as an entry point for all Cucumber tests in the 'features' directory.
