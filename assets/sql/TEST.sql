@@ -49,7 +49,7 @@ VALUES ('admin', 'admin');
 
 -- Customers:
 INSERT INTO customer (name, phone, address, email)
-VALUES ('John Smith', '1234567890', '123 Main St, Anytown, USA', 'izzat5233@gmail.com'),
+VALUES ('John Smith', '1234567890', '123 Main St, Anytown, USA', 'izzat5233@hotmail.com'),
        ('Sarah Lee', '2345678901', '456 Elm St, Anytown, USA', 'sarah.lee@example.com'),
        ('Michael Brown', '3456789012', '789 Oak St, Anytown, USA', 'michael.brown@example.com'),
        ('Emily Davis', '4567890123', '321 Maple St, Anytown, USA', 'emily.davis@example.com'),
