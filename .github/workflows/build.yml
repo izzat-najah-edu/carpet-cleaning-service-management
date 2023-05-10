@@ -9,6 +9,9 @@ jobs:
   build:
     name: Build and analyze
     runs-on: ubuntu-latest
+    env:
+      JAVAMAIL_USER: ${{ secrets.JAVAMAIL_USER }}
+      JAVAMAIL_PASS: ${{ secrets.JAVAMAIL_PASS }}
     services:
       mysql:
         image: mysql:8.0
