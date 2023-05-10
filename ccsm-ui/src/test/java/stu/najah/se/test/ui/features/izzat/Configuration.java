@@ -11,6 +11,10 @@ import stu.najah.se.ui.SceneManager;
 
 public class Configuration {
 
+    static {
+        System.setProperty("testfx.timeout", "10000");
+    }
+
     @BeforeAll
     public static void launch() throws Exception {
         ServiceManager.initializeAdminService();
