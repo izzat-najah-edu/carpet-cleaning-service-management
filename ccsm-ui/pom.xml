@@ -12,15 +12,9 @@
     <artifactId>ccsm-ui</artifactId>
 
     <properties>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <testfx.robot>glass</testfx.robot>
-        <testfx.headless>true</testfx.headless>
-        <testfx.verbose>true</testfx.verbose>
-        <prism.order>sw</prism.order>
-        <prism.text>t2k</prism.text>
-        <java.awt.headless>true</java.awt.headless>
     </properties>
     <dependencies>
         <dependency>
@@ -32,12 +26,12 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>21-ea+5</version>
+            <version>20</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>21-ea+5</version>
+            <version>11.0.2</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>

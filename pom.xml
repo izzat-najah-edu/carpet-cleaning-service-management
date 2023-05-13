@@ -37,6 +37,20 @@
                         <target>17</target>
                     </configuration>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.1.0</version>
+                    <configuration>
+                        <argLine>
+                            --add-exports javafx.graphics/com.sun.javafx.application=org.testfx
+                            --add-exports javafx.graphics/com.sun.glass.ui=ALL-UNNAMED
+                            --add-exports javafx.graphics/com.sun.javafx.tk.quantum=ALL-UNNAMED
+                            --add-exports javafx.graphics/com.sun.javafx.tk=ALL-UNNAMED
+                            --add-opens javafx.graphics/com.sun.glass.ui=org.testfx
+                        </argLine>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
