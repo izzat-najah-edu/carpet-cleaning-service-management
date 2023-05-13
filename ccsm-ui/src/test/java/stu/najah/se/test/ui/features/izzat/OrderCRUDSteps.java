@@ -64,10 +64,10 @@ public class OrderCRUDSteps extends ApplicationTestBase {
 
     @Then("a new order is added to the order list")
     public void aNewOrderIsAddedToTheOrderList() {
-        var now = LocalDateTime.now().withSecond(0).withNano(0);
+        var now = LocalDateTime.now().withMinute(0).withSecond(0).withNano(0);
         var matchers = tableOrders.getItems().stream().filter(orderEntity -> {
             // created within the last minute
-            var orderCreatedAt = orderEntity.getCreatedAt().toLocalDateTime().withSecond(0).withNano(0);
+            var orderCreatedAt = orderEntity.getCreatedAt().toLocalDateTime().withMinute(0).withSecond(0).withNano(0);
             return orderCreatedAt.equals(now);
         });
         assertEquals(1, matchers.count());
