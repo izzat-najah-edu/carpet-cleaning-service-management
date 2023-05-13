@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="h">
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/izzat/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -397,14 +397,7 @@
       <workItem from="1682797049329" duration="314000" />
       <workItem from="1682798899668" duration="3573000" />
       <workItem from="1682802687054" duration="5553000" />
-      <workItem from="1684017569462" duration="3535000" />
-    </task>
-    <task id="LOCAL-00160" summary="service initialization fix">
-      <created>1682369491735</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1682369491736</updated>
+      <workItem from="1684017569462" duration="4245000" />
     </task>
     <task id="LOCAL-00161" summary="fix">
       <created>1682369645595</created>
@@ -742,7 +735,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684020985661</updated>
     </task>
-    <option name="localTasksCounter" value="209" />
+    <task id="LOCAL-00209" summary="h">
+      <created>1684021587035</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1684021587036</updated>
+    </task>
+    <option name="localTasksCounter" value="210" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
