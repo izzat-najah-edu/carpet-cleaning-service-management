@@ -9,13 +9,28 @@ import stu.najah.se.core.ServiceManager;
 import stu.najah.se.ui.Prompter;
 import stu.najah.se.ui.SceneManager;
 
-public class Configuration {
+public class Configuration extends ApplicationTestBase {
+
+    static {
+        System.setProperty("testfx.timeout", "10000");
+    }
 
     @BeforeAll
     public static void launch() throws Exception {
+        // System.setProperty("testfx.robot", "glass");
+        // System.setProperty("testfx.headless", "true");
+        // System.setProperty("prism.order", "sw");
+        // System.setProperty("prism.text", "t2k");
+        // System.setProperty("java.awt.headless", "true");
         ServiceManager.initializeAdminService();
         ServiceManager.initializeEntityServices(Prompter.getInstance(), Prompter.getInstance());
         ApplicationTest.launch(SceneManager.class);
+        Thread.sleep(5000);
+    }
+
+    @Before
+    public void selectStage() {
+        targetWindow(SceneManager.getInstance().getStage());
     }
 
     @Before

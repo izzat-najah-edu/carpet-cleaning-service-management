@@ -78,6 +78,10 @@ public class SceneManager extends Application
         setLoginScene();
     }
 
+    public Stage getStage() {
+        return stage;
+    }
+
     public boolean isLoggedIn() {
         return ServiceManager.getAdminService().isLoggedIn();
     }

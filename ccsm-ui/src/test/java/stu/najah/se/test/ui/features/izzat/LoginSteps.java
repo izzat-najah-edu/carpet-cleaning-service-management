@@ -21,18 +21,14 @@ public class LoginSteps extends ApplicationTestBase {
 
     @When("I enter correct username and correct password")
     public void iEnterCorrectUsernameAndCorrectPassword() {
-        clickOn("#textFieldUsername");
-        write("admin");
-        clickOn("#textFieldPassword");
-        write("admin");
+        type("#textFieldUsername", "admin");
+        type("#textFieldPassword", "admin");
     }
 
     @When("I enter wrong username or wrong password")
     public void iEnterWrongUsernameOrWrongPassword() {
-        clickOn("#textFieldUsername");
-        write("wrong_username");
-        clickOn("#textFieldPassword");
-        write("wrong_password");
+        type("#textFieldUsername", "wrong_username");
+        type("#textFieldPassword", "wrong_password");
     }
 
     @When("I click on the login button")

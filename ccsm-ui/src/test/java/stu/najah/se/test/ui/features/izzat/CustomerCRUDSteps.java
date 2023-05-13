@@ -26,14 +26,10 @@ public class CustomerCRUDSteps extends ApplicationTestBase {
 
     @Given("I enter customer information")
     public void iEnterACustomerInformation() {
-        clickOn("#textFieldName");
-        write(CUSTOMER.getName());
-        clickOn("#textFieldPhone");
-        write(CUSTOMER.getPhone());
-        clickOn("#textFieldAddress");
-        write(CUSTOMER.getAddress());
-        clickOn("#textFieldEmail");
-        write(CUSTOMER.getEmail());
+        type("#textFieldName", CUSTOMER.getName());
+        type("#textFieldPhone", CUSTOMER.getPhone());
+        type("#textFieldAddress", CUSTOMER.getAddress());
+        type("#textFieldEmail", CUSTOMER.getEmail());
     }
 
     @And("the name is not empty")
@@ -68,8 +64,7 @@ public class CustomerCRUDSteps extends ApplicationTestBase {
 
     @And("I enter a different customer information")
     public void iEnterADifferentCustomerInformation() {
-        clickOn("#textFieldAddress");
-        write("-new");
+        type("#textFieldAddress", CUSTOMER.getAddress() + "-new");
         CUSTOMER.setAddress(CUSTOMER.getAddress() + "-new");
     }
 
