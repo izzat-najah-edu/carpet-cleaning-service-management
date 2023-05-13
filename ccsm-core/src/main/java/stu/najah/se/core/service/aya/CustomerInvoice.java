@@ -10,7 +10,7 @@ public class CustomerInvoice {
     private String deliveryAddress;
     private double totalPrice;
     private ArrayList<String> itemsToClean;
-    final String lineSeparator = "=================================";
+    final static String lineSeparator = "=================================";
 
     public CustomerInvoice(String customerName, String customerAddress, String deliveryAddress, ArrayList<String> itemsToClean, double totalPrice) {
         this.customerName = customerName;
