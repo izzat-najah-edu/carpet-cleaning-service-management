@@ -39,8 +39,7 @@ public class ProductCRUDSteps extends ApplicationTestBase {
 
     @Given("I enter product information")
     public void iEnterProductInformation() {
-        clickOn("#textFieldDescription");
-        write(PRODUCT.getDescription());
+        type("#textFieldDescription", PRODUCT.getDescription());
     }
 
     @And("I click add product button")
@@ -68,8 +67,7 @@ public class ProductCRUDSteps extends ApplicationTestBase {
 
     @And("I enter a different product information")
     public void iEnterADifferentProductInformation() {
-        clickOn("#textFieldDescription");
-        write("-new");
+        type("#textFieldDescription", PRODUCT.getDescription() + "-new");
         PRODUCT.setDescription(PRODUCT.getDescription() + "-new");
     }
 

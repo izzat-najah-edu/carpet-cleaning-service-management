@@ -4,6 +4,7 @@ import javafx.application.Platform;
 import javafx.scene.Node;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextInputControl;
 import org.testfx.framework.junit5.ApplicationTest;
 import org.testfx.util.WaitForAsyncUtils;
 
@@ -29,6 +30,21 @@ public class ApplicationTestBase extends ApplicationTest {
         Platform.runLater(() ->
                 comboBox.getSelectionModel().clearAndSelect(row));
         WaitForAsyncUtils.waitForFxEvents();
+    }
+
+    public void type(String query, String text) {
+        var node = lookup(query).query();
+        if (node instanceof TextInputControl inputControl) {
+            Platform.runLater(() -> {
+                inputControl.requestFocus();
+                inputControl.setText(text);
+            });
+            WaitForAsyncUtils.waitForFxEvents();
+        } else {
+            throw new IllegalArgumentException(
+                    "Unsupported Node class for typing text: " + node.getClass().getName()
+            );
+        }
     }
 
 }

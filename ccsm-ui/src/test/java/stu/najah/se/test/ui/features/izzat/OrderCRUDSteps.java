@@ -104,13 +104,11 @@ public class OrderCRUDSteps extends ApplicationTestBase {
 
     @Given("I enter order product information")
     public void iEnterOrderProductInformation() {
-        clickOn("#textFieldSpecialTreatment");
-        write(ORDER_PRODUCT.getSpecialTreatment());
+        type("#textFieldSpecialTreatment", ORDER_PRODUCT.getSpecialTreatment());
         for (byte i = 0; i < ORDER_PRODUCT.getFinished(); i++) {
             clickOn("#checkBoxFinished");
         }
-        clickOn("#textFieldPrice");
-        write(String.valueOf(ORDER_PRODUCT.getPrice()));
+        type("#textFieldPrice", String.valueOf(ORDER_PRODUCT.getPrice()));
     }
 
     @And("I select a product from the product box")
@@ -145,8 +143,7 @@ public class OrderCRUDSteps extends ApplicationTestBase {
 
     @And("I enter a different order product information")
     public void iEnterADifferentOrderProductInformation() {
-        clickOn("#textFieldSpecialTreatment");
-        write("-new");
+        type("#textFieldSpecialTreatment", ORDER_PRODUCT.getSpecialTreatment() + "-new");
         ORDER_PRODUCT.setSpecialTreatment(
                 ORDER_PRODUCT.getSpecialTreatment() + "-new"
         );
