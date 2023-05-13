@@ -10,7 +10,8 @@ public class CustomerInvoice {
     private String deliveryAddress;
     private double totalPrice;
     private ArrayList<String> itemsToClean;
-    static final String lineSeparator = "=================================";
+    static final String LINE_SEPARATOR_CONSTANT = "=================================";
+
 
     public CustomerInvoice(String customerName, String customerAddress, String deliveryAddress, ArrayList<String> itemsToClean, double totalPrice) {
         this.customerName = customerName;
@@ -19,25 +20,26 @@ public class CustomerInvoice {
         this.itemsToClean = itemsToClean;
         this.totalPrice = totalPrice;
     }
-//..
+
+    //..
     public void printInvoice() {
-        System.out.println(lineSeparator);
+        System.out.println(LINE_SEPARATOR_CONSTANT);
         System.out.println("CUSTOMER INFORMATION");
-        System.out.println(lineSeparator);
+        System.out.println(LINE_SEPARATOR_CONSTANT);
         System.out.println("Customer Name: " + customerName);
         System.out.println("Customer Address: " + customerAddress);
         System.out.println("Delivery Address: " + deliveryAddress);
-        System.out.println(lineSeparator);
+        System.out.println(LINE_SEPARATOR_CONSTANT);
         System.out.println("ITEMS TO CLEAN");
-        System.out.println(lineSeparator);
+        System.out.println(LINE_SEPARATOR_CONSTANT);
         for (String item : itemsToClean) {
             System.out.println("- " + item);
         }
-        System.out.println(lineSeparator);
+        System.out.println(LINE_SEPARATOR_CONSTANT);
         System.out.println("TOTAL PRICE");
-        System.out.println(lineSeparator);
+        System.out.println(LINE_SEPARATOR_CONSTANT);
         System.out.println("$" + totalPrice);
-        System.out.println(lineSeparator);
+        System.out.println(LINE_SEPARATOR_CONSTANT);
     }
 
     public static void main(String[] args) {
