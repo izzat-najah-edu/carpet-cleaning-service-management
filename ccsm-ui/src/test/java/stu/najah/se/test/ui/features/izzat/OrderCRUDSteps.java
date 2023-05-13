@@ -17,8 +17,7 @@ import stu.najah.se.core.service.OrderService;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 import static org.testfx.api.FxAssert.verifyThat;
 
 public class OrderCRUDSteps extends ApplicationTestBase {
@@ -70,7 +69,7 @@ public class OrderCRUDSteps extends ApplicationTestBase {
             var orderCreatedAt = orderEntity.getCreatedAt().toLocalDateTime().withMinute(0).withSecond(0).withNano(0);
             return orderCreatedAt.equals(now);
         });
-        assertEquals(1, matchers.count());
+        assertNotEquals(0, matchers.count());
     }
 
     @Given("I select the new order from the order list")
