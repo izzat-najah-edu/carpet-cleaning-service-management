@@ -3,7 +3,7 @@ package stu.najah.se.test.ui.features.izzat;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
-import org.testfx.framework.junit5.ApplicationTest;
+import org.testfx.framework.junit.ApplicationTest;
 import org.testfx.util.WaitForAsyncUtils;
 import stu.najah.se.core.ServiceManager;
 import stu.najah.se.ui.Prompter;

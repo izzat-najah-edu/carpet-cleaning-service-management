@@ -11,10 +11,10 @@ module ccsm.ui.test {
     requires io.cucumber.core;
     requires io.cucumber.junit;
 
-    requires junit;
     requires org.hamcrest;
     requires org.testfx;
-    requires org.testfx.junit5;
+    requires org.testfx.junit;
+    requires junit;
 
     exports stu.najah.se.test.ui.features.aya;
     exports stu.najah.se.test.ui.features.izzat;
