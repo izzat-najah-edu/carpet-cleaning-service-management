@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="sonar project key fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/GenerateStatisticsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/test/java/stu/najah/se/test/core/service/aya/GenerateStatisticsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/aya/CustomerInvoiceFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/aya/CustomerInvoiceFeature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/aya/Discount.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/aya/DiscountSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/aya/ReviewFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/java/stu/najah/se/test/ui/features/aya/ReviewFeature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/aya/Discount.feature" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/aya/Discount.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,21 +165,13 @@
       <command value="mvn sonar:sonar -Pcoverage" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.stu.najah.se.test.core.service in ccsm-core">
-    <configuration name="Feature: Discount" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/aya/Discount.feature" />
-      <option name="GLUE" value="stu.najah.se.test.ui.features.izzat stu.najah.se.test.ui.features.aya" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="ccsm-ui" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <shortenClasspath name="NONE" />
-      <option name="SUGGESTED_NAME" value="Feature: Discount" />
-      <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+  <component name="RunManager" selected="Application.CustomerInvoice">
+    <configuration name="CustomerInvoice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.core.service.aya.CustomerInvoice" />
+      <module name="ccsm-core" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="PATTERN" value="stu.najah.se.core.service.aya.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -192,20 +179,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: Email" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/izzat/Email.feature" />
-      <option name="GLUE" value="stu.najah.se.test.ui.features.izzat stu.najah.se.test.ui.features.aya" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+    <configuration name="LogoutController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.control.LogoutController" />
       <module name="ccsm-ui" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <shortenClasspath name="NONE" />
-      <option name="SUGGESTED_NAME" value="Feature: Email" />
-      <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="PATTERN" value="stu.najah.se.ui.control.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -213,20 +192,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: Logout" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/ccsm-ui/src/test/resources/features/aya/Logout.feature" />
-      <option name="GLUE" value="stu.najah.se.test.ui.features.izzat stu.najah.se.test.ui.features.aya" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+    <configuration name="SceneManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stu.najah.se.ui.SceneManager" />
       <module name="ccsm-ui" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <shortenClasspath name="NONE" />
-      <option name="SUGGESTED_NAME" value="Feature: Logout" />
-      <option name="VM_PARAMETERS" value="--add-exports javafx.graphics/com.sun.javafx.application=org.testfx " />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="PATTERN" value="stu.najah.se.ui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -242,49 +213,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GenerateStatisticsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-core" />
+    <configuration name="stu.najah.se.ui in ccsm-ui" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccsm-ui" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.core.service.aya.*" />
+          <option name="PATTERN" value="stu.najah.se.ui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service.aya" />
-      <option name="MAIN_CLASS_NAME" value="stu.najah.se.test.core.service.aya.GenerateStatisticsTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="stu.najah.se.ui" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="stu.najah.se.test.core.service in ccsm-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccsm-core" />
+    <configuration name="stu.najah.se.ui.control in ccsm-ui" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccsm-ui" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stu.najah.se.test.core.service.*" />
+          <option name="PATTERN" value="stu.najah.se.ui.control.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="stu.najah.se.test.core.service" />
+      <option name="PACKAGE_NAME" value="stu.najah.se.ui.control" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Cucumber Java.Feature: Discount" />
-      <item itemvalue="Cucumber Java.Feature: Email" />
-      <item itemvalue="Cucumber Java.Feature: Logout" />
-      <item itemvalue="JUnit.GenerateStatisticsTest" />
-      <item itemvalue="JUnit.stu.najah.se.test.core.service in ccsm-core" />
+      <item itemvalue="Application.CustomerInvoice" />
+      <item itemvalue="Application.LogoutController" />
+      <item itemvalue="Application.SceneManager" />
+      <item itemvalue="JUnit.stu.najah.se.ui in ccsm-ui" />
+      <item itemvalue="JUnit.stu.najah.se.ui.control in ccsm-ui" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.stu.najah.se.test.core.service in ccsm-core" />
-        <item itemvalue="JUnit.GenerateStatisticsTest" />
-        <item itemvalue="Cucumber Java.Feature: Discount" />
-        <item itemvalue="Cucumber Java.Feature: Email" />
-        <item itemvalue="Cucumber Java.Feature: Logout" />
+        <item itemvalue="Application.CustomerInvoice" />
+        <item itemvalue="Application.SceneManager" />
+        <item itemvalue="JUnit.stu.najah.se.ui in ccsm-ui" />
+        <item itemvalue="JUnit.stu.najah.se.ui.control in ccsm-ui" />
+        <item itemvalue="Application.LogoutController" />
       </list>
     </recent_temporary>
   </component>
@@ -426,13 +396,7 @@
       <workItem from="1682684107035" duration="3629000" />
       <workItem from="1682797049329" duration="314000" />
       <workItem from="1682798899668" duration="3573000" />
-    </task>
-    <task id="LOCAL-00150" summary="dependency fix">
-      <created>1682336025148</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1682336025148</updated>
+      <workItem from="1682802687054" duration="5553000" />
     </task>
     <task id="LOCAL-00151" summary="customer email fix">
       <created>1682340221336</created>
@@ -770,7 +734,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682799017980</updated>
     </task>
-    <option name="localTasksCounter" value="199" />
+    <task id="LOCAL-00199" summary="sonar project key fix">
+      <created>1684017423989</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1684017423989</updated>
+    </task>
+    <option name="localTasksCounter" value="200" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
