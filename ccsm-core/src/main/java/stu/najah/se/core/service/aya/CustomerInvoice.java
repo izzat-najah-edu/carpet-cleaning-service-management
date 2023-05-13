@@ -20,8 +20,7 @@ public class CustomerInvoice {
         this.itemsToClean = itemsToClean;
         this.totalPrice = totalPrice;
     }
-
-    //..
+//..
     public void printInvoice() {
         System.out.println(LINE_SEPARATOR_CONSTANT);
         System.out.println("CUSTOMER INFORMATION");
