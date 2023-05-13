@@ -9,6 +9,8 @@ import stu.najah.se.core.ServiceManager;
 import stu.najah.se.ui.Prompter;
 import stu.najah.se.ui.SceneManager;
 
+import java.util.concurrent.CountDownLatch;
+
 public class Configuration extends ApplicationTestBase {
 
     static {
@@ -25,7 +27,7 @@ public class Configuration extends ApplicationTestBase {
         ServiceManager.initializeAdminService();
         ServiceManager.initializeEntityServices(Prompter.getInstance(), Prompter.getInstance());
         ApplicationTest.launch(SceneManager.class);
-        Thread.sleep(5000);
+        CountDownLatch latch = new CountDownLatch(1);
     }
 
     @Before
