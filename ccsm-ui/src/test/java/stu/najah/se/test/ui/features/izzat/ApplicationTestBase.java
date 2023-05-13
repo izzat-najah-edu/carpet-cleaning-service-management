@@ -2,6 +2,7 @@ package stu.najah.se.test.ui.features.izzat;
 
 import javafx.application.Platform;
 import javafx.scene.Node;
+import javafx.scene.control.ButtonBase;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextInputControl;
@@ -12,6 +13,19 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 public class ApplicationTestBase extends ApplicationTest {
+
+    public void clickOn(String query) {
+        this.clickOn(lookup(query).query());
+    }
+
+    public void clickOn(Node node) {
+        Platform.runLater(() -> {
+            node.requestFocus();
+            if (node instanceof ButtonBase button) {
+                button.fire();
+            }
+        });
+    }
 
     public void clickOkToAlert() {
         Node alert = lookup(".alert").query();
