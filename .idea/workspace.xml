@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="sonar project key fix">
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/aya/CustomerInvoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/aya/CustomerInvoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/Prompter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/Prompter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -397,28 +398,7 @@
       <workItem from="1682797049329" duration="314000" />
       <workItem from="1682798899668" duration="3573000" />
       <workItem from="1682802687054" duration="5553000" />
-      <workItem from="1684017569462" duration="662000" />
-    </task>
-    <task id="LOCAL-00154" summary="fast login moved to test module">
-      <created>1682348533795</created>
-      <option name="number" value="00154" />
-      <option name="presentableId" value="LOCAL-00154" />
-      <option name="project" value="LOCAL" />
-      <updated>1682348533795</updated>
-    </task>
-    <task id="LOCAL-00155" summary="testfx fix">
-      <created>1682352886328</created>
-      <option name="number" value="00155" />
-      <option name="presentableId" value="LOCAL-00155" />
-      <option name="project" value="LOCAL" />
-      <updated>1682352886328</updated>
-    </task>
-    <task id="LOCAL-00156" summary="login screen fix">
-      <created>1682358434226</created>
-      <option name="number" value="00156" />
-      <option name="presentableId" value="LOCAL-00156" />
-      <option name="project" value="LOCAL" />
-      <updated>1682358434226</updated>
+      <workItem from="1684017569462" duration="2439000" />
     </task>
     <task id="LOCAL-00157" summary="refactoring">
       <created>1682360790945</created>
@@ -742,7 +722,28 @@
       <option name="project" value="LOCAL" />
       <updated>1684018112663</updated>
     </task>
-    <option name="localTasksCounter" value="203" />
+    <task id="LOCAL-00203" summary="sonar project key fix">
+      <created>1684018238073</created>
+      <option name="number" value="00203" />
+      <option name="presentableId" value="LOCAL-00203" />
+      <option name="project" value="LOCAL" />
+      <updated>1684018238073</updated>
+    </task>
+    <task id="LOCAL-00204" summary="sonar project key fix">
+      <created>1684018470384</created>
+      <option name="number" value="00204" />
+      <option name="presentableId" value="LOCAL-00204" />
+      <option name="project" value="LOCAL" />
+      <updated>1684018470384</updated>
+    </task>
+    <task id="LOCAL-00205" summary="sonar project key fix">
+      <created>1684019070806</created>
+      <option name="number" value="00205" />
+      <option name="presentableId" value="LOCAL-00205" />
+      <option name="project" value="LOCAL" />
+      <updated>1684019070806</updated>
+    </task>
+    <option name="localTasksCounter" value="206" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

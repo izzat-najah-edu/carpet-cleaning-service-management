@@ -6,20 +6,20 @@ import stu.najah.se.core.service.aya.DiscountCalculator;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
-public class DiscountCalculatorTest {
+ class DiscountCalculatorTest {
 
-    @Test
-    public void testDiscountCalculation() {
-        String input = "500";
-        InputStream in = new ByteArrayInputStream(input.getBytes());
-        System.setIn(in);
+     @Test
+     void testDiscountCalculation() {
+         String input = "500";
+         InputStream in = new ByteArrayInputStream(input.getBytes());
+         System.setIn(in);
 
 
-        String output = "Congratulations, you qualify for a 10% discount!\n" +
-                "Discount amount: 50.00 NIS\n" +
-                "Discounted price: 450.00 NIS\n";
+         String output = "Congratulations, you qualify for a 10% discount!\n" +
+                 "Discount amount: 50.00 NIS\n" +
+                 "Discounted price: 450.00 NIS\n";
 
-        final double DISCOUNT_RATE = 0.1;
+         final double DISCOUNT_RATE = 0.1;
         final double THRESHOLD_AMOUNT = 400;
 
         DiscountCalculator.main(new String[0]);
@@ -36,17 +36,17 @@ public class DiscountCalculatorTest {
     private void assertarreyEquals(String expectedOutput, String output1) {
     }
 
-    @Test
-    public void testNoDiscount() {
-        String input = "300";
-        InputStream in = new ByteArrayInputStream(input.getBytes());
-        System.setIn(in);
-        String expectedOutput = "Sorry, you do not qualify for a discount.\n";
+     @Test
+     void testNoDiscount() {
+         String input = "300";
+         InputStream in = new ByteArrayInputStream(input.getBytes());
+         System.setIn(in);
+         String expectedOutput = "Sorry, you do not qualify for a discount.\n";
 
-        final double DISCOUNT_RATE = 0.1;
-        final double THRESHOLD_AMOUNT = 400;
+         final double DISCOUNT_RATE = 0.1;
+         final double THRESHOLD_AMOUNT = 400;
 
-        DiscountCalculator.main(new String[0]);
+         DiscountCalculator.main(new String[0]);
 
         String output = systemOut().getHistory();
 

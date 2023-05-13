@@ -9,20 +9,19 @@ import stu.najah.se.core.EmailConfirmationListener;
 /**
  * Utility class for (graphically) prompting alerts, inputs texts, dialogs, etc...
  */
-public final class Prompter
-        implements DatabaseErrorListener, EmailConfirmationListener {
+public final class Prompter implements DatabaseErrorListener, EmailConfirmationListener {
+    private Prompter() {
+        // Private constructor to prevent instantiation
+    }
 
-    private static Prompter instance;
+    private static class SingletonHolder {
+        private static final Prompter instance = new Prompter();
+    }
 
     public static Prompter getInstance() {
-        if (instance == null) {
-            instance = new Prompter();
-        }
-        return instance;
+        return SingletonHolder.instance;
     }
 
-    private Prompter() {
-    }
 
     @Override
     public void onTransactionError(String message) {
