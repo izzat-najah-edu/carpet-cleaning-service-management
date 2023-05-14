@@ -15,13 +15,16 @@ public class Configuration extends ApplicationTestBase {
         System.setProperty("testfx.timeout", "10000");
     }
 
+    private void setHeadlessMode() {
+        System.setProperty("testfx.robot", "glass");
+        System.setProperty("testfx.headless", "true");
+        System.setProperty("prism.order", "sw");
+        System.setProperty("prism.text", "t2k");
+        System.setProperty("java.awt.headless", "true");
+    }
+
     @BeforeAll
     public static void launch() throws Exception {
-        // System.setProperty("testfx.robot", "glass");
-        // System.setProperty("testfx.headless", "true");
-        // System.setProperty("prism.order", "sw");
-        // System.setProperty("prism.text", "t2k");
-        // System.setProperty("java.awt.headless", "true");
         ServiceManager.initializeAdminService();
         ServiceManager.initializeEntityServices(Prompter.getInstance(), Prompter.getInstance());
         ApplicationTest.launch(SceneManager.class);

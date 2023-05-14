@@ -46,7 +46,7 @@
                             <goal>report-aggregate</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${project.build.directory}/site/jacoco-aggregate</outputDirectory>
+                            <outputDirectory>${project.build.directory}/site</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
