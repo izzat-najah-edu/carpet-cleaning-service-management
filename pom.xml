@@ -10,7 +10,6 @@
     <modules>
         <module>ccsm-core</module>
         <module>ccsm-ui</module>
-        <module>ccsm-aggregate-report</module>
     </modules>
 
     <properties>
@@ -21,7 +20,7 @@
         <sonar.projectKey>izzat-najah-edu_carpet-cleaning-service-management</sonar.projectKey>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.coverage.jacoco.xmlReportPaths>
-            ${project.basedir}/ccsm-aggregate-report/target/site/jacoco-aggregate/jacoco.xml
+            ${project.basedir}/ccsm-ui/target/site/jacoco-aggregate/jacoco.xml
         </sonar.coverage.jacoco.xmlReportPaths>
     </properties>
     <build>
@@ -49,26 +48,6 @@
                             --add-opens javafx.graphics/com.sun.glass.ui=org.testfx
                         </argLine>
                     </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.jacoco</groupId>
-                    <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>0.8.7</version>
-                    <executions>
-                        <execution>
-                            <id>prepare-agent</id>
-                            <goals>
-                                <goal>prepare-agent</goal>
-                            </goals>
-                        </execution>
-                        <execution>
-                            <id>report</id>
-                            <phase>test</phase>
-                            <goals>
-                                <goal>report</goal>
-                            </goals>
-                        </execution>
-                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
