@@ -24,6 +24,4 @@ public interface UserSessionListener {
      * after a logout.
      */
     void logout();
-
-    void addSomeEventListener(Object o);
 }
