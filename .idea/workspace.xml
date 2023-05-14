@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="sonar project key fix">
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="h">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/Prompter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/src/main/java/stu/najah/se/ui/Prompter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -398,42 +397,7 @@
       <workItem from="1682797049329" duration="314000" />
       <workItem from="1682798899668" duration="3573000" />
       <workItem from="1682802687054" duration="5553000" />
-      <workItem from="1684017569462" duration="2439000" />
-    </task>
-    <task id="LOCAL-00157" summary="refactoring">
-      <created>1682360790945</created>
-      <option name="number" value="00157" />
-      <option name="presentableId" value="LOCAL-00157" />
-      <option name="project" value="LOCAL" />
-      <updated>1682360790945</updated>
-    </task>
-    <task id="LOCAL-00158" summary="readme fix">
-      <created>1682364613051</created>
-      <option name="number" value="00158" />
-      <option name="presentableId" value="LOCAL-00158" />
-      <option name="project" value="LOCAL" />
-      <updated>1682364613051</updated>
-    </task>
-    <task id="LOCAL-00159" summary="renaming fix">
-      <created>1682369017346</created>
-      <option name="number" value="00159" />
-      <option name="presentableId" value="LOCAL-00159" />
-      <option name="project" value="LOCAL" />
-      <updated>1682369017346</updated>
-    </task>
-    <task id="LOCAL-00160" summary="service initialization fix">
-      <created>1682369491735</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1682369491736</updated>
-    </task>
-    <task id="LOCAL-00161" summary="fix">
-      <created>1682369645595</created>
-      <option name="number" value="00161" />
-      <option name="presentableId" value="LOCAL-00161" />
-      <option name="project" value="LOCAL" />
-      <updated>1682369645595</updated>
+      <workItem from="1684017569462" duration="4883000" />
     </task>
     <task id="LOCAL-00162" summary="fix">
       <created>1682371612012</created>
@@ -743,7 +707,42 @@
       <option name="project" value="LOCAL" />
       <updated>1684019070806</updated>
     </task>
-    <option name="localTasksCounter" value="206" />
+    <task id="LOCAL-00206" summary="sonar project key fix">
+      <created>1684020209916</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1684020209916</updated>
+    </task>
+    <task id="LOCAL-00207" summary="h">
+      <created>1684020663025</created>
+      <option name="number" value="00207" />
+      <option name="presentableId" value="LOCAL-00207" />
+      <option name="project" value="LOCAL" />
+      <updated>1684020663025</updated>
+    </task>
+    <task id="LOCAL-00208" summary="h">
+      <created>1684020985661</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1684020985661</updated>
+    </task>
+    <task id="LOCAL-00209" summary="h">
+      <created>1684021587035</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1684021587036</updated>
+    </task>
+    <task id="LOCAL-00210" summary="h">
+      <created>1684022070406</created>
+      <option name="number" value="00210" />
+      <option name="presentableId" value="LOCAL-00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1684022070406</updated>
+    </task>
+    <option name="localTasksCounter" value="211" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -779,7 +778,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="renaming fix" />
     <MESSAGE value="service initialization fix" />
     <MESSAGE value="fix" />
     <MESSAGE value="customer crud feature fix" />
@@ -804,7 +802,8 @@
     <MESSAGE value="Jacoco tool integration" />
     <MESSAGE value="dependency fix" />
     <MESSAGE value="sonar project key fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="sonar project key fix" />
+    <MESSAGE value="h" />
+    <option name="LAST_COMMIT_MESSAGE" value="h" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

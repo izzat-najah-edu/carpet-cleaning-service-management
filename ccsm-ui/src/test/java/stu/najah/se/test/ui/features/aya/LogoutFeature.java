@@ -41,10 +41,10 @@ public class LogoutFeature extends ApplicationTest {
         iClickOnTheLoginButton();
         assertTrue(SceneManager.getInstance().isLoggedIn());
 
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException ignored) {
-        }
+        // try {
+        //  Thread.sleep(10000);
+        // } catch (InterruptedException ignored) {
+        //  }
     }
 
     @When("the user clicks on the logout button")
