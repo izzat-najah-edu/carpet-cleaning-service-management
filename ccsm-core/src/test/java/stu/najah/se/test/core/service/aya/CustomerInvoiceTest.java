@@ -6,20 +6,20 @@ import stu.najah.se.core.service.aya.CustomerInvoice;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
-public class CustomerInvoiceTest {
+ class CustomerInvoiceTest {
 
-    @Test
-    public void testPrintInvoice() {
-        String input = "Aya\nNablus\nAsira Street\nCarpet\nRug\nWindow\ndone\n50.00";
-        InputStream in = new ByteArrayInputStream(input.getBytes());
-        System.setIn(in);
+     @Test
+     void testPrintInvoice() {
+         String input = "Aya\nNablus\nAsira Street\nCarpet\nRug\nWindow\ndone\n50.00";
+         InputStream in = new ByteArrayInputStream(input.getBytes());
+         System.setIn(in);
 
-        CustomerInvoice.main(new String[0]);
+         CustomerInvoice.main(new String[0]);
 
-        String output = systemOut().getHistory();
+         String output = systemOut().getHistory();
 
-        String expectedOutput = "=================================\n" +
-                "CUSTOMER INFORMATION\n" +
+         String expectedOutput = "=================================\n" +
+                 "CUSTOMER INFORMATION\n" +
                 "=================================\n" +
                 "Customer Name: Aya\n" +
                 "Customer Address: Nablus\n" +
