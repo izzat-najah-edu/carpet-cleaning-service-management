@@ -9,8 +9,6 @@ import stu.najah.se.core.ServiceManager;
 import stu.najah.se.ui.Prompter;
 import stu.najah.se.ui.SceneManager;
 
-import java.util.concurrent.CountDownLatch;
-
 public class Configuration extends ApplicationTestBase {
 
     static {
@@ -30,21 +28,6 @@ public class Configuration extends ApplicationTestBase {
         ServiceManager.initializeAdminService();
         ServiceManager.initializeEntityServices(Prompter.getInstance(), Prompter.getInstance());
         ApplicationTest.launch(SceneManager.class);
-        //Thread.sleep(5000);
-        CountDownLatch latch = new CountDownLatch(1);
-        ServiceManager.initializeAdminService();
-        ServiceManager.initializeEntityServices(Prompter.getInstance(), Prompter.getInstance());
-
-        // Register a listener or observer to trigger the countDown() method when the desired event occurs
-        //SceneManager.getInstance().addSomeEventListener(() -> latch.countDown());
-
-        // Launch the application
-        ApplicationTest.launch(SceneManager.class);
-
-        // Wait until the countDown() method is called or a timeout occurs
-        latch.await();
-
-        // Rest of the code after the desired event has occurred
     }
 
 
