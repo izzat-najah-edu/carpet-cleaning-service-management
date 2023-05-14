@@ -53,7 +53,7 @@ public class SceneManager extends Application
      */
     public static void main(String[] args) {
         ServiceManager.initializeAdminService();
-        ServiceManager.initializeEntityServices(Prompter.getInstance(), Prompter.getInstance());
+        ServiceManager.initializeEntityServices(Prompter.getListener(), Prompter.getListener());
         Application.launch(args);
     }
 

@@ -112,7 +112,7 @@ public class ProductsController
                     textFieldDescription.getText()
             ));
         } catch (IllegalStateException e) {
-            Prompter.getInstance().error(e);
+            Prompter.error(e);
         } finally {
             refreshTable();
         }
@@ -125,7 +125,7 @@ public class ProductsController
                     textFieldDescription.getText()
             ));
         } catch (IllegalStateException e) {
-            Prompter.getInstance().error(e);
+            Prompter.error(e);
         } finally {
             refreshTable();
         }
@@ -136,7 +136,7 @@ public class ProductsController
         try {
             productService.deleteProduct();
         } catch (IllegalStateException e) {
-            Prompter.getInstance().error(e);
+            Prompter.error(e);
         } finally {
             refreshTable();
         }

@@ -41,7 +41,7 @@ public class LoginController
                     textFieldPassword.getText()
             );
         } catch (IllegalArgumentException e) {
-            Prompter.getInstance().error(e);
+            Prompter.error(e);
         }
     }
 }

@@ -184,7 +184,7 @@ public class OrdersController
         try {
             orderProductService.updateOrderProduct(createProductFromTextFields());
         } catch (NumberFormatException | IllegalStateException e) {
-            Prompter.getInstance().error(e);
+            Prompter.error(e);
         } finally {
             refreshOrderProductsTable();
         }
@@ -195,7 +195,7 @@ public class OrdersController
         try {
             orderProductService.deleteOrderProduct();
         } catch (IllegalStateException e) {
-            Prompter.getInstance().error(e);
+            Prompter.error(e);
         } finally {
             refreshOrderProductsTable();
             refreshAvailableProducts();
@@ -207,7 +207,7 @@ public class OrdersController
         try {
             orderProductService.createAndSelectOrderProduct(createProductFromTextFields());
         } catch (NumberFormatException | IllegalStateException e) {
-            Prompter.getInstance().error(e);
+            Prompter.error(e);
         } finally {
             refreshOrderProductsTable();
             refreshAvailableProducts();
@@ -219,7 +219,7 @@ public class OrdersController
         try {
             orderService.createAndSelectOrder();
         } catch (IllegalStateException e) {
-            Prompter.getInstance().error(e);
+            Prompter.error(e);
         } finally {
             refreshOrdersTable();
         }
@@ -230,7 +230,7 @@ public class OrdersController
         try {
             orderService.deleteOrder();
         } catch (IllegalStateException e) {
-            Prompter.getInstance().error(e);
+            Prompter.error(e);
         } finally {
             refreshOrdersTable();
         }
@@ -241,7 +241,7 @@ public class OrdersController
         try {
             orderService.notifyCustomer();
         } catch (IllegalStateException e) {
-            Prompter.getInstance().error(e);
+            Prompter.error(e);
         }
     }
 

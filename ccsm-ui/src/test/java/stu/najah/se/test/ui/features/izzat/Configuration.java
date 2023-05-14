@@ -26,7 +26,7 @@ public class Configuration extends ApplicationTestBase {
     @BeforeAll
     public static void launch() throws Exception {
         ServiceManager.initializeAdminService();
-        ServiceManager.initializeEntityServices(Prompter.getInstance(), Prompter.getInstance());
+        ServiceManager.initializeEntityServices(Prompter.getListener(), Prompter.getListener());
         ApplicationTest.launch(SceneManager.class);
     }
 

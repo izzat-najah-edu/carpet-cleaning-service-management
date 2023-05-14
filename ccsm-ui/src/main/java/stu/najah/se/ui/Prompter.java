@@ -9,34 +9,31 @@ import stu.najah.se.core.EmailConfirmationListener;
 /**
  * Utility class for (graphically) prompting alerts, inputs texts, dialogs, etc...
  */
-public final class Prompter
+public abstract class Prompter
         implements DatabaseErrorListener, EmailConfirmationListener {
 
-    private static Prompter instance;
-
-    public static Prompter getInstance() {
-        if (instance == null) {
-            instance = new Prompter();
+    private static final Prompter adapterListener = new Prompter() {
+        @Override
+        public void onTransactionError(String message) {
+            Prompter.error(message);
         }
-        return instance;
+
+        @Override
+        public boolean onEmailConfirmation(String message) {
+            return Prompter.confirm(message);
+        }
+
+        @Override
+        public void onEmailSent(String message) {
+            Prompter.info(message);
+        }
+    };
+
+    public static Prompter getListener() {
+        return adapterListener;
     }
 
     private Prompter() {
-    }
-
-    @Override
-    public void onTransactionError(String message) {
-        error(message);
-    }
-
-    @Override
-    public boolean onEmailConfirmation(String message) {
-        return confirm(message);
-    }
-
-    @Override
-    public void onEmailSent(String message) {
-        info(message);
     }
 
     /**
@@ -46,7 +43,7 @@ public final class Prompter
      * @param type    only use INFORMATION, WARNING, or ERROR
      *                because they don't have multiple buttons
      */
-    private void prompt(String message, Alert.AlertType type) {
+    private static void prompt(String message, Alert.AlertType type) {
         var alert = new Alert(type);
         alert.initModality(Modality.APPLICATION_MODAL);
         alert.setContentText(message);
@@ -59,7 +56,7 @@ public final class Prompter
      * @param message to be displayed
      * @return true if OK was pressed, false otherwise
      */
-    public boolean confirm(String message) {
+    public static boolean confirm(String message) {
         var alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.initModality(Modality.APPLICATION_MODAL);
         alert.setContentText(message);
@@ -72,7 +69,7 @@ public final class Prompter
      *
      * @param message to be displayed
      */
-    public void info(String message) {
+    public static void info(String message) {
         prompt(message, Alert.AlertType.INFORMATION);
     }
 
@@ -81,7 +78,7 @@ public final class Prompter
      *
      * @param message to be displayed
      */
-    public void warning(String message) {
+    public static void warning(String message) {
         prompt(message, Alert.AlertType.WARNING);
     }
 
@@ -90,7 +87,7 @@ public final class Prompter
      *
      * @param message to be displayed
      */
-    public void error(String message) {
+    public static void error(String message) {
         prompt(message, Alert.AlertType.ERROR);
     }
 
@@ -99,12 +96,12 @@ public final class Prompter
      *
      * @param e it's message will be displayed
      */
-    public void error(Exception e) {
+    public static void error(Exception e) {
         prompt(e.getMessage(), Alert.AlertType.ERROR);
     }
 
 
-    public void loginError() {
+    public static void loginError() {
         error("Login failed. Please check your username and password and try again.");
     }
 
