@@ -49,28 +49,4 @@ final class Database {
         return sessionFactory.openSession();
     }
 
-    /**
-     * Executes the given SessionUsage functional interface within a try-with-resources block,
-     * ensuring the session is properly closed after the operation.
-     *
-     * @param usage The SessionUsage functional interface to be executed with the session
-     * @param <T>   The type of the result returned from the session operation
-     * @return The result of the session operation
-     */
-    static <T> T useSession(SessionUsage<T> usage) {
-        try (var session = sessionFactory.openSession()) {
-            return usage.perform(session);
-        }
-    }
-
-    /**
-     * A functional interface to be used with the useSession method.
-     * Provides an abstract perform method to execute operations on the session.
-     *
-     * @param <T> The type of the result returned from the session operation
-     */
-    @FunctionalInterface
-    interface SessionUsage<T> {
-        T perform(Session session);
-    }
 }
