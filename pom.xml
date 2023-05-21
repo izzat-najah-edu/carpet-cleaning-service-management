@@ -51,7 +51,7 @@
                 <version>0.8.7</version>
                 <configuration>
                     <excludes>
-                        <exclude>**/entity/*</exclude>
+                        <exclude>**/core/entity/*.class</exclude>
                     </excludes>
                 </configuration>
                 <executions>
