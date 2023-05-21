@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="fix">
-      <change afterPath="$PROJECT_DIR$/ccsm-ui/hs_err_pid2016.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ccsm-ui/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-ui/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +173,7 @@
       <command value="mvn sonar:sonar -Pcoverage" />
       <command value="mvn clean validate compile install" />
       <command value="mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar" />
+      <command value="mvn clean verify" />
     </option>
   </component>
   <component name="RunManager" selected="JUnit.IzzatFeaturesTest">
@@ -409,98 +405,14 @@
       <workItem from="1682798899668" duration="3573000" />
       <workItem from="1682802687054" duration="5553000" />
       <workItem from="1684017569462" duration="4883000" />
-      <workItem from="1684073377253" duration="742000" />
-    </task>
-    <task id="LOCAL-00164" summary="fix">
-      <created>1682372078923</created>
-      <option name="number" value="00164" />
-      <option name="presentableId" value="LOCAL-00164" />
-      <option name="project" value="LOCAL" />
-      <updated>1682372078923</updated>
-    </task>
-    <task id="LOCAL-00165" summary="customer crud feature fix">
-      <created>1682372319848</created>
-      <option name="number" value="00165" />
-      <option name="presentableId" value="LOCAL-00165" />
-      <option name="project" value="LOCAL" />
-      <updated>1682372319848</updated>
-    </task>
-    <task id="LOCAL-00166" summary="steps definitions fix">
-      <created>1682372586832</created>
-      <option name="number" value="00166" />
-      <option name="presentableId" value="LOCAL-00166" />
-      <option name="project" value="LOCAL" />
-      <updated>1682372586832</updated>
-    </task>
-    <task id="LOCAL-00167" summary="steps definitions fix">
-      <created>1682372632911</created>
-      <option name="number" value="00167" />
-      <option name="presentableId" value="LOCAL-00167" />
-      <option name="project" value="LOCAL" />
-      <updated>1682372632911</updated>
-    </task>
-    <task id="LOCAL-00168" summary="scenario change">
-      <created>1682435601618</created>
-      <option name="number" value="00168" />
-      <option name="presentableId" value="LOCAL-00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1682435601618</updated>
-    </task>
-    <task id="LOCAL-00169" summary="customer crud test fix">
-      <created>1682439057707</created>
-      <option name="number" value="00169" />
-      <option name="presentableId" value="LOCAL-00169" />
-      <option name="project" value="LOCAL" />
-      <updated>1682439057707</updated>
-    </task>
-    <task id="LOCAL-00170" summary="test refactoring">
-      <created>1682440974564</created>
-      <option name="number" value="00170" />
-      <option name="presentableId" value="LOCAL-00170" />
-      <option name="project" value="LOCAL" />
-      <updated>1682440974564</updated>
-    </task>
-    <task id="LOCAL-00171" summary="product crud test fix">
-      <created>1682440995818</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1682440995818</updated>
-    </task>
-    <task id="LOCAL-00172" summary="code fix">
-      <created>1682441003430</created>
-      <option name="number" value="00172" />
-      <option name="presentableId" value="LOCAL-00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1682441003430</updated>
-    </task>
-    <task id="LOCAL-00173" summary="grammar fix">
-      <created>1682441173993</created>
-      <option name="number" value="00173" />
-      <option name="presentableId" value="LOCAL-00173" />
-      <option name="project" value="LOCAL" />
-      <updated>1682441173993</updated>
-    </task>
-    <task id="LOCAL-00174" summary="new order product constructor">
-      <created>1682444413032</created>
-      <option name="number" value="00174" />
-      <option name="presentableId" value="LOCAL-00174" />
-      <option name="project" value="LOCAL" />
-      <updated>1682444413032</updated>
-    </task>
-    <task id="LOCAL-00175" summary="new order product constructor">
-      <created>1682444467372</created>
-      <option name="number" value="00175" />
-      <option name="presentableId" value="LOCAL-00175" />
-      <option name="project" value="LOCAL" />
-      <updated>1682444467372</updated>
-    </task>
-    <task id="LOCAL-00176" summary="order product crud test">
-      <created>1682445907405</created>
-      <option name="number" value="00176" />
-      <option name="presentableId" value="LOCAL-00176" />
-      <option name="project" value="LOCAL" />
-      <updated>1682445907405</updated>
+      <workItem from="1684073377253" duration="3312000" />
+      <workItem from="1684090575655" duration="23000" />
+      <workItem from="1684096806018" duration="441000" />
+      <workItem from="1684393804852" duration="7000" />
+      <workItem from="1684581246170" duration="4741000" />
+      <workItem from="1684685229606" duration="31000" />
+      <workItem from="1684693469181" duration="502000" />
+      <workItem from="1684694292920" duration="1527000" />
     </task>
     <task id="LOCAL-00177" summary="javafx thread fix">
       <created>1682446163385</created>
@@ -754,7 +666,98 @@
       <option name="project" value="LOCAL" />
       <updated>1684072466310</updated>
     </task>
-    <option name="localTasksCounter" value="213" />
+    <task id="LOCAL-00213" summary="fix">
+      <created>1684074382883</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1684074382883</updated>
+    </task>
+    <task id="LOCAL-00214" summary="fix">
+      <created>1684074388599</created>
+      <option name="number" value="00214" />
+      <option name="presentableId" value="LOCAL-00214" />
+      <option name="project" value="LOCAL" />
+      <updated>1684074388599</updated>
+    </task>
+    <task id="LOCAL-00215" summary="fix">
+      <created>1684074503806</created>
+      <option name="number" value="00215" />
+      <option name="presentableId" value="LOCAL-00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1684074503806</updated>
+    </task>
+    <task id="LOCAL-00216" summary="fix">
+      <created>1684075874686</created>
+      <option name="number" value="00216" />
+      <option name="presentableId" value="LOCAL-00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1684075874686</updated>
+    </task>
+    <task id="LOCAL-00217" summary="fix">
+      <created>1684076106984</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1684076106984</updated>
+    </task>
+    <task id="LOCAL-00218" summary="prompter refactoring">
+      <created>1684097222114</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1684097222114</updated>
+    </task>
+    <task id="LOCAL-00219" summary="jacoco fixes">
+      <created>1684584780704</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1684584780704</updated>
+    </task>
+    <task id="LOCAL-00220" summary="jacoco fixes">
+      <created>1684587801969</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1684587801969</updated>
+    </task>
+    <task id="LOCAL-00221" summary="fixes">
+      <created>1684588341522</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1684588341522</updated>
+    </task>
+    <task id="LOCAL-00222" summary="fixes">
+      <created>1684693598168</created>
+      <option name="number" value="00222" />
+      <option name="presentableId" value="LOCAL-00222" />
+      <option name="project" value="LOCAL" />
+      <updated>1684693598168</updated>
+    </task>
+    <task id="LOCAL-00223" summary="fixes">
+      <created>1684694478845</created>
+      <option name="number" value="00223" />
+      <option name="presentableId" value="LOCAL-00223" />
+      <option name="project" value="LOCAL" />
+      <updated>1684694478845</updated>
+    </task>
+    <task id="LOCAL-00224" summary="fixes">
+      <created>1684694926334</created>
+      <option name="number" value="00224" />
+      <option name="presentableId" value="LOCAL-00224" />
+      <option name="project" value="LOCAL" />
+      <updated>1684694926334</updated>
+    </task>
+    <task id="LOCAL-00225" summary="fixes">
+      <created>1684695668356</created>
+      <option name="number" value="00225" />
+      <option name="presentableId" value="LOCAL-00225" />
+      <option name="project" value="LOCAL" />
+      <updated>1684695668356</updated>
+    </task>
+    <option name="localTasksCounter" value="226" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -790,10 +793,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="service initialization fix" />
-    <MESSAGE value="customer crud feature fix" />
-    <MESSAGE value="steps definitions fix" />
-    <MESSAGE value="scenario change" />
     <MESSAGE value="customer crud test fix" />
     <MESSAGE value="test refactoring" />
     <MESSAGE value="product crud test fix" />
@@ -815,7 +814,11 @@
     <MESSAGE value="sonar project key fix" />
     <MESSAGE value="h" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="prompter fixes" />
+    <MESSAGE value="prompter refactoring" />
+    <MESSAGE value="jacoco fixes" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
