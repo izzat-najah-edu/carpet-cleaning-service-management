@@ -3,7 +3,6 @@ package stu.najah.se.core.service;
 import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
-import jakarta.mail.internet.MimeMultipart;
 import stu.najah.se.core.EmailException;
 
 import java.io.IOException;
@@ -107,19 +106,16 @@ public final class EmailUtil {
         } catch (MessagingException | NullPointerException | IOException e) {
             throw new EmailException(e);
         } finally {
-            // Close the resources
             if (sentFolder != null) {
                 try {
                     sentFolder.close(false);
-                } catch (MessagingException e) {
-                    // Ignore this exception
+                } catch (MessagingException ignored) {
                 }
             }
             if (store != null) {
                 try {
                     store.close();
-                } catch (MessagingException e) {
-                    // Ignore this exception
+                } catch (MessagingException ignored) {
                 }
             }
         }
@@ -131,29 +127,7 @@ public final class EmailUtil {
         if (message.isMimeType("text/plain")) {
             result = message.getContent().toString();
         } else if (message.isMimeType("multipart/*")) {
-            MimeMultipart mimeMultipart = (MimeMultipart) message.getContent();
-            result = getTextFromMimeMultipart(mimeMultipart);
-        }
-        return result;
-    }
-
-    private static String getTextFromMimeMultipart(MimeMultipart mimeMultipart)
-            throws MessagingException, IOException {
-        String result = "";
-        int count = mimeMultipart.getCount();
-        for (int i = 0; i < count; i++) {
-            BodyPart bodyPart = mimeMultipart.getBodyPart(i);
-            if (bodyPart.isMimeType("text/plain")) {
-                result = bodyPart.getContent().toString();
-                break; // We found the plain text part, no need to continue
-            } else if (bodyPart.isMimeType("text/html")) {
-                String html = bodyPart.getContent().toString();
-                if (result.isEmpty()) {
-                    result = html;
-                }
-            } else if (bodyPart.getContent() instanceof MimeMultipart) {
-                result = getTextFromMimeMultipart((MimeMultipart) bodyPart.getContent());
-            }
+            throw new MessagingException("not text");
         }
         return result;
     }
