@@ -26,14 +26,12 @@ public class ServiceManager {
      * Initializes the AdminService.
      * This method ensures that a single AdminService instance is shared between all users.
      *
-     * @return an instance of the initialized AdminService
      * @throws IllegalStateException if the AdminService is already initialized
      */
-    public static AdminService initializeAdminService()
+    public static void initializeAdminService()
             throws IllegalStateException {
         if (adminServiceInstance == null) {
             adminServiceInstance = new AdminService(new AdminDAO());
-            return adminServiceInstance;
         } else {
             throw new IllegalStateException("AdminService has already been initialized!");
         }
