@@ -114,16 +114,20 @@ export JAVAMAIL_PASS="your_password"
 ## Latest Look
 
 - Login Panel
-  ![Login Panel](https://github.com/izzat-najah-edu/carpet-cleaning-service-management/assets/92182269/10957c64-bf3a-43cd-8a49-cde3615a885b)
+
+![Login Panel](https://github.com/izzat-najah-edu/carpet-cleaning-service-management/assets/92182269/10957c64-bf3a-43cd-8a49-cde3615a885b)
 
 - Customers Tab
-  ![Customers Tab](https://github.com/izzat-najah-edu/carpet-cleaning-service-management/assets/92182269/993473fb-2f00-4455-8365-1086ebdbd653)
+
+![Customers Tab](https://github.com/izzat-najah-edu/carpet-cleaning-service-management/assets/92182269/993473fb-2f00-4455-8365-1086ebdbd653)
 
 - Products Tab
-  ![Products Tab](https://github.com/izzat-najah-edu/carpet-cleaning-service-management/assets/92182269/49036d2b-d693-440e-84a1-72333013dd3b)
+
+![Products Tab](https://github.com/izzat-najah-edu/carpet-cleaning-service-management/assets/92182269/49036d2b-d693-440e-84a1-72333013dd3b)
 
 - Orders Tab
-  ![Orders Tab](https://github.com/izzat-najah-edu/carpet-cleaning-service-management/assets/92182269/c9ce93e3-5946-4492-a182-5cfd18a6627a)
+
+![Orders Tab](https://github.com/izzat-najah-edu/carpet-cleaning-service-management/assets/92182269/c9ce93e3-5946-4492-a182-5cfd18a6627a)
 
 ## Adding Features
 
