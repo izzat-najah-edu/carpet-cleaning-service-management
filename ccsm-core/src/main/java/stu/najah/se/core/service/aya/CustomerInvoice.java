@@ -38,7 +38,7 @@ public class CustomerInvoice {
         Logger.print("ITEMS TO CLEAN");
         Logger.print(LINE_SEPARATOR_CONSTANT);
         for (String item : itemsToClean) {
-            System.out.println("- " + item);
+            Logger.print("- " + item);
         }
         Logger.print(LINE_SEPARATOR_CONSTANT);
         Logger.print("TOTAL PRICE");
