@@ -2,44 +2,57 @@
 
 The Idea is to build management system that can:
 
-### by: [@izzat5233](https://github.com/izzat5233)
+### Developed by: [@izzat5233](https://github.com/izzat5233)
 
-- record full information for customers with all CRUD operations available.
-- record full information for the products & orders with all CRUD operations available.
-- Track the orders and the status [ waiting, complete].
-- Notify the customer by sending email when the order is complete.
-- [Extra] Authentication system with a login screen (only certain admins can access the system).
+- Record full information for customers with all CRUD operations available.
+- Record full information for the products & orders with all CRUD operations available.
+- Track the orders and the status [waiting, complete].
+- Notify customers via email when their order is complete.
+- [Extra] Authentication system with a login screen (restrict access to specific admins).
 
-### by: [@ayakhammash](https://github.com/ayakhammash)
+### Developed by: [@ayakhammash](https://github.com/ayakhammash)
 
-- generate invoice for customer including delivery information price , address , items he gives to clean
-- generate customized reports about business.
+- Generate invoice for customer including delivery information price , address , items he gives to clean
+- Generate customized reports about business.
 - Generate statistics about, for example, total delivered items , total cash , total paid, total debts.
 - Give a discount option to customers.
+
+# Table of Contents
+
+- [Summary](#summary)
+  - [Technologies](#technologies)
+  - [Static Analysis](#static-analysis)
+  - [Coverage](#coverage)
+- [Setup](#setup)
+  - [MySQL](#mysql)
+  - [Email Service](#email-service)
+- [Latest Look](#latest-look)
+- [More](#more)
+  - [Adding Features](#adding-features)
 
 # Summary
 
 ## Technologies
 
-The system was divided into two modules [core & ui]. And the following was used:
+The system is divided into two modules, Core and UI. And the following technologies are used:
 
 - Core Module:
   - Hibernate
+  - JUnit5 (for testing)
+  - Mockito (for testing)
   - Jakarta Mail
-  - JUnit5 (test)
-  - Mockito (test)
 - UI Module:
   - JavaFX
-  - Cucumber (test)
-  - TestFX (test)
+  - Cucumber (for testing)
+  - TestFX (for testing)
 - CI Analysis:
-  - SonarCloud - for static analysis
-  - Jenkins - for building automation
-  - Jacoco - for coverage report
+  - SonarCloud (for static analysis)
+  - Jenkins (for building automation)
+  - Jacoco (for coverage report)
 
 ## Static Analysis
 
-- Full analysis at
+- Full analysis available at
   [project link](https://sonarcloud.io/project/overview?id=izzat-najah-edu_carpet-cleaning-service-management)
 
 ![SonarCloud Analysis](https://github.com/izzat-najah-edu/carpet-cleaning-service-management/assets/92182269/317af9ac-efb0-4388-9728-ddfe2032dc2b)
@@ -109,9 +122,9 @@ export JAVAMAIL_USER="your_email@example.com"
 export JAVAMAIL_PASS="your_password"
 ```
 
-# More
+# Latest Look
 
-## Latest Look
+Screenshots of the latest interface are provided below:
 
 - Login Panel
 
@@ -128,6 +141,8 @@ export JAVAMAIL_PASS="your_password"
 - Orders Tab
 
 ![Orders Tab](https://github.com/izzat-najah-edu/carpet-cleaning-service-management/assets/92182269/c9ce93e3-5946-4492-a182-5cfd18a6627a)
+
+# More
 
 ## Adding Features
 
