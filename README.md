@@ -17,17 +17,46 @@ The Idea is to build management system that can:
 - Generate statistics about, for example, total delivered items , total cash , total paid, total debts.
 - Give a discount option to customers.
 
-## Technologies:
+# Summary
+
+## Technologies
 
 The system was divided into two modules [core & ui]. And the following was used:
 
-- Hibernate (Core)
-- JUnit 5 (Core Testing)
-- JavaFX (UI)
-- Cucumber (UI Testing)
-- TestFX (UI Testing)
+- Core Module:
+  - Hibernate
+  - Jakarta Mail
+  - JUnit5 (test)
+  - Mockito (test)
+- UI Module:
+  - JavaFX
+  - Cucumber (test)
+  - TestFX (test)
+- CI Analysis:
+  - SonarCloud - for static analysis
+  - Jenkins - for building automation
+  - Jacoco - for coverage report
 
-## MySQL Setup
+## Static Analysis
+
+- Full analysis at
+  [project link](https://sonarcloud.io/project/overview?id=izzat-najah-edu_carpet-cleaning-service-management)
+
+![SonarCloud Analysis](https://github.com/izzat-najah-edu/carpet-cleaning-service-management/assets/92182269/317af9ac-efb0-4388-9728-ddfe2032dc2b)
+
+## Coverage
+
+- Most of the non-covered lines are either additional methods to handle extra functionalities which haven't been tested
+  yet or getters & setters of the POJO entity objects (AdminEntity, CustomerEntity, etc.) which are auto-generated and
+  do not require testing.
+
+- The Cucumber tests focused mainly on the UI. Therefore, almost all UI functionalities are tested.
+
+![Jacoco Coverage Report](https://github.com/izzat-najah-edu/carpet-cleaning-service-management/assets/92182269/b7ef1423-5430-4411-9132-53f1b1392471)
+
+# Setup
+
+## MySQL
 
 This project requires a MySQL server to be installed and running. Please follow the official MySQL installation guide
 for your platform:
@@ -49,7 +78,7 @@ To execute these files, follow these steps:
 3. Similarly, execute the contents of the `INSERT.sql` file in your MySQL shell or client. Use the same method as you
    did for the `CREATE.sql` file.
 
-## Email Setup and Environment Variables
+## Email Service
 
 This project uses an email service to send notifications to customers. To protect sensitive information, the email
 credentials should be stored as environment variables. Please follow these steps to set up the environment variables:
@@ -80,19 +109,7 @@ export JAVAMAIL_USER="your_email@example.com"
 export JAVAMAIL_PASS="your_password"
 ```
 
-## Static Analysis
-
-![SonarCloud Analysis](https://github.com/izzat-najah-edu/carpet-cleaning-service-management/assets/92182269/317af9ac-efb0-4388-9728-ddfe2032dc2b)
-
-## Coverage
-
-- Most of the non-covered lines are either additional methods to handle extra functionalities which haven't been tested
-  yet or getters & setters of the POJO entity objects (AdminEntity, CustomerEntity, etc.) which are auto-generated and
-  do not require testing.
-
-- The Cucumber tests focused mainly on the UI. Therefore, almost all UI functionalities are tested.
-
-![Jacoco Coverage Report](https://github.com/izzat-najah-edu/carpet-cleaning-service-management/assets/92182269/b7ef1423-5430-4411-9132-53f1b1392471)
+# More
 
 ## Adding Features
 
