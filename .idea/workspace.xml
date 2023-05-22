@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="logger">
-      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/aya/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/aya/Logger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -414,21 +414,7 @@
       <workItem from="1684693469181" duration="502000" />
       <workItem from="1684694292920" duration="3495000" />
       <workItem from="1684700438153" duration="642000" />
-      <workItem from="1684740863028" duration="1768000" />
-    </task>
-    <task id="LOCAL-00184" summary="sonarcloud integration">
-      <created>1682630965777</created>
-      <option name="number" value="00184" />
-      <option name="presentableId" value="LOCAL-00184" />
-      <option name="project" value="LOCAL" />
-      <updated>1682630965777</updated>
-    </task>
-    <task id="LOCAL-00185" summary="sonarcloud integration">
-      <created>1682631194779</created>
-      <option name="number" value="00185" />
-      <option name="presentableId" value="LOCAL-00185" />
-      <option name="project" value="LOCAL" />
-      <updated>1682631194779</updated>
+      <workItem from="1684740863028" duration="3198000" />
     </task>
     <task id="LOCAL-00186" summary="maintainability fixes">
       <created>1682631866046</created>
@@ -759,7 +745,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684742339168</updated>
     </task>
-    <option name="localTasksCounter" value="233" />
+    <task id="LOCAL-00233" summary="logger">
+      <created>1684742876571</created>
+      <option name="number" value="00233" />
+      <option name="presentableId" value="LOCAL-00233" />
+      <option name="project" value="LOCAL" />
+      <updated>1684742876572</updated>
+    </task>
+    <task id="LOCAL-00234" summary="logger">
+      <created>1684742997669</created>
+      <option name="number" value="00234" />
+      <option name="presentableId" value="LOCAL-00234" />
+      <option name="project" value="LOCAL" />
+      <updated>1684742997669</updated>
+    </task>
+    <option name="localTasksCounter" value="235" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

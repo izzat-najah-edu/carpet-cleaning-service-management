@@ -20,8 +20,8 @@ public class GenerateReports {
 
     // Generate customer report
     private static void generateCustomerReport() {
-        System.out.println("CUSTOMER REPORT");
-        System.out.println("=============================");
+        Logger.print("CUSTOMER REPORT");
+        Logger.print("=============================");
         for (Customer customer : customers) {
             Logger.print("Name: " + customer.getName());
             Logger.print("Address: " + customer.getAddress());
@@ -32,8 +32,8 @@ public class GenerateReports {
 
     // Generate job report
     private static void generateJobReport() {
-        System.out.println("JOB REPORT");
-        System.out.println("=============================");
+        Logger.print("JOB REPORT");
+        Logger.print("=============================");
         for (Job job : jobs) {
             Logger.print("Type: " + job.getType());
             Logger.print("Frequency: " + job.getFrequency());
