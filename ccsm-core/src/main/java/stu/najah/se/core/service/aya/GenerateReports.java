@@ -4,19 +4,15 @@ import java.util.ArrayList;
 
 public class GenerateReports {
 
-
-    private static final ArrayList<Customer> customers = new ArrayList<Customer>() {{
-        add(new Customer("Aya Khammash", "Nablus", "aya.khammash@gmail.com"));
-        add(new Customer("Izzat AlSharif", "Nablus", "Izzat.Alsharif@gmail.com"));
-
-    }};
-    private static final ArrayList<Job> jobs = new ArrayList<Job>() {{
-        add(new Job("Cleaning", "Daily", 100.00));
-        add(new Job("Floor Cleaning", "Weekly", 200.00));
-        add(new Job("Window Washing", "Monthly", 150.00));
-    }};
+    private static final ArrayList<Customer> customers = new ArrayList<>();
+    private static final ArrayList<Job> jobs = new ArrayList<>();
 
     public static void main(String[] args) {
+        customers.add(new Customer("Aya Khammash", "Nablus", "aya.khammash@gmail.com"));
+        customers.add(new Customer("Izzat AlSharif", "Nablus", "Izzat.Alsharif@gmail.com"));
+        jobs.add(new Job("Cleaning", "Daily", 100.00));
+        jobs.add(new Job("Floor Cleaning", "Weekly", 200.00));
+        jobs.add(new Job("Window Washing", "Monthly", 150.00));
         // Generate reports
         generateCustomerReport();
         generateJobReport();
@@ -36,7 +32,7 @@ public class GenerateReports {
 
     // Generate job report
     private static void generateJobReport() {
-       System.out.println("JOB REPORT");
+        System.out.println("JOB REPORT");
         System.out.println("=============================");
         for (Job job : jobs) {
             System.out.println("Type: " + job.getType());
