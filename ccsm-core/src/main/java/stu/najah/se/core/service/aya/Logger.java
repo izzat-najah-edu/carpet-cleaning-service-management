@@ -7,15 +7,15 @@ public class Logger {
     private Logger() {
     }
 
-    private static final java.util.logging.Logger logger =
+    private static final java.util.logging.Logger globalLogger =
             java.util.logging.Logger.getGlobal();
 
     public static void print(String text) {
-        logger.log(Level.INFO, text);
+        globalLogger.log(Level.INFO, text);
     }
 
     public static void print(String text, Object... args) {
-        logger.log(Level.INFO, String.format(text, args));
+        globalLogger.log(Level.INFO, args == null ? text : String.format(text, args));
     }
 
 }
