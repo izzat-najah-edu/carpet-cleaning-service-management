@@ -20,42 +20,43 @@ public class CustomerInvoice {
         this.itemsToClean = itemsToClean;
         this.totalPrice = totalPrice;
     }
-//..
+
+    //..
     public void printInvoice() {
-        System.out.println(LINE_SEPARATOR_CONSTANT);
-        System.out.println("CUSTOMER INFORMATION");
-        System.out.println(LINE_SEPARATOR_CONSTANT);
-        System.out.println("Customer Name: " + customerName);
-        System.out.println("Customer Address: " + customerAddress);
-        System.out.println("Delivery Address: " + deliveryAddress);
-        System.out.println(LINE_SEPARATOR_CONSTANT);
-        System.out.println("ITEMS TO CLEAN");
-        System.out.println(LINE_SEPARATOR_CONSTANT);
+        Logger.print(LINE_SEPARATOR_CONSTANT);
+        Logger.print("CUSTOMER INFORMATION");
+        Logger.print(LINE_SEPARATOR_CONSTANT);
+        Logger.print("Customer Name: " + customerName);
+        Logger.print("Customer Address: " + customerAddress);
+        Logger.print("Delivery Address: " + deliveryAddress);
+        Logger.print(LINE_SEPARATOR_CONSTANT);
+        Logger.print("ITEMS TO CLEAN");
+        Logger.print(LINE_SEPARATOR_CONSTANT);
         for (String item : itemsToClean) {
             System.out.println("- " + item);
         }
-        System.out.println(LINE_SEPARATOR_CONSTANT);
-        System.out.println("TOTAL PRICE");
-        System.out.println(LINE_SEPARATOR_CONSTANT);
-        System.out.println("$" + totalPrice);
-        System.out.println(LINE_SEPARATOR_CONSTANT);
+        Logger.print(LINE_SEPARATOR_CONSTANT);
+        Logger.print("TOTAL PRICE");
+        Logger.print(LINE_SEPARATOR_CONSTANT);
+        Logger.print("$" + totalPrice);
+        Logger.print(LINE_SEPARATOR_CONSTANT);
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter customer name:");
+        Logger.print("Enter customer name:");
         String customerName = sc.nextLine();
 
-        System.out.println("Enter customer address:");
+        Logger.print("Enter customer address:");
         String customerAddress = sc.nextLine();
 
-        System.out.println("Enter delivery address:");
+        Logger.print("Enter delivery address:");
         String deliveryAddress = sc.nextLine();
 
-        ArrayList<String> itemsToClean = new ArrayList<String>();
+        ArrayList<String> itemsToClean = new ArrayList<>();
         while (true) {
-            System.out.println("Enter item to clean (or type 'done' to finish):");
+            Logger.print("Enter item to clean (or type 'done' to finish):");
             String item = sc.nextLine();
             if (item.equals("done")) {
                 break;
@@ -63,7 +64,7 @@ public class CustomerInvoice {
             itemsToClean.add(item);
         }
 
-        System.out.println("Enter total price:");
+        Logger.print("Enter total price:");
         double totalPrice = sc.nextDouble();
 
         CustomerInvoice invoice = new CustomerInvoice(customerName, customerAddress, deliveryAddress, itemsToClean, totalPrice);

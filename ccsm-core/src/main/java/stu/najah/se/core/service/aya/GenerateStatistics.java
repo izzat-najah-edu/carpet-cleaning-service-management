@@ -71,9 +71,9 @@ public class GenerateStatistics {
         double totalDebts = generate.getTotalDebts();
 
         // Print the statistics
-        System.out.println("Total delivered items: " + totalDeliveredItems);
-        System.out.println("Total cash: " + totalCash);
-        System.out.println("Total paid: " + totalPaid);
-        System.out.println("Total debts: " + totalDebts);
+        Logger.print("Total delivered items: " + totalDeliveredItems);
+        Logger.print("Total cash: " + totalCash);
+        Logger.print("Total paid: " + totalPaid);
+        Logger.print("Total debts: " + totalDebts);
     }
 }

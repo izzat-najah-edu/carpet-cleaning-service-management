@@ -23,10 +23,10 @@ public class GenerateReports {
         System.out.println("CUSTOMER REPORT");
         System.out.println("=============================");
         for (Customer customer : customers) {
-            System.out.println("Name: " + customer.getName());
-            System.out.println("Address: " + customer.getAddress());
-            System.out.println("Email: " + customer.getEmail());
-            System.out.println("-----------------------------");
+            Logger.print("Name: " + customer.getName());
+            Logger.print("Address: " + customer.getAddress());
+            Logger.print("Email: " + customer.getEmail());
+            Logger.print("-----------------------------");
         }
     }
 
@@ -35,10 +35,10 @@ public class GenerateReports {
         System.out.println("JOB REPORT");
         System.out.println("=============================");
         for (Job job : jobs) {
-            System.out.println("Type: " + job.getType());
-            System.out.println("Frequency: " + job.getFrequency());
-            System.out.println("Price: $" + job.getPrice());
-            System.out.println("-----------------------------");
+            Logger.print("Type: " + job.getType());
+            Logger.print("Frequency: " + job.getFrequency());
+            Logger.print("Price: $" + job.getPrice());
+            Logger.print("-----------------------------");
         }
     }
 

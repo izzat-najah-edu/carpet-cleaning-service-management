@@ -15,19 +15,19 @@ public class DiscountCalculator {
         Scanner scanner = new Scanner(System.in);
 
 
-        System.out.print("Enter total amount spent: ");
+        Logger.print("Enter total amount spent: ");
         double totalAmount = scanner.nextDouble();
 
 
         if (totalAmount > THRESHOLD_AMOUNT) {
             double discountAmount = totalAmount * DISCOUNT_RATE;
             double discountedPrice = totalAmount - discountAmount;
-            System.out.printf("Congratulations, you qualify for a %.0f%% discount!%n", DISCOUNT_RATE * 100);
-            System.out.printf("Discount amount: %.2f NIS%n", discountAmount);
-            System.out.printf("Discounted price: %.2f NIS%n", discountedPrice);
+            Logger.print("Congratulations, you qualify for a %.0f%% discount!%n", DISCOUNT_RATE * 100);
+            Logger.print("Discount amount: %.2f NIS%n", discountAmount);
+            Logger.print("Discounted price: %.2f NIS%n", discountedPrice);
 
         } else {
-            System.out.println("Sorry, you do not qualify for a discount.");
+            Logger.print("Sorry, you do not qualify for a discount.");
         }
 
 
