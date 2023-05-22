@@ -80,15 +80,19 @@ export JAVAMAIL_USER="your_email@example.com"
 export JAVAMAIL_PASS="your_password"
 ```
 
-## VM Options Setup
+## Static Analysis
 
-1. Open the "Run/Debug Configurations" dialog.
-2. Select the test configuration you're using (e.g., JUnit or Cucumber).
-3. In the "VM options" field, add the following JVM arguments:
+![SonarCloud Analysis](https://github.com/izzat-najah-edu/carpet-cleaning-service-management/assets/92182269/317af9ac-efb0-4388-9728-ddfe2032dc2b)
 
-```code 
---add-exports javafx.graphics/com.sun.javafx.application=org.testfx
-```
+## Coverage
+
+- Most of the non-covered lines are either additional methods to handle extra functionalities which haven't been tested
+  yet or getters & setters of the POJO entity objects (AdminEntity, CustomerEntity, etc.) which are auto-generated and
+  do not require testing.
+
+- The Cucumber tests focused mainly on the UI. Therefore, almost all UI functionalities are tested.
+
+![Jacoco Coverage Report](https://github.com/izzat-najah-edu/carpet-cleaning-service-management/assets/92182269/b7ef1423-5430-4411-9132-53f1b1392471)
 
 ## Adding Features
 
