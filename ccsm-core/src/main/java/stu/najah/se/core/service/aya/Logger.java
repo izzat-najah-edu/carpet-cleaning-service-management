@@ -15,7 +15,7 @@ public class Logger {
     }
 
     public static void print(String text, Object... args) {
-        globalLogger.log(Level.INFO, args == null ? text : String.format(text, args));
+        print(String.format(text, args));
     }
 
 }
