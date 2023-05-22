@@ -1,6 +1,7 @@
 package stu.najah.se.core.service.aya;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class CustomerInvoice {
@@ -13,11 +14,15 @@ public class CustomerInvoice {
     static final String LINE_SEPARATOR_CONSTANT = "=================================";
 
 
-    public CustomerInvoice(String customerName, String customerAddress, String deliveryAddress, ArrayList<String> itemsToClean, double totalPrice) {
+    public CustomerInvoice(String customerName,
+                           String customerAddress,
+                           String deliveryAddress,
+                           List<String> itemsToClean,
+                           double totalPrice) {
         this.customerName = customerName;
         this.customerAddress = customerAddress;
         this.deliveryAddress = deliveryAddress;
-        this.itemsToClean = itemsToClean;
+        this.itemsToClean = new ArrayList<>(itemsToClean);
         this.totalPrice = totalPrice;
     }
 

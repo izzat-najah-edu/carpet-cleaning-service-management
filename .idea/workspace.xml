@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="logger" />
+    <list default="true" id="30a2bec6-b51e-49fd-8372-661244324514" name="Changes" comment="logger">
+      <change beforePath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/aya/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/ccsm-core/src/main/java/stu/najah/se/core/service/aya/Logger.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -412,14 +414,7 @@
       <workItem from="1684693469181" duration="502000" />
       <workItem from="1684694292920" duration="3495000" />
       <workItem from="1684700438153" duration="642000" />
-      <workItem from="1684740863028" duration="1397000" />
-    </task>
-    <task id="LOCAL-00183" summary="different views added">
-      <created>1682512615874</created>
-      <option name="number" value="00183" />
-      <option name="presentableId" value="LOCAL-00183" />
-      <option name="project" value="LOCAL" />
-      <updated>1682512615874</updated>
+      <workItem from="1684740863028" duration="1768000" />
     </task>
     <task id="LOCAL-00184" summary="sonarcloud integration">
       <created>1682630965777</created>
@@ -757,7 +752,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684742248995</updated>
     </task>
-    <option name="localTasksCounter" value="232" />
+    <task id="LOCAL-00232" summary="logger">
+      <created>1684742339168</created>
+      <option name="number" value="00232" />
+      <option name="presentableId" value="LOCAL-00232" />
+      <option name="project" value="LOCAL" />
+      <updated>1684742339168</updated>
+    </task>
+    <option name="localTasksCounter" value="233" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
